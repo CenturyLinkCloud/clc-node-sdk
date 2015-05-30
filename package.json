@@ -1,0 +1,13 @@
+{
+  "name": "clc-node-sdk",
+  "version": "0.0.1",
+  "description": "CenturyLink Cloud SDK for Node.js",
+  "author": "Ilya Drabenia <ilya.drabenia@altoros.com>",
+  "dependencies": {
+    "bluebird": "^2.9.26",
+    "mocha": "^2.2.5",
+    "restling": "^0.9.1",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {}
+}
