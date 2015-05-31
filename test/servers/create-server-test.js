@@ -39,7 +39,7 @@ describe('Create server operation', function () {
 //    });
 
     it('Should create new server', function (done) {
-        this.timeout(10000);
+        this.timeout(1000 * 60 * 15);
 
         compute
             .servers()
@@ -56,10 +56,10 @@ describe('Create server operation', function () {
                 storageType: "standard"
             })
             .on('job-queue', function (server) {
-                done();
+                // empty
             })
-            .on('executed', function (result) {
-
+            .on('complete', function (result) {
+                done();
             });
     });
 
