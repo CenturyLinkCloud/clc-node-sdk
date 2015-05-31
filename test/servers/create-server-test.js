@@ -2,7 +2,7 @@
 var Sdk = require('./../../lib/clc-sdk.js');
 var compute = new Sdk().computeServices();
 
-describe('Search servers operation', function () {
+describe('Create server operation', function () {
 
 //    it('Should create new server', function () {
 //        compute
@@ -38,13 +38,15 @@ describe('Search servers operation', function () {
 //            });
 //    });
 
-    it('Should create new server', function () {
+    it('Should create new server', function (done) {
+        this.timeout(10000);
+
         compute
             .servers()
             .create({
                 name: "web",
                 description: "My web server",
-                groupId: "97e2d9693a79e411877f005056882d41",
+                groupId: "2dda7958f3ad4d819914e8d3cb643120",
                 sourceServerId: "RHEL-6-64-TEMPLATE",
                 primaryDns: "172.17.1.26",
                 secondaryDns: "172.17.1.27",
@@ -54,10 +56,10 @@ describe('Search servers operation', function () {
                 storageType: "standard"
             })
             .on('job-queue', function (server) {
-
+                done();
             })
             .on('executed', function (result) {
-                done();
+
             });
     });
 

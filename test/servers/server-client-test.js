@@ -9,8 +9,8 @@ describe('Test Server client functions', function () {
     var dataCenterClient = new DataCenterClient(new AuthenticatedClient());
     var serverClient = new ServerClient(new AuthenticatedClient());
 
-    it('Should return list of all datacenters', function (done) {
-        this.timeout(5000);
+    it('Should return group by ID', function (done) {
+        this.timeout(10000);
 
         dataCenterClient
             .findAllDataCenters()

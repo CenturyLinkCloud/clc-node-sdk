@@ -21,7 +21,6 @@ describe('Test DataCenter client functions', function () {
         dataCenterClient
             .getDeploymentCapabilities('DE1')
             .then(function (result) {
-                console.log(result);
                 done();
             });
     });
