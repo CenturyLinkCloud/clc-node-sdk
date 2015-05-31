@@ -1,6 +1,6 @@
 
 var Sdk = require('./../../lib/clc-sdk.js');
-var compute = new Sdk().computeService();
+var compute = new Sdk().computeServices();
 
 
 describe('Create server command', function () {
@@ -8,33 +8,17 @@ describe('Create server command', function () {
     it('Should create new server', function () {
         compute
             .servers()
-            .create({
-                name: 'ALTRS',
-                description: 'My Server',
-                type: compute.SERVER.STANDARD,
-                storageType: compute.SERVER_STORAGE.PREMIUM,
-                group: { dataCenter: 'frankfurt', name: compute.GROUP.DEFAULT },
-                template: { os: compute.OS.CENTOS, version: '6' },
-                machine: {
-                    cpu: 2, ram: 1,
-                    disk: [
-                        { path: '/var', size: 16 },
-                        { size: 10 }
-                    ]
+            .find({
+                id: ['A1', 'A2', 'B4', 'B5'],
+                name: 'BLABLABLA',
+                descriptionContains: 'BLABLABLA',
+                where: function (metadata) {
+                    return metadata.getDescription() === null;
                 },
-                network: {
-                    primaryDns: '192.168.1.5',
-                    secondaryDns: '192.168.1.6',
-                    publicIp: {
-                        openPorts: [80, 443, 22, compute.Port.range(22, 25)],
-                        restrictions: '192.168.2.1/244'
-                    }
-                }
+                onlyActive: true,
+                powerState: ['STARTED', compute.SERVER_STATE.PAUSED]
             })
-            .on('called', function (server) {
-
-            })
-            .on('executed', function (result) {
+            .on('complete', function (result) {
 
             });
     });

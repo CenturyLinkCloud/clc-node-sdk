@@ -1,7 +1,7 @@
 
 var AuthenticatedClient = require('./../../lib/core/client/authenticated-client.js');
-var DataCenterClient = require('./../../lib/common-management/datacenter-client.js');
-var ServerClient = require('./../../lib/servers/server-client.js');
+var DataCenterClient = require('./../../lib/common-services/datacenters/datacenter-client.js');
+var ServerClient = require('./../../lib/compute-services/servers/server-client.js');
 var _ = require('underscore');
 
 
