@@ -1,5 +1,5 @@
 
-var Sdk = require('./../../lib/clc-sdk.js');
+var Sdk = require('./../../../lib/clc-sdk.js');
 var compute = new Sdk().computeServices();
 
 
