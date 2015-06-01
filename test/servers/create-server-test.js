@@ -3,40 +3,17 @@ var Sdk = require('./../../lib/clc-sdk.js');
 var compute = new Sdk().computeServices();
 
 describe('Create server operation', function () {
+    var server;
 
-//    it('Should create new server', function () {
-//        compute
-//            .servers()
-//            .create({
-//                name: 'ALTRS',
-//                description: 'My Server',
-//                type: compute.SERVER.STANDARD,
-//                storageType: compute.SERVER_STORAGE.PREMIUM,
-//                group: { dataCenter: 'frankfurt', name: compute.GROUP.DEFAULT },
-//                template: { os: compute.OS.CENTOS, version: '6' },
-//                machine: {
-//                    cpu: 2, ram: 1,
-//                    disk: [
-//                        { path: '/var', size: 16 },
-//                        { size: 10 }
-//                    ]
-//                },
-//                network: {
-//                    primaryDns: '192.168.1.5',
-//                    secondaryDns: '192.168.1.6',
-//                    publicIp: {
-//                        openPorts: [80, 443, 22, compute.Port.range(22, 25)],
-//                        restrictions: '192.168.2.1/244'
-//                    }
-//                }
-//            })
-//            .on('job-queue', function (server) {
-//
-//            })
-//            .on('executed', function (result) {
-//
-//            });
-//    });
+    after(function(done) {
+        this.timeout(1000 * 60 * 3);
+        compute
+            .servers()
+            .delete(server)
+            .on('complete', function () {
+                done();
+            });
+    });
 
     it('Should create new server', function (done) {
         this.timeout(1000 * 60 * 15);
@@ -59,7 +36,13 @@ describe('Create server operation', function () {
                 // empty
             })
             .on('complete', function (result) {
-                done();
+                compute
+                    .servers()
+                    .findByUuid(result.findSelfId())
+                    .then(function(result) {
+                        server = result;
+                    })
+                    .then(done);
             });
     });
 
