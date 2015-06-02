@@ -1,9 +1,10 @@
 
-var assert = require('assert');
 var Sdk = require('./../../lib/clc-sdk.js');
 var common = new Sdk().commonServices();
+var TestAsserts = require("./../test-asserts.js")
 
 describe('Search datacenter by reference', function () {
+    var assertThatDataCenterIsDe1 = new TestAsserts().assertThatDataCenterIsDe1;
 
     it('Should found "de1" datacenter by id', function (done) {
         this.timeout(10000);
@@ -28,11 +29,5 @@ describe('Search datacenter by reference', function () {
                 done();
             });
     });
-
-    var assertThatDataCenterIsDe1 = function(result) {
-        assert.equal(result.length, 1);
-        assert.equal(result[0].id, "de1");
-        assert.equal(result[0].name, "DE1 - Germany (Frankfurt)");
-    }
 
 });
