@@ -44,9 +44,9 @@ describe("Verify search predicates [UNIT]", function () {
         var secondPredicate = new Predicate(_.constant(false));
         var thirdPredicate = new Predicate(_.constant(false));
 
-        var resultPredicate = Predicate.and(firstPredicate, secondPredicate, thirdPredicate);
+        var resultPredicate = Predicate.or(firstPredicate, secondPredicate, thirdPredicate);
 
-        assert.equal(resultPredicate.fn(), false);
+        assert.equal(resultPredicate.fn(), true);
     });
 
 });
