@@ -11,9 +11,7 @@ describe('Search datacenter by reference', function () {
         common
             .dataCenters()
             .findByRef({ id: 'de1'})
-            .then(function(result) {
-                checkAsserts(result);
-            })
+            .then(assertThatDataCenterIsDe1)
             .then(function () {
                 done();
             });
@@ -25,15 +23,13 @@ describe('Search datacenter by reference', function () {
         common
             .dataCenters()
             .findByRef({ name: 'Frankfurt'})
-            .then(function(result) {
-                checkAsserts(result);
-            })
+            .then(assertThatDataCenterIsDe1)
             .then(function () {
                 done();
             });
     });
 
-    var checkAsserts = function(result) {
+    var assertThatDataCenterIsDe1 = function(result) {
         assert.equal(result.length, 1);
         assert.equal(result[0].id, "de1");
         assert.equal(result[0].name, "DE1 - Germany (Frankfurt)");
