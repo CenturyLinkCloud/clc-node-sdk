@@ -4,3 +4,4 @@ Testing
 -------
 `mocha --recursive test/**/*.js --clc.username=<USERNAME> --clc.password=<PASSWORD>`
 
+npm
