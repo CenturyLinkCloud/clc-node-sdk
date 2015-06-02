@@ -5,7 +5,9 @@ Testing
 `mocha --recursive test/**/*.js --clc.username=<USERNAME> --clc.password=<PASSWORD>`
 
 ##Unit Tests
+```bash
 npm run tests
+```
 
 ##Integration Tests
 ```bash
