@@ -4,14 +4,16 @@
   "description": "CenturyLink Cloud SDK for Node.js",
   "author": "Ilya Drabenia <ilya.drabenia@altoros.com>",
   "scripts": {
-    "tests": "./node_modules/mocha/bin/mocha --recursive test/*/*.js test/*/*/*.js --clc.username=<USERNAME> --clc.password=<PASSWD> --fgrep [UNIT]",
-    "integration-tests": "./node_modules/mocha/bin/mocha --recursive test/*/*.js test/*/*/*.js --clc.username=<USERNAME> --clc.password=<PASSWD> --fgrep [INTEGRATION]"
+    "tests": "./node_modules/mocha/bin/mocha --recursive test/*/*.js test/*/*/*.js --fgrep [UNIT]",
+    "integration-tests": "./node_modules/mocha/bin/mocha --recursive test/*/*.js test/*/*/*.js --fgrep [INTEGRATION]",
+    "long-running-tests": "./node_modules/mocha/bin/mocha --recursive test/*/*.js test/*/*/*.js --fgrep [INTEGRATION, LONG_RUNNING]"
   },
   "dependencies": {
     "bluebird": "^2.9.26",
-    "mocha": "^2.2.5",
     "restling": "^0.9.1",
     "underscore": "^1.8.3"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "mocha": "^2.2.5"
+  }
 }

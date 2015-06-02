@@ -16,7 +16,7 @@ describe('Test DataCenter client functions [INTEGRATION]', function () {
     });
 
     it('Should return datacenter deployment capabilities', function (done) {
-        this.timeout(5000);
+        this.timeout(15000);
 
         dataCenterClient
             .getDeploymentCapabilities('DE1')

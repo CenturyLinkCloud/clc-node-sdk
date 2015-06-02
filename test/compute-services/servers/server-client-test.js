@@ -10,7 +10,7 @@ describe('Test Server client functions [INTEGRATION]', function () {
     var serverClient = new ServerClient(new AuthenticatedClient());
 
     it('Should return group by ID', function (done) {
-        this.timeout(10000);
+        this.timeout(15 * 1000);
 
         dataCenterClient
             .findAllDataCenters()
