@@ -1,7 +1,7 @@
 
-var Sdk = require('./../../lib/clc-sdk.js');
+var Sdk = require('./../../../lib/clc-sdk.js');
 var common = new Sdk().commonServices();
-var TestAsserts = require("./../test-asserts.js");
+var TestAsserts = require("./../../test-asserts.js");
 
 describe('Search datacenter by reference [INTEGRATION]', function () {
     var assertThatDataCenterIsDe1 = new TestAsserts().assertThatDataCenterIsDe1;

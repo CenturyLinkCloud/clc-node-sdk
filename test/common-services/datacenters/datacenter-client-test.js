@@ -1,6 +1,6 @@
 
-var AuthenticatedClient = require('./../../lib/core/client/authenticated-client.js');
-var DataCenterClient = require('./../../lib/common-services/datacenters/datacenter-client.js');
+var AuthenticatedClient = require('./../../../lib/core/client/authenticated-client.js');
+var DataCenterClient = require('./../../../lib/common-services/datacenters/datacenter-client.js');
 
 describe('Test DataCenter client functions [INTEGRATION]', function () {
     var dataCenterClient = new DataCenterClient(new AuthenticatedClient());
