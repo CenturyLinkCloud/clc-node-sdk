@@ -23,15 +23,15 @@ describe('Search server [INTEGRATION]', function () {
 //            });
 //    });
 
-    it('Should find server by ID reference', function (done) {
-        this.timeout(5000);
-
-        compute.servers()
-            .findByRef({ id: 'DE1ALTDCTTL577' })
-            .then(console.log)
-            .then(function () {
-                done();
-            });
-    });
+//    it('Should find server by ID reference', function (done) {
+//        this.timeout(10000);
+//
+//        compute.servers()
+//            .findByRef({ id: 'DE1ALTDCTTL577' })
+//            .then(console.log)
+//            .then(function () {
+//                done();
+//            });
+//    });
 
 });
