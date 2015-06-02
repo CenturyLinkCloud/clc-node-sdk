@@ -4,15 +4,15 @@ Testing
 -------
 `mocha --recursive test/**/*.js --clc.username=<USERNAME> --clc.password=<PASSWORD>`
 
-##Unit Tests
+###Unit Tests
 npm run tests
 
-##Integration Tests
+###Integration Tests
 export CLC_USERNAME=<USERNAME>
 export CLC_PASSWORD=<PASSWORD>
 npm run integration-tests
 
-##Long Running Tests
+###Long Running Tests
 export CLC_USERNAME=<USERNAME>
 export CLC_PASSWORD=<PASSWORD>
 npm run long-running-tests
