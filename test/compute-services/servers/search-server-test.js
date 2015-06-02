@@ -3,7 +3,7 @@ var Sdk = require('./../../../lib/clc-sdk.js');
 var compute = new Sdk().computeServices();
 
 
-describe('Search server', function () {
+describe('Search server [INTEGRATION]', function () {
 
 //    it('Should search servers', function () {
 //        compute

@@ -2,7 +2,7 @@
 var Sdk = require('./../../../lib/clc-sdk.js');
 var compute = new Sdk().computeServices();
 
-describe('Create server operation', function () {
+describe('Create server operation [INTEGRATION, LONG_RUNNING]', function () {
     var server;
 
     after(function(done) {

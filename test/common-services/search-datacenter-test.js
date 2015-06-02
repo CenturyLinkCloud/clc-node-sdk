@@ -3,7 +3,7 @@ var Sdk = require('./../../lib/clc-sdk.js');
 var common = new Sdk().commonServices();
 var TestAsserts = require("./../test-asserts.js")
 
-describe('Search datacenter by reference', function () {
+describe('Search datacenter by reference [INTEGRATION]', function () {
     var assertThatDataCenterIsDe1 = new TestAsserts().assertThatDataCenterIsDe1;
 
     it('Should found "de1" datacenter by id', function (done) {

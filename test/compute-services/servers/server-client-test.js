@@ -5,7 +5,7 @@ var ServerClient = require('./../../../lib/compute-services/servers/server-clien
 var _ = require('underscore');
 
 
-describe('Test Server client functions', function () {
+describe('Test Server client functions [INTEGRATION]', function () {
     var dataCenterClient = new DataCenterClient(new AuthenticatedClient());
     var serverClient = new ServerClient(new AuthenticatedClient());
 

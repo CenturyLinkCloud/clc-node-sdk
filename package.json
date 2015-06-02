@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "CenturyLink Cloud SDK for Node.js",
   "author": "Ilya Drabenia <ilya.drabenia@altoros.com>",
+  "scripts": {
+    "test": "mocha --recursive test/*/*.js test/*/*/*.js --clc.username=<USERNAME> --clc.password=<PASSWD> --fgrep [UNIT]"
+  },
   "dependencies": {
     "bluebird": "^2.9.26",
     "mocha": "^2.2.5",

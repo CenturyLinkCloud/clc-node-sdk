@@ -2,7 +2,7 @@
 var AuthenticatedClient = require('./../../lib/core/client/authenticated-client.js');
 var DataCenterClient = require('./../../lib/common-services/datacenters/datacenter-client.js');
 
-describe('Test DataCenter client functions', function () {
+describe('Test DataCenter client functions [INTEGRATION]', function () {
     var dataCenterClient = new DataCenterClient(new AuthenticatedClient());
 
     it('Should return list of all datacenters', function (done) {
