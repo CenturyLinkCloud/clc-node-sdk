@@ -1,4 +1,4 @@
-This is node.js SDK for CenturyLink Cloud API.
+This is Node SDK for CenturyLink Cloud.
 
 Testing
 -------
