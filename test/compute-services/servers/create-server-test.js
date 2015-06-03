@@ -23,7 +23,13 @@ describe('Create server operation [INTEGRATION, LONG_RUNNING]', function () {
             .create({
                 name: "web",
                 description: "My web server",
-                groupId: "2dda7958f3ad4d819914e8d3cb643120",
+                group: {
+                    datacenter: {
+                        id: 'de1',
+                        name: 'DE1 - Germany (Frankfurt)'
+                    },
+                    name: 'Default Group'
+                },
                 sourceServerId: "RHEL-6-64-TEMPLATE",
                 primaryDns: "172.17.1.26",
                 secondaryDns: "172.17.1.27",
