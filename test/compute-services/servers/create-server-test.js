@@ -33,7 +33,7 @@ describe('Create server operation [INTEGRATION, LONG_RUNNING]', function () {
                 memoryGB: 1,
                 type: "standard",
                 storageType: "standard",
-                ttl:ttl.toISOString()
+                ttl: ttl.toISOString()
             });
 
         promise.then(function() {
