@@ -7,7 +7,7 @@
     "tests": "mocha --recursive test/*/*/*.js --fgrep [UNIT]",
     "tests-watch": "watch \"npm run tests\" lib test",
     "integration-tests": "mocha --recursive test/*/*/*.js --fgrep [INTEGRATION]",
-    "long-running-tests": "mocha --recursive test/*/*/*.js --fgrep [INTEGRATION, LONG_RUNNING]",
+    "long-running-tests": "mocha --recursive test/*/*/*.js --fgrep \"[INTEGRATION, LONG_RUNNING]\"",
     "jshint": "jshint --verbose ./lib ./test",
     "jshint-watch": "watch \"npm run jshint\" lib test",
     "watch-all": "npm run tests-watch & npm run jshint-watch"

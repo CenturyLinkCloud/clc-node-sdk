@@ -3,22 +3,24 @@ var Sdk = require('./../../../lib/clc-sdk.js');
 var compute = new Sdk().computeServices();
 
 describe('Create server operation [INTEGRATION, LONG_RUNNING]', function () {
-    var server;
+    var promise;
 
     after(function(done) {
         this.timeout(1000 * 60 * 3);
         compute
             .servers()
-            .delete(server)
-            .on('complete', function () {
+            .delete(promise.value())
+            .then(function() {
                 done();
             });
     });
 
     it('Should create new server', function (done) {
         this.timeout(1000 * 60 * 15);
+        var ttl = new Date();
+        ttl.setHours(ttl.getHours()+3);
 
-        compute
+        promise = compute
             .servers()
             .create({
                 name: "web",
@@ -33,23 +35,16 @@ describe('Create server operation [INTEGRATION, LONG_RUNNING]', function () {
                 sourceServerId: "RHEL-6-64-TEMPLATE",
                 primaryDns: "172.17.1.26",
                 secondaryDns: "172.17.1.27",
-                cpu: 2,
-                memoryGB: 4,
+                cpu: 1,
+                memoryGB: 1,
                 type: "standard",
-                storageType: "standard"
-            })
-            .on('job-queue', function (server) {
-                // empty
-            })
-            .on('complete', function (result) {
-                compute
-                    .servers()
-                    .findByUuid(result.findSelfId())
-                    .then(function(result) {
-                        server = result;
-                    })
-                    .then(done);
+                storageType: "standard",
+                ttl: ttl.toISOString()
             });
+
+        promise.then(function() {
+            done();
+        });
     });
 
 });
