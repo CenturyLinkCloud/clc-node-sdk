@@ -30,4 +30,22 @@ describe('Search datacenter by reference [INTEGRATION]', function () {
             });
     });
 
+    it('Should found "de1" datacenter by search criteria', function (done) {
+        this.timeout(10000);
+
+        common
+            .dataCenters()
+            .find({
+                id: ['de1'],
+                nameContains: "de",
+                where: function(metadata) {
+                    return metadata.id === 'de1';
+                }
+            })
+            .then(assertThatDataCenterIsDe1)
+            .then(function () {
+                done();
+            });
+    });
+
 });
