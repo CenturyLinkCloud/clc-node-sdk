@@ -10,4 +10,8 @@ function TestAsserts () {
         assert.equal(dataCenter.id, "de1");
         assert.equal(dataCenter.name, "DE1 - Germany (Frankfurt)");
     };
+
+    self.assertThatGroupIsDefault = function (group) {
+        assert.equal(group.name, "Default Group");
+    };
 }
