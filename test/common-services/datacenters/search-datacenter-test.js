@@ -30,7 +30,7 @@ describe('Search datacenter by reference [INTEGRATION]', function () {
             });
     });
 
-    it('Should found "de1" datacenter by search criteria', function (done) {
+    it('Should found "de1" datacenter by filter criteria', function (done) {
         this.timeout(10000);
 
         common
@@ -41,6 +41,27 @@ describe('Search datacenter by reference [INTEGRATION]', function () {
                 where: function(metadata) {
                     return metadata.id === 'de1';
                 }
+            })
+            .then(assertThatDataCenterIsDe1)
+            .then(function () {
+                done();
+            });
+    });
+
+    it('Should found "de1" datacenter by conditional criteria', function (done) {
+        this.timeout(10000);
+
+        common
+            .dataCenters()
+            .find({
+                and:[
+                    {nameContains:'DE'},
+                    {and:[
+                        {nameContains:'Germany'},
+                        {id:'de1'}
+                    ]
+                    }
+                ]
             })
             .then(assertThatDataCenterIsDe1)
             .then(function () {
