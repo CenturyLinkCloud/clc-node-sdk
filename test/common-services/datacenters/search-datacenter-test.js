@@ -68,5 +68,4 @@ describe('Search datacenter by reference [INTEGRATION]', function () {
                 done();
             });
     });
-
 });
