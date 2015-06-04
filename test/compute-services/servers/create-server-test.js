@@ -26,10 +26,7 @@ describe('Create server operation [INTEGRATION, LONG_RUNNING]', function () {
                 name: "web",
                 description: "My web server",
                 group: {
-                    datacenter: {
-                        id: 'de1',
-                        name: 'DE1 - Germany (Frankfurt)'
-                    },
+                    datacenter: compute.DataCenter.DE_FRANKFURT,
                     name: 'Default Group'
                 },
                 sourceServerId: "RHEL-6-64-TEMPLATE",
