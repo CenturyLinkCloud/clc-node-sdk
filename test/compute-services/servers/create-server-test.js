@@ -33,9 +33,11 @@ describe('Create server operation [INTEGRATION, LONG_RUNNING]', function () {
                     datacenter: DataCenter.DE_FRANKFURT,
                     name: Group.DEFAULT
                 },
-                sourceServerId: "RHEL-6-64-TEMPLATE",
-                primaryDns: "172.17.1.26",
-                secondaryDns: "172.17.1.27",
+                template: "RHEL-6-64-TEMPLATE",
+                network: {
+                    primaryDns: "172.17.1.26",
+                    secondaryDns: "172.17.1.27"
+                },
                 cpu: 1,
                 memoryGB: 1,
                 type: Server.STANDARD,
