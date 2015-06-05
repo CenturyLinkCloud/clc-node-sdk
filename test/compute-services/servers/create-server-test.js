@@ -33,7 +33,12 @@ describe('Create server operation [INTEGRATION, LONG_RUNNING]', function () {
                     datacenter: DataCenter.DE_FRANKFURT,
                     name: Group.DEFAULT
                 },
-                template: "RHEL-6-64-TEMPLATE",
+                template: {
+                    datacenter: compute.DataCenter.DE_FRANKFURT,
+                    os: compute.Os.CENTOS,
+                    version: "6",
+                    architecture: compute.Machine.Architecture.x64
+                },
                 network: {
                     primaryDns: "172.17.1.26",
                     secondaryDns: "172.17.1.27"
