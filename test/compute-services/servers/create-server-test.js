@@ -29,7 +29,14 @@ describe('Create server operation [INTEGRATION, LONG_RUNNING]', function () {
                     datacenter: compute.DataCenter.DE_FRANKFURT,
                     name: 'Default Group'
                 },
-                sourceServerId: "RHEL-6-64-TEMPLATE",
+                template: {
+                    datacenter: compute.DataCenter.DE_FRANKFURT,
+                    os: compute.Os.CENTOS,
+                    version: "6",
+                    //edition: "Some Addition",
+                    architecture: compute.Machine.Architecture.x86_64
+                },
+                //sourceServerId: "RHEL-6-64-TEMPLATE",
                 primaryDns: "172.17.1.26",
                 secondaryDns: "172.17.1.27",
                 cpu: 1,
