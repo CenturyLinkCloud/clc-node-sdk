@@ -1,0 +1,26 @@
+{
+  "curly": true,
+  "node": true,
+  "mocha": true,
+  "eqeqeq": true,
+  "immed": true, //deprecated
+  "latedef": "nofunc",
+  "newcap": true, //deprecated
+  "noarg": true,
+  "noempty": true, //deprecated
+  "nonbsp": true,
+  "undef": true,
+  "sub": true, //deprecated
+  "expr": true,
+  "boss": true,
+  "forin": true,
+  "eqnull": true,
+  "supernew": true,
+  "camelcase": true, //deprecated
+  "globals": {
+    "_": true
+  },
+  "maxcomplexity": 10,
+  "maxlen": 135, //deprecated
+  "indent": 4 //deprecated
+}
