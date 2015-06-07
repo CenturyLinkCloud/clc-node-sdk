@@ -14,4 +14,8 @@ function TestAsserts () {
     self.assertThatGroupIsDefault = function (group) {
         assert.equal(group.name, "Default Group");
     };
+
+    self.assertThatArrayIsEmpty = function(array) {
+        assert.equal(array.length, 0);
+    };
 }

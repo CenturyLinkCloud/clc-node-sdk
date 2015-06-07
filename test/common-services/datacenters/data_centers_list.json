@@ -1,0 +1,574 @@
+[
+  {
+    "id": "ca1",
+    "name": "CA1 - Canada (Vancouver)",
+    "links": [
+      {
+        "rel": "self",
+        "href": "/v2/datacenters/altd/ca1"
+      },
+      {
+        "rel": "deploymentCapabilities",
+        "href": "/v2/datacenters/altd/ca1/deploymentCapabilities"
+      },
+      {
+        "rel": "loadBalancers",
+        "href": "/v2/sharedLoadBalancers/altd/ca1",
+        "verbs": [
+          "GET",
+          "POST"
+        ]
+      },
+      {
+        "rel": "computeLimits",
+        "href": "/v2/datacenters/altd/ca1/computeLimits",
+        "verbs": [
+          "GET",
+          "POST"
+        ]
+      },
+      {
+        "rel": "networkLimits",
+        "href": "/v2/datacenters/altd/ca1/networkLimits",
+        "verbs": [
+          "GET"
+        ]
+      },
+      {
+        "rel": "availableOvfs",
+        "href": "/v2/vmImport/altd/ca1/available",
+        "verbs": [
+          "GET"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ca2",
+    "name": "CA2 - Canada (Toronto)",
+    "links": [
+      {
+        "rel": "self",
+        "href": "/v2/datacenters/altd/ca2"
+      },
+      {
+        "rel": "deploymentCapabilities",
+        "href": "/v2/datacenters/altd/ca2/deploymentCapabilities"
+      },
+      {
+        "rel": "loadBalancers",
+        "href": "/v2/sharedLoadBalancers/altd/ca2",
+        "verbs": [
+          "GET",
+          "POST"
+        ]
+      },
+      {
+        "rel": "computeLimits",
+        "href": "/v2/datacenters/altd/ca2/computeLimits",
+        "verbs": [
+          "GET",
+          "POST"
+        ]
+      },
+      {
+        "rel": "networkLimits",
+        "href": "/v2/datacenters/altd/ca2/networkLimits",
+        "verbs": [
+          "GET"
+        ]
+      },
+      {
+        "rel": "availableOvfs",
+        "href": "/v2/vmImport/altd/ca2/available",
+        "verbs": [
+          "GET"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ca3",
+    "name": "CA3 - Canada (Toronto)",
+    "links": [
+      {
+        "rel": "self",
+        "href": "/v2/datacenters/altd/ca3"
+      },
+      {
+        "rel": "deploymentCapabilities",
+        "href": "/v2/datacenters/altd/ca3/deploymentCapabilities"
+      },
+      {
+        "rel": "loadBalancers",
+        "href": "/v2/sharedLoadBalancers/altd/ca3",
+        "verbs": [
+          "GET",
+          "POST"
+        ]
+      },
+      {
+        "rel": "computeLimits",
+        "href": "/v2/datacenters/altd/ca3/computeLimits",
+        "verbs": [
+          "GET",
+          "POST"
+        ]
+      },
+      {
+        "rel": "networkLimits",
+        "href": "/v2/datacenters/altd/ca3/networkLimits",
+        "verbs": [
+          "GET"
+        ]
+      },
+      {
+        "rel": "availableOvfs",
+        "href": "/v2/vmImport/altd/ca3/available",
+        "verbs": [
+          "GET"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "de1",
+    "name": "DE1 - Germany (Frankfurt)",
+    "links": [
+      {
+        "rel": "self",
+        "href": "/v2/datacenters/altd/de1"
+      },
+      {
+        "rel": "deploymentCapabilities",
+        "href": "/v2/datacenters/altd/de1/deploymentCapabilities"
+      },
+      {
+        "rel": "loadBalancers",
+        "href": "/v2/sharedLoadBalancers/altd/de1",
+        "verbs": [
+          "GET",
+          "POST"
+        ]
+      },
+      {
+        "rel": "computeLimits",
+        "href": "/v2/datacenters/altd/de1/computeLimits",
+        "verbs": [
+          "GET",
+          "POST"
+        ]
+      },
+      {
+        "rel": "networkLimits",
+        "href": "/v2/datacenters/altd/de1/networkLimits",
+        "verbs": [
+          "GET"
+        ]
+      },
+      {
+        "rel": "availableOvfs",
+        "href": "/v2/vmImport/altd/de1/available",
+        "verbs": [
+          "GET"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "gb1",
+    "name": "GB1 - Great Britain (Portsmouth)",
+    "links": [
+      {
+        "rel": "self",
+        "href": "/v2/datacenters/altd/gb1"
+      },
+      {
+        "rel": "deploymentCapabilities",
+        "href": "/v2/datacenters/altd/gb1/deploymentCapabilities"
+      },
+      {
+        "rel": "loadBalancers",
+        "href": "/v2/sharedLoadBalancers/altd/gb1",
+        "verbs": [
+          "GET",
+          "POST"
+        ]
+      },
+      {
+        "rel": "computeLimits",
+        "href": "/v2/datacenters/altd/gb1/computeLimits",
+        "verbs": [
+          "GET",
+          "POST"
+        ]
+      },
+      {
+        "rel": "networkLimits",
+        "href": "/v2/datacenters/altd/gb1/networkLimits",
+        "verbs": [
+          "GET"
+        ]
+      },
+      {
+        "rel": "availableOvfs",
+        "href": "/v2/vmImport/altd/gb1/available",
+        "verbs": [
+          "GET"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "gb3",
+    "name": "GB3 - Great Britain (Slough)",
+    "links": [
+      {
+        "rel": "self",
+        "href": "/v2/datacenters/altd/gb3"
+      },
+      {
+        "rel": "deploymentCapabilities",
+        "href": "/v2/datacenters/altd/gb3/deploymentCapabilities"
+      },
+      {
+        "rel": "loadBalancers",
+        "href": "/v2/sharedLoadBalancers/altd/gb3",
+        "verbs": [
+          "GET",
+          "POST"
+        ]
+      },
+      {
+        "rel": "computeLimits",
+        "href": "/v2/datacenters/altd/gb3/computeLimits",
+        "verbs": [
+          "GET",
+          "POST"
+        ]
+      },
+      {
+        "rel": "networkLimits",
+        "href": "/v2/datacenters/altd/gb3/networkLimits",
+        "verbs": [
+          "GET"
+        ]
+      },
+      {
+        "rel": "availableOvfs",
+        "href": "/v2/vmImport/altd/gb3/available",
+        "verbs": [
+          "GET"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "il1",
+    "name": "IL1 - US Central (Chicago)",
+    "links": [
+      {
+        "rel": "self",
+        "href": "/v2/datacenters/altd/il1"
+      },
+      {
+        "rel": "deploymentCapabilities",
+        "href": "/v2/datacenters/altd/il1/deploymentCapabilities"
+      },
+      {
+        "rel": "loadBalancers",
+        "href": "/v2/sharedLoadBalancers/altd/il1",
+        "verbs": [
+          "GET",
+          "POST"
+        ]
+      },
+      {
+        "rel": "computeLimits",
+        "href": "/v2/datacenters/altd/il1/computeLimits",
+        "verbs": [
+          "GET",
+          "POST"
+        ]
+      },
+      {
+        "rel": "networkLimits",
+        "href": "/v2/datacenters/altd/il1/networkLimits",
+        "verbs": [
+          "GET"
+        ]
+      },
+      {
+        "rel": "availableOvfs",
+        "href": "/v2/vmImport/altd/il1/available",
+        "verbs": [
+          "GET"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ny1",
+    "name": "NY1 - US East (New York)",
+    "links": [
+      {
+        "rel": "self",
+        "href": "/v2/datacenters/altd/ny1"
+      },
+      {
+        "rel": "deploymentCapabilities",
+        "href": "/v2/datacenters/altd/ny1/deploymentCapabilities"
+      },
+      {
+        "rel": "loadBalancers",
+        "href": "/v2/sharedLoadBalancers/altd/ny1",
+        "verbs": [
+          "GET",
+          "POST"
+        ]
+      },
+      {
+        "rel": "computeLimits",
+        "href": "/v2/datacenters/altd/ny1/computeLimits",
+        "verbs": [
+          "GET",
+          "POST"
+        ]
+      },
+      {
+        "rel": "networkLimits",
+        "href": "/v2/datacenters/altd/ny1/networkLimits",
+        "verbs": [
+          "GET"
+        ]
+      },
+      {
+        "rel": "availableOvfs",
+        "href": "/v2/vmImport/altd/ny1/available",
+        "verbs": [
+          "GET"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sg1",
+    "name": "SG1 - APAC (Singapore)",
+    "links": [
+      {
+        "rel": "self",
+        "href": "/v2/datacenters/altd/sg1"
+      },
+      {
+        "rel": "deploymentCapabilities",
+        "href": "/v2/datacenters/altd/sg1/deploymentCapabilities"
+      },
+      {
+        "rel": "loadBalancers",
+        "href": "/v2/sharedLoadBalancers/altd/sg1",
+        "verbs": [
+          "GET",
+          "POST"
+        ]
+      },
+      {
+        "rel": "computeLimits",
+        "href": "/v2/datacenters/altd/sg1/computeLimits",
+        "verbs": [
+          "GET",
+          "POST"
+        ]
+      },
+      {
+        "rel": "networkLimits",
+        "href": "/v2/datacenters/altd/sg1/networkLimits",
+        "verbs": [
+          "GET"
+        ]
+      },
+      {
+        "rel": "availableOvfs",
+        "href": "/v2/vmImport/altd/sg1/available",
+        "verbs": [
+          "GET"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "uc1",
+    "name": "UC1 - US West (Santa Clara)",
+    "links": [
+      {
+        "rel": "self",
+        "href": "/v2/datacenters/altd/uc1"
+      },
+      {
+        "rel": "deploymentCapabilities",
+        "href": "/v2/datacenters/altd/uc1/deploymentCapabilities"
+      },
+      {
+        "rel": "loadBalancers",
+        "href": "/v2/sharedLoadBalancers/altd/uc1",
+        "verbs": [
+          "GET",
+          "POST"
+        ]
+      },
+      {
+        "rel": "computeLimits",
+        "href": "/v2/datacenters/altd/uc1/computeLimits",
+        "verbs": [
+          "GET",
+          "POST"
+        ]
+      },
+      {
+        "rel": "networkLimits",
+        "href": "/v2/datacenters/altd/uc1/networkLimits",
+        "verbs": [
+          "GET"
+        ]
+      },
+      {
+        "rel": "availableOvfs",
+        "href": "/v2/vmImport/altd/uc1/available",
+        "verbs": [
+          "GET"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ut1",
+    "name": "UT1 - US Central (Salt Lake City)",
+    "links": [
+      {
+        "rel": "self",
+        "href": "/v2/datacenters/altd/ut1"
+      },
+      {
+        "rel": "deploymentCapabilities",
+        "href": "/v2/datacenters/altd/ut1/deploymentCapabilities"
+      },
+      {
+        "rel": "loadBalancers",
+        "href": "/v2/sharedLoadBalancers/altd/ut1",
+        "verbs": [
+          "GET",
+          "POST"
+        ]
+      },
+      {
+        "rel": "computeLimits",
+        "href": "/v2/datacenters/altd/ut1/computeLimits",
+        "verbs": [
+          "GET",
+          "POST"
+        ]
+      },
+      {
+        "rel": "networkLimits",
+        "href": "/v2/datacenters/altd/ut1/networkLimits",
+        "verbs": [
+          "GET"
+        ]
+      },
+      {
+        "rel": "availableOvfs",
+        "href": "/v2/vmImport/altd/ut1/available",
+        "verbs": [
+          "GET"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "va1",
+    "name": "VA1 - US East (Sterling)",
+    "links": [
+      {
+        "rel": "self",
+        "href": "/v2/datacenters/altd/va1"
+      },
+      {
+        "rel": "deploymentCapabilities",
+        "href": "/v2/datacenters/altd/va1/deploymentCapabilities"
+      },
+      {
+        "rel": "loadBalancers",
+        "href": "/v2/sharedLoadBalancers/altd/va1",
+        "verbs": [
+          "GET",
+          "POST"
+        ]
+      },
+      {
+        "rel": "computeLimits",
+        "href": "/v2/datacenters/altd/va1/computeLimits",
+        "verbs": [
+          "GET",
+          "POST"
+        ]
+      },
+      {
+        "rel": "networkLimits",
+        "href": "/v2/datacenters/altd/va1/networkLimits",
+        "verbs": [
+          "GET"
+        ]
+      },
+      {
+        "rel": "availableOvfs",
+        "href": "/v2/vmImport/altd/va1/available",
+        "verbs": [
+          "GET"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "wa1",
+    "name": "WA1 - US West (Seattle)",
+    "links": [
+      {
+        "rel": "self",
+        "href": "/v2/datacenters/altd/wa1"
+      },
+      {
+        "rel": "deploymentCapabilities",
+        "href": "/v2/datacenters/altd/wa1/deploymentCapabilities"
+      },
+      {
+        "rel": "loadBalancers",
+        "href": "/v2/sharedLoadBalancers/altd/wa1",
+        "verbs": [
+          "GET",
+          "POST"
+        ]
+      },
+      {
+        "rel": "computeLimits",
+        "href": "/v2/datacenters/altd/wa1/computeLimits",
+        "verbs": [
+          "GET",
+          "POST"
+        ]
+      },
+      {
+        "rel": "networkLimits",
+        "href": "/v2/datacenters/altd/wa1/networkLimits",
+        "verbs": [
+          "GET"
+        ]
+      },
+      {
+        "rel": "availableOvfs",
+        "href": "/v2/vmImport/altd/wa1/available",
+        "verbs": [
+          "GET"
+        ]
+      }
+    ]
+  }
+]
