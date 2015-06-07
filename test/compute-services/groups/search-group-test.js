@@ -9,15 +9,15 @@ describe('Search group by name and datacenter [INTEGRATION]', function () {
     it('Should found "Default group"', function (done) {
         this.timeout(10000);
 
+        var DataCenter = compute.DataCenter;
+        var Group = compute.Group;
+
         compute
             .groups()
             .findByNameAndDatacenter(
                 {
-                    datacenter: {
-                        id: 'de1',
-                        name: 'DE1 - Germany (Frankfurt)'
-                    },
-                    name: 'Default Group'
+                    datacenter: DataCenter.DE_FRANKFURT,
+                    name: Group.DEFAULT
                 }
             )
             .then(assertThatGroupIsDefault)

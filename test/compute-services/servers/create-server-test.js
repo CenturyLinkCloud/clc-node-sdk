@@ -18,7 +18,7 @@ describe('Create server operation [INTEGRATION, LONG_RUNNING]', function () {
     it('Should create new server', function (done) {
         this.timeout(1000 * 60 * 15);
         var ttl = new Date();
-        ttl.setHours(ttl.getHours()+3);
+        ttl.setHours(ttl.getHours() + 3);
 
         var DataCenter = compute.DataCenter;
         var Server = compute.Server;
@@ -34,7 +34,7 @@ describe('Create server operation [INTEGRATION, LONG_RUNNING]', function () {
                     name: Group.DEFAULT
                 },
                 template: {
-                    datacenter: compute.DataCenter.DE_FRANKFURT,
+                    datacenter: DataCenter.DE_FRANKFURT,
                     os: compute.Os.CENTOS,
                     version: "6",
                     architecture: compute.Machine.Architecture.X86_64
