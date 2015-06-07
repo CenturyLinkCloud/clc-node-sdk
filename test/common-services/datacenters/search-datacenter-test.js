@@ -2,6 +2,8 @@
 var Sdk = require('./../../../lib/clc-sdk.js');
 var common = new Sdk().commonServices();
 var TestAsserts = require("./../../test-asserts.js");
+var JsMockito = require('jsmockito').JsMockito;
+var Promise = require("bluebird");
 
 describe('Search datacenter by reference [INTEGRATION]', function () {
     var assertThatDataCenterIsDe1 = new TestAsserts().assertThatDataCenterIsDe1;
@@ -51,18 +53,21 @@ describe('Search datacenter by reference [INTEGRATION]', function () {
     it('Should found "de1" datacenter by conditional criteria', function (done) {
         this.timeout(10000);
 
-        common
-            .dataCenters()
-            .find({
-                and:[
-                    {nameContains:'DE'},
-                    {and:[
-                        {nameContains:'Germany'},
-                        {id:'de1'}
-                    ]
-                    }
+        var mockedFindFn = JsMockito.spy(common.dataCenters().find);
+        var criteria = {
+            and:[
+                {nameContains:'DE'},
+                {and:[
+                    {nameContains:'Germany'},
+                    {id:'de1'}
                 ]
-            })
+                }
+            ]
+        };
+
+        JsMockito.when(mockedFindFn)(criteria).thenReturn(Promise.resolve(common.DataCenter.DE_FRANKFURT));
+
+        mockedFindFn(criteria)
             .then(assertThatDataCenterIsDe1)
             .then(function () {
                 done();
