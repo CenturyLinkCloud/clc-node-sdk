@@ -10,7 +10,8 @@
     "long-running-tests": "mocha --recursive test/*/*/*.js --fgrep \"[INTEGRATION, LONG_RUNNING]\"",
     "jshint": "jshint --verbose ./lib ./test",
     "jshint-watch": "watch \"npm run jshint\" lib test",
-    "watch-all": "npm run tests-watch & npm run jshint-watch"
+    "watch-all": "npm run tests-watch & npm run jshint-watch",
+    "gen-docs": "node_modules\\.bin\\jsdoc -c conf.json"
   },
   "dependencies": {
     "bluebird": "^2.9.26",
@@ -20,6 +21,7 @@
   "devDependencies": {
     "jshint": "^2.8.0",
     "mocha": "^2.2.5",
-    "watch": "^0.16.0"
+    "watch": "^0.16.0",
+    "jsdoc": "^3.3.1"
   }
 }
