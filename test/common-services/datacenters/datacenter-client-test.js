@@ -1,6 +1,7 @@
 
 var AuthenticatedClient = require('./../../../lib/core/client/authenticated-client.js');
 var DataCenterClient = require('./../../../lib/common-services/datacenters/datacenter-client.js');
+var DataCenter = require('./../../../lib/compute-services/domain/datacenter.js');
 
 describe('Test DataCenter client functions [INTEGRATION]', function () {
     var dataCenterClient = new DataCenterClient(new AuthenticatedClient());
@@ -19,7 +20,7 @@ describe('Test DataCenter client functions [INTEGRATION]', function () {
         this.timeout(15000);
 
         dataCenterClient
-            .getDeploymentCapabilities('DE1')
+            .getDeploymentCapabilities(DataCenter.DE_FRANKFURT.id)
             .then(function (result) {
                 done();
             });

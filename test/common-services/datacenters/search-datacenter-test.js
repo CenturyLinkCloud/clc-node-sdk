@@ -11,7 +11,7 @@ describe('Search datacenter by reference [INTEGRATION]', function () {
 
         common
             .dataCenters()
-            .findByRef({ id: 'de1'})
+            .findByRef({ id: common.DataCenter.DE_FRANKFURT.id})
             .then(assertThatDataCenterIsDe1)
             .then(function () {
                 done();

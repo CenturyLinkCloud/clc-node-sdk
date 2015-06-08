@@ -3,6 +3,7 @@ var AuthenticatedClient = require('./../../../lib/core/client/authenticated-clie
 var DataCenterClient = require('./../../../lib/common-services/datacenters/datacenter-client.js');
 var ServerClient = require('./../../../lib/compute-services/servers/server-client.js');
 var _ = require('underscore');
+var DataCenter = require('./../../../lib/compute-services/domain/datacenter.js');
 
 
 describe('Test Server client functions [INTEGRATION]', function () {
@@ -15,7 +16,7 @@ describe('Test Server client functions [INTEGRATION]', function () {
         dataCenterClient
             .findAllDataCenters()
             .then(function (list) {
-                return _.findWhere(list, {id : 'de1'});
+                return _.findWhere(list, {id : DataCenter.DE_FRANKFURT.id});
             })
             .then(function (dataCenter) {
                 return _.findWhere(dataCenter.links, {rel: 'group'}).id;

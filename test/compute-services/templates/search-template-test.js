@@ -10,7 +10,7 @@ describe('Search templates test [INTEGRATION, LONG_RUNNING]', function () {
         compute
             .templates()
             .find({
-                dataCenterIds: 'de1',
+                dataCenterIds: compute.DataCenter.DE_FRANKFURT
             })
             .then(console.log)
             .then(function () {
