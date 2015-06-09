@@ -4,7 +4,7 @@ var TestAsserts = require("./../../test-asserts.js");
 var Promise = require("bluebird");
 var fs = require('fs');
 
-describe('Search datacenter by reference [INTEGRATION]', function () {
+describe('Search datacenter by reference [UNIT]', function () {
     var assertThatDataCenterIsDe1 = new TestAsserts().assertThatDataCenterIsDe1;
     var assertThatArrayIsEmpty = new TestAsserts().assertThatArrayIsEmpty;
     var dataCenters = [];
@@ -28,7 +28,7 @@ describe('Search datacenter by reference [INTEGRATION]', function () {
 
         common
             .dataCenters()
-            .findByRef(DataCenter.DE_FRANKFURT)
+            .findByRef({ id: "de1" })
             .then(assertThatDataCenterIsDe1)
             .then(function () {
                 done();
