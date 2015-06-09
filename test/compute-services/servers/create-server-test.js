@@ -34,9 +34,9 @@ describe('Create server operation [INTEGRATION, LONG_RUNNING]', function () {
                     name: Group.DEFAULT
                 },
                 template: {
-                    datacenter: DataCenter.DE_FRANKFURT,
-                    os: {
-                        os: compute.Os.CENTOS,
+                    dataCenter: DataCenter.DE_FRANKFURT,
+                    operatingSystem: {
+                        family: compute.Os.CENTOS,
                         version: "6",
                         architecture: compute.Machine.Architecture.X86_64
                     }
