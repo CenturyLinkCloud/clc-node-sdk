@@ -35,9 +35,11 @@ describe('Create server operation [INTEGRATION, LONG_RUNNING]', function () {
                 },
                 template: {
                     datacenter: DataCenter.DE_FRANKFURT,
-                    os: compute.Os.CENTOS,
-                    version: "6",
-                    architecture: compute.Machine.Architecture.X86_64
+                    os: {
+                        os: compute.Os.CENTOS,
+                        version: "6",
+                        architecture: compute.Machine.Architecture.X86_64
+                    }
                 },
                 network: {
                     primaryDns: "172.17.1.26",
