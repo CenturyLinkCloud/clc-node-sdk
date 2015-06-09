@@ -14,10 +14,12 @@ describe('Search group by name and datacenter [INTEGRATION]', function () {
 
         compute
             .groups()
-            .findByNameAndDatacenter({
-                datacenter: DataCenter.DE_FRANKFURT,
-                name: Group.DEFAULT
-            })
+            .findByNameAndDatacenter(
+                {
+                    datacenter: DataCenter.DE_FRANKFURT,
+                    name: Group.DEFAULT
+                }
+            )
             .then(assertThatGroupIsDefault)
             .then(function () {
                 done();
