@@ -1,4 +1,3 @@
-
 var assert = require('assert');
 var Group = require('./../lib/compute-services/domain/group.js');
 var DataCenter = require('./../lib/compute-services/domain/datacenter.js');
@@ -15,5 +14,9 @@ function TestAsserts () {
 
     self.assertThatGroupIsDefault = function (group) {
         assert.equal(group.name, Group.DEFAULT);
+    };
+
+    self.assertThatArrayIsEmpty = function(array) {
+        assert.equal(array.length, 0);
     };
 }
