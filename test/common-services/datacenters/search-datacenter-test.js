@@ -67,13 +67,9 @@ describe('Search datacenter by reference [UNIT]', function () {
         this.timeout(10000);
 
         var criteria = {
-            and:[
-                {nameContains:'DE'},
-                {and:[
-                    {nameContains:'Germany'},
-                    {id:'de1'}
-                ]
-                }
+            and: [
+                { nameContains: 'DE' },
+                { and: [{nameContains:'Germany'}, {id:'de1'}] }
             ]
         };
 
@@ -88,12 +84,9 @@ describe('Search datacenter by reference [UNIT]', function () {
         this.timeout(10000);
 
         var criteria = {
-            and:[
-                {nameContains:'DE'},
-                {and:[
-                    {id:'ca1'}
-                ]
-                }
+            and: [
+                { nameContains:'DE' },
+                { and: [{id:'ca1'}] }
             ]
         };
 
