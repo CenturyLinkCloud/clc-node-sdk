@@ -43,8 +43,14 @@ describe('Create server operation [INTEGRATION, LONG_RUNNING]', function () {
                     primaryDns: "172.17.1.26",
                     secondaryDns: "172.17.1.27"
                 },
-                cpu: 1,
-                memoryGB: 1,
+                machine: {
+                    cpu: 1,
+                    memoryGB: 1,
+                    disks: [
+                        { size: 2 },
+                        { path: "/data", size: 4}
+                    ]
+                },
                 type: Server.STANDARD,
                 storageType: Server.StorageType.STANDARD,
                 ttl: ttl.toISOString()
