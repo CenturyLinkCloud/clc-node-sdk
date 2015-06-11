@@ -1,17 +1,52 @@
 
+var _ = require('underscore');
 var Sdk = require('./../../../lib/clc-sdk.js');
 var compute = new Sdk().computeServices();
 var TestAsserts = require("./../../test-asserts.js");
+var assert = require('assert');
+var Promise = require('bluebird');
+var readFile = Promise.promisify(require("fs").readFile);
 
 describe('Search templates test [INTEGRATION, LONG_RUNNING]', function () {
 
+    var de1Capabilities = [];
+    var va1Capabilities = [];
+    //mocked service
+    var service;
+
+    before(function(done) {
+        Promise.all([
+            readFile('./test/resources/de1_deployment_capabilities.json'),
+            readFile('./test/resources/va1_deployment_capabilities.json')
+        ])
+            .then(function(result) {
+                de1Capabilities = JSON.parse(result[0]);
+                va1Capabilities = JSON.parse(result[1]);
+            })
+            .then(function() {
+                service = compute.templates();
+
+                service._dataCenterService().getDeploymentCapabilities = function(id) {
+                    var capabilities = [];
+                    if (id === 'de1') {
+                        capabilities = de1Capabilities;
+                    }
+                    if (id === 'va1') {
+                        capabilities = va1Capabilities;
+                    }
+                    return Promise.resolve(capabilities);
+                };
+            })
+            .then(done);
+    });
+
     it('Should return list of all "de1" templates', function (done) {
-        this.timeout(1000 * 60 * 15);
+        this.timeout(1000 * 60 * 5);
 
         compute
             .templates()
             .find({
-                dataCenterIds: [compute.DataCenter.DE_FRANKFURT.id, "ca1"]
+                dataCenterIds: [compute.DataCenter.DE_FRANKFURT.id, "va1"]
             })
             .then(TestAsserts.assertThatResultNotEmpty)
             .then(function () {
@@ -20,12 +55,11 @@ describe('Search templates test [INTEGRATION, LONG_RUNNING]', function () {
     });
 
     it('Should return centOs template in "de1" templates', function (done) {
-        this.timeout(1000 * 60 * 15);
+        this.timeout(1000 * 60 * 5);
 
-        compute
-            .templates()
-            .findByRef({
-                dataCenter: ['de1', 'ca2'],
+        service
+            .find({
+                dataCenter: ['de1', 'va1'],
                 dataCenterNameContains: ['Frankfurt', 'Seattle'],
                 dataCenterWhere: function (metadata) {
                     return metadata.id === 'de1';
@@ -42,7 +76,94 @@ describe('Search templates test [INTEGRATION, LONG_RUNNING]', function () {
                     architecture: compute.Machine.Architecture.X86_64
                 }
             })
-            .then(TestAsserts.assertThatResultNotEmpty)
+            .then(function(result) {
+                assert.equal(result.length, 1);
+                assert.equal(result[0].name, "CENTOS-6-64-TEMPLATE");
+            })
+            .then(function () {
+                done();
+            });
+    });
+
+    it('Should return WINDOWS and RHEL templates in "de1" and RHEL in "va1', function (done) {
+        this.timeout(1000 * 60 * 5);
+
+        compute.templates()
+            .find({
+                or:[
+                    {
+                        dataCenter:'de1',
+                        operatingSystem: {family: compute.Os.WINDOWS}
+                    },
+                    {
+                        dataCenter:['va1', 'de1'],
+                        operatingSystem: {family: compute.Os.RHEL}
+                    },
+                    {
+                        or: [
+                            {
+                                nameContains: 'cent',
+                                dataCenterWhere:function(dataCenter) {
+                                    return dataCenter.id === 'de1';
+                                }
+                            },
+                            {
+                                dataCenterNameContains:'Sterling',
+                                descriptionContains: 'Ubuntu'
+                            }
+                        ]
+                    }
+            ]})
+            .then(function(result) {
+                assert(_.every(result, function(template) {
+                    if (['de1', 'va1'].indexOf(template.dataCenter.id) === -1) {
+                        return false;
+                    }
+                    var osType = template.osType.toUpperCase();
+                    if (template.dataCenter.id === 'va1') {
+                        return osType.indexOf(compute.Os.RHEL.toUpperCase()) > -1 ||
+                            osType.indexOf(compute.Os.UBUNTU.toUpperCase()) > -1;
+                    } else {
+                        return osType.indexOf(compute.Os.RHEL.toUpperCase()) > -1 ||
+                            osType.indexOf(compute.Os.WINDOWS.toUpperCase()) > -1 ||
+                            osType.indexOf(compute.Os.CENTOS.toUpperCase()) > -1;
+                    }
+                }), true);
+            })
+            .then(function () {
+                done();
+            });
+    });
+
+    it('Should return empty result', function (done) {
+        this.timeout(1000 * 60 * 5);
+
+        compute.templates()
+            .find({
+                and:[
+                    {
+                        dataCenter:'de1',
+                        operatingSystem: {family: compute.Os.WINDOWS}
+                    },
+                    {
+                        dataCenter:['va1', 'de1'],
+                        operatingSystem: {family: compute.Os.RHEL}
+                    },
+                    {or: [
+                        {
+                            dataCenterNameContains: 'Frank',
+                            name: ['CentOS-6_32Bit']
+                        },
+                        {
+                            dataCenterWhere: function(dataCenter) {
+                                return dataCenter.id === 'de1';
+                            },
+                            nameContains: 'Win'
+                        }
+
+                    ]}
+                ]})
+            .then(TestAsserts.assertThatArrayIsEmpty)
             .then(function () {
                 done();
             });
@@ -53,8 +174,8 @@ describe('Search templates test [INTEGRATION, LONG_RUNNING]', function () {
 
         compute
             .templates()
-            .findByRef({
-                dataCenter: compute.DataCenter.DE_FRANKFURT,
+            .find({
+                dataCenter: compute.DataCenter.DE_FRANKFURT.id,
                 where: function(metadata) {
                     return metadata.capabilities.indexOf("cpuAutoscale") > -1;
                 }

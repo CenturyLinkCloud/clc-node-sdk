@@ -11,7 +11,7 @@ describe('Search datacenter by reference [INTEGRATION]', function () {
     var service;
 
     before(function(done) {
-        fs.readFile('./test/common-services/datacenters/data_centers_list.json', function(err, data) {
+        fs.readFile('./test/resources/data_centers_list.json', function(err, data) {
             dataCenters = JSON.parse(data);
 
             service = common.dataCenters();
