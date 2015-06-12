@@ -183,7 +183,7 @@ describe('Search templates test [INTEGRATION, LONG_RUNNING]', function () {
         compute
             .templates()
             .find({
-                dataCenter: compute.DataCenter.DE_FRANKFURT.id,
+                dataCenter: compute.DataCenter.DE_FRANKFURT,
                 where: function(metadata) {
                     return metadata.capabilities.indexOf("cpuAutoscale") > -1;
                 }
