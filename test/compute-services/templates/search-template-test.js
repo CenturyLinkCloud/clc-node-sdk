@@ -14,6 +14,14 @@ describe('Search templates test [INTEGRATION, LONG_RUNNING]', function () {
     //mocked service
     var service;
 
+    function compareIgnoreCase(expected, actual) {
+        if (_.isString(expected) && _.isString(actual)) {
+            return actual.toUpperCase().indexOf(expected.toUpperCase()) > -1;
+        }
+        return false;
+
+    }
+
     before(function(done) {
         Promise.all([
             readFile('./test/resources/de1_deployment_capabilities.json'),
@@ -90,25 +98,25 @@ describe('Search templates test [INTEGRATION, LONG_RUNNING]', function () {
 
         compute.templates()
             .find({
-                or:[
+                or: [
                     {
-                        dataCenter:'de1',
+                        dataCenter: 'de1',
                         operatingSystem: {family: compute.Os.WINDOWS}
                     },
                     {
-                        dataCenter:['va1', 'de1'],
+                        dataCenter: ['va1', 'de1'],
                         operatingSystem: {family: compute.Os.RHEL}
                     },
                     {
                         or: [
                             {
                                 nameContains: 'cent',
-                                dataCenterWhere:function(dataCenter) {
+                                dataCenterWhere: function(dataCenter) {
                                     return dataCenter.id === 'de1';
                                 }
                             },
                             {
-                                dataCenterNameContains:'Sterling',
+                                dataCenterNameContains: 'Sterling',
                                 descriptionContains: 'Ubuntu'
                             }
                         ]
@@ -119,14 +127,14 @@ describe('Search templates test [INTEGRATION, LONG_RUNNING]', function () {
                     if (['de1', 'va1'].indexOf(template.dataCenter.id) === -1) {
                         return false;
                     }
-                    var osType = template.osType.toUpperCase();
+                    var osType = template.osType;
                     if (template.dataCenter.id === 'va1') {
-                        return osType.indexOf(compute.Os.RHEL.toUpperCase()) > -1 ||
-                            osType.indexOf(compute.Os.UBUNTU.toUpperCase()) > -1;
+                        return compareIgnoreCase(compute.Os.RHEL, osType) ||
+                            compareIgnoreCase(compute.Os.UBUNTU, osType);
                     } else {
-                        return osType.indexOf(compute.Os.RHEL.toUpperCase()) > -1 ||
-                            osType.indexOf(compute.Os.WINDOWS.toUpperCase()) > -1 ||
-                            osType.indexOf(compute.Os.CENTOS.toUpperCase()) > -1;
+                        return compareIgnoreCase(compute.Os.RHEL, osType) ||
+                            compareIgnoreCase(compute.Os.WINDOWS, osType) ||
+                            compareIgnoreCase(compute.Os.CENTOS, osType);
                     }
                 }), true);
             })
@@ -140,13 +148,13 @@ describe('Search templates test [INTEGRATION, LONG_RUNNING]', function () {
 
         compute.templates()
             .find({
-                and:[
+                and: [
                     {
-                        dataCenter:'de1',
+                        dataCenter: 'de1',
                         operatingSystem: {family: compute.Os.WINDOWS}
                     },
                     {
-                        dataCenter:['va1', 'de1'],
+                        dataCenter: ['va1', 'de1'],
                         operatingSystem: {family: compute.Os.RHEL}
                     },
                     {or: [
