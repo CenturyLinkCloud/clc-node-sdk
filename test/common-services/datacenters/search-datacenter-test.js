@@ -4,14 +4,14 @@ var TestAsserts = require("./../../test-asserts.js");
 var Promise = require("bluebird");
 var fs = require('fs');
 
-describe('Search datacenter by reference [UNIT]', function () {
-    var assertThatDataCenterIsDe1 = new TestAsserts().assertThatDataCenterIsDe1;
-    var assertThatArrayIsEmpty = new TestAsserts().assertThatArrayIsEmpty;
+describe('Search datacenter by reference [INTEGRATION]', function () {
+    var assertThatDataCenterIsDe1 = TestAsserts.assertThatDataCenterIsDe1;
+    var assertThatArrayIsEmpty = TestAsserts.assertThatArrayIsEmpty;
     var dataCenters = [];
     var service;
 
     before(function(done) {
-        fs.readFile('./test/common-services/datacenters/data_centers_list.json', function(err, data) {
+        fs.readFile('./test/resources/data_centers_list.json', function(err, data) {
             dataCenters = JSON.parse(data);
 
             service = common.dataCenters();
@@ -26,9 +26,8 @@ describe('Search datacenter by reference [UNIT]', function () {
     it('Should found "de1" datacenter by id', function (done) {
         this.timeout(10000);
 
-        common
-            .dataCenters()
-            .findByRef({ id: "de1" })
+        service
+            .findByRef({ id: common.DataCenter.DE_FRANKFURT.id})
             .then(assertThatDataCenterIsDe1)
             .then(function () {
                 done();
