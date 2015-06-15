@@ -62,6 +62,25 @@ describe('Search templates test [INTEGRATION, LONG_RUNNING]', function () {
             });
     });
 
+    it('Should return Windows template in "de1" templates', function (done) {
+        this.timeout(1000 * 60 * 5);
+
+        service
+            .findByRef({
+                dataCenter: compute.DataCenter.DE_FRANKFURT,
+                os: compute.Os.WINDOWS,
+                version: '2008',
+                architecture: compute.Machine.Architecture.X86_64,
+                edition: "Enterprise"
+            })
+            .then(function(result) {
+                assert.equal(result.name, "WIN2008R2ENT-64");
+            })
+            .then(function () {
+                done();
+            });
+    });
+
     it('Should return centOs template in "de1" templates', function (done) {
         this.timeout(1000 * 60 * 5);
 
