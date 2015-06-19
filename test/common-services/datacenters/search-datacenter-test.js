@@ -1,5 +1,5 @@
 var Sdk = require('./../../../lib/clc-sdk.js');
-var common = new Sdk().commonServices();
+var common = new Sdk().baseServices();
 var TestAsserts = require("./../../test-asserts.js");
 var Promise = require("bluebird");
 var fs = require('fs');
