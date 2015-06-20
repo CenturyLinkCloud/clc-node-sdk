@@ -4,7 +4,7 @@ var TestAsserts = require("./../../test-asserts.js");
 var Promise = require("bluebird");
 var fs = require('fs');
 
-describe('Search datacenter by reference [INTEGRATION]', function () {
+describe('Search datacenter by reference [UNIT]', function () {
     var assertThatDataCenterIsDe1 = TestAsserts.assertThatDataCenterIsDe1;
     var assertThatArrayIsEmpty = TestAsserts.assertThatArrayIsEmpty;
     var dataCenters = [];

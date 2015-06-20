@@ -7,10 +7,8 @@ var assert = require('assert');
 var Promise = require('bluebird');
 var readFile = Promise.promisify(require("fs").readFile);
 
-describe('Search templates test [INTEGRATION, LONG_RUNNING]', function () {
+describe('Search templates test [UNIT]', function () {
 
-    var de1Capabilities = [];
-    var va1Capabilities = [];
     //mocked service
     var service;
 
@@ -23,32 +21,35 @@ describe('Search templates test [INTEGRATION, LONG_RUNNING]', function () {
     }
 
     before(function(done) {
-        Promise.all([
-            readFile('./test/resources/de1_deployment_capabilities.json'),
-            readFile('./test/resources/va1_deployment_capabilities.json')
-        ])
+        Promise
+            .all([
+                readFile('./test/resources/de1_deployment_capabilities.json'),
+                readFile('./test/resources/va1_deployment_capabilities.json'),
+                readFile('./test/resources/data_centers_list.json')
+            ])
             .then(function(result) {
-                de1Capabilities = JSON.parse(result[0]);
-                va1Capabilities = JSON.parse(result[1]);
-            })
-            .then(function() {
+                var de1Capabilities = JSON.parse(result[0]);
+                var va1Capabilities = JSON.parse(result[1]);
+                var dataCentersList = JSON.parse(result[2]);
                 service = compute.templates();
 
-                service._dataCenterService().getDeploymentCapabilities = function(id) {
+                service._dataCenterService().getDeploymentCapabilities = function (id) {
                     var capabilities = [];
-                    if (id === 'de1') {
-                        capabilities = de1Capabilities;
-                    }
-                    if (id === 'va1') {
-                        capabilities = va1Capabilities;
-                    }
+
+                    id === 'de1' && (capabilities = de1Capabilities);
+                    id === 'va1' && (capabilities = va1Capabilities);
+
                     return Promise.resolve(capabilities);
+                };
+
+                service._dataCenterService()._dataCenterClient().findAllDataCenters = function () {
+                    return Promise.resolve(dataCentersList);
                 };
             })
             .then(done);
     });
 
-    it('Should return list of all "de1" templates', function (done) {
+    it('Should return list of all "de1" templates [UNIT]', function (done) {
         this.timeout(1000 * 60 * 5);
 
         compute
