@@ -54,7 +54,7 @@ describe('Search templates test [UNIT]', function () {
             .then(done);
     });
 
-    it('Should return list of all "de1" templates [UNIT]', function (done) {
+    it('Should return list of all "de1" templates', function (done) {
         this.timeout(1000 * 60 * 5);
 
         compute

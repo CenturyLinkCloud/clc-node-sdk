@@ -3,7 +3,7 @@ var AuthenticatedClient = require('./../../../lib/core/client/authenticated-clie
 var DataCenterClient = require('./../../../lib/base-services/datacenters/datacenter-client.js');
 var ServerClient = require('./../../../lib/compute-services/servers/server-client.js');
 var _ = require('underscore');
-var DataCenter = require('./../../../lib/compute-services/domain/datacenter.js');
+var DataCenter = require('./../../../lib/base-services/datacenters/domain/datacenter.js');
 
 
 describe('Test Server client functions [INTEGRATION]', function () {

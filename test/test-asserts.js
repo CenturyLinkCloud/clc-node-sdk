@@ -1,7 +1,7 @@
 var assert = require('assert');
 var _ = require('underscore');
-var Group = require('./../lib/compute-services/domain/group.js');
-var DataCenter = require('./../lib/compute-services/domain/datacenter.js');
+var Group = require('./../lib/compute-services/groups/domain/group.js');
+var DataCenter = require('./../lib/base-services/datacenters/domain/datacenter.js');
 
 var TestAsserts = {
     assertThatDataCenterIsDe1 : function (dataCenter) {
