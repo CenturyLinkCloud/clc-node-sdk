@@ -10,14 +10,18 @@ var readFile = Promise.promisify(require("fs").readFile);
 describe('Search templates test [UNIT]', function () {
 
     //mocked service
-    var service;
+    var service = compute.templates();
 
     function compareIgnoreCase(expected, actual) {
         if (_.isString(expected) && _.isString(actual)) {
             return actual.toUpperCase().indexOf(expected.toUpperCase()) > -1;
         }
-        return false;
 
+        return false;
+    }
+
+    function dataCenterService () {
+        return service._dataCenterService();
     }
 
     before(function(done) {
@@ -31,9 +35,8 @@ describe('Search templates test [UNIT]', function () {
                 var de1Capabilities = JSON.parse(result[0]);
                 var va1Capabilities = JSON.parse(result[1]);
                 var dataCentersList = JSON.parse(result[2]);
-                service = compute.templates();
 
-                service._dataCenterService().getDeploymentCapabilities = function (id) {
+                dataCenterService().getDeploymentCapabilities = function (id) {
                     var capabilities = [];
 
                     id === 'de1' && (capabilities = de1Capabilities);
@@ -42,7 +45,7 @@ describe('Search templates test [UNIT]', function () {
                     return Promise.resolve(capabilities);
                 };
 
-                service._dataCenterService()._dataCenterClient().findAllDataCenters = function () {
+                dataCenterService()._dataCenterClient().findAllDataCenters = function () {
                     return Promise.resolve(dataCentersList);
                 };
             })
