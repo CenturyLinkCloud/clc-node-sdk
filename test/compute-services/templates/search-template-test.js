@@ -6,6 +6,8 @@ var TestAsserts = require("./../../test-asserts.js");
 var assert = require('assert');
 var Promise = require('bluebird');
 var readFile = Promise.promisify(require("fs").readFile);
+var Os = compute.Os;
+var DataCenter = compute.DataCenter;
 
 describe('Search templates test [UNIT]', function () {
 
@@ -58,7 +60,7 @@ describe('Search templates test [UNIT]', function () {
         compute
             .templates()
             .find({
-                dataCenterIds: [compute.DataCenter.DE_FRANKFURT.id, "va1"]
+                dataCenterIds: [DataCenter.DE_FRANKFURT.id, "va1"]
             })
             .then(TestAsserts.assertThatResultNotEmpty)
             .then(function () {
@@ -71,8 +73,8 @@ describe('Search templates test [UNIT]', function () {
 
         service
             .findByRef({
-                dataCenter: compute.DataCenter.DE_FRANKFURT,
-                os: compute.Os.WINDOWS,
+                dataCenter: DataCenter.DE_FRANKFURT,
+                os: Os.WINDOWS,
                 version: '2008',
                 architecture: compute.Machine.Architecture.X86_64,
                 edition: "Enterprise"
@@ -102,7 +104,7 @@ describe('Search templates test [UNIT]', function () {
                     return template.osType === 'centOS6_64Bit';
                 },
                 operatingSystem: {
-                    family: compute.Os.CENTOS,
+                    family: Os.CENTOS,
                     version: '6',
                     architecture: compute.Machine.Architecture.X86_64
                 }
@@ -124,11 +126,11 @@ describe('Search templates test [UNIT]', function () {
                 or: [
                     {
                         dataCenter: 'de1',
-                        operatingSystem: {family: compute.Os.WINDOWS}
+                        operatingSystem: { family: Os.WINDOWS }
                     },
                     {
                         dataCenter: ['va1', 'de1'],
-                        operatingSystem: {family: compute.Os.RHEL}
+                        operatingSystem: {family: Os.RHEL}
                     },
                     {
                         or: [
@@ -152,12 +154,12 @@ describe('Search templates test [UNIT]', function () {
                     }
                     var osType = template.osType;
                     if (template.dataCenter.id === 'va1') {
-                        return compareIgnoreCase(compute.Os.RHEL, osType) ||
-                            compareIgnoreCase(compute.Os.UBUNTU, osType);
+                        return compareIgnoreCase(Os.RHEL, osType) ||
+                            compareIgnoreCase(Os.UBUNTU, osType);
                     } else {
-                        return compareIgnoreCase(compute.Os.RHEL, osType) ||
-                            compareIgnoreCase(compute.Os.WINDOWS, osType) ||
-                            compareIgnoreCase(compute.Os.CENTOS, osType);
+                        return compareIgnoreCase(Os.RHEL, osType) ||
+                            compareIgnoreCase(Os.WINDOWS, osType) ||
+                            compareIgnoreCase(Os.CENTOS, osType);
                     }
                 }), true);
             })
@@ -174,11 +176,11 @@ describe('Search templates test [UNIT]', function () {
                 and: [
                     {
                         dataCenter: 'de1',
-                        operatingSystem: {family: compute.Os.WINDOWS}
+                        operatingSystem: {family: Os.WINDOWS}
                     },
                     {
                         dataCenter: ['va1', 'de1'],
-                        operatingSystem: {family: compute.Os.RHEL}
+                        operatingSystem: {family: Os.RHEL}
                     },
                     {or: [
                         {
@@ -206,7 +208,7 @@ describe('Search templates test [UNIT]', function () {
         compute
             .templates()
             .find({
-                dataCenter: compute.DataCenter.DE_FRANKFURT,
+                dataCenter: DataCenter.DE_FRANKFURT,
                 where: function(metadata) {
                     return metadata.capabilities.indexOf("cpuAutoscale") > -1;
                 }
