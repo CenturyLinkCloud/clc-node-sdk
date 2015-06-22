@@ -68,6 +68,7 @@ describe('Search datacenter by reference [UNIT]', function () {
         var criteria = {
             and: [
                 { nameContains: 'DE' },
+                { name: 'DE1 - Germany (Frankfurt)' },
                 { and: [{ nameContains: 'Germany' }, { id: 'de1' }] }
             ]
         };
