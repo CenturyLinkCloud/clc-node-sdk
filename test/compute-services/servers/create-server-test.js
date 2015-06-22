@@ -1,18 +1,10 @@
 
+var _ = require('underscore');
 var vcr = require('nock-vcr-recorder-mocha');
 var Sdk = require('./../../../lib/clc-sdk.js');
 var compute = new Sdk('cloud_user', 'cloud_user_password').computeServices();
 
 vcr.describe('Create server operation [UNIT]', function () {
-    var promise;
-
-//    after(function(done) {
-//        this.timeout(1000 * 60 * 3);
-//
-//        compute
-//            .servers()
-//            .delete(promise.value());
-//    });
 
     it('Should create new server', function (done) {
         this.timeout(1000 * 60 * 15);
@@ -21,7 +13,7 @@ vcr.describe('Create server operation [UNIT]', function () {
         var Server = compute.Server;
         var Group = compute.Group;
 
-        promise = compute
+        var promise = compute
             .servers()
             .create({
                 name: "web",
@@ -52,9 +44,16 @@ vcr.describe('Create server operation [UNIT]', function () {
                 storageType: Server.StorageType.STANDARD
             });
 
-        promise.then(function() {
-            done();
-        });
+        promise.then(_.partial(deleteServer, done));
     });
+
+    function deleteServer (done, server) {
+        compute
+            .servers()
+            .delete(server)
+            .then(function () {
+                done();
+            });
+    }
 
 });
