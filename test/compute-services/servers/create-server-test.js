@@ -1,24 +1,21 @@
 
+var vcr = require('nock-vcr-recorder-mocha');
 var Sdk = require('./../../../lib/clc-sdk.js');
 var compute = new Sdk().computeServices();
 
-describe('Create server operation [INTEGRATION, LONG_RUNNING]', function () {
+vcr.describe('Create server operation [UNIT]', function () {
     var promise;
 
-    after(function(done) {
-        this.timeout(1000 * 60 * 3);
-        compute
-            .servers()
-            .delete(promise.value())
-            .then(function() {
-                done();
-            });
-    });
+//    after(function(done) {
+//        this.timeout(1000 * 60 * 3);
+//
+//        compute
+//            .servers()
+//            .delete(promise.value());
+//    });
 
     it('Should create new server', function (done) {
         this.timeout(1000 * 60 * 15);
-        var ttl = new Date();
-        ttl.setHours(ttl.getHours() + 3);
 
         var DataCenter = compute.DataCenter;
         var Server = compute.Server;
@@ -48,12 +45,11 @@ describe('Create server operation [INTEGRATION, LONG_RUNNING]', function () {
                     memoryGB: 1,
                     disks: [
                         { size: 2 },
-                        { path: "/data", size: 4}
+                        { path: "/data", size: 4 }
                     ]
                 },
                 type: Server.STANDARD,
-                storageType: Server.StorageType.STANDARD,
-                ttl: ttl.toISOString()
+                storageType: Server.StorageType.STANDARD
             });
 
         promise.then(function() {

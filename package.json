@@ -19,10 +19,11 @@
     "underscore": "^1.8.3"
   },
   "devDependencies": {
-    "jsmockito": "^1.0.5",
+    "jsdoc": "^3.3.1",
     "jshint": "^2.8.0",
+    "jsmockito": "^1.0.5",
     "mocha": "^2.2.5",
-    "watch": "^0.16.0",
-    "jsdoc": "^3.3.1"
+    "nock-vcr-recorder-mocha": "^0.3.2",
+    "watch": "^0.16.0"
   }
 }
