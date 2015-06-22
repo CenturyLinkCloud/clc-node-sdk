@@ -24,7 +24,7 @@ vcr.describe('Create server operation [UNIT]', function () {
                 },
                 template: {
                     dataCenter: DataCenter.DE_FRANKFURT,
-                    os: compute.Os.CENTOS,
+                    os: compute.OsFamily.CENTOS,
                     version: "6",
                     architecture: compute.Machine.Architecture.X86_64
                 },

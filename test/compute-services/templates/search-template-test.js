@@ -6,7 +6,7 @@ var TestAsserts = require("./../../test-asserts.js");
 var assert = require('assert');
 var Promise = require('bluebird');
 var readFile = Promise.promisify(require("fs").readFile);
-var Os = compute.Os;
+var OsFamily = compute.OsFamily;
 var DataCenter = compute.DataCenter;
 
 describe('Search templates test [UNIT]', function () {
@@ -74,7 +74,7 @@ describe('Search templates test [UNIT]', function () {
         service
             .findByRef({
                 dataCenter: DataCenter.DE_FRANKFURT,
-                os: Os.WINDOWS,
+                os: OsFamily.WINDOWS,
                 version: '2008',
                 architecture: compute.Machine.Architecture.X86_64,
                 edition: "Enterprise"
@@ -104,7 +104,7 @@ describe('Search templates test [UNIT]', function () {
                     return template.osType === 'centOS6_64Bit';
                 },
                 operatingSystem: {
-                    family: Os.CENTOS,
+                    family: OsFamily.CENTOS,
                     version: '6',
                     architecture: compute.Machine.Architecture.X86_64
                 }
@@ -126,11 +126,11 @@ describe('Search templates test [UNIT]', function () {
                 or: [
                     {
                         dataCenter: 'de1',
-                        operatingSystem: { family: Os.WINDOWS }
+                        operatingSystem: { family: OsFamily.WINDOWS }
                     },
                     {
                         dataCenter: ['va1', 'de1'],
-                        operatingSystem: {family: Os.RHEL}
+                        operatingSystem: {family: OsFamily.RHEL}
                     },
                     {
                         or: [
@@ -154,12 +154,12 @@ describe('Search templates test [UNIT]', function () {
                     }
                     var osType = template.osType;
                     if (template.dataCenter.id === 'va1') {
-                        return compareIgnoreCase(Os.RHEL, osType) ||
-                            compareIgnoreCase(Os.UBUNTU, osType);
+                        return compareIgnoreCase(OsFamily.RHEL, osType) ||
+                            compareIgnoreCase(OsFamily.UBUNTU, osType);
                     } else {
-                        return compareIgnoreCase(Os.RHEL, osType) ||
-                            compareIgnoreCase(Os.WINDOWS, osType) ||
-                            compareIgnoreCase(Os.CENTOS, osType);
+                        return compareIgnoreCase(OsFamily.RHEL, osType) ||
+                            compareIgnoreCase(OsFamily.WINDOWS, osType) ||
+                            compareIgnoreCase(OsFamily.CENTOS, osType);
                     }
                 }), true);
             })
@@ -176,11 +176,11 @@ describe('Search templates test [UNIT]', function () {
                 and: [
                     {
                         dataCenter: 'de1',
-                        operatingSystem: {family: Os.WINDOWS}
+                        operatingSystem: {family: OsFamily.WINDOWS}
                     },
                     {
                         dataCenter: ['va1', 'de1'],
-                        operatingSystem: {family: Os.RHEL}
+                        operatingSystem: {family: OsFamily.RHEL}
                     },
                     {or: [
                         {
