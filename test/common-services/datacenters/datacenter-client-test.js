@@ -1,9 +1,10 @@
 
+var vcr = require('nock-vcr-recorder-mocha');
 var AuthenticatedClient = require('./../../../lib/core/client/authenticated-client.js');
 var DataCenterClient = require('./../../../lib/base-services/datacenters/datacenter-client.js');
 var DataCenter = require('./../../../lib/base-services/datacenters/domain/datacenter.js');
 
-describe('Test DataCenter client functions [INTEGRATION]', function () {
+vcr.describe('Test DataCenter client functions [UNIT]', function () {
     var dataCenterClient = new DataCenterClient(new AuthenticatedClient());
 
     it('Should return list of all datacenters', function (done) {
