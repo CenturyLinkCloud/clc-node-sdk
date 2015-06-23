@@ -24,9 +24,11 @@ vcr.describe('Create server operation [UNIT]', function () {
                 },
                 template: {
                     dataCenter: DataCenter.DE_FRANKFURT,
-                    os: compute.OsFamily.CENTOS,
-                    version: "6",
-                    architecture: compute.Machine.Architecture.X86_64
+                    operatingSystem: {
+                        family: compute.OsFamily.CENTOS,
+                        version: "6",
+                        architecture: compute.Machine.Architecture.X86_64
+                    }
                 },
                 network: {
                     primaryDns: "172.17.1.26",
