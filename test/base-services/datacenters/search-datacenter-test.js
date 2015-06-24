@@ -23,28 +23,6 @@ describe('Search datacenter by reference [UNIT]', function () {
         });
     });
 
-    it('Should found "de1" datacenter by id', function (done) {
-        this.timeout(10000);
-
-        service
-            .findByRef({ id: common.DataCenter.DE_FRANKFURT.id})
-            .then(assertThatDataCenterIsDe1)
-            .then(function () {
-                done();
-            });
-    });
-
-    it('Should found "de1" datacenter by name substring', function (done) {
-        this.timeout(10000);
-
-        service
-            .findByRef({ name: 'Frankfurt'})
-            .then(assertThatDataCenterIsDe1)
-            .then(function () {
-                done();
-            });
-    });
-
     it('Should found "de1" datacenter by filter criteria', function (done) {
         this.timeout(10000);
 
