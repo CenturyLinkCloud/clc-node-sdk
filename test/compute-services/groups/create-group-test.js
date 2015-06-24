@@ -16,8 +16,11 @@ vcr.describe('Create Group Operation [UNIT]', function () {
                 name: 'Group1',
                 description: 'Test Group'
             })
-            .then(function () {
-                done();
-            });
+            .then(deleteGroup)
+            .then(_.partial(done, undefined));
     });
+
+    function deleteGroup (groupCriteria) {
+
+    }
 });
