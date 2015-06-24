@@ -1,0 +1,129 @@
+[
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "POST",
+    "path": "/v2/authentication/login",
+    "body": "*",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f227ec3b147c3ab26c2af5f64c28bc3bcc2a3471f15c2b33ac29bc3a4c38b221b67653bc3bb68c3b45136c29d56c3ab657b5c165943c39f1f3f7fc3b3c2943e2dc2ab69c39616c395c3927cc3bcc293c387c2bbc3b4695dc29539c3bdc3b5c2bdc28fc28ec3b5c2a5c399c2a258c392c3a7c3bac3a74f16c3b9555ec393c39f4fc28ac2b22cc29617c3a6c3abc2a72f5e7fc2912dc2b30bc3bec3ae45c39e5e55c3b55bc3b3c39dc3ab7cc2bac2aec28bc3b6c39ac3bd5d5fc3a675c3b8c397c297c2abc2bcc38ec39ac2aac3bec3a8c3bbc2a3c28f267956c3a7c3b5c29bc3aa6dc2be24c2b4c3b2c3abc3afc3acc3a4c2bfc3b771c3b165c3b1c29dc39fc3ab27777fc2a2787ec3b2c29dc3b9c3a4c3b329c3be3ec3bbc3aa0767c2bb2fc28ac3af3c1c53c2a3c395c3b4c39e17057dc2b83b5dc3ac7fc3bac3bbc3bcc39e4f56c38f7fc3af57c2abc29fc3bac2bdc38f7e70565c15c2bfc38fc3afc3bdc2936fc38f7ec2ba2a66c2bfc3b777c3965f2ec3a5c3b3c3a7c2bfc3b74fc3bec3a0c2a77ec3afc3afc3b0c3b7c293c3857716c3b4c3bdc2bb174fc2bfc398c3bdc3a2c38d57572fc29ec29ec3ad524765c3be6dc3aac3b8c2a74f77c2bec3b8c381c3afc3b3c283173f7d7cc3b5c3854f7fc395c29c2dc2bf7339c3b9c3bcc2abc3a2c38bc2b2297ec3a2c2bb2f7e7a72c3af27c397c2b3c393676f27c39f2dc397c280653f7bc3b653c394c38fc2acc29c1667c38dc399c39bc3afc2ac26c29fc2bf5b4d16c2b3273fc3b5c3b9c3ae6ac382c29fc2bdc3bac3b2c2abc29dc39dc3b964c3b16c49c3b860605fc3bec394c3afc3bdc3aac39ec3a4c39e77c3aac29fc3b8c3aec2ab36c3bbc3ae3e3e7bc3b353c39f7d41632a77c3b2c2af5c1f5fc3adc3bdc3a4c3b56cc3b1c293c39741c2bbc39fc3bb3b7bc3b4c3bfc297c393c38f7fc3b2c3bac3b7c3b9c2bd5f5d4ec28bc3afc38cc3a8c3b3c39dc389c2a27c37c3bbc3ae4fc29e533fc3ad4fc2bd3ec3bbc3b46c51c2bec29d2ec29e153fc3b5c39dc3bbc2abc39fc3a7c3b5c3bdc3b9c3a4c39bc2afc39e02c2a64fc29b2f17c38f7ec3bac3b7c3997bc2b83b59c3be44c3bbc3bb7cc3b7c39dc3aac3b7c3b9c2bdc299c2b64fc39e3c7b75c39a6fc3bbc3aec3b2c3b7c3997bc2b6c2937dc3b7c3a1c3bac3b977c29f35c39977c29fc3bdc2806859c3bcc3a4c39bc3937767c38bc29dc3b10fc2aec29fc29c3cc3b9c3aa270fc296c39727c3b32fc3b3c3b9c2a47c75c3b0c3bcc393c3bb2f76c39fc3bdc3b4c3a9c2ba78c3b2c3b4c39d4f5cc3bcc394c3b2c395c3b5c3af737fc3a7c39ec38547c2bfc3a4c3bf01c28e39c3adc3aac389020000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Wed, 24 Jun 2015 12:53:45 GMT",
+      "content-length": "709"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "POST",
+    "path": "/v2/groups/ALTD/",
+    "body": {
+      "parentGroupId": "e9cf5a7a9fad43a8a9184d0265ae076c",
+      "name": "Group1",
+      "description": "Test Group"
+    },
+    "status": 201,
+    "response": {
+      "id": "317f97709f4b4b09a320a555d9f2c885",
+      "name": "Group1",
+      "description": "Test Group",
+      "locationId": "DE1",
+      "type": "default",
+      "status": "active",
+      "groups": [],
+      "links": [
+        {
+          "rel": "createGroup",
+          "href": "/v2/groups/altd",
+          "verbs": [
+            "POST"
+          ]
+        },
+        {
+          "rel": "createServer",
+          "href": "/v2/servers/altd",
+          "verbs": [
+            "POST"
+          ]
+        },
+        {
+          "rel": "self",
+          "href": "/v2/groups/altd/317f97709f4b4b09a320a555d9f2c885",
+          "verbs": [
+            "GET",
+            "PATCH",
+            "DELETE"
+          ]
+        },
+        {
+          "rel": "parentGroup",
+          "href": "/v2/groups/altd/e9cf5a7a9fad43a8a9184d0265ae076c",
+          "id": "e9cf5a7a9fad43a8a9184d0265ae076c"
+        },
+        {
+          "rel": "defaults",
+          "href": "/v2/groups/altd/317f97709f4b4b09a320a555d9f2c885/defaults",
+          "verbs": [
+            "GET",
+            "POST"
+          ]
+        },
+        {
+          "rel": "billing",
+          "href": "/v2/groups/altd/317f97709f4b4b09a320a555d9f2c885/billing"
+        },
+        {
+          "rel": "archiveGroupAction",
+          "href": "/v2/groups/altd/317f97709f4b4b09a320a555d9f2c885/archive"
+        },
+        {
+          "rel": "statistics",
+          "href": "/v2/groups/altd/317f97709f4b4b09a320a555d9f2c885/statistics"
+        },
+        {
+          "rel": "upcomingScheduledActivities",
+          "href": "/v2/groups/altd/317f97709f4b4b09a320a555d9f2c885/upcomingScheduledActivities"
+        },
+        {
+          "rel": "horizontalAutoscalePolicyMapping",
+          "href": "/v2/groups/altd/317f97709f4b4b09a320a555d9f2c885/horizontalAutoscalePolicy",
+          "verbs": [
+            "GET",
+            "PUT",
+            "DELETE"
+          ]
+        },
+        {
+          "rel": "scheduledActivities",
+          "href": "/v2/groups/altd/317f97709f4b4b09a320a555d9f2c885/scheduledActivities",
+          "verbs": [
+            "GET",
+            "POST"
+          ]
+        }
+      ],
+      "changeInfo": {
+        "createdBy": "idrabenia.altd",
+        "createdDate": "2015-06-24T12:53:46Z",
+        "modifiedBy": "idrabenia.altd",
+        "modifiedDate": "2015-06-24T12:53:46Z"
+      },
+      "customFields": []
+    },
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "expires": "-1",
+      "location": "/v2/groups/altd/317f97709f4b4b09a320a555d9f2c885",
+      "date": "Wed, 24 Jun 2015 12:53:46 GMT",
+      "content-length": "1474"
+    }
+  }
+]
