@@ -6,7 +6,7 @@
     "body": "*",
     "status": 200,
     "response": [
-      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f227ec3b147c3ab26c2af5f64c28bc3bcc2a3471f15c2b33ac29bc3a4c38b221b67653bc3bb68c3b45136c29d56c3ab657b5c165943c39f1f3f7fc3b3c2943e2dc2ab69c39616c395c3927cc3bcc293c387c2bbc3b4695dc29539c3bdc3b5c2bdc28fc28ec3b5c2a5c399c2a258c392c3a7c3bac3a74f16c3b9555ec393c39f4fc28ac2b22cc29617c3a6c3abc2a72f5e7fc2912dc2b30bc3bec3ae45c39e5e55c3b55bc3b3c39dc3ab7cc2bac2aec28bc3b6c39ac3bd5d5fc3a675c3b8c397c297c2abc2bcc38ec39ac2aac3bec3a8c3bbc2a3c28f267956c3a7c3b5c29bc3aa6dc2be24c2b4c3b2c3abc3afc3acc3a4c2bfc3b771c3b165c3b1c29dc39fc3ab27777fc2a2787ec3b2c29dc3b9c3a4c3b329c3be3ec3bbc3aa0767c2bb2fc28ac3af3c1c53c2a3c395c3b4c39e17057dc2b83b5dc3ac7fc3bac3bbc3bcc39e4f56c38f7fc3af57c2abc29fc3bac2bdc38f7e70565c15c2bfc38fc3afc3bdc2936fc38f7ec2ba2a66c2bfc3b777c3965f2ec3a5c3b3c3a7c2bfc3b74fc3bec3a0c2a77ec3afc3afc3b0c3b7c293c3857716c3b4c3bdc2bb174fc2bfc398c3bdc3a2c38d57572fc29ec29ec3ad524765c3be6dc3aac3b8c2a74f77c2bec3b8c381c3afc3b3c283173f7d7cc3b5c3854f7fc395c29c2dc2bf7339c3b9c3bcc2abc3a2c38bc2b2297ec3a2c2bb2f7e7a72c3af27c397c2b3c393676f27c39f2dc397c280653f7bc3b653c394c38fc2acc29c1667c38dc399c39bc3afc2ac26c29fc2bf5b4d16c2b3273fc3b5c3b9c3ae6ac382c29fc2bdc3bac3b2c2abc29dc39dc3b964c3b16c49c3b860605fc3bec394c3afc3bdc3aac39ec3a4c39e77c3aac29fc3b8c3aec2ab36c3bbc3ae3e3e7bc3b353c39f7d41632a77c3b2c2af5c1f5fc3adc3bdc3a4c3b56cc3b1c293c39741c2bbc39fc3bb3b7bc3b4c3bfc297c393c38f7fc3b2c3bac3b7c3b9c2bd5f5d4ec28bc3afc38cc3a8c3b3c39dc389c2a27c37c3bbc3ae4fc29e533fc3ad4fc2bd3ec3bbc3b46c51c2bec29d2ec29e153fc3b5c39dc3bbc2abc39fc3a7c3b5c3bdc3b9c3a4c39bc2afc39e02c2a64fc29b2f17c38f7ec3bac3b7c3997bc2b83b59c3be44c3bbc3bb7cc3b7c39dc3aac3b7c3b9c2bdc299c2b64fc39e3c7b75c39a6fc3bbc3aec3b2c3b7c3997bc2b6c2937dc3b7c3a1c3bac3b977c29f35c39977c29fc3bdc2806859c3bcc3a4c39bc3937767c38bc29dc3b10fc2aec29fc29c3cc3b9c3aa270fc296c39727c3b32fc3b3c3b9c2a47c75c3b0c3bcc393c3bb2f76c39fc3bdc3b4c3a9c2ba78c3b2c3b4c39d4f5cc3bcc394c3b2c395c3b5c3af737fc3a7c39ec38547c2bfc3a4c3bf01c28e39c3adc3aac389020000"
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f227ec3b147c3ab26c2af5f64c28bc3bcc2a3471f15c2b33ac29bc3a4c38b221b67653bc3bb68c3b45136c29d56c3ab657b5c165943c39f1f3f7fc3b3c2943e2dc2ab69c39616c395c3927cc3bcc293c387c2bbc3b4695dc29539c3bdc3b5c2bdc28fc28ec3b5c2a5c399c2a258c392c3a7c3bac3a74f16c3b9555ec393c39f4fc28ac2b22cc29617c3a6c3abc2a72f5e7fc2912dc2b30bc3bec3ae45c39e5e55c3b55bc3b3c39dc3ab7cc2bac2aec28bc3b6c39ac3bd5d5fc3a675c3b8c397c297c2abc2bcc38ec39ac2aac3bec3a8c3bbc2a3c28f267956c3a7c3b5c29bc3aa6dc2be24c2b4c3b2c3abc3afc3acc3a4c2bfc3b771c3b165c3b1c29dc39fc3ab27777fc2a2787ec3b2c29dc3b9c3a4c3b329c3be3ec3bbc3aa0767c2bb2fc28ac3af3c1c53c2a3c395c3b4c39e17057dc2b83b5dc3ac7fc3bac3bbc3bcc39e4f56c38f7fc3af57c2abc29fc3bac2bdc38f7e70565c15c2bfc38fc3afc3bdc2936fc38f7ec2ba2a66c2bfc3b777c3965f2ec3a5c3b3c3a7c2bfc3b74fc3bec3a0c2a77ec3afc3afc3b0c3b7c293c3857716c3b4c3bdc2bb174fc2bfc398c3bdc3a2c38dc3afc3b3c3aec28b375fc39dc2a3c28ec38ac3bcc39bc394c3b14fc29fc3ae7cc3b1c283c39fc3a7072f7e707cc3afc385c29b6973c2b6c3bcc38ec3a5c3a4c3b3c2afc28a2fc38bc2a6c3b8c289c3afc2bec3b8c3a9c389c2bdc29f5cc38f4ec29fc2bdc29d7cc2b75c03c296c3bdc3acc3994f513fc2b3725ac29c35676fc2bfc2b3c29a7cc3be6e3559c38cc29ec3bcc394c3a7c2bbc2ab097fc3b6c3aac38bc2af7676c3a7c293c385c2b325c3a1c283c2817dc3b953c2bfc3b7c2ab7bc2937bc39fc2a97fc3a2c2bbc2afc39ac3acc2bbc3bbc3b8c3acc38d4f7dc3b705c28dc2a9c39cc389c2bf727d7cc2b5c3b7c293c397c2b3c3854f5e07c3ad7ec3afc3afc3acc391c3bf5f4e3fc3bfc389c3abc39fc3a7c3b77e75392dc2be33c2a3c38f7727c28bc3b2c39dc3acc2bb3f794ec3bdc2b43fc3b5c3bac3acc393c2b345c3b976c2ba7856c3bcc39477c3afc2af7ec29fc397c3b7c3a7c2936fc2bf7a0bc2983e6dc2be5c3cc3bbc3a9c39f67c3afc3a1c3ae64c3b913c3adc3afc3b3c39d77c2abc39fc3a7c3b766c39a3e79c3b3c3acc39569c2bfc3adc2bbc38bc39f67c3afc3994ec3b6c39dc287c3abc3a7c39f7dc39664c39f7dc3b603c2a265c3b1c2936f4fc39fc29d2d77c386c2bfc397c3992fc2a2c3b17c7ac3bec3ba17c3bdc3b4c3b5c3acc3a1c39bc29f28c2bf5cc3acc39fc2bf7cc3b2c3aec2b4c3b8c3b64fc3bec3b4c28376c2b2c3bbc28b7ec3b053c3b9c3a4c39977c3af3fc2bfc3bac3a8c297c3bc3fc29fc2bc5776c389020000"
     ],
     "headers": {
       "cache-control": "no-cache",
@@ -15,8 +15,8 @@
       "content-encoding": "gzip",
       "expires": "-1",
       "vary": "Accept-Encoding",
-      "date": "Wed, 24 Jun 2015 12:53:45 GMT",
-      "content-length": "709"
+      "date": "Wed, 24 Jun 2015 15:52:37 GMT",
+      "content-length": "710"
     }
   },
   {
@@ -30,7 +30,7 @@
     },
     "status": 201,
     "response": {
-      "id": "317f97709f4b4b09a320a555d9f2c885",
+      "id": "bf8a52a51f534dc8b05f2cb90fd9ff47",
       "name": "Group1",
       "description": "Test Group",
       "locationId": "DE1",
@@ -54,7 +54,7 @@
         },
         {
           "rel": "self",
-          "href": "/v2/groups/altd/317f97709f4b4b09a320a555d9f2c885",
+          "href": "/v2/groups/altd/bf8a52a51f534dc8b05f2cb90fd9ff47",
           "verbs": [
             "GET",
             "PATCH",
@@ -68,7 +68,7 @@
         },
         {
           "rel": "defaults",
-          "href": "/v2/groups/altd/317f97709f4b4b09a320a555d9f2c885/defaults",
+          "href": "/v2/groups/altd/bf8a52a51f534dc8b05f2cb90fd9ff47/defaults",
           "verbs": [
             "GET",
             "POST"
@@ -76,23 +76,23 @@
         },
         {
           "rel": "billing",
-          "href": "/v2/groups/altd/317f97709f4b4b09a320a555d9f2c885/billing"
+          "href": "/v2/groups/altd/bf8a52a51f534dc8b05f2cb90fd9ff47/billing"
         },
         {
           "rel": "archiveGroupAction",
-          "href": "/v2/groups/altd/317f97709f4b4b09a320a555d9f2c885/archive"
+          "href": "/v2/groups/altd/bf8a52a51f534dc8b05f2cb90fd9ff47/archive"
         },
         {
           "rel": "statistics",
-          "href": "/v2/groups/altd/317f97709f4b4b09a320a555d9f2c885/statistics"
+          "href": "/v2/groups/altd/bf8a52a51f534dc8b05f2cb90fd9ff47/statistics"
         },
         {
           "rel": "upcomingScheduledActivities",
-          "href": "/v2/groups/altd/317f97709f4b4b09a320a555d9f2c885/upcomingScheduledActivities"
+          "href": "/v2/groups/altd/bf8a52a51f534dc8b05f2cb90fd9ff47/upcomingScheduledActivities"
         },
         {
           "rel": "horizontalAutoscalePolicyMapping",
-          "href": "/v2/groups/altd/317f97709f4b4b09a320a555d9f2c885/horizontalAutoscalePolicy",
+          "href": "/v2/groups/altd/bf8a52a51f534dc8b05f2cb90fd9ff47/horizontalAutoscalePolicy",
           "verbs": [
             "GET",
             "PUT",
@@ -101,7 +101,7 @@
         },
         {
           "rel": "scheduledActivities",
-          "href": "/v2/groups/altd/317f97709f4b4b09a320a555d9f2c885/scheduledActivities",
+          "href": "/v2/groups/altd/bf8a52a51f534dc8b05f2cb90fd9ff47/scheduledActivities",
           "verbs": [
             "GET",
             "POST"
@@ -110,9 +110,9 @@
       ],
       "changeInfo": {
         "createdBy": "idrabenia.altd",
-        "createdDate": "2015-06-24T12:53:46Z",
+        "createdDate": "2015-06-24T15:52:39Z",
         "modifiedBy": "idrabenia.altd",
-        "modifiedDate": "2015-06-24T12:53:46Z"
+        "modifiedDate": "2015-06-24T15:52:39Z"
       },
       "customFields": []
     },
@@ -121,8 +121,8 @@
       "pragma": "no-cache",
       "content-type": "application/json; charset=utf-8",
       "expires": "-1",
-      "location": "/v2/groups/altd/317f97709f4b4b09a320a555d9f2c885",
-      "date": "Wed, 24 Jun 2015 12:53:46 GMT",
+      "location": "/v2/groups/altd/bf8a52a51f534dc8b05f2cb90fd9ff47",
+      "date": "Wed, 24 Jun 2015 15:52:39 GMT",
       "content-length": "1474"
     }
   }
