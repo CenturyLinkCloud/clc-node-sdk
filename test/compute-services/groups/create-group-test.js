@@ -8,12 +8,15 @@ var assert = require('assert');
 
 vcr.describe('Create Group Operation [UNIT]', function () {
     it('Should create Group1 in DE1 DataCenter', function (done) {
-        this.timeout(20 * 1000);
+        this.timeout(50 * 1000);
 
         compute
             .groups()
             .create({
-                parentGroupId: 'e9cf5a7a9fad43a8a9184d0265ae076c',
+                parentGroup: {
+                    dataCenter: compute.DataCenter.DE_FRANKFURT,
+                    name: compute.Group.DEFAULT
+                },
                 name: 'Group1',
                 description: 'Test Group'
             })
