@@ -1,14 +1,15 @@
 
 var AuthenticatedClient = require('./../../../lib/core/client/authenticated-client.js');
 var DataCenterClient = require('./../../../lib/base-services/datacenters/datacenter-client.js');
-var ServerClient = require('./../../../lib/compute-services/servers/server-client.js');
+var GroupClient = require('./../../../lib/compute-services/groups/group-client.js');
 var _ = require('underscore');
 var DataCenter = require('./../../../lib/base-services/datacenters/domain/datacenter.js');
 
 
 describe('Test Server client functions [INTEGRATION]', function () {
-    var dataCenterClient = new DataCenterClient(new AuthenticatedClient());
-    var serverClient = new ServerClient(new AuthenticatedClient());
+    var authClient = new AuthenticatedClient();
+    var dataCenterClient = new DataCenterClient(authClient);
+    var groupClient = new GroupClient(authClient);
 
     it('Should return group by ID', function (done) {
         this.timeout(15 * 1000);
@@ -22,7 +23,7 @@ describe('Test Server client functions [INTEGRATION]', function () {
                 return _.findWhere(dataCenter.links, {rel: 'group'}).id;
             })
             .then(function (targetGroupId) {
-                return serverClient.findGroupById(targetGroupId);
+                return groupClient.findGroupById(targetGroupId);
             })
             .then(function (result) {
                 done();

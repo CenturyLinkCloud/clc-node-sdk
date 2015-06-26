@@ -106,7 +106,7 @@
       "name": "web",
       "description": "My web server",
       "group": {
-        "datacenter": {
+        "dataCenter": {
           "id": "de1",
           "name": "DE1 - Germany (Frankfurt)"
         },

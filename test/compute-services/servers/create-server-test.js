@@ -19,7 +19,7 @@ vcr.describe('Create server operation [UNIT]', function () {
                 name: "web",
                 description: "My web server",
                 group: {
-                    datacenter: DataCenter.DE_FRANKFURT,
+                    dataCenter: DataCenter.DE_FRANKFURT,
                     name: Group.DEFAULT
                 },
                 template: {

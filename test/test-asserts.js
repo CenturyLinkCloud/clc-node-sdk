@@ -5,6 +5,7 @@ var DataCenter = require('./../lib/base-services/datacenters/domain/datacenter.j
 
 var TestAsserts = {
     assertThatDataCenterIsDe1 : function (dataCenter) {
+        dataCenter = dataCenter[0];
         assert.equal(dataCenter.id, DataCenter.DE_FRANKFURT.id);
         assert.equal(dataCenter.name, DataCenter.DE_FRANKFURT.name);
     },
