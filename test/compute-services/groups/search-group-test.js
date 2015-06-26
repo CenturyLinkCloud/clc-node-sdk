@@ -18,7 +18,7 @@ vcr.describe('Search group by name and datacenter [UNIT]', function () {
         compute
             .groups()
             .findByNameAndDatacenter({
-                datacenter: DataCenter.DE_FRANKFURT,
+                dataCenter: DataCenter.DE_FRANKFURT,
                 name: Group.DEFAULT
             })
             .then(assertThatGroupIsDefault)

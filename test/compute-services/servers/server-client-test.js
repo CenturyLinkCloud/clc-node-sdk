@@ -23,7 +23,7 @@ describe('Test Server client functions [INTEGRATION]', function () {
                 return _.findWhere(dataCenter.links, {rel: 'group'}).id;
             })
             .then(function (targetGroupId) {
-                return groupClient.get(targetGroupId);
+                return groupClient.findGroupById(targetGroupId);
             })
             .then(function (result) {
                 done();
