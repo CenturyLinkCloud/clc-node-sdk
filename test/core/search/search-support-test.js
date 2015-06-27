@@ -12,13 +12,10 @@ describe('SearchSupport mixin [UNIT]', function () {
 
             assert.deepEqual(result, {or: [
                 {or: [
-                    {or: [
-                        {},
-                        {id: 1}
-                    ]},
+                    {id: 1},
                     {id: 2}
                 ]},
-                {id:3}
+                {id: 3}
             ]});
         });
 
@@ -28,10 +25,7 @@ describe('SearchSupport mixin [UNIT]', function () {
             var result = new SearchSupport()._toCriteriaObject(args);
 
             assert.deepEqual(result, {or: [
-                {or: [
-                    {},
-                    {id: 1}
-                ]},
+                {id: 1},
                 {id: 2}
             ]});
         });
