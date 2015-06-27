@@ -30,6 +30,14 @@ describe('SearchSupport mixin [UNIT]', function () {
             ]});
         });
 
+        it('Should throw exception when leaf is not a criteria', function () {
+            var args = [[{id: 1}, 2]];
+
+            assert.throws(function () {
+                new SearchSupport()._toCriteriaObject(args);
+            });
+        });
+
     });
 
 });
