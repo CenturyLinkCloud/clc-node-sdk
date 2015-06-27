@@ -45,6 +45,15 @@ describe('SearchSupport mixin [UNIT]', function () {
 
             assert.deepEqual(result, {id: 1});
         });
+
+        it('Should just return received object when it contains just a one criteria', function () {
+            var args = [{id: 1}];
+
+            var result = new SearchSupport()._toCriteriaObject(args);
+
+            assert.deepEqual(result, {id: 1});
+        });
+
     });
 
 });
