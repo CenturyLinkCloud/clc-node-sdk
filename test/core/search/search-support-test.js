@@ -38,6 +38,13 @@ describe('SearchSupport mixin [UNIT]', function () {
             });
         });
 
+        it('Should create criteria from array with single item', function () {
+            var args = [[{id: 1}]];
+
+            var result = new SearchSupport()._toCriteriaObject(args);
+
+            assert.deepEqual(result, {id: 1});
+        });
     });
 
 });
