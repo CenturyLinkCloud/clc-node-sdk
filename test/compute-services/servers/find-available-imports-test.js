@@ -3,7 +3,7 @@ var vcr = require('nock-vcr-recorder-mocha');
 var TestAsserts = require("./../../test-asserts.js");
 
 describe('Find available server imports [UNIT]', function () {
-    var compute = new Sdk().computeServices();
+    var compute = new Sdk('cloud_user', 'cloud_user_password').computeServices();
     var templates = compute.templates();
     var DataCenter = compute.DataCenter;
 
