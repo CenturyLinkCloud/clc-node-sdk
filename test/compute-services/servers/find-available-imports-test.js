@@ -13,6 +13,7 @@ describe('Find available server imports [INTEGRATION]', function () {
 
         service
             .findAvailableServerImports(DataCenter.DE_FRANKFURT)
+            .then(TestAsserts.assertNotNull)
             .then(function () {
                 done();
             });
