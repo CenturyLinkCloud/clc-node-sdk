@@ -20,10 +20,9 @@ function listCentOsTemplates() {
             }
         })
         .then(function (results) {
-            var firstItem = results[0];
-
             assert(results.length > 0);
-            assert(/^CENTOS/.test(firstItem.name));
+
+            assert(/^CENTOS/.test(_.first(results).name));
 
             console.log('Available CentOs templates is', _.pluck(results, 'name'));
         });
