@@ -10,15 +10,15 @@ describe('Find Server Credentials for Single Server [UNIT]', function () {
     var serverBuilder = new ServerBuilder(compute);
     var servers = compute.servers();
 
-//    vcr.it('Should return correct credentials of created server', function (done) {
-//        this.timeout(15 * 60 * 1000);
-//
-//        serverBuilder
-//            .createCentOsVm({password: 'qwerty123'})
-//            .then(servers.findCredentials)
-//            .then(_.property('password'))
-//            .then(_.partial(assert.equal, 'qwerty123'))
-//            .then(serverBuilder.deleteServer(done));
-//    });
+    vcr.it('Should return correct credentials of created server', function (done) {
+        this.timeout(15 * 60 * 1000);
+
+        serverBuilder
+            .createCentOsVm({password: '1qa@WS3ed'})
+            .then(servers.findCredentials)
+            .then(_.property('password'))
+            .then(_.partial(assert.equal, '1qa@WS3ed'))
+            .then(serverBuilder.deleteServer(done));
+    });
 
 });
