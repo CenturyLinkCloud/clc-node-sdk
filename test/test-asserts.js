@@ -23,6 +23,10 @@ var TestAsserts = {
             result && !_.isUndefined(result) && !_.isNull(result) && (_.isArray(result) ? result.length > 0 : true),
             true
         );
+    },
+
+    assertNotNull: function(result) {
+        assert.notEqual(result, null);
     }
 };
 
