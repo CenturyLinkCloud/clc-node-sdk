@@ -7,6 +7,7 @@ var compute = sdk.computeServices();
 var DataCenter = compute.DataCenter;
 var OsFamily = compute.OsFamily;
 var Machine = compute.Machine;
+var startsWith = function (str, substr) { return str.indexOf(substr) === 0; };
 
 function listCentOsTemplates() {
     sdk
@@ -22,7 +23,8 @@ function listCentOsTemplates() {
         .then(function (results) {
             assert(results.length > 0);
 
-            assert(/^CENTOS/.test(_.first(results).name));
+            var firstTemplate = _.first(results);
+            assert(startsWith(firstTemplate.name, 'CENTOS'));
 
             console.log('Available CentOs templates is', _.pluck(results, 'name'));
         });
