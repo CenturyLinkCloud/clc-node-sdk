@@ -18,6 +18,7 @@ vcr.describe('Modify Group Operation [UNIT1]', function () {
 
             .then(_.partial(modifyGroup, {name: 'Group2'}))
 
+            .then(assertThatGroupRefIsCorrect)
             .then(assertThatGroupNameIs('Group2'))
 
             .then(deleteGroup(done));
