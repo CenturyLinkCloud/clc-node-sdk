@@ -67,13 +67,6 @@
     "method": "POST",
     "path": "/v2/groups/ALTD/",
     "body": {
-      "parentGroup": {
-        "dataCenter": {
-          "id": "de1",
-          "name": "DE1 - Germany (Frankfurt)"
-        },
-        "name": "Default Group"
-      },
       "name": "Group1",
       "description": "Test Group",
       "parentGroupId": "2dda7958f3ad4d819914e8d3cb643120"

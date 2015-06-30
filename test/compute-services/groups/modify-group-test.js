@@ -7,8 +7,10 @@ var compute = new Sdk('cloud_user', 'cloud_user_password').computeServices();
 var assert = require('assert');
 
 
-vcr.describe('Modify Group Operation [UNIT1]', function () {
+vcr.describe('Modify Group Operation [UNIT]', function () {
     var groups = compute.groups();
+    var DataCenter = compute.DataCenter;
+    var Group = compute.Group;
 
     vcr.it('Should modify group name', function (done) {
         this.timeout(50 * 1000);
@@ -38,15 +40,42 @@ vcr.describe('Modify Group Operation [UNIT1]', function () {
             .then(deleteGroup(done));
     });
 
+    vcr.it('Should change group parent', function (done) {
+        this.timeout(50 * 1000);
+
+        Promise.resolve()
+            .then(_.partial(createGroup, { parentGroup: de1Group(Group.DEFAULT) }))
+
+            .then(_.partial(modifyGroup, { parentGroup: de1Group('DE1 Hardware') }))
+
+            .then(assertThatParentGroupIs('DE1 Hardware'))
+
+            .then(deleteGroup(done));
+    });
+
+    function de1Group (name) {
+        return { dataCenter: DataCenter.DE_FRANKFURT, name: name };
+    }
+
     function assertGroup (callback) {
         return function (group) {
             return groups
                 .findSingle(group)
                 .then(function (metadata) {
-                    callback(metadata);
-                    return group;
+                    return callback(metadata) || group;
                 });
         };
+    }
+
+    function assertThatParentGroupIs(expectedGroupName) {
+        return assertGroup(function (metadata) {
+            return groups
+                .findSingle({dataCenter: DataCenter.DE_FRANKFURT, name: expectedGroupName})
+                .then(function (expectedGroup) {
+                    assert.equal(_.findWhere(metadata.links, {rel: 'parentGroup'}).id, expectedGroup.id);
+                    return { id: metadata.id };
+                });
+        });
     }
 
     function assertThatDescriptionIs(expectedDescription) {
@@ -79,7 +108,7 @@ vcr.describe('Modify Group Operation [UNIT1]', function () {
     }
 
     function assertThatGroupRefIsCorrect (groupRef) {
-        assert(!_.isUndefined(groupRef.id));
+        assert(!_.isUndefined(groupRef.id || groupRef[0].id));
 
         return groupRef;
     }
