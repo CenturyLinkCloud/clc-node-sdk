@@ -39,7 +39,7 @@ describe('Search templates test [UNIT]', function () {
                 var dataCentersList = JSON.parse(result[2]);
 
                 dataCenterService().getDeploymentCapabilities = function (id) {
-                    var capabilities = [];
+                    var capabilities;
 
                     id === 'de1' && (capabilities = de1Capabilities);
                     id === 'va1' && (capabilities = va1Capabilities);
@@ -73,7 +73,7 @@ describe('Search templates test [UNIT]', function () {
 
         service
             .find({
-                dataCenter: ['de1', 'va1'],
+                dataCenterId: ['de1', 'va1'],
                 dataCenterNameContains: ['Frankfurt', 'Seattle'],
                 dataCenterWhere: function (metadata) {
                     return metadata.id === 'de1';
@@ -106,11 +106,11 @@ describe('Search templates test [UNIT]', function () {
             .find({
                 or: [
                     {
-                        dataCenter: 'de1',
+                        dataCenterId: 'de1',
                         operatingSystem: { family: OsFamily.WINDOWS }
                     },
                     {
-                        dataCenter: ['va1', 'de1'],
+                        dataCenterId: ['va1', 'de1'],
                         operatingSystem: {family: OsFamily.RHEL}
                     },
                     {
@@ -156,11 +156,11 @@ describe('Search templates test [UNIT]', function () {
             .find({
                 and: [
                     {
-                        dataCenter: 'de1',
+                        dataCenterId: 'de1',
                         operatingSystem: {family: OsFamily.WINDOWS}
                     },
                     {
-                        dataCenter: ['va1', 'de1'],
+                        dataCenterId: ['va1', 'de1'],
                         operatingSystem: {family: OsFamily.RHEL}
                     },
                     {or: [
@@ -189,7 +189,7 @@ describe('Search templates test [UNIT]', function () {
         compute
             .templates()
             .find({
-                dataCenter: DataCenter.DE_FRANKFURT,
+                dataCenter: [DataCenter.DE_FRANKFURT],
                 where: function(metadata) {
                     return metadata.capabilities.indexOf("cpuAutoscale") > -1;
                 }

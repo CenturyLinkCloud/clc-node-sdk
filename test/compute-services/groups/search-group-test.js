@@ -13,7 +13,7 @@ vcr.describe('Search group by name and datacenter [UNIT]', function () {
     var Group = compute.Group;
 
     it('Should found Default group', function (done) {
-        this.timeout(100000);
+        this.timeout(10000);
 
         compute
             .groups()
@@ -28,7 +28,7 @@ vcr.describe('Search group by name and datacenter [UNIT]', function () {
     });
 
     it('Should found Default group in DE1', function (done) {
-        this.timeout(100000);
+        this.timeout(10000);
 
         compute
             .groups()
@@ -62,7 +62,7 @@ vcr.describe('Search group by name and datacenter [UNIT]', function () {
     });
 
     it('Should found Default groups in different data centers with composite dataCenter criteria', function (done) {
-        this.timeout(100000);
+        this.timeout(10000);
 
         compute
             .groups()
@@ -84,7 +84,7 @@ vcr.describe('Search group by name and datacenter [UNIT]', function () {
     });
 
     it('Should not found any group', function (done) {
-        this.timeout(100000);
+        this.timeout(10000);
 
         compute
             .groups()
@@ -106,7 +106,7 @@ vcr.describe('Search group by name and datacenter [UNIT]', function () {
     });
 
     it('Should found Archive group with composite group criteria', function (done) {
-        this.timeout(100000);
+        this.timeout(10000);
 
         compute
             .groups()
