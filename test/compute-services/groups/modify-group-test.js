@@ -44,16 +44,16 @@ vcr.describe('Modify Group Operation [UNIT]', function () {
         this.timeout(50 * 1000);
 
         Promise.resolve()
-            .then(_.partial(createGroup, { parentGroup: de1Group(Group.DEFAULT) }))
+            .then(_.partial(createGroup, { parentGroup: groupInDE1(Group.DEFAULT) }))
 
-            .then(_.partial(modifyGroup, { parentGroup: de1Group('DE1 Hardware') }))
+            .then(_.partial(modifyGroup, { parentGroup: groupInDE1('DE1 Hardware') }))
 
             .then(assertThatParentGroupIs('DE1 Hardware'))
 
             .then(deleteGroup(done));
     });
 
-    function de1Group (name) {
+    function groupInDE1 (name) {
         return { dataCenter: DataCenter.DE_FRANKFURT, name: name };
     }
 
@@ -68,12 +68,12 @@ vcr.describe('Modify Group Operation [UNIT]', function () {
     }
 
     function assertThatParentGroupIs(expectedGroupName) {
-        return assertGroup(function (metadata) {
+        return assertGroup(function (actualGroup) {
             return groups
                 .findSingle({dataCenter: DataCenter.DE_FRANKFURT, name: expectedGroupName})
                 .then(function (expectedGroup) {
-                    assert.equal(_.findWhere(metadata.links, {rel: 'parentGroup'}).id, expectedGroup.id);
-                    return { id: metadata.id };
+                    assert.equal(_.findWhere(actualGroup.links, {rel: 'parentGroup'}).id, expectedGroup.id);
+                    return { id: actualGroup.id };
                 });
         });
     }
