@@ -40,7 +40,7 @@ vcr.describe('Modify Group Operation [UNIT]', function () {
             .then(deleteGroup(done));
     });
 
-    vcr.it('Should change group parent', function (done) {
+    vcr.it('Should change parent group', function (done) {
         this.timeout(50 * 1000);
 
         Promise.resolve()
