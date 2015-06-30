@@ -57,14 +57,14 @@ vcr.describe('Modify Group Operation [UNIT1]', function () {
 
     function createGroup (config) {
         return groups
-            .create(_.extend({
+            .create(_.defaults(config, {
                 parentGroup: {
                     dataCenter: compute.DataCenter.DE_FRANKFURT,
                     name: compute.Group.DEFAULT
                 },
                 name: 'Group1',
                 description: 'Test Group'
-            }, config))
+            }))
             .then(assertThatGroupRefIsCorrect);
     }
 
