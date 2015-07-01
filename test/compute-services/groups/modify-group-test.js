@@ -26,16 +26,40 @@ vcr.describe('Modify Group Operation [UNIT]', function () {
             .then(deleteGroup(done));
     });
 
-    vcr.it('Should modify group name and description together by one call', function (done) {
+    vcr.it('Should modify group name, description and custom fields together by one call', function (done) {
         this.timeout(50 * 1000);
 
         Promise.resolve()
-            .then(_.partial(createGroup, {name: 'Group1', description: 'Desc1'}))
+            .then(_.partial(createGroup,
+                {
+                    name: 'Group1',
+                    description: 'Desc1',
+                    customFields: [
+                        {
+                            name: "Approved by",
+                            value: "test"
+                        }
+                    ]
+                })
+            )
 
-            .then(_.partial(modifyGroup, {name: 'Group2', description: 'Desc2'}))
+            .then(_.partial(modifyGroup,
+                {
+                    name: 'Group2',
+                    description: 'Desc2',
+                    customFields: [
+                        {
+                            where: function(field) {
+                                return field.type === "text";
+                            },
+                            value: "test2"
+                        }
+                    ]
+                }))
 
             .then(assertThatGroupNameIs('Group2'))
             .then(assertThatDescriptionIs('Desc2'))
+            .then(assertThatGroupCustomFieldIs("test2"))
 
             .then(deleteGroup(done));
     });
@@ -105,6 +129,13 @@ vcr.describe('Modify Group Operation [UNIT]', function () {
     function assertThatGroupNameIs (name) {
         return assertGroup(function (metadata) {
             assert.equal(metadata.name, name);
+        });
+    }
+
+    function assertThatGroupCustomFieldIs (value) {
+        return assertGroup(function (metadata) {
+            assert.equal(metadata.customFields.length, 1);
+            assert.equal(metadata.customFields[0].value, value);
         });
     }
 

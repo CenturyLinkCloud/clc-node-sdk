@@ -48,7 +48,13 @@ vcr.describe('Modify server operation [UNIT]', function () {
                         "size":3
                     }],
                     remove: '0:4'
-                }
+                },
+                customFields: [
+                    {
+                        name: "Type",
+                        value: 1
+                    }
+                ]
             })
             .then(function (serverIds) {
                 assert.equal(serverIds != null, true);
@@ -61,10 +67,9 @@ vcr.describe('Modify server operation [UNIT]', function () {
                 assert.equal(modifiedServer.details.memoryMB, newMemory*1024);
                 assert.equal(modifiedServer.locationId, "DE1");
 
-                assert.equal(modifiedServer.details.diskCount, 5);
-                assert.equal(_.findWhere(modifiedServer.details.disks, {id:'0:4'}), undefined);
-                assert.equal(_.findWhere(modifiedServer.details.disks, {id:'0:1'}).sizeGB, 3);
-                assert.equal(_.findWhere(modifiedServer.details.disks, {id:'0:3'}).sizeGB, 3);
+                assertDisks(modifiedServer);
+
+                assertCustomFields(modifiedServer);
 
                 return modifiedServer;
             })
@@ -75,4 +80,20 @@ vcr.describe('Modify server operation [UNIT]', function () {
             .then(_.partial(assert.equal, '!QWE123rty1'))
             .then(done);
     });
+
+    function assertDisks(modifiedServer) {
+        var details = modifiedServer.details;
+
+        assert.equal(details.diskCount, 5);
+        assert.equal(_.findWhere(details.disks, {id:'0:4'}), undefined);
+        assert.equal(_.findWhere(details.disks, {id:'0:1'}).sizeGB, 3);
+        assert.equal(_.findWhere(details.disks, {id:'0:3'}).sizeGB, 3);
+    }
+
+    function assertCustomFields(modifiedServer) {
+        var customFields = modifiedServer.details.customFields;
+
+        assert.equal(customFields.length, 1);
+        assert.equal(customFields[0].value, 1);
+    }
 });
