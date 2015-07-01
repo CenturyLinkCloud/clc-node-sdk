@@ -120,22 +120,18 @@
         "value": [
           {
             "sizeGB": 1,
-            "partitionPaths": [],
             "diskId": "0:0"
           },
           {
             "sizeGB": 3,
-            "partitionPaths": [],
             "diskId": "0:1"
           },
           {
             "sizeGB": 14,
-            "partitionPaths": [],
             "diskId": "0:2"
           },
           {
             "sizeGB": 3,
-            "partitionPaths": [],
             "diskId": "0:3"
           },
           {
