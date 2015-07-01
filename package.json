@@ -12,7 +12,8 @@
     "jshint-watch": "watch \"npm run jshint\" lib test",
     "watch-all": "npm run tests-watch & npm run jshint-watch",
     "gen-docs": "node_modules\\.bin\\jsdoc -c conf.json",
-    "tests-coverage": "istanbul cover ./node_modules/mocha/bin/_mocha -- -u exports -R spec --fgrep UNIT"
+    "tests-coverage": "istanbul cover ./node_modules/mocha/bin/_mocha -- -u exports -R spec --fgrep UNIT",
+    "loc": "sloc --format cli-table --keys total,source,comment --exclude \"(node_modules\\.*|cassettes\\.*|docs\\.*|coverage\\.*|\\.*idea\\.*)\" ."
   },
   "dependencies": {
     "bluebird": "^2.9.26",
