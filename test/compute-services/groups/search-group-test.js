@@ -6,7 +6,7 @@ var TestAsserts = require("./../../test-asserts.js");
 var assert = require('assert');
 var _ = require("underscore");
 
-vcr.describe('Search group by name and datacenter [UNIT]', function () {
+vcr.describe('Search group operation [UNIT]', function () {
     var assertThatGroupIsDefault = TestAsserts.assertThatGroupIsDefault;
 
     var DataCenter = compute.DataCenter;
@@ -128,6 +128,18 @@ vcr.describe('Search group by name and datacenter [UNIT]', function () {
                 assert.equal(result[0].locationId, "DE1");
             })
             .then(function () {
+                done();
+            });
+    });
+
+    it('Should found all groups', function (done) {
+        this.timeout(10000);
+
+        compute
+            .groups()
+            .find()
+            .then(function (result) {
+                assert.equal(result.length > 0, true);
                 done();
             });
     });
