@@ -9,6 +9,11 @@ Testing
 npm run tests
 ```
 
+##Unit Tests with Coverage
+```bash
+npm run tests-coverage
+```
+
 ##Integration Tests
 ```bash
 export CLC_USERNAME=<USERNAME>
