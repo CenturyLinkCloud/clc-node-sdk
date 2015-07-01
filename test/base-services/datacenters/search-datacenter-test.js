@@ -1,32 +1,18 @@
-var Sdk = require('./../../../lib/clc-sdk.js');
-var common = new Sdk().baseServices();
-var TestAsserts = require("./../../test-asserts.js");
-var Promise = require("bluebird");
-var fs = require('fs');
+var vcr = require('nock-vcr-recorder-mocha');
 
-describe('Search datacenter by reference [UNIT]', function () {
+var Sdk = require('./../../../lib/clc-sdk.js');
+var compute = new Sdk().baseServices();
+var TestAsserts = require("./../../test-asserts.js");
+var assert = require('assert');
+
+vcr.describe('Search datacenter operation [UNIT]', function () {
     var assertThatDataCenterIsDe1 = TestAsserts.assertThatDataCenterIsDe1;
     var assertThatArrayIsEmpty = TestAsserts.assertThatArrayIsEmpty;
-    var dataCenters = [];
-    var service;
 
-    before(function(done) {
-        fs.readFile('./test/resources/data_centers_list.json', function(err, data) {
-            dataCenters = JSON.parse(data);
-
-            service = common.dataCenters();
-            service._dataCenterClient().findAllDataCenters = function() {
-                return Promise.resolve(dataCenters);
-            };
-
-            done();
-        });
-    });
-
-    it('Should found "de1" datacenter by filter criteria', function (done) {
+    it('Should found de1 datacenter by filter criteria', function (done) {
         this.timeout(10000);
 
-        service
+        compute.dataCenters()
             .find({
                 id: ['de1'],
                 nameContains: "de",
@@ -40,19 +26,23 @@ describe('Search datacenter by reference [UNIT]', function () {
             });
     });
 
-    it('Should found "de1" datacenter by conditional criteria', function (done) {
+    it('Should found ca1 datacenter by conditional criteria', function (done) {
         this.timeout(10000);
 
         var criteria = {
             and: [
-                { nameContains: 'DE' },
-                { name: 'DE1 - Germany (Frankfurt)' },
-                { and: [{ nameContains: 'Germany' }, { id: 'de1' }] }
+                { nameContains: 'CA' },
+                { name: 'CA1 - Canada (Vancouver)' },
+                { and: [{ nameContains: 'Canada' }, { id: 'ca1' }] }
             ]
         };
 
-        service.find(criteria)
-            .then(assertThatDataCenterIsDe1)
+        compute.dataCenters()
+            .find(criteria)
+            .then(function(result) {
+                assert.equal(result.length, 1);
+                assert.equal(result[0].id, 'ca1');
+            })
             .then(function () {
                 done();
             });
@@ -68,9 +58,21 @@ describe('Search datacenter by reference [UNIT]', function () {
             ]
         };
 
-        service.find(criteria)
+        compute.dataCenters()
+            .find(criteria)
             .then(assertThatArrayIsEmpty)
             .then(function () {
+                done();
+            });
+    });
+
+    it('Should found all data centers', function (done) {
+        this.timeout(10000);
+
+        compute.dataCenters()
+            .find()
+            .then(function (result) {
+                assert.equal(result.length > 0, true);
                 done();
             });
     });

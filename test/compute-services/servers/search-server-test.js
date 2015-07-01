@@ -48,4 +48,17 @@ vcr.describe('Search server operation [UNIT]', function () {
                 done();
             });
     });
+
+    it('Should search all servers', function (done) {
+        this.timeout(30000);
+
+        compute
+            .servers()
+            .find()
+            .then(function(servers) {
+                assert.equal(servers.length > 0, true);
+
+                done();
+            });
+    });
 });
