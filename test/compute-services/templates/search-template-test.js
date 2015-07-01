@@ -1,17 +1,16 @@
+var vcr = require('nock-vcr-recorder-mocha');
 
 var _ = require('underscore');
 var Sdk = require('./../../../lib/clc-sdk.js');
 var compute = new Sdk().computeServices();
 var TestAsserts = require("./../../test-asserts.js");
 var assert = require('assert');
-var Promise = require('bluebird');
-var readFile = Promise.promisify(require("fs").readFile);
-var OsFamily = compute.OsFamily;
-var DataCenter = compute.DataCenter;
 
-describe('Search templates test [UNIT]', function () {
 
-    //mocked service
+vcr.describe('Search templates test [UNIT]', function () {
+    var OsFamily = compute.OsFamily;
+    var DataCenter = compute.DataCenter;
+
     var service = compute.templates();
 
     function compareIgnoreCase(expected, actual) {
@@ -22,39 +21,7 @@ describe('Search templates test [UNIT]', function () {
         return false;
     }
 
-    function dataCenterService () {
-        return service._dataCenterService();
-    }
-
-    before(function(done) {
-        Promise
-            .all([
-                readFile('./test/resources/de1_deployment_capabilities.json'),
-                readFile('./test/resources/va1_deployment_capabilities.json'),
-                readFile('./test/resources/data_centers_list.json')
-            ])
-            .then(function(result) {
-                var de1Capabilities = JSON.parse(result[0]);
-                var va1Capabilities = JSON.parse(result[1]);
-                var dataCentersList = JSON.parse(result[2]);
-
-                dataCenterService().getDeploymentCapabilities = function (id) {
-                    var capabilities;
-
-                    id === 'de1' && (capabilities = de1Capabilities);
-                    id === 'va1' && (capabilities = va1Capabilities);
-
-                    return Promise.resolve(capabilities);
-                };
-
-                dataCenterService()._dataCenterClient().findAllDataCenters = function () {
-                    return Promise.resolve(dataCentersList);
-                };
-            })
-            .then(done);
-    });
-
-    it('Should return list of all "de1" templates', function (done) {
+    it('Should return list of all de1 templates', function (done) {
         this.timeout(1000 * 60 * 5);
 
         compute
@@ -68,7 +35,7 @@ describe('Search templates test [UNIT]', function () {
             });
     });
 
-    it('Should return centOs template in "de1" templates', function (done) {
+    it('Should return centOs template in de1 templates', function (done) {
         this.timeout(1000 * 60 * 5);
 
         service
@@ -99,7 +66,7 @@ describe('Search templates test [UNIT]', function () {
             });
     });
 
-    it('Should return WINDOWS and RHEL templates in "de1" and RHEL in "va1', function (done) {
+    it('Should return WINDOWS and RHEL templates in de1 and RHEL in va1', function (done) {
         this.timeout(1000 * 60 * 5);
 
         compute.templates()
@@ -183,7 +150,7 @@ describe('Search templates test [UNIT]', function () {
             });
     });
 
-    it('Should return template with cpuAutoscale capability in "de1" templates (by search func)', function (done) {
+    it('Should return template with cpuAutoscale capability in de1 templates (by search func)', function (done) {
         this.timeout(1000 * 60 * 15);
 
         compute
