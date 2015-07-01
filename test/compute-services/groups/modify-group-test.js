@@ -67,12 +67,17 @@ vcr.describe('Modify Group Operation [UNIT]', function () {
         };
     }
 
+    function parentGroupIdOf(actualGroupMetadata) {
+        return _.findWhere(actualGroupMetadata.links, {rel: 'parentGroup'}).id;
+    }
+
     function assertThatParentGroupIs(expectedGroupName) {
         return assertGroup(function (actualGroup) {
             return groups
                 .findSingle({dataCenter: DataCenter.DE_FRANKFURT, name: expectedGroupName})
                 .then(function (expectedGroup) {
-                    assert.equal(_.findWhere(actualGroup.links, {rel: 'parentGroup'}).id, expectedGroup.id);
+                    assert.equal(parentGroupIdOf(actualGroup), expectedGroup.id);
+
                     return { id: actualGroup.id };
                 });
         });

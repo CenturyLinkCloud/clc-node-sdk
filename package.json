@@ -4,7 +4,7 @@
   "description": "CenturyLink Cloud SDK for Node.js",
   "author": "Ilya Drabenia <ilya.drabenia@altoros.com>",
   "scripts": {
-    "tests": "mocha --recursive test/*/*/*.js --fgrep [UNIT]",
+    "tests": "mocha --fgrep [UNIT]",
     "tests-watch": "watch \"npm run tests\" lib test",
     "integration-tests": "mocha --recursive test/*/*/*.js --fgrep [INTEGRATION]",
     "long-running-tests": "mocha --recursive test/*/*/*.js --fgrep \"[INTEGRATION, LONG_RUNNING]\"",
