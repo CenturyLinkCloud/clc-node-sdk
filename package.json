@@ -11,7 +11,8 @@
     "jshint": "jshint --verbose ./lib ./test",
     "jshint-watch": "watch \"npm run jshint\" lib test",
     "watch-all": "npm run tests-watch & npm run jshint-watch",
-    "gen-docs": "node_modules\\.bin\\jsdoc -c conf.json"
+    "gen-docs": "node_modules\\.bin\\jsdoc -c conf.json",
+    "tests-coverage": "istanbul cover ./node_modules/mocha/bin/_mocha -- -u exports -R spec --fgrep UNIT"
   },
   "dependencies": {
     "bluebird": "^2.9.26",
@@ -19,6 +20,7 @@
     "underscore": "^1.8.3"
   },
   "devDependencies": {
+    "istanbul": "^0.3.17",
     "jsdoc": "^3.3.1",
     "jshint": "^2.8.0",
     "jsmockito": "^1.0.5",
