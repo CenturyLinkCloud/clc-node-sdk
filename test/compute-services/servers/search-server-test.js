@@ -15,7 +15,7 @@ vcr.describe('Search server operation [UNIT]', function () {
         this.timeout(10000);
 
         compute.servers()
-            .findByRef({ id: 'de1altdweb580' })
+            .findSingle({ id: 'de1altdweb580' })
             .then(function (result) {
                 assert.equal(result != null, true);
 

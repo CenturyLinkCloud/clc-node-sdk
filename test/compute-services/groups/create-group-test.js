@@ -31,7 +31,7 @@ vcr.describe('Create Group Operation [UNIT]', function () {
     });
 
     it('Should create Group1 in DE1 DataCenter with custom fields', function (done) {
-        this.timeout(500 * 1000);
+        this.timeout(50 * 1000);
 
         compute
             .groups()
@@ -57,7 +57,7 @@ vcr.describe('Create Group Operation [UNIT]', function () {
             })
             .then(assertThatGroupRefIsCorrect)
             .then(function(groupRef) {
-                return compute.groups().findByRef(groupRef);
+                return compute.groups().findSingle(groupRef);
             })
             .then(assertThatGroupWithCustomFields)
 
