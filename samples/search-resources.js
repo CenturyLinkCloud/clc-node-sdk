@@ -15,6 +15,9 @@ var Machine = compute.Machine;
 
 var startsWith = function (str, substr) { return str.indexOf(substr) === 0; };
 var contains = function (str, substr) { return str.indexOf(substr) > -1; };
+var onlyCompletedServers = function (serverMetadata) {
+    return serverMetadata.status !== 'underConstruction';
+};
 
 var server1Name = "srv-1";
 var server2Name = "srv-2";
@@ -83,7 +86,8 @@ function __deleteServer(serverId) {
 /* List all servers available for current user */
 function __findAllServers() {
     return compute.servers().find({
-        dataCenter: [DataCenter.US_EAST_STERLING, DataCenter.US_WEST_SEATTLE]
+        dataCenter: [DataCenter.US_EAST_STERLING, DataCenter.US_WEST_SEATTLE],
+        where: onlyCompletedServers
     })
     .then(function(servers) {
         console.log("All servers:");
@@ -97,7 +101,8 @@ function __findAllServers() {
 function __findAllActiveServers() {
     return compute.servers().find({
         dataCenter: [DataCenter.US_EAST_STERLING, DataCenter.US_WEST_SEATTLE],
-        onlyActive: true
+        onlyActive: true,
+        where: onlyCompletedServers
     })
     .then(function(servers) {
         console.log("Active servers:");
@@ -111,7 +116,8 @@ function __findAllActiveServers() {
 function __findServersByGroup() {
     return compute.servers().find({
         dataCenter: [DataCenter.US_EAST_STERLING, DataCenter.US_WEST_SEATTLE],
-        group: {name: Group.DEFAULT}
+        group: {name: Group.DEFAULT},
+        where: onlyCompletedServers
     })
     .then(function(servers) {
         console.log("Servers from Default Group (VA1 and WA1):");
@@ -126,7 +132,7 @@ function __findServerByValueInMetadata() {
     return compute.servers().find({
         dataCenter: [DataCenter.US_EAST_STERLING, DataCenter.US_WEST_SEATTLE],
         where: function(serverMetadata) {
-            return contains(serverMetadata.description, server1Name)
+            return contains(serverMetadata.description, server1Name) && onlyCompletedServers(serverMetadata)
         }
     })
     .then(function(servers) {
