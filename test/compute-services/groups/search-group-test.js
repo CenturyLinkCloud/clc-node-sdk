@@ -12,23 +12,24 @@ vcr.describe('Search group operation [UNIT]', function () {
     var DataCenter = compute.DataCenter;
     var Group = compute.Group;
 
+    var timeout = 1000000;
+
     it('Should found Default group', function (done) {
-        this.timeout(10000);
+        this.timeout(timeout);
 
         compute
             .groups()
-            .findByNameAndDatacenter({
+            .find({
                 dataCenter: DataCenter.DE_FRANKFURT,
                 name: Group.DEFAULT
             })
+            .then(_.first)
             .then(assertThatGroupIsDefault)
-            .then(function () {
-                done();
-            });
+            .then(done);
     });
 
     it('Should found Default group in DE1', function (done) {
-        this.timeout(10000);
+        this.timeout(timeout);
 
         compute
             .groups()
@@ -62,7 +63,7 @@ vcr.describe('Search group operation [UNIT]', function () {
     });
 
     it('Should found Default groups in different data centers with composite dataCenter criteria', function (done) {
-        this.timeout(10000);
+        this.timeout(timeout);
 
         compute
             .groups()
@@ -84,7 +85,7 @@ vcr.describe('Search group operation [UNIT]', function () {
     });
 
     it('Should not found any group', function (done) {
-        this.timeout(10000);
+        this.timeout(timeout);
 
         compute
             .groups()
@@ -106,7 +107,7 @@ vcr.describe('Search group operation [UNIT]', function () {
     });
 
     it('Should found Archive group with composite group criteria', function (done) {
-        this.timeout(10000);
+        this.timeout(timeout);
 
         compute
             .groups()
@@ -132,8 +133,41 @@ vcr.describe('Search group operation [UNIT]', function () {
             });
     });
 
+    it('Should found default and archive groups in de1 with composite group criteria', function (done) {
+        this.timeout(timeout);
+
+        compute
+            .groups()
+            .find({
+                and: [
+                    {or: [
+                        {
+                            id: "2dda7958f3ad4d819914e8d3cb643120"
+                        },
+                        {
+                            name: Group.ARCHIVE
+                        }
+                    ]},
+                    {
+                        dataCenter: {id:'de1'}
+                    }
+                ]
+            })
+            .then(function(result) {
+                assert.equal(result.length, 2);
+                assert.equal(_.chain(result).pluck('locationId').uniq().value(), "DE1");
+
+                var groupNames = _.chain(result).pluck('name').value();
+                assert.equal(_.contains(groupNames, Group.DEFAULT), true);
+                assert.equal(_.contains(groupNames, Group.ARCHIVE), true);
+            })
+            .then(function () {
+                done();
+            });
+    });
+
     it('Should found all groups', function (done) {
-        this.timeout(10000);
+        this.timeout(timeout);
 
         compute
             .groups()
