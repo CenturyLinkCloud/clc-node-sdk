@@ -2,8 +2,9 @@
 var _ = require('underscore');
 var vcr = require('nock-vcr-recorder-mocha');
 var Sdk = require('./../../../lib/clc-sdk.js');
-var compute = new Sdk('cloud_user', 'cloud_user_password').computeServices();
+var compute = new Sdk(/*'cloud_user', 'cloud_user_password'*/).computeServices();
 var assert = require('assert');
+var GroupBuilder = require('./../group-builder.js');
 
 
 vcr.describe('Create Group Operation [UNIT]', function () {
@@ -68,6 +69,19 @@ vcr.describe('Create Group Operation [UNIT]', function () {
                 done();
             });
     });
+
+//    it('Should delete specified group', function (done) {
+//        this.timeout(50 * 1000);
+//
+//        var groupBuilder = new GroupBuilder(compute);
+//
+//        groupBuilder
+//            .createGroup()
+//            .then(assertThatGroupRefIsCorrect)
+//
+//
+//            .then(groupBuilder.deleteGroup(done));
+//    });
 
     function assertThatGroupWithCustomFields(group) {
         assert.equal(group.customFields.length, 1);
