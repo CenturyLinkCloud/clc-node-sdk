@@ -1,7 +1,7 @@
 
 var vcr = require('nock-vcr-recorder-mocha');
 var Sdk = require('./../../../lib/clc-sdk.js');
-var compute = new Sdk().computeServices();
+var compute = new Sdk('cloud_user', 'cloud_user_password').computeServices();
 var TestAsserts = require("./../../test-asserts.js");
 var assert = require('assert');
 var _ = require("underscore");
@@ -12,7 +12,7 @@ vcr.describe('Search group operation [UNIT]', function () {
     var DataCenter = compute.DataCenter;
     var Group = compute.Group;
 
-    var timeout = 1000000;
+    var timeout = 10000;
 
     it('Should found Default group', function (done) {
         this.timeout(timeout);
