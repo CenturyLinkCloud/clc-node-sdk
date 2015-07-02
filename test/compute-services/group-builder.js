@@ -1,5 +1,7 @@
 
 var _ = require('underscore');
+var assert = require('assert');
+
 
 module.exports = GroupBuilder;
 
@@ -9,10 +11,7 @@ function GroupBuilder (compute) {
 
     self.createGroup = function (configCustomization) {
         var DataCenter = compute.DataCenter;
-        var Server = compute.Server;
         var Group = compute.Group;
-        var OsFamily = compute.OsFamily;
-        var Machine = compute.Machine;
 
         return compute
             .groups()
@@ -34,7 +33,8 @@ function GroupBuilder (compute) {
             return compute
                 .groups()
                 .delete(group)
-                .then(function () {
+                .then(function (groupRef) {
+                    assert(!!groupRef[0].id);
                     done();
                 });
         };
