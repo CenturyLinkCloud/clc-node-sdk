@@ -68,6 +68,14 @@ function __checkServers(servers) {
     });
 }
 
+function __displayResult(result) {
+    _.each(result, function(element) {
+        console.log("    " + element.id);
+    });
+
+    return result;
+}
+
 function __deleteServer(serverId) {
     compute.servers().delete({ id : serverId});
 }
@@ -75,37 +83,57 @@ function __deleteServer(serverId) {
 /* List all servers available for current user */
 function __findAllServers() {
     return compute.servers().find({
-        dataCenter: [DataCenter.US_EAST_STERLING, DataCenter.DE_FRANKFURT]
+        dataCenter: [DataCenter.US_EAST_STERLING, DataCenter.US_WEST_SEATTLE]
     })
+    .then(function(servers) {
+        console.log("All servers:");
+        return servers;
+    })
+    .then(__displayResult)
     .then(__checkServers);
 }
 
 /* Find all active servers in all datacenters */
 function __findAllActiveServers() {
     return compute.servers().find({
-        dataCenter: [DataCenter.US_EAST_STERLING, DataCenter.DE_FRANKFURT],
+        dataCenter: [DataCenter.US_EAST_STERLING, DataCenter.US_WEST_SEATTLE],
         onlyActive: true
     })
+    .then(function(servers) {
+        console.log("Active servers:");
+        return servers;
+    })
+    .then(__displayResult)
     .then(__checkServers);
 }
 
 /* Find server within some group in all datacenters */
 function __findServersByGroup() {
     return compute.servers().find({
-        dataCenter: [DataCenter.US_EAST_STERLING, DataCenter.DE_FRANKFURT],
+        dataCenter: [DataCenter.US_EAST_STERLING, DataCenter.US_WEST_SEATTLE],
         group: {name: Group.DEFAULT}
     })
+    .then(function(servers) {
+        console.log("Servers from Default Group (VA1 and WA1):");
+        return servers;
+    })
+    .then(__displayResult)
     .then(__checkServers);
 }
 
 /* Find server that contains some value in it’s metadata */
 function __findServerByValueInMetadata() {
     return compute.servers().find({
-        dataCenter: [DataCenter.US_EAST_STERLING, DataCenter.DE_FRANKFURT],
+        dataCenter: [DataCenter.US_EAST_STERLING, DataCenter.US_WEST_SEATTLE],
         where: function(serverMetadata) {
             return contains(serverMetadata.description, server1Name)
         }
     })
+    .then(function(servers) {
+        console.log("Server by '" + server1Name + "' value in metadata:");
+        return servers;
+    })
+    .then(__displayResult)
     .then(function(servers) {
         assert.equal(servers.length, 1);
         assert(contains(servers[0].id, server1Name))
@@ -115,9 +143,14 @@ function __findServerByValueInMetadata() {
 /* Find groups that contains keyword in description */
 function __findGroupByKeywordInDescription() {
     return compute.groups().find({
-        dataCenter: [DataCenter.US_EAST_STERLING, DataCenter.DE_FRANKFURT],
+        dataCenter: [DataCenter.US_EAST_STERLING, DataCenter.US_WEST_SEATTLE],
         descriptionContains: "The default"
     })
+    .then(function(servers) {
+        console.log("Groups that contains 'The default' keyword in description:");
+        return servers;
+    })
+    .then(__displayResult)
     .then(function(groups) {
         assert.equal(groups.length, 2);
     });
@@ -140,14 +173,17 @@ function __listCentOsTemplates() {
             var firstTemplate = _.first(results);
             assert(startsWith(firstTemplate.name, 'CENTOS'));
 
-            console.log('Available CentOs templates is', _.pluck(results, 'name'));
+            console.log("Available CentOs templates:");
+            _.each(results, function(template) {
+                console.log("    " + template.name);
+            });
         });
 }
 
 function run() {
     Promise.join(
         __createServer(server1Name, DataCenter.US_EAST_STERLING),
-        __createServer(server2Name, DataCenter.DE_FRANKFURT),
+        __createServer(server2Name, DataCenter.US_WEST_SEATTLE),
         __createServer(server3Name, DataCenter.US_EAST_STERLING),
 
         function(serverId1, serverId2, serverId3) {
@@ -163,7 +199,6 @@ function run() {
     .then(__listCentOsTemplates)
     .then(__findGroupByKeywordInDescription)
     .then(function() {
-        console.log("Created servers ids is ", serverIds);
         _.each(serverIds, __deleteServer);
     });
 }
