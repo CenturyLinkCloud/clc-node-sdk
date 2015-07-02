@@ -56,10 +56,10 @@ vcr.describe('Modify server operation [UNIT]', function () {
                     }
                 ]
             })
-            .then(function (serverIds) {
-                assert.equal(serverIds != null, true);
+            .then(function (serverRefs) {
+                assert.equal(serverRefs != null, true);
 
-                return compute.servers().find({id: serverIds});
+                return compute.servers().find(serverRefs);
             })
             .then(function(modifiedServers) {
                 var modifiedServer = modifiedServers[0];
