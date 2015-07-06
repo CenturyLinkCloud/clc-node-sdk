@@ -16,17 +16,18 @@ vcr.describe('Create server operation [UNIT]', function () {
         var promise = compute
             .servers()
             .create({
-                name: "web",
-                description: "My web server",
+                name: "webOS",
+                description: "My web server with managed OS",
                 group: {
-                    dataCenter: DataCenter.DE_FRANKFURT,
+                    dataCenter: DataCenter.US_EAST_STERLING,
                     name: Group.DEFAULT
                 },
+                managedOS: true,
                 template: {
-                    dataCenter: DataCenter.DE_FRANKFURT,
+                    dataCenter: DataCenter.US_EAST_STERLING,
                     operatingSystem: {
-                        family: compute.OsFamily.CENTOS,
-                        version: "6",
+                        family: compute.OsFamily.RHEL,
+                        version: "5",
                         architecture: compute.Machine.Architecture.X86_64
                     }
                 },
