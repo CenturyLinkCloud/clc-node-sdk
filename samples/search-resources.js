@@ -86,7 +86,7 @@ function __deleteServer(serverId) {
 /* List all servers available for current user */
 function __findAllServers() {
     return compute.servers().find({
-        dataCenter: [DataCenter.US_EAST_STERLING, DataCenter.US_WEST_SEATTLE],
+        dataCenter: [DataCenter.US_EAST_STERLING, DataCenter.US_CENTRAL_SALT_LAKE_CITY],
         where: onlyCompletedServers
     })
     .then(function(servers) {
@@ -100,7 +100,7 @@ function __findAllServers() {
 /* Find all active servers in all datacenters */
 function __findAllActiveServers() {
     return compute.servers().find({
-        dataCenter: [DataCenter.US_EAST_STERLING, DataCenter.US_WEST_SEATTLE],
+        dataCenter: [DataCenter.US_EAST_STERLING, DataCenter.US_CENTRAL_SALT_LAKE_CITY],
         onlyActive: true,
         where: onlyCompletedServers
     })
@@ -115,7 +115,7 @@ function __findAllActiveServers() {
 /* Find server within some group in all datacenters */
 function __findServersByGroup() {
     return compute.servers().find({
-        dataCenter: [DataCenter.US_EAST_STERLING, DataCenter.US_WEST_SEATTLE],
+        dataCenter: [DataCenter.US_EAST_STERLING, DataCenter.US_CENTRAL_SALT_LAKE_CITY],
         group: {name: Group.DEFAULT},
         where: onlyCompletedServers
     })
@@ -127,10 +127,10 @@ function __findServersByGroup() {
     .then(__checkServers);
 }
 
-/* Find server that contains some value in it’s metadata */
+/* Find server that contains some value in itï¿½s metadata */
 function __findServerByValueInMetadata() {
     return compute.servers().find({
-        dataCenter: [DataCenter.US_EAST_STERLING, DataCenter.US_WEST_SEATTLE],
+        dataCenter: [DataCenter.US_EAST_STERLING, DataCenter.US_CENTRAL_SALT_LAKE_CITY],
         where: function(serverMetadata) {
             return contains(serverMetadata.description, server1Name) && onlyCompletedServers(serverMetadata)
         }
@@ -149,7 +149,7 @@ function __findServerByValueInMetadata() {
 /* Find groups that contains keyword in description */
 function __findGroupByKeywordInDescription() {
     return compute.groups().find({
-        dataCenter: [DataCenter.US_EAST_STERLING, DataCenter.US_WEST_SEATTLE],
+        dataCenter: [DataCenter.US_EAST_STERLING, DataCenter.US_CENTRAL_SALT_LAKE_CITY],
         descriptionContains: "The default"
     })
     .then(function(servers) {
@@ -189,7 +189,7 @@ function __listCentOsTemplates() {
 function run() {
     Promise.join(
         __createServer(server1Name, DataCenter.US_EAST_STERLING),
-        __createServer(server2Name, DataCenter.US_WEST_SEATTLE),
+        __createServer(server2Name, DataCenter.US_CENTRAL_SALT_LAKE_CITY),
         __createServer(server3Name, DataCenter.US_EAST_STERLING),
 
         function(serverId1, serverId2, serverId3) {
