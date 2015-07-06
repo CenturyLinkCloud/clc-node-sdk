@@ -70,18 +70,17 @@ vcr.describe('Create Group Operation [UNIT]', function () {
             });
     });
 
-//    it('Should delete specified group', function (done) {
-//        this.timeout(50 * 1000);
-//
-//        var groupBuilder = new GroupBuilder(compute);
-//
-//        groupBuilder
-//            .createGroup()
-//            .then(assertThatGroupRefIsCorrect)
-//
-//
-//            .then(groupBuilder.deleteGroup(done));
-//    });
+    it('Should delete specified group', function (done) {
+        this.timeout(5 * 60 * 1000);
+
+        var groupBuilder = new GroupBuilder(compute);
+
+        groupBuilder
+            .createGroup()
+            .then(assertThatGroupRefIsCorrect)
+
+            .then(groupBuilder.deleteGroup(done));
+    });
 
     function assertThatGroupWithCustomFields(group) {
         assert.equal(group.customFields.length, 1);
