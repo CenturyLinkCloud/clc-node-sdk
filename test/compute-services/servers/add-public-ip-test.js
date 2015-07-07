@@ -42,7 +42,7 @@ vcr.describe('Public IP Address Operations [UNIT]', function () {
             })
             .then(function(servers) {
                 _.each(servers, function(server) {
-                    assert.equal(server.details.ipAddresses.length, 2)
+                    assert.equal(server.details.ipAddresses.length, 2);
                 });
                 /* TODO add assertions within getPublicIp implementation */
             })
