@@ -8,7 +8,7 @@ var assert = require('assert');
 vcr.describe('Create server with managed OS operation  [UNIT]', function () {
 
     it('Should create new server', function (done) {
-        this.timeout(1000 * 60 * 15);
+        this.timeout(1000 * 60);
 
         var DataCenter = compute.DataCenter;
         var Server = compute.Server;
