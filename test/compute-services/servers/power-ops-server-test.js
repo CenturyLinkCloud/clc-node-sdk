@@ -11,17 +11,18 @@ var assert = require('assert');
 vcr.describe('Power operations server operation [UNIT]', function () {
     var DataCenter = compute.DataCenter;
 
-    var timeout = 10000;
+    var timeout = 1000000;
+
+    var criteria = {
+        dataCenter: DataCenter.DE_FRANKFURT,
+        nameContains: 'web58'
+    };
 
     it('Should power off servers', function (done) {
         this.timeout(timeout);
 
         compute.servers()
-            .powerOff(
-            {
-                dataCenter: DataCenter.DE_FRANKFURT,
-                nameContains: 'web58'
-            })
+            .powerOff(criteria)
             .then(function (serverRefs) {
                 assert.equal(!_.isEmpty(serverRefs), true);
 
@@ -37,11 +38,7 @@ vcr.describe('Power operations server operation [UNIT]', function () {
         this.timeout(timeout);
 
         compute.servers()
-            .powerOn(
-            {
-                dataCenter: DataCenter.DE_FRANKFURT,
-                nameContains: 'web58'
-            })
+            .powerOn(criteria)
             .then(function (serverRefs) {
                 assert.equal(!_.isEmpty(serverRefs), true);
 
@@ -57,10 +54,7 @@ vcr.describe('Power operations server operation [UNIT]', function () {
         this.timeout(timeout);
 
         compute.servers()
-            .pause({
-                dataCenter: DataCenter.DE_FRANKFURT,
-                nameContains: 'web58'
-            })
+            .pause(criteria)
             .then(function (serverRefs) {
                 assert.equal(!_.isEmpty(serverRefs), true);
 
@@ -76,10 +70,7 @@ vcr.describe('Power operations server operation [UNIT]', function () {
         this.timeout(timeout);
 
         compute.servers()
-            .startMaintenance({
-                dataCenter: DataCenter.DE_FRANKFURT,
-                nameContains: 'web58'
-            })
+            .startMaintenance(criteria)
             .then(function (serverRefs) {
                 assert.equal(!_.isEmpty(serverRefs), true);
 
@@ -95,10 +86,7 @@ vcr.describe('Power operations server operation [UNIT]', function () {
         this.timeout(timeout);
 
         compute.servers()
-            .stopMaintenance({
-                dataCenter: DataCenter.DE_FRANKFURT,
-                nameContains: 'web58'
-            })
+            .stopMaintenance(criteria)
             .then(function (serverRefs) {
                 assert.equal(!_.isEmpty(serverRefs), true);
 
@@ -106,6 +94,57 @@ vcr.describe('Power operations server operation [UNIT]', function () {
             })
             .then(function(modifiedServers) {
                 _.each(modifiedServers, _.partial(assertThatServerInMaintenanceMode, _, false));
+            })
+            .then(done);
+    });
+
+
+
+    it('Should shut down servers', function (done) {
+        this.timeout(timeout);
+
+        compute.servers()
+            .shutDown(criteria)
+            .then(function (serverRefs) {
+                assert.equal(!_.isEmpty(serverRefs), true);
+
+                return compute.servers().find(serverRefs);
+            })
+            .then(function(modifiedServers) {
+                _.each(modifiedServers, _.partial(assertThatServerInState, _, "stopped"));
+            })
+            .then(done);
+    });
+
+    it('Should reboot servers', function (done) {
+        this.timeout(timeout);
+
+        compute.servers()
+            .powerOn(criteria)
+            .then(_.partial(compute.servers().reboot, criteria))
+            .then(function (serverRefs) {
+                assert.equal(!_.isEmpty(serverRefs), true);
+
+                return compute.servers().find(serverRefs);
+            })
+            .then(function(modifiedServers) {
+                _.each(modifiedServers, _.partial(assertThatServerInState, _, "started"));
+            })
+            .then(done);
+    });
+
+    it('Should reset servers', function (done) {
+        this.timeout(timeout);
+
+        compute.servers()
+            .reset(criteria)
+            .then(function (serverRefs) {
+                assert.equal(!_.isEmpty(serverRefs), true);
+
+                return compute.servers().find(serverRefs);
+            })
+            .then(function(modifiedServers) {
+                _.each(modifiedServers, _.partial(assertThatServerInState, _, "started"));
             })
             .then(done);
     });
