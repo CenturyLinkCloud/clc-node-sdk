@@ -98,6 +98,54 @@ vcr.describe('Power operations group operation [UNIT]', function () {
             .then(done);
     });
 
+    it('Should reboot servers', function (done) {
+        this.timeout(timeout);
+
+        compute.groups()
+            .reboot(criteria)
+            .then(function (serverRefs) {
+                assert.equal(!_.isEmpty(serverRefs), true);
+
+                return compute.servers().find(serverRefs);
+            })
+            .then(function(modifiedServers) {
+                _.each(modifiedServers, _.partial(assertThatServerInState, _, "started"));
+            })
+            .then(done);
+    });
+
+    it('Should reset servers', function (done) {
+        this.timeout(timeout);
+
+        compute.groups()
+            .reset(criteria)
+            .then(function (serverRefs) {
+                assert.equal(!_.isEmpty(serverRefs), true);
+
+                return compute.servers().find(serverRefs);
+            })
+            .then(function(modifiedServers) {
+                _.each(modifiedServers, _.partial(assertThatServerInState, _, "started"));
+            })
+            .then(done);
+    });
+
+    it('Should shut down servers', function (done) {
+        this.timeout(timeout);
+
+        compute.groups()
+            .shutDown(criteria)
+            .then(function (serverRefs) {
+                assert.equal(!_.isEmpty(serverRefs), true);
+
+                return compute.servers().find(serverRefs);
+            })
+            .then(function(modifiedServers) {
+                _.each(modifiedServers, _.partial(assertThatServerInState, _, "stopped"));
+            })
+            .then(done);
+    });
+
     function assertThatServerInMaintenanceMode(server, flag) {
         assert.equal(server.details.inMaintenanceMode, flag);
     }

@@ -11,7 +11,7 @@ var assert = require('assert');
 vcr.describe('Power operations server operation [UNIT]', function () {
     var DataCenter = compute.DataCenter;
 
-    var timeout = 1000000;
+    var timeout = 10000;
 
     var criteria = {
         dataCenter: DataCenter.DE_FRANKFURT,
