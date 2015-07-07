@@ -40,8 +40,10 @@ vcr.describe('Public IP Address Operations [UNIT]', function () {
 
                 return compute.servers().find(serverRefs);
             })
-            .then(function(modifiedServers) {
-                console.log(modifiedServers);
+            .then(function(servers) {
+                _.each(servers, function(server) {
+                    assert.equal(server.details.ipAddresses.length, 2)
+                });
                 /* TODO add assertions within getPublicIp implementation */
             })
             .then(done);
