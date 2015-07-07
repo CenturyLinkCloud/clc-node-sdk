@@ -10,6 +10,7 @@ var assert = require('assert');
 
 vcr.describe('Power operations server operation [UNIT]', function () {
     var DataCenter = compute.DataCenter;
+    var Group = compute.Group;
 
     var timeout = 10000;
 
@@ -29,7 +30,7 @@ vcr.describe('Power operations server operation [UNIT]', function () {
                 return compute.servers().find(serverRefs);
             })
             .then(function(modifiedServers) {
-                _.each(modifiedServers, _.partial(assertThatServerInState, _, "stopped"));
+                _.each(modifiedServers, _.partial(assertThatServerInPowerState, _, "stopped"));
             })
             .then(done);
     });
@@ -45,7 +46,7 @@ vcr.describe('Power operations server operation [UNIT]', function () {
                 return compute.servers().find(serverRefs);
             })
             .then(function(modifiedServers) {
-                _.each(modifiedServers, _.partial(assertThatServerInState, _, "started"));
+                _.each(modifiedServers, _.partial(assertThatServerInPowerState, _, "started"));
             })
             .then(done);
     });
@@ -61,7 +62,7 @@ vcr.describe('Power operations server operation [UNIT]', function () {
                 return compute.servers().find(serverRefs);
             })
             .then(function(modifiedServers) {
-                _.each(modifiedServers, _.partial(assertThatServerInState, _, "paused"));
+                _.each(modifiedServers, _.partial(assertThatServerInPowerState, _, "paused"));
             })
             .then(done);
     });
@@ -111,7 +112,7 @@ vcr.describe('Power operations server operation [UNIT]', function () {
                 return compute.servers().find(serverRefs);
             })
             .then(function(modifiedServers) {
-                _.each(modifiedServers, _.partial(assertThatServerInState, _, "stopped"));
+                _.each(modifiedServers, _.partial(assertThatServerInPowerState, _, "stopped"));
             })
             .then(done);
     });
@@ -128,7 +129,7 @@ vcr.describe('Power operations server operation [UNIT]', function () {
                 return compute.servers().find(serverRefs);
             })
             .then(function(modifiedServers) {
-                _.each(modifiedServers, _.partial(assertThatServerInState, _, "started"));
+                _.each(modifiedServers, _.partial(assertThatServerInPowerState, _, "started"));
             })
             .then(done);
     });
@@ -144,16 +145,56 @@ vcr.describe('Power operations server operation [UNIT]', function () {
                 return compute.servers().find(serverRefs);
             })
             .then(function(modifiedServers) {
-                _.each(modifiedServers, _.partial(assertThatServerInState, _, "started"));
+                _.each(modifiedServers, _.partial(assertThatServerInPowerState, _, "started"));
             })
             .then(done);
     });
+
+    it('Should archive servers', function (done) {
+        this.timeout(timeout);
+
+        compute.servers()
+            .archive(criteria)
+            .then(function (serverRefs) {
+                assert.equal(!_.isEmpty(serverRefs), true);
+
+                return compute.servers().find(serverRefs);
+            })
+            .then(function(modifiedServers) {
+                _.each(modifiedServers, _.partial(assertThatServerInState, _, "archived"));
+            })
+            .then(done);
+    });
+
+    it('Should restore servers to Default Group', function (done) {
+        this.timeout(timeout);
+
+        compute.servers()
+            .restore(criteria,
+            {
+                dataCenter: DataCenter.DE_FRANKFURT,
+                name: Group.DEFAULT
+            })
+            .then(function (serverRefs) {
+                assert.equal(!_.isEmpty(serverRefs), true);
+
+                return compute.servers().find(serverRefs);
+            })
+            .then(function(modifiedServers) {
+                _.each(modifiedServers, _.partial(assertThatServerInState, _, "active"));
+            })
+            .then(done);
+    });
+
+    function assertThatServerInState(server, state) {
+        assert.equal(server.status, state);
+    }
 
     function assertThatServerInMaintenanceMode(server, flag) {
         assert.equal(server.details.inMaintenanceMode, flag);
     }
 
-    function assertThatServerInState(server, state) {
+    function assertThatServerInPowerState(server, state) {
         assert.equal(server.details.powerState, state);
     }
 });
