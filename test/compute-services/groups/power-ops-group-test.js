@@ -8,21 +8,20 @@ var _ = require('underscore');
 var assert = require('assert');
 
 
-vcr.describe('Power operations server operation [UNIT]', function () {
+vcr.describe('Power operations group operation [UNIT]', function () {
     var DataCenter = compute.DataCenter;
-    var Group = compute.Group;
 
     var timeout = 10000;
 
     var criteria = {
         dataCenter: DataCenter.DE_FRANKFURT,
-        nameContains: 'web58'
+        nameContains: 'Power'
     };
 
     it('Should power off servers', function (done) {
         this.timeout(timeout);
 
-        compute.servers()
+        compute.groups()
             .powerOff(criteria)
             .then(loadServerDetails)
             .then(assertServersState(assertThatServerInPowerState, "stopped"))
@@ -32,7 +31,7 @@ vcr.describe('Power operations server operation [UNIT]', function () {
     it('Should power on servers', function (done) {
         this.timeout(timeout);
 
-        compute.servers()
+        compute.groups()
             .powerOn(criteria)
             .then(loadServerDetails)
             .then(assertServersState(assertThatServerInPowerState, "started"))
@@ -42,7 +41,7 @@ vcr.describe('Power operations server operation [UNIT]', function () {
     it('Should pause servers', function (done) {
         this.timeout(timeout);
 
-        compute.servers()
+        compute.groups()
             .pause(criteria)
             .then(loadServerDetails)
             .then(assertServersState(assertThatServerInPowerState, "paused"))
@@ -52,7 +51,7 @@ vcr.describe('Power operations server operation [UNIT]', function () {
     it('Should start maintenance servers', function (done) {
         this.timeout(timeout);
 
-        compute.servers()
+        compute.groups()
             .startMaintenance(criteria)
             .then(loadServerDetails)
             .then(assertServersState(assertThatServerInMaintenanceMode, true))
@@ -62,31 +61,18 @@ vcr.describe('Power operations server operation [UNIT]', function () {
     it('Should stop maintenance servers', function (done) {
         this.timeout(timeout);
 
-        compute.servers()
+        compute.groups()
             .stopMaintenance(criteria)
             .then(loadServerDetails)
             .then(assertServersState(assertThatServerInMaintenanceMode, false))
             .then(done);
     });
 
-
-
-    it('Should shut down servers', function (done) {
-        this.timeout(timeout);
-
-        compute.servers()
-            .shutDown(criteria)
-            .then(loadServerDetails)
-            .then(assertServersState(assertThatServerInPowerState, "stopped"))
-            .then(done);
-    });
-
     it('Should reboot servers', function (done) {
         this.timeout(timeout);
 
-        compute.servers()
-            .powerOn(criteria)
-            .then(_.partial(compute.servers().reboot, criteria))
+        compute.groups()
+            .reboot(criteria)
             .then(loadServerDetails)
             .then(assertServersState(assertThatServerInPowerState, "started"))
             .then(done);
@@ -95,36 +81,57 @@ vcr.describe('Power operations server operation [UNIT]', function () {
     it('Should reset servers', function (done) {
         this.timeout(timeout);
 
-        compute.servers()
+        compute.groups()
             .reset(criteria)
             .then(loadServerDetails)
             .then(assertServersState(assertThatServerInPowerState, "started"))
             .then(done);
     });
 
+    it('Should shut down servers', function (done) {
+        this.timeout(timeout);
+
+        compute.groups()
+            .shutDown(criteria)
+            .then(loadServerDetails)
+            .then(assertServersState(assertThatServerInPowerState, "stopped"))
+            .then(done);
+    });
+
+
+
     it('Should archive servers', function (done) {
         this.timeout(timeout);
 
-        compute.servers()
+        compute.groups()
             .archive(criteria)
             .then(loadServerDetails)
             .then(assertServersState(assertThatServerInState, "archived"))
             .then(done);
     });
 
-    it('Should restore servers to Default Group', function (done) {
-        this.timeout(timeout);
-
-        compute.servers()
-            .restore(criteria,
-            {
-                dataCenter: DataCenter.DE_FRANKFURT,
-                name: Group.DEFAULT
-            })
-            .then(loadServerDetails)
-            .then(assertServersState(assertThatServerInState, "active"))
-            .then(done);
-    });
+    //TODO record test, when the environment will be fixed
+    //it('Should restore servers to Power operations group', function (done) {
+    //    this.timeout(timeout);
+    //
+    //    criteria.nameContains = Group.ARCHIVE;
+    //
+    //    compute.groups()
+    //        .restore(criteria,
+    //        {
+    //            dataCenter: DataCenter.DE_FRANKFURT,
+    //            nameContains: "power"
+    //        })
+    //        .then(function (serverRefs) {
+    //            assert.equal(!_.isEmpty(serverRefs), true);
+    //
+    //            return compute.servers().find(serverRefs);
+    //        })
+    //        .then(function(modifiedServers) {
+    //            _.each(modifiedServers, _.partial(assertThatServerInState, _, "active"));
+    //        })
+    //        .then(done);
+    //});
 
     function loadServerDetails(serverRefs) {
         assert(!_.isEmpty(serverRefs));

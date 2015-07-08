@@ -420,14 +420,14 @@
     "method": "POST",
     "path": "/v2/operations/ALTD/servers/pause",
     "body": [
-      "de1altdweb580",
-      "de1altdweb581",
-      "de1altdweb582",
-      "de1altdweb583",
-      "de1altdweb585",
-      "de1altdweb586",
-      "de1altdweb587",
-      "de1altdweb589"
+      "DE1ALTDWEB580",
+      "DE1ALTDWEB581",
+      "DE1ALTDWEB582",
+      "DE1ALTDWEB583",
+      "DE1ALTDWEB585",
+      "DE1ALTDWEB586",
+      "DE1ALTDWEB587",
+      "DE1ALTDWEB589"
     ],
     "status": 200,
     "response": [
