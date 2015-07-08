@@ -92,13 +92,13 @@ vcr.describe('Public IP Address Operations [UNIT]', function () {
     });
 
     function serverHasNoPublicIp(server) {
-        assert.equal(
-            _.chain(server.details.ipAddresses)
+        assert(
+            _.isEmpty(
+                _.chain(server.details.ipAddresses)
                 .pluck("public")
                 .compact()
                 .value()
-                .length,
-            0
+            )
         );
     }
 
