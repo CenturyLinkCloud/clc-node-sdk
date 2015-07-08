@@ -110,6 +110,7 @@ vcr.describe('Power operations group operation [UNIT]', function () {
             .then(done);
     });
 
+    //TODO record test, when the environment will be fixed
     //it('Should restore servers to Power operations group', function (done) {
     //    this.timeout(timeout);
     //
