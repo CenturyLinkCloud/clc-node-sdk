@@ -24,14 +24,8 @@ vcr.describe('Power operations server operation [UNIT]', function () {
 
         compute.servers()
             .powerOff(criteria)
-            .then(function (serverRefs) {
-                assert.equal(!_.isEmpty(serverRefs), true);
-
-                return compute.servers().find(serverRefs);
-            })
-            .then(function(modifiedServers) {
-                _.each(modifiedServers, _.partial(assertThatServerInPowerState, _, "stopped"));
-            })
+            .then(loadServerDetails)
+            .then(assertServersState(assertThatServerInPowerState, "stopped"))
             .then(done);
     });
 
@@ -40,14 +34,8 @@ vcr.describe('Power operations server operation [UNIT]', function () {
 
         compute.servers()
             .powerOn(criteria)
-            .then(function (serverRefs) {
-                assert.equal(!_.isEmpty(serverRefs), true);
-
-                return compute.servers().find(serverRefs);
-            })
-            .then(function(modifiedServers) {
-                _.each(modifiedServers, _.partial(assertThatServerInPowerState, _, "started"));
-            })
+            .then(loadServerDetails)
+            .then(assertServersState(assertThatServerInPowerState, "started"))
             .then(done);
     });
 
@@ -56,14 +44,8 @@ vcr.describe('Power operations server operation [UNIT]', function () {
 
         compute.servers()
             .pause(criteria)
-            .then(function (serverRefs) {
-                assert.equal(!_.isEmpty(serverRefs), true);
-
-                return compute.servers().find(serverRefs);
-            })
-            .then(function(modifiedServers) {
-                _.each(modifiedServers, _.partial(assertThatServerInPowerState, _, "paused"));
-            })
+            .then(loadServerDetails)
+            .then(assertServersState(assertThatServerInPowerState, "paused"))
             .then(done);
     });
 
@@ -72,14 +54,8 @@ vcr.describe('Power operations server operation [UNIT]', function () {
 
         compute.servers()
             .startMaintenance(criteria)
-            .then(function (serverRefs) {
-                assert.equal(!_.isEmpty(serverRefs), true);
-
-                return compute.servers().find(serverRefs);
-            })
-            .then(function(modifiedServers) {
-                _.each(modifiedServers, _.partial(assertThatServerInMaintenanceMode, _, true));
-            })
+            .then(loadServerDetails)
+            .then(assertServersState(assertThatServerInMaintenanceMode, true))
             .then(done);
     });
 
@@ -88,14 +64,8 @@ vcr.describe('Power operations server operation [UNIT]', function () {
 
         compute.servers()
             .stopMaintenance(criteria)
-            .then(function (serverRefs) {
-                assert.equal(!_.isEmpty(serverRefs), true);
-
-                return compute.servers().find(serverRefs);
-            })
-            .then(function(modifiedServers) {
-                _.each(modifiedServers, _.partial(assertThatServerInMaintenanceMode, _, false));
-            })
+            .then(loadServerDetails)
+            .then(assertServersState(assertThatServerInMaintenanceMode, false))
             .then(done);
     });
 
@@ -106,14 +76,8 @@ vcr.describe('Power operations server operation [UNIT]', function () {
 
         compute.servers()
             .shutDown(criteria)
-            .then(function (serverRefs) {
-                assert.equal(!_.isEmpty(serverRefs), true);
-
-                return compute.servers().find(serverRefs);
-            })
-            .then(function(modifiedServers) {
-                _.each(modifiedServers, _.partial(assertThatServerInPowerState, _, "stopped"));
-            })
+            .then(loadServerDetails)
+            .then(assertServersState(assertThatServerInPowerState, "stopped"))
             .then(done);
     });
 
@@ -123,14 +87,8 @@ vcr.describe('Power operations server operation [UNIT]', function () {
         compute.servers()
             .powerOn(criteria)
             .then(_.partial(compute.servers().reboot, criteria))
-            .then(function (serverRefs) {
-                assert.equal(!_.isEmpty(serverRefs), true);
-
-                return compute.servers().find(serverRefs);
-            })
-            .then(function(modifiedServers) {
-                _.each(modifiedServers, _.partial(assertThatServerInPowerState, _, "started"));
-            })
+            .then(loadServerDetails)
+            .then(assertServersState(assertThatServerInPowerState, "started"))
             .then(done);
     });
 
@@ -139,14 +97,8 @@ vcr.describe('Power operations server operation [UNIT]', function () {
 
         compute.servers()
             .reset(criteria)
-            .then(function (serverRefs) {
-                assert.equal(!_.isEmpty(serverRefs), true);
-
-                return compute.servers().find(serverRefs);
-            })
-            .then(function(modifiedServers) {
-                _.each(modifiedServers, _.partial(assertThatServerInPowerState, _, "started"));
-            })
+            .then(loadServerDetails)
+            .then(assertServersState(assertThatServerInPowerState, "started"))
             .then(done);
     });
 
@@ -155,14 +107,8 @@ vcr.describe('Power operations server operation [UNIT]', function () {
 
         compute.servers()
             .archive(criteria)
-            .then(function (serverRefs) {
-                assert.equal(!_.isEmpty(serverRefs), true);
-
-                return compute.servers().find(serverRefs);
-            })
-            .then(function(modifiedServers) {
-                _.each(modifiedServers, _.partial(assertThatServerInState, _, "archived"));
-            })
+            .then(loadServerDetails)
+            .then(assertServersState(assertThatServerInState, "archived"))
             .then(done);
     });
 
@@ -175,16 +121,22 @@ vcr.describe('Power operations server operation [UNIT]', function () {
                 dataCenter: DataCenter.DE_FRANKFURT,
                 name: Group.DEFAULT
             })
-            .then(function (serverRefs) {
-                assert.equal(!_.isEmpty(serverRefs), true);
-
-                return compute.servers().find(serverRefs);
-            })
-            .then(function(modifiedServers) {
-                _.each(modifiedServers, _.partial(assertThatServerInState, _, "active"));
-            })
+            .then(loadServerDetails)
+            .then(assertServersState(assertThatServerInState, "active"))
             .then(done);
     });
+
+    function loadServerDetails(serverRefs) {
+        assert(!_.isEmpty(serverRefs));
+
+        return compute.servers().find(serverRefs);
+    }
+
+    function assertServersState(assertFn, state) {
+        return function(servers) {
+            _.each(servers,  _.partial(assertFn, _, state));
+        };
+    }
 
     function assertThatServerInState(server, state) {
         assert.equal(server.status, state);

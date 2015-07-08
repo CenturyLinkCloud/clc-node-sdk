@@ -10,9 +10,8 @@ var assert = require('assert');
 
 vcr.describe('Power operations group operation [UNIT]', function () {
     var DataCenter = compute.DataCenter;
-    var Group = compute.Group;
 
-    var timeout = 100000000;
+    var timeout = 10000;
 
     var criteria = {
         dataCenter: DataCenter.DE_FRANKFURT,
@@ -24,14 +23,8 @@ vcr.describe('Power operations group operation [UNIT]', function () {
 
         compute.groups()
             .powerOff(criteria)
-            .then(function (serverRefs) {
-                assert.equal(!_.isEmpty(serverRefs), true);
-
-                return compute.servers().find(serverRefs);
-            })
-            .then(function(modifiedServers) {
-                _.each(modifiedServers, _.partial(assertThatServerInPowerState, _, "stopped"));
-            })
+            .then(loadServerDetails)
+            .then(assertServersState(assertThatServerInPowerState, "stopped"))
             .then(done);
     });
 
@@ -40,14 +33,8 @@ vcr.describe('Power operations group operation [UNIT]', function () {
 
         compute.groups()
             .powerOn(criteria)
-            .then(function (serverRefs) {
-                assert.equal(!_.isEmpty(serverRefs), true);
-
-                return compute.servers().find(serverRefs);
-            })
-            .then(function(modifiedServers) {
-                _.each(modifiedServers, _.partial(assertThatServerInPowerState, _, "started"));
-            })
+            .then(loadServerDetails)
+            .then(assertServersState(assertThatServerInPowerState, "started"))
             .then(done);
     });
 
@@ -56,14 +43,8 @@ vcr.describe('Power operations group operation [UNIT]', function () {
 
         compute.groups()
             .pause(criteria)
-            .then(function (serverRefs) {
-                assert.equal(!_.isEmpty(serverRefs), true);
-
-                return compute.servers().find(serverRefs);
-            })
-            .then(function(modifiedServers) {
-                _.each(modifiedServers, _.partial(assertThatServerInPowerState, _, "paused"));
-            })
+            .then(loadServerDetails)
+            .then(assertServersState(assertThatServerInPowerState, "paused"))
             .then(done);
     });
 
@@ -72,14 +53,8 @@ vcr.describe('Power operations group operation [UNIT]', function () {
 
         compute.groups()
             .startMaintenance(criteria)
-            .then(function (serverRefs) {
-                assert.equal(!_.isEmpty(serverRefs), true);
-
-                return compute.servers().find(serverRefs);
-            })
-            .then(function(modifiedServers) {
-                _.each(modifiedServers, _.partial(assertThatServerInMaintenanceMode, _, true));
-            })
+            .then(loadServerDetails)
+            .then(assertServersState(assertThatServerInMaintenanceMode, true))
             .then(done);
     });
 
@@ -88,14 +63,8 @@ vcr.describe('Power operations group operation [UNIT]', function () {
 
         compute.groups()
             .stopMaintenance(criteria)
-            .then(function (serverRefs) {
-                assert.equal(!_.isEmpty(serverRefs), true);
-
-                return compute.servers().find(serverRefs);
-            })
-            .then(function(modifiedServers) {
-                _.each(modifiedServers, _.partial(assertThatServerInMaintenanceMode, _, false));
-            })
+            .then(loadServerDetails)
+            .then(assertServersState(assertThatServerInMaintenanceMode, false))
             .then(done);
     });
 
@@ -104,14 +73,8 @@ vcr.describe('Power operations group operation [UNIT]', function () {
 
         compute.groups()
             .reboot(criteria)
-            .then(function (serverRefs) {
-                assert.equal(!_.isEmpty(serverRefs), true);
-
-                return compute.servers().find(serverRefs);
-            })
-            .then(function(modifiedServers) {
-                _.each(modifiedServers, _.partial(assertThatServerInPowerState, _, "started"));
-            })
+            .then(loadServerDetails)
+            .then(assertServersState(assertThatServerInPowerState, "started"))
             .then(done);
     });
 
@@ -120,14 +83,8 @@ vcr.describe('Power operations group operation [UNIT]', function () {
 
         compute.groups()
             .reset(criteria)
-            .then(function (serverRefs) {
-                assert.equal(!_.isEmpty(serverRefs), true);
-
-                return compute.servers().find(serverRefs);
-            })
-            .then(function(modifiedServers) {
-                _.each(modifiedServers, _.partial(assertThatServerInPowerState, _, "started"));
-            })
+            .then(loadServerDetails)
+            .then(assertServersState(assertThatServerInPowerState, "started"))
             .then(done);
     });
 
@@ -136,14 +93,8 @@ vcr.describe('Power operations group operation [UNIT]', function () {
 
         compute.groups()
             .shutDown(criteria)
-            .then(function (serverRefs) {
-                assert.equal(!_.isEmpty(serverRefs), true);
-
-                return compute.servers().find(serverRefs);
-            })
-            .then(function(modifiedServers) {
-                _.each(modifiedServers, _.partial(assertThatServerInPowerState, _, "stopped"));
-            })
+            .then(loadServerDetails)
+            .then(assertServersState(assertThatServerInPowerState, "stopped"))
             .then(done);
     });
 
@@ -154,14 +105,8 @@ vcr.describe('Power operations group operation [UNIT]', function () {
 
         compute.groups()
             .archive(criteria)
-            .then(function (serverRefs) {
-                assert.equal(!_.isEmpty(serverRefs), true);
-
-                return compute.servers().find(serverRefs);
-            })
-            .then(function(modifiedServers) {
-                _.each(modifiedServers, _.partial(assertThatServerInState, _, "archived"));
-            })
+            .then(loadServerDetails)
+            .then(assertServersState(assertThatServerInState, "archived"))
             .then(done);
     });
 
@@ -186,6 +131,18 @@ vcr.describe('Power operations group operation [UNIT]', function () {
     //        })
     //        .then(done);
     //});
+
+    function loadServerDetails(serverRefs) {
+        assert(!_.isEmpty(serverRefs));
+
+        return compute.servers().find(serverRefs);
+    }
+
+    function assertServersState(assertFn, state) {
+        return function(servers) {
+            _.each(servers,  _.partial(assertFn, _, state));
+        };
+    }
 
     function assertThatServerInState(server, state) {
         assert.equal(server.status, state);
