@@ -36,11 +36,7 @@ vcr.describe('Public IP Address Operations [UNIT]', function () {
 
         compute.servers()
             .addPublicIp(searchCriteria, publicIpConfig)
-            .then(function (serverRefs) {
-                assert.equal(serverRefs != null, true);
-
-                return compute.servers().find(serverRefs);
-            })
+            .then(loadServerDetails)
             .then(function(servers) {
                 _.each(servers, function(server) {
                     assert.equal(server.details.ipAddresses.length, 2);
@@ -81,5 +77,34 @@ vcr.describe('Public IP Address Operations [UNIT]', function () {
                 { cidr: '192.168.3.0/25' }
             ]
         );
+    }
+
+    it('Should remove all public ip data', function (done) {
+        this.timeout(1000 * 60 * 15);
+
+        compute.servers()
+            .removeAllPublicIp(searchCriteria)
+            .then(loadServerDetails)
+            .then(function(servers) {
+                _.each(servers, serverHasNoPublicIp);
+            })
+            .then(done);
+    });
+
+    function serverHasNoPublicIp(server) {
+        assert.equal(
+            _.chain(server.details.ipAddresses)
+                .pluck("public")
+                .compact()
+                .value()
+                .length,
+            0
+        );
+    }
+
+    function loadServerDetails(serverRefs) {
+        assert(!_.isEmpty(serverRefs));
+
+        return compute.servers().find(serverRefs);
     }
 });
