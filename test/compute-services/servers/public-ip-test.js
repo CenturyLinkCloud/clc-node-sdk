@@ -57,7 +57,7 @@ vcr.describe('Public IP Address Operations [UNIT]', function () {
     });
 
     it('Modify all public ip data', function (done) {
-        this.timeout(1000 * 60 * 15);
+        this.timeout(10000);
 
         var modifiedPublicIpConfig = {
             openPorts: [
@@ -71,8 +71,7 @@ vcr.describe('Public IP Address Operations [UNIT]', function () {
 
         compute.servers()
             .modifyAllPublicIp(searchCriteria, modifiedPublicIpConfig)
-            .then(loadServerDetails)
-            .then(function(servers) {
+            .then(function() {
                 return compute.servers()
                     .findPublicIp(searchCriteria)
                     .then(function(publicIpData) {
