@@ -14,11 +14,13 @@ vcr.describe('Create Infrastructure Operation [UNIT]', function () {
         var Group = compute.Group;
         var infrastructureConfig = {
             dataCenter: compute.DataCenter.US_CENTRAL_CHICAGO,
-            name: 'Group-1',
-            description: 'Test Group',
+            group: {
+                name: 'Group-1',
+                description: 'Test Group'
+            },
             subItems: [
                 {
-                    name: 'Group-1-1',
+                    group: 'Group-1-1',
                     subItems: [
                         {
                             name: "web",
@@ -39,11 +41,11 @@ vcr.describe('Create Infrastructure Operation [UNIT]', function () {
                                 ]
                             }
                         },
-                        {name: 'Group-1-1-1'}
+                        {group: 'Group-1-1-1'}
                     ]
                 },
                 {
-                    name: 'Group-1-2',
+                    group: 'Group-1-2',
                     subItems:[
                         mysqlServer(),
                         nginxServer()
