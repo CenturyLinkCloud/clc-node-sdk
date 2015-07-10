@@ -17,7 +17,7 @@ var startsWith = function (str, substr) { return str.indexOf(substr) === 0; };
 var contains = function (str, substr) { return str.indexOf(substr) > -1; };
 
 var groupName = "SampleGroup";
-var dataCenter = DataCenter.GB_PORTSMOUTH;
+var dataCenter = DataCenter.US_EAST_NEW_YORK;
 
 var serverSearchCriteria = {
     dataCenter: dataCenter,
