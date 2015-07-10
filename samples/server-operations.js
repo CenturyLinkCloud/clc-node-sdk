@@ -31,7 +31,7 @@ var server2Name = "apache";
 var server3Name = "mysql";
 
 
-function __createGroup() {
+function createGroup() {
     console.log("Create group " + groupName);
     return compute
         .groups()
@@ -44,7 +44,7 @@ function __createGroup() {
             description: 'SampleGroup for power operations'});
 }
 
-function __deleteGroup() {
+function deleteGroup() {
     console.log("Delete group " + groupName);
     return compute
         .groups()
@@ -54,15 +54,15 @@ function __deleteGroup() {
         });
 }
 
-function __createServers() {
+function createServers() {
     return Promise.join(
-        __createServer(server1Name, "a_nginx"),
-        __createServer(server2Name, "a_apache"),
-        __createServer(server3Name, "b_mysql")
+        createServer(server1Name, "a_nginx"),
+        createServer(server2Name, "a_apache"),
+        createServer(server3Name, "b_mysql")
     );
 }
 
-function __createServer(name, description) {
+function createServer(name, description) {
     console.log("Create server " + name);
     return compute
         .servers()
@@ -93,7 +93,7 @@ function __createServer(name, description) {
         });
 }
 
-function __checkServers(servers) {
+function checkServers(servers) {
     assert.equal(servers.length, 3);
 
     _.each(servers, function(server) {
@@ -107,7 +107,7 @@ function __checkServers(servers) {
     return servers;
 }
 
-function __displayResult(result) {
+function displayResult(result) {
     _.each(result, function(element) {
         console.log("    " + element.id);
     });
@@ -116,26 +116,26 @@ function __displayResult(result) {
 }
 
 /* List created servers */
-function __findCreatedServers() {
-    return __findServers()
+function findCreatedServers() {
+    return findServers()
         .then(function(servers) {
             console.log("Created servers:");
             return servers;
         })
-        .then(__displayResult)
-        .then(__checkServers);
+        .then(displayResult)
+        .then(checkServers);
 }
 
 /* List created servers */
-function __findServers() {
+function findServers() {
     return compute.servers().find(serverSearchCriteria);
 }
 
-function __findServersByRef(serverRefs) {
+function findServersByRef(serverRefs) {
     return compute.servers().find(serverRefs);
 }
 
-function __restartServersForGroup() {
+function restartServersForGroup() {
     console.log("Restart all servers in group " + groupName);
     return compute.groups().reboot(
             {
@@ -143,31 +143,31 @@ function __restartServersForGroup() {
                 name: groupName
             }
         )
-        .then(__findServersByRef)
-        .then(__checkServersState("active", "started"));
+        .then(findServersByRef)
+        .then(checkServersState("active", "started"));
 }
 
-function __stopServers() {
+function stopServers() {
     console.log("Stop all created servers");
     return compute.servers().powerOff(serverSearchCriteria)
-        .then(__findServersByRef)
-        .then(__checkServersState("active", "stopped"));
+        .then(findServersByRef)
+        .then(checkServersState("active", "stopped"));
 }
 
-function __startServers() {
+function startServers() {
     console.log("Start all created servers");
     return compute.servers().powerOn(serverSearchCriteria)
-        .then(__findServersByRef)
-        .then(__checkServersState("active", "started"));
+        .then(findServersByRef)
+        .then(checkServersState("active", "started"));
 }
 
-function __checkServersState(serverState, powerState) {
+function checkServersState(serverState, powerState) {
     return function(servers) {
         console.log("Check that server state is *" + serverState +
             "*, power state is *" + powerState + "* for servers");
-        __displayResult(servers);
+        displayResult(servers);
 
-        _.each(servers, __checkServerState(serverState, powerState));
+        _.each(servers, checkServerState(serverState, powerState));
 
         console.log('Done');
 
@@ -175,7 +175,7 @@ function __checkServersState(serverState, powerState) {
     }
 }
 
-function __checkServerState(serverState, powerState) {
+function checkServerState(serverState, powerState) {
     return function(server) {
         if (serverState) {
             assert.equal(server.status, serverState);
@@ -186,20 +186,20 @@ function __checkServerState(serverState, powerState) {
     };
 }
 
-function __createSnapshotForServers() {
+function createSnapshotForServers() {
     console.log("Create snapshot for servers where description starts with 'a'");
-    return __checkSnapshotCountForServers(0)
+    return checkSnapshotCountForServers(0)
         .then(_.partial(compute.servers().createSnapshot, _, 3))
-        .then(_.partial(__checkSnapshotCountForServers, 1));
+        .then(_.partial(checkSnapshotCountForServers, 1));
 }
 
-function __revertToSnapshotForServers() {
+function revertToSnapshotForServers() {
     console.log("Revert to snapshot servers where description starts with 'a'");
-    return __findServersWithDescriptionStarts("a")
+    return findServersWithDescriptionStarts("a")
         .then(compute.servers().revertToSnapshot);
 }
 
-function __findServersWithDescriptionStarts(description) {
+function findServersWithDescriptionStarts(description) {
     var criteria = _.clone(serverSearchCriteria);
     criteria.where = function(metadata) {
         return startsWith(metadata.description, description);
@@ -208,8 +208,8 @@ function __findServersWithDescriptionStarts(description) {
     return compute.servers().find(criteria);
 }
 
-function __checkSnapshotCountForServers(snapshotCount) {
-    return __findServersWithDescriptionStarts("a")
+function checkSnapshotCountForServers(snapshotCount) {
+    return findServersWithDescriptionStarts("a")
         .then(function(servers) {
             _.each(servers, function(server) {
                 assert.equal(server.details.snapshots.length, snapshotCount);
@@ -219,36 +219,36 @@ function __checkSnapshotCountForServers(snapshotCount) {
         });
 }
 
-function __pauseServers() {
-    return __findServersWithDescriptionStarts("a")
+function pauseServers() {
+    return findServersWithDescriptionStarts("a")
         .then(function(servers) {
             console.log("Pause servers:");
-            __displayResult(servers);
+            displayResult(servers);
             return servers;
         })
         .then(compute.servers().pause)
-        .then(__findServersByRef)
-        .then(__checkServersState("active", "paused"));
+        .then(findServersByRef)
+        .then(checkServersState("active", "paused"));
 }
 
 
 function run() {
-    __createGroup()
-    .then(__createServers)
-    .then(__findCreatedServers)
-    .then(__checkServersState("active", "started"))
+    createGroup()
+        .then(createServers)
+        .then(findCreatedServers)
+        .then(checkServersState("active", "started"))
 
-    .then(__stopServers)
-    .then(__startServers)
-    .then(__restartServersForGroup)
+        .then(stopServers)
+        .then(startServers)
+        .then(restartServersForGroup)
 
-    .then(__createSnapshotForServers)
-    .then(__pauseServers)
-    .then(__revertToSnapshotForServers)
-    .then(__findCreatedServers)
-    .then(__checkServersState("active", "started"))
-    .then(__deleteGroup)
-    .then(_.partial(console.log, "Finished!"));
+        .then(createSnapshotForServers)
+        .then(pauseServers)
+        .then(revertToSnapshotForServers)
+        .then(findCreatedServers)
+        .then(checkServersState("active", "started"))
+        .then(deleteGroup)
+        .then(_.partial(console.log, "Finished!"));
 }
 
 run();
