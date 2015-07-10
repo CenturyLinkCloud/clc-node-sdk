@@ -146,14 +146,23 @@ vcr.describe('Create Infrastructure Operation [UNIT]', function () {
         var config = props.config;
 
         var items = _.partition(config.subItems, isServerConfig);
-        var actualServersCount =
-            _.reduce(items[0], function(memo, cfg) {return memo + (cfg.count ? cfg.count : 1);}, 0);
+        var actualServersCount = collectServersCount(items[0]);
 
         assert.equal(item.servers.length, actualServersCount, "check servers count");
 
         assert.equal(item.groups.length, items[1].length, "check groups count");
 
         _.each(config.subItems, _.partial(checkSubItem, item));
+    }
+
+    function collectServersCount(serverConfigs) {
+        return _.reduce(
+            serverConfigs,
+            function(memo, cfg) {
+                return memo + (cfg.count ? cfg.count : 1);
+            },
+            0
+        );
     }
 
     function checkServer(props) {
