@@ -56,6 +56,43 @@ vcr.describe('Public IP Address Operations [UNIT]', function () {
             .then(done);
     });
 
+    it('Modify all public ip data', function (done) {
+        this.timeout(10000);
+
+        var modifiedPublicIpConfig = {
+            openPorts: [
+                Port.HTTP,
+                Port.HTTPS
+            ],
+            sourceRestrictions: [
+                '192.168.3.0/25'
+            ]
+        };
+
+        compute.servers()
+            .modifyAllPublicIp(searchCriteria, modifiedPublicIpConfig)
+            .then(function() {
+                return compute.servers()
+                    .findPublicIp(searchCriteria)
+                    .then(function(publicIpData) {
+                        checkModifiedPublicIpData(publicIpData);
+                    });
+            })
+            .then(done);
+    });
+
+    it('Should remove all public ip data', function (done) {
+        this.timeout(10000);
+
+        compute.servers()
+            .removeAllPublicIp(searchCriteria)
+            .then(loadServerDetails)
+            .then(function(servers) {
+                _.each(servers, serverHasNoPublicIp);
+            })
+            .then(done);
+    });
+
     function checkPublicIpData(data) {
         assert.equal(data.length, 1);
         var publicIpData = data[0];
@@ -79,25 +116,31 @@ vcr.describe('Public IP Address Operations [UNIT]', function () {
         );
     }
 
-    it('Should remove all public ip data', function (done) {
-        this.timeout(1000 * 60 * 15);
+    function checkModifiedPublicIpData(data) {
+        assert.equal(data.length, 1);
+        var publicIpData = data[0];
 
-        compute.servers()
-            .removeAllPublicIp(searchCriteria)
-            .then(loadServerDetails)
-            .then(function(servers) {
-                _.each(servers, serverHasNoPublicIp);
-            })
-            .then(done);
-    });
+        assert(publicIpData.internalIPAddress);
+        assert.deepEqual(
+            publicIpData.ports,
+            [
+                { port: Port.HTTP, protocol: Protocol.TCP },
+                { port: Port.HTTPS, protocol: Protocol.TCP }
+            ]
+        );
+        assert.deepEqual(
+            publicIpData.sourceRestrictions,
+            [{ cidr: '192.168.3.0/25' }]
+        );
+    }
 
     function serverHasNoPublicIp(server) {
         assert(
             _.isEmpty(
                 _.chain(server.details.ipAddresses)
-                .pluck("public")
-                .compact()
-                .value()
+                    .pluck("public")
+                    .compact()
+                    .value()
             )
         );
     }
