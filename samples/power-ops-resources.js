@@ -17,7 +17,7 @@ var startsWith = function (str, substr) { return str.indexOf(substr) === 0; };
 var contains = function (str, substr) { return str.indexOf(substr) > -1; };
 
 var groupName = "SampleGroup";
-var dataCenter = DataCenter.US_EAST_STERLING;
+var dataCenter = DataCenter.GB_PORTSMOUTH;
 
 var serverSearchCriteria = {
     dataCenter: dataCenter,
@@ -163,7 +163,8 @@ function __startServers() {
 
 function __checkServersState(serverState, powerState) {
     return function(servers) {
-        console.log("Check that server state is *" + serverState + "*, power state is *" + powerState + "* for servers");
+        console.log("Check that server state is *" + serverState +
+            "*, power state is *" + powerState + "* for servers");
         __displayResult(servers);
 
         _.each(servers, __checkServerState(serverState, powerState));
