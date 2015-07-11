@@ -128,7 +128,6 @@ function findCreatedServers() {
 
 /* List created servers */
 function findServers() {
-    serverSearchCriteria.group = {id: groupId};
     return compute.servers().find(serverSearchCriteria);
 }
 
