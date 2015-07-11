@@ -17,7 +17,7 @@ var startsWith = function (str, substr) { return str.indexOf(substr) === 0; };
 var contains = function (str, substr) { return str.indexOf(substr) > -1; };
 
 var groupName = "SampleGroup";
-var dataCenter = DataCenter.US_EAST_NEW_YORK;
+var dataCenter = DataCenter.GB_PORTSMOUTH;
 
 var serverSearchCriteria = {
     dataCenter: dataCenter,
@@ -128,6 +128,7 @@ function findCreatedServers() {
 
 /* List created servers */
 function findServers() {
+    serverSearchCriteria.group = {id: groupId};
     return compute.servers().find(serverSearchCriteria);
 }
 
@@ -233,7 +234,8 @@ function pauseServers() {
 
 
 function run() {
-    createGroup()
+    deleteGroup()
+        .then(createGroup)
         .then(createServers)
         .then(findCreatedServers)
         .then(checkServersState("active", "started"))
