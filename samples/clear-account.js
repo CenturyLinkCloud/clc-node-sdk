@@ -11,9 +11,13 @@ var Group = compute.Group;
 function clearAccount() {
     console.log('clear environment');
     return dataCenters.find()
-        .then(deleteServers)
-        .then(deleteGroups)
+        .then(deleteServers, errorLog)
+        .then(deleteGroups, errorLog)
         .then(clearDone);
+}
+
+function errorLog(err) {
+    console.error(err);
 }
 
 function deleteServers(dataCenters) {
@@ -44,7 +48,11 @@ function deleteGroups(dataCenters) {
                     })
                     .flatten()
                     .value();
-            return compute.groups().delete(subGroups);
+
+            if (subGroups.length > 0) {
+                compute.groups().delete(subGroups);
+            }
+            return;
         });
 }
 
