@@ -13,7 +13,7 @@ function clearAccount() {
     return dataCenters.find()
         .then(deleteServers, errorLog)
         .then(deleteGroups, errorLog)
-        .then(clearDone);
+        .finally(clearDone);
 }
 
 function errorLog(err) {
@@ -28,7 +28,7 @@ function deleteServers(dataCenters) {
                 nameContains: [Group.ARCHIVE, Group.TEMPLATES, Group.DEFAULT]
             }
         })
-        .then(function() {
+        .finally(function() {
             return dataCenters;
         });
 }
