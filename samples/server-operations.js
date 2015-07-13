@@ -231,10 +231,8 @@ function pauseServers() {
         .then(checkServersState("active", "paused"));
 }
 
-
 function run() {
-    deleteGroup()
-        .then(createGroup)
+    createGroup()
         .then(createServers)
         .then(findCreatedServers)
         .then(checkServersState("active", "started"))
