@@ -11,9 +11,9 @@ var Group = compute.Group;
 function clearAccount() {
     console.log('clear environment');
     return dataCenters.find()
-        .then(deleteServers, errorLog)
-        .then(deleteGroups, errorLog)
-        .finally(clearDone);
+        .then(deleteServers)
+        .then(deleteGroups)
+        .then(clearDone);
 }
 
 function errorLog(err) {
@@ -28,7 +28,7 @@ function deleteServers(dataCenters) {
                 nameContains: [Group.ARCHIVE, Group.TEMPLATES, Group.DEFAULT]
             }
         })
-        .finally(function() {
+        .catch(function() {
             return dataCenters;
         });
 }
@@ -53,7 +53,8 @@ function deleteGroups(dataCenters) {
                 compute.groups().delete(subGroups);
             }
             return;
-        });
+        })
+        .catch(errorLog);
 }
 
 function clearDone() {
