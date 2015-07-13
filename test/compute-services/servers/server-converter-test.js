@@ -10,7 +10,7 @@ describe('Server converter test [UNIT]', function() {
     it('Should convert ttl property from Date', function (done) {
         var ttlDate = new Date();
         var command = converter.convertTtl({ttl: ttlDate});
-        assert.equal(ttlDate.toISOString(), command.ttl);
+        checkTtl(ttlDate.toISOString(), command.ttl);
 
         done();
     });
@@ -18,7 +18,7 @@ describe('Server converter test [UNIT]', function() {
     it('Should convert ttl property from Number', function (done) {
         var ttlHour = 5;
         var command = converter.convertTtl({ttl: ttlHour});
-        assert.equal(moment().hour() + ttlHour, moment(command.ttl).hour());
+        checkTtl(moment().hour() + ttlHour, moment(command.ttl).hour());
 
         done();
     });
@@ -26,7 +26,15 @@ describe('Server converter test [UNIT]', function() {
     it('Should convert ttl property from Moment', function (done) {
         var ttlMoment = moment().add(2, 'd');
         var command = converter.convertTtl({ttl: ttlMoment});
-        assert.equal(ttlMoment.toISOString(), command.ttl);
+        checkTtl(ttlMoment.toISOString(), command.ttl);
+
+        done();
+    });
+
+    it('Should convert ttl property from Duration', function (done) {
+        var ttlDuration = moment.duration(2, 'd');
+        var command = converter.convertTtl({ttl: ttlDuration});
+        checkTtl(moment().add(ttlDuration).toISOString(), command.ttl);
 
         done();
     });
@@ -34,7 +42,7 @@ describe('Server converter test [UNIT]', function() {
     it('Should convert ttl property from String', function (done) {
         var ttlString = new Date().toISOString();
         var command = converter.convertTtl({ttl: ttlString});
-        assert.equal(ttlString, command.ttl);
+        checkTtl(ttlString, command.ttl)
 
         done();
     });
@@ -60,4 +68,12 @@ describe('Server converter test [UNIT]', function() {
 
         done();
     });
+
+    function checkTtl(expected, actual) {
+        assert.equal(trimMillis(expected), trimMillis(actual));
+    }
+
+    function trimMillis(dateString) {
+        return moment(dateString).milliseconds(0).toISOString();
+    }
 });
