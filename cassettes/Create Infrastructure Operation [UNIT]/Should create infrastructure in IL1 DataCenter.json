@@ -1,0 +1,1011 @@
+[
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "POST",
+    "path": "/v2/authentication/login",
+    "body": "*",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f227ec3b147c3ab26c2af5f64c28bc3bcc2a3471f15c2b33ac29bc3a4c38b221b67653bc3bb68c3b45136c29d56c3ab657b5c165943c39f1f3f7fc3b3c2943e2dc2ab69c39616c395c3927cc3bcc293c387c2bbc3b4695dc29539c3bdc3b5c2bdc28fc28ec3b5c2a5c399c2a258c392c3a7c3bac3a74f16c3b9555ec393c39f4fc28ac2b22cc29617c3a6c3abc2a72f5e7fc2912dc2b30bc3bec3ae45c39e5e55c3b55bc3b3c39dc3ab7cc2bac2aec28bc3b6c39ac3bd5d5fc3a675c3b8c397c297c2abc2bcc38ec39a0a6fc38b07c2afc2a7c3b37cc2b62e09c39ec3b7471f4dc3b2c2acc38ec3ab37c395c39b7c49c288c3a6c397c39fc399c3897fc3afc3a3c3a2c38bc3a23bc2bfc3974fc3aec3be44c3b1c3bcc3a43bc3b3c389c3a753c3bc7dc3b6c3950fc38e765f14c39f7938c2a646c2abc3a9c2bd2f0ac3ba7077c2bac398c3bfc3b4c3b7c3b9c2bdc29fc2acc29ec3bfc39ec2af563fc3b57bc29fc3bdc3a0c2acc2b82a7ec29fc39fc3bb27c39fc29ec3bd7455c38c7ec3afc3afc2acc2bf5cc38ac3a7c38f7fc3afc29fc3bcc3814fc3bdc39ec39fc3a1c3af27c28bc3af2cc3a8c3bb772fc29e7ec2b147c3bfc39fc3b9c3a2c38dc3b41d7554c3a6c39fc2a6c28e7fc3ba74c3a7c28b1f4cc3b1c3b9c2bd173f386dc38ec296c39fc2b9c29c7cc3be55c3b165c399143fc3b1c39d173f3dc2b9c3b7c293c3abc399c3a9c2b3c2b7c293c3afc2966bc380c2b2c29f3dc3bb29c3aa67564ec28bc2b3c3a6c3acc3ad7756c293c38fc39fc2ad26c28bc399c293c29fc3ba7c7735c3a1c38f5e7dc3b9c395c38ec3ae7cc2b278c2b6247c30c2b02f7fc3aac3b77e756f72c3af3bc3b54f7cc3b755c29b7d771fc29fc2bdc3b9c2a9c3afc2bec2a031c2953bc3b957c2aec28fc2afc3b67ec3b27ac2b6c3b8c389c3abc2a0c39dc3afc3bdc29d3dc3bac3bfc38bc3a9c3a73f79c3bdc3bbc3bcc39ec2af2ec2b9c39fc3b245395dc3be54392d5fc3bc74c3b6c3b94fc2bec29d7dc3b71dc3a1c3b3c29d19c2b5c39fc29d2cc38a77c2b3c3afc3bec3a439c3b5c39fc3bec394c3abc2b34fc38f16c3a5c39bc3a9c3a259c3b153c39fc2bdc2bfc3ba7d5ec39fc29f4fc2bec3bdc3aa2dc3bac3b269c3b6c3a5c3a2c3994fc3bf3e7b0f7727c38bc29f687fc29fc3afc2be5bc3bd3ec2bf37c393c3bcc389c29b67c2af4ec3bb6dc39f5dc3be3e7bc38f76c2b2c3af3e5c3fc3bfc3aec2b326c3bbc3aec2b31f10c28dc28bc29f7c7bc3bac3ae6cc2b933c3bec38955c3bec3aac39ec28bc3b2c3b7c2afc2b3c29fc3bec2a9c29317c2bfc38fc39ec395c3b4070fc3962fc2ae7f6ac3bbc2abc3a5c3bec3afc3b5c3a9c2bd5fc3b4c3b9c29bc2b3c39357c3b5c3b1772fc28bc29fc3b8c3a8c297c3bc3f49763e2bc3b3020000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Thu, 09 Jul 2015 09:29:31 GMT",
+      "content-length": "734"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2/datacenters/ALTD?groupLinks=true",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba68c29ac3ad7e34c3ba68c2992d72c3bac3a3c3a47837c39d4e4fc2b26536c38bc392c2adc29fc38cc296c3936a7dc299c39777c2a845592cc39f361f3dc2a2c397c3aac2bcc2a4c2a64d5ec29ec393c387c3b33a3fc2a7c2bfc3ae5ec3aec39dc29d656d36c38dc2976d5e3777c2b3c2b2c29dc39d05c3a85f32322fc38cc3b255595d2fc2a8c38149c2b6c38a264559c2b445c39ec39c0cc3a2c3aec380c28b0e725965c2b3275949c398c3927b21c38066c29ec395c3b9c3acc2b9c39fc38002c2a6c29634c2b60906c3b5c391c3a7c2a76fc3a8c38fc2975fc2be7ec3b3c391c3b71dc3a069c2b558c2adc39bc3bc79c2b128c39a0ec3a028c2a6c39dc3b637c2805fc3a6c3ad5555c2bfc2b5c38d6f02c39f6d1fc280c3b7c3a066c297595166c29332c3bfc3b2c3b21cc3ad3cc2b8c297c28bc2b3c385c2aac2aa5b07c39436c2a6c28643002fc3aa6ac2bdc2a2c3af3d40c3bcc291c3a276c3bfc3bc7cc2961d3cc38c0ec2a6c3b9c2a7c3bbc3bbc3bbc2932c3bc298c3ad1d4c1ec38e76c3af1fc3acc3a6c29fc38ec3a84d66c2b55bc2b4c3b3c3b8c3b0c39b593dc2bbc2a2c399c3b3267a5ac3a759c29b7fc28ec2aec2a96d1c1bc3bac3820ec2a34b7079c3bf755e530b6ac3a70168c3b8c2b3c29b21c38cc3b2c3b36c5d32c3b5c2bdc2b7c2bdc3ae6f2406c2b1c2b30561c2bb01c2bdc3bbc3bc41c2ac4e527741c39f7cc39dc2be0c0407c2b369c2b3c2b668c39a62c28ac3bec2bf2e580fc288c283c2bc5e11c3bb5367c2afc2a7c3b37cc2b62ec3b3c399c3b1c2b42d2e4556c2bf7e57c29bc2a0c2bac2bec3a7555dc3bcc2a05ac2b65979c2bc6ec2ab66c29ac295c3b9c38bc2aa2cc2a6c3975f64c2ab15c2bdc3bd01080cc28226c298c39dc3b9c3bb0ac3bf3e3d7d7ec3bac3a6c394c29fc38726c282c3bbc39747280ec2adc28bc28ac2b01223c381c2b237c38dc3b6c3a8632b5e7bc29ec29a7f53c39534c2bec3aa6b2bc3b93d6f220674c3b5c28d20482ac2a22f3ac3885f4fc38963c39071c39258c380c3845fc281c392c3b6004731c3adc2b6c2bf017c5769c39f04c2bec39b3e00c3afc381c2b57ac3bb6625c2bfc3b74d28c3b9c283c3a941c2b6c297c3af3d3cc39f3dc39fc39bc29f105bc39ec39b7f30c2bd3fc399c29bc39ec29bc3ad4f1e3cc284356546c2bb453bc28f0bc3bf3fc2aac3a46f1a24c2b1c2b30561c2bb01c2bdc3bbc3bc41c2ac4e52c2b74143c39dc398c297c281c3a0607ac3bac3b9c3abc283c3b5c28038c388c29bc394c3b1c397c3af6a1354c397c3b7c2a026c2be51c389c39fc288c3802068c282c399c29dc2bf6f42c389c39fc288501c5a1715612546c282656fc29ac39dc2a3c28fc2ad78c39dc3bb06c295c3bc3d6f220674c3b5c28d20482ac2a22f3ac3885f4fc38963c39071c39258c380c3845fc281c392c3b6004731c3adc2b6c2bf017c5769c39f04c2bec39b3e00c3afc381c2b57ac3bb66257fc3afc29b",
+      "50c3b279c2963dc398c29bc3ac3fc398c39dc2994cc3b7c3b777c2b3c2877bc29f3ec39cc39fc2b977c3bf7cc2ba7bc3bfc3be74c3b2c290c39e6446c2bb453bc28f0bc3bf3fc2aac3a46f1a24c2b1c2b30561c2bb01c2bdc3bbc3bc41c2ac4e52c2b74143c39dc398c297c281c3a0607ac3bac3b9c3abc283c3b5c28038c388c29bc394c3b1c397c3af6a1354c397c3b7c2a026c2be51c389c39fc288c3802068c282c399c29dc2bf6f42c389c39fc288501c5a1715612546c282656fc2967b3ec394c39353246c3ec38fc3ab45c2b6c2bc4ec2b7c29ec395c399c3b2c3adc3b9c2ba6ec2bfc2a6c29e076c74242f0cc2a8c3ab1b41c390c3bfc2a32f3ac3885f47c38f13606a19c2a7c28e054c2c16c3a86d0f7014c3936ec3bb1bc38077c3b5c3b64dc3a0c2bbc3ad03c3b01e5cc2abc2ba6fc392c3b3006a1b53c38321c280c38cc287c3b4c2bd07c2883f52c39cc3b2c287c393c3b3c3bbc399c283c3acc3a17936c39bc2bfc2971d640f770fc3b6673b7bc29fc39ec38fc3b2c29d07c29f4ec3a94dc3a6c2b55bc2b4c3b318c3b1c3bfc2ab7ac3bec2864112c3912d08c39b0dc3a8c39dc3a70f6275c292c2ba4d4ac3aac2a6c2be0c0407c39353c3915f1fc2ac07c38441c39ec2a4c291c2bf7e57c29bc2a0c2bac2be07c295c3b1c38d7ac3be2604064113c38cc3aec3bc7d237ac3be26c284c3a2c390c2bac2a8082b31122c7b1713c3a83b15c2afc38fc29fc2b0c29ec28734c2a44fc3aac2a2c38dc28a65c2bac3b5c292c39442c2b3c2a8c396c3adc3bc6bc2aa7b74c281c3bec3a4c28501c2ad7d2308c292c28fc3a8c28b0ec3b2c39751c3b704c2985ac386c289640113c2a705c3aac39b031cc385c2b4c39bc3be06c3b05dc3b57d13c3b86ec3bb00c2bc07c3976ac3b0c29bc3943dc280c39ac386c394700820c2b3237dc3af01c3a2c28f14c2b7c2bdc287c3b777770e26c3b71fc3aec38ec3aec3ad1f3c387f78c3be6976c3afc39ec2a7c3b7c38e1f7cc3ba70c3ba69c2be436f32c38bc39dc2a2c29dc387c28fc3bf1f55c3b7370dc292c398c399c282c2b0c39dc280c39e7dc3be205627c2a9c39bc2a0c2ab6ec3acc38b4070303d4dc3bdc3b5c3817a401cc3a44dc28ac3b9c3ab77c2b509c2aac3ab7b5027c39fc2a8c3ae6f44601034c381c3acc38ec39f37c2a1c3ae6f44280ec2adc28bc28ac2b01223c381c2b27731411ac383c28a1772371d75c3bfc2bac2acc396175f5fc3957f7006c28740c2906c445f74c290c2bfc29ec2aac387c390c3a304c2b2c280c289c38b02c395c3ad01c28e62c39a6d7f03c3b8c2aec3aac2be097cc2b77d00c39ec2836bc2b5c3b7c38dc2aac3be1bc389c3a0502631c29bc3aec38ec38ec3b776c3aec3afc3aec3a7c3b7c2a6c399c2a73bc2b3c3bd4f67c3b70fc3aec39fc29b1ec39c7f00c388c38c6ec399c38dc3ad3c5ec3bcc3bfc2a8c2aac2bfc28918c384c38e16c284c3ad06c3b4c3aec3b307c2b13a49c39d063d75635f06c282c283c3a969c3a9c2af0fc39603c3a2206f52c38a5fc2bfc2ab4d505dc39fc283c3bac3b846557f2302c283c2a0096677c3bec2be09557f234271685d54c284c2951809c296c2bdc2a2c2846bc2abc3a275c3b61cc29ec3bd57c2afc3931352317556c2a65b27c3b362c29a5d7cc39d543dc280c2a3277961405fc39f08c2822423c3bac2a2c283c3bc75143d01c2a6c29671c3b258c380c38463c281c3a2c3b6004731c3adc2b6c2bf017c5771c39f04c2bec39b3e00c3afc381c2b5c2bac3bb26450fc2a0c2b631351c02c388c28c48c39f7bc280c3b823c385c28d72c2890f67c3a7c393c38974c2b233c39dc2bfc3bf70c3afc3a0c3a1c28cc3a2c38ec2bdc39dc389c38ec3bec3b9c2a77936c2a137c299c3996ec391c38ec3a3c384c3bfc28f2ac3bac29b0649c3ac6c41c3986e40c3af3e7f10c2abc293c3946dc3905237c3b6652038c298c29ec28ec3bec3ba603d200ec3b226c295c3bcc3b5c2bbc39a04c395c3b53dc2a8c28d6f54c3b437223008c29a6076c3a7c3afc29b50c3b4372214c287c396454558c289c29160c3995b5e43c39fc2a978c2bdc3b87d54c391c29f664dc29b6ec2bdc388c2afc392c39fc28714c38bc39754c3b300c28d7ec3a4c285016d7d2308c292c28bc3a8c28b0ec3b2c39751c3b304c2985ac386c289630113c287056ac39b031cc385c2b4c39bc3be",
+      "06c3b05dc2b57d13c3b86ec3bb00c2bc07c3976ac3aec29bc3943cc280c39ac386c394700820c2b3217dc3af01c3a2c28f14c2b7c3bd07c3b7763ec39d79c3b06067c3afc3bc7c7fc3ba60c3b7c3a0c39ec38ec283c389c38ec2bd4f3fc3bdc3b4c3bcc3a1c3bec2bdc29d7d7ac29359c3ad16c3ad3c3ec3bcc3bfc2a8c29ac2bf69c290c384c38e16c284c3ad06c3b4c3aec3b307c2b13a49c39d061d75635f06c282c283c3a969c3a8c2af0fc39603c3a2206f52c3885fc2bfc2ab4d505dc39fc283c2bac3b846357f2302c283c2a0096677c3bec2be09357f234271685d54c284c2951809c296c2bdc3a602c3ba4ec385c3abc3b5c3a750c3b3c3872fc28f4f286343c3a4c3894825c3a45f53c38903307ac291170674c3b5c28d20482ac2a22f3ac3885f47c38913606a1927c28d054cc3bc15286d0f7014c3936ec3bb1bc38077c295c3b64dc3a0c2bbc3ad03c3b01e5cc2abc2b76f52c3b2006a1b53c38321c280c38cc284c3b4c2bd07c2883f52c39c1e64c3a7c2bbc3b71ec3acc39e3fc2b8c2b7c2bfc2bf7fc3bfc3a0c3a1c3a4c38174c3bfc3a1c39e7dc38a2b4ec3b6c38fc3afc3af033233c39a2dc39a795cc3b8c3bf51257fc39320c289c29d2d08c39b0dc3a8c39dc3a70f6275c292c2ba0d1ac3aac386c2be0c0407c393c393c38f5f1fc2ac07c38441c39ec2a4c28ec2bf7e57c29bc2a0c2bac2be0735c3b1c28d4ac3be4604064113c38cc3aec3bc7d134ac3be46c284c3a2c390c2bac2a8082b31122c7bc3ab29c3b4c29dc28ac397572750c3b2c3a4c38b7f37c2872fc3bf3ac2a3c3a1c2a5276556675f53c393033ac2bac292170614c3b6c28d204834c2a22f3ac3885f47c39313606a19c2a7c28f054c4c16686e0f7014c3936ec3bb1bc3807735c3b74dc3a0c2bbc3ad03c3b01e5cc2abc2bc6fc392c3b4006a1b53c38321c280c38cc289c3b4c2bd07c2883f52c39c767677c2891bc38fc3b3c39dc3bcc3bec38ec3bec38ec3ae5ec3b6c3a0c393c389c3837cc3afc393c389c3bdc3acc393c3bbc3bb19c39641c298c39b6ec391c38e63c385c3bfc28f6ac3bac29b0649c3ac6c41c3986e40c3af3e7f10c2abc293c3946d505337c3b6652038c298c29ec292c3bec3ba603d200ec3b226c29dc3bcc3b5c2bbc39a04c395c3b53dc2a8c28e6fc394c3b437223008c29a6076c3a7c3afc29bc390c3b4372214c287c396454558c289c29160c3995bc2b7c3907746c2bcc39ec2a8c2a6c2b7c3a9c3b9c397c39477c3ba3c7bc29bc2a727457bc3bd75c3b53dc3b5c2810ec3a5c28501c2b57d230812c290c3a8c28b0ec3b2c397c392c3b7c284c39b10c2952c6062c2b5407f7bc280c2a3c29876c39bc39f00c2bec2abc2bf6f02c39f6d1fc280c3b7c3a05a157ec2a3c2be27c2a0c2b631351c02c388c3bc48c39f7bc280c3b823c385c3adc3936c2f3bc38f776819c3a9c381c39ec3bec2bdc3a934c38bc38ec3b7c3aec38dc38ec3b3070fc38ec3b733c38a38c392c29bc38c73c2b768c3a731c3a4c3bf47c3b5c3bd4dc2832476c2b6206c37c2a077c29f3fc288c39549c3aa3628c2ab1bc3bb32101c4c4f557f7dc2b01e100779c29366c3bec3ba5d6dc282c3ba4b46c2a6c3af21c2a57cc2b3c2bec2bf11c28141c39004c2b33b7fc39fc284c2bec2bf11c2a138c2b42e2ac3824ac28c04c38bc39e65067dc2a7c3a2c3b5c293c387c2aac3af254bc3bfc29ac3940cc398c3a46bc2aa79c280463fc3b2c382c280c2b6c2be1104c38945c3b44507c3b9c3abc2a879024c2dc3a3c384c2b1c280c289c38302c2b5c3ad01c28e62c39a6d7f03c3b8c2aec39ac2be097cc2b77d00c39ec2836b35c3b74d6a1e406d636a3804c290c399c290c2bec3b700c3b147c28ac39bc3bec2bdc3bbc29f3ec39c7d30c2bbc2bf4f51c3a7c3aec3b420c38b1f4cc3ae7fc29ac3afc39ec39fc2bdc2b7c2bbc29f3d04c29b30c2abc39dc2a2c29dc387c287c3bf1f55c3b3370dc292c398c399c282c2b0c39dc280c39e7dc3be205627c2a9c39bc2a0c2a36ec3acc38b4070303d0dc3bdc3b5c3817a401cc3a44d0ac3b9c3ab77c2b509c2aac3ab7b5017c39fc2a8c3a66f44601034c381c3acc38ec39f37c2a1c3a66f44280ec2adc28bc28ac2b01223c381c2b277c385c3ba4ec385c3abc2bb245ec2acc3a635c2814352c391c2965f37",
+      "4d0fc388c3a8465e1850c39637c28220c2b1c288c2bec3a8207f1d2d4fc280c2a965c29c3616303158c2a0c2b53dc380514cc2bbc3ad6f00c39fc395c39a37c281c3afc2b60fc3807b70c2adc3a2c2be49c38b03c2a86d4c0dc287003217c392c3b71e20c3be4871c39b3d3fc398c38d26c293c3bd3c3bc298c3aec29fc29f4f26c3b73ec39d21c2bfc3a37cc3b7c381c381c3b9c383c29dc2bd09c2bdc389c29c76c28b761e1bc3be7f54c38bc39f344862670bc38276037ac3b7c3b9c28358c29dc2a46ec283c28ac2bac2b12f03c381c381c3b414c3b4c39707c3ab0171c29037c3a9c3a3c2afc39fc39526c2a8c2aec3af41557cc2a3c296c2bf11c28141c39004c2b33b7fc39fc284c296c2bf11c2a138c2b42e2ac3824ac39fc3bf25c39fc3bf7f0051c3804a6cc3904c0000"
+    ],
+    "headers": {
+      "cache-control": "max-age=300, private",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "vary": "Accept-Encoding",
+      "date": "Thu, 09 Jul 2015 09:29:33 GMT",
+      "content-length": "3063"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "POST",
+    "path": "/v2/groups/ALTD/",
+    "body": {
+      "name": "Group-1",
+      "description": "Test Group",
+      "parentGroupId": "6949dfcbcb0c459289d91821b04f6eab"
+    },
+    "status": 201,
+    "response": {
+      "id": "481294a58ee74340894aef21ec5e5e2d",
+      "name": "Group-1",
+      "description": "Test Group",
+      "locationId": "IL1",
+      "type": "default",
+      "status": "active",
+      "groups": [],
+      "links": [
+        {
+          "rel": "createGroup",
+          "href": "/v2/groups/altd",
+          "verbs": [
+            "POST"
+          ]
+        },
+        {
+          "rel": "createServer",
+          "href": "/v2/servers/altd",
+          "verbs": [
+            "POST"
+          ]
+        },
+        {
+          "rel": "self",
+          "href": "/v2/groups/altd/481294a58ee74340894aef21ec5e5e2d",
+          "verbs": [
+            "GET",
+            "PATCH",
+            "DELETE"
+          ]
+        },
+        {
+          "rel": "parentGroup",
+          "href": "/v2/groups/altd/6949dfcbcb0c459289d91821b04f6eab",
+          "id": "6949dfcbcb0c459289d91821b04f6eab"
+        },
+        {
+          "rel": "defaults",
+          "href": "/v2/groups/altd/481294a58ee74340894aef21ec5e5e2d/defaults",
+          "verbs": [
+            "GET",
+            "POST"
+          ]
+        },
+        {
+          "rel": "billing",
+          "href": "/v2/groups/altd/481294a58ee74340894aef21ec5e5e2d/billing"
+        },
+        {
+          "rel": "archiveGroupAction",
+          "href": "/v2/groups/altd/481294a58ee74340894aef21ec5e5e2d/archive"
+        },
+        {
+          "rel": "statistics",
+          "href": "/v2/groups/altd/481294a58ee74340894aef21ec5e5e2d/statistics"
+        },
+        {
+          "rel": "upcomingScheduledActivities",
+          "href": "/v2/groups/altd/481294a58ee74340894aef21ec5e5e2d/upcomingScheduledActivities"
+        },
+        {
+          "rel": "horizontalAutoscalePolicyMapping",
+          "href": "/v2/groups/altd/481294a58ee74340894aef21ec5e5e2d/horizontalAutoscalePolicy",
+          "verbs": [
+            "GET",
+            "PUT",
+            "DELETE"
+          ]
+        },
+        {
+          "rel": "scheduledActivities",
+          "href": "/v2/groups/altd/481294a58ee74340894aef21ec5e5e2d/scheduledActivities",
+          "verbs": [
+            "GET",
+            "POST"
+          ]
+        }
+      ],
+      "changeInfo": {
+        "createdBy": "idrabenia.altd",
+        "createdDate": "2015-07-09T09:29:35Z",
+        "modifiedBy": "idrabenia.altd",
+        "modifiedDate": "2015-07-09T09:29:35Z"
+      },
+      "customFields": []
+    },
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "expires": "-1",
+      "location": "/v2/groups/altd/481294a58ee74340894aef21ec5e5e2d",
+      "date": "Thu, 09 Jul 2015 09:29:35 GMT",
+      "content-length": "1475"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "POST",
+    "path": "/v2/groups/ALTD/",
+    "body": {
+      "name": "Group-1-1",
+      "parentGroupId": "481294a58ee74340894aef21ec5e5e2d"
+    },
+    "status": 201,
+    "response": {
+      "id": "de9318f18717455a98d28c815ad7e96e",
+      "name": "Group-1-1",
+      "locationId": "IL1",
+      "type": "default",
+      "status": "active",
+      "groups": [],
+      "links": [
+        {
+          "rel": "createGroup",
+          "href": "/v2/groups/altd",
+          "verbs": [
+            "POST"
+          ]
+        },
+        {
+          "rel": "createServer",
+          "href": "/v2/servers/altd",
+          "verbs": [
+            "POST"
+          ]
+        },
+        {
+          "rel": "self",
+          "href": "/v2/groups/altd/de9318f18717455a98d28c815ad7e96e",
+          "verbs": [
+            "GET",
+            "PATCH",
+            "DELETE"
+          ]
+        },
+        {
+          "rel": "parentGroup",
+          "href": "/v2/groups/altd/481294a58ee74340894aef21ec5e5e2d",
+          "id": "481294a58ee74340894aef21ec5e5e2d"
+        },
+        {
+          "rel": "defaults",
+          "href": "/v2/groups/altd/de9318f18717455a98d28c815ad7e96e/defaults",
+          "verbs": [
+            "GET",
+            "POST"
+          ]
+        },
+        {
+          "rel": "billing",
+          "href": "/v2/groups/altd/de9318f18717455a98d28c815ad7e96e/billing"
+        },
+        {
+          "rel": "archiveGroupAction",
+          "href": "/v2/groups/altd/de9318f18717455a98d28c815ad7e96e/archive"
+        },
+        {
+          "rel": "statistics",
+          "href": "/v2/groups/altd/de9318f18717455a98d28c815ad7e96e/statistics"
+        },
+        {
+          "rel": "upcomingScheduledActivities",
+          "href": "/v2/groups/altd/de9318f18717455a98d28c815ad7e96e/upcomingScheduledActivities"
+        },
+        {
+          "rel": "horizontalAutoscalePolicyMapping",
+          "href": "/v2/groups/altd/de9318f18717455a98d28c815ad7e96e/horizontalAutoscalePolicy",
+          "verbs": [
+            "GET",
+            "PUT",
+            "DELETE"
+          ]
+        },
+        {
+          "rel": "scheduledActivities",
+          "href": "/v2/groups/altd/de9318f18717455a98d28c815ad7e96e/scheduledActivities",
+          "verbs": [
+            "GET",
+            "POST"
+          ]
+        }
+      ],
+      "changeInfo": {
+        "createdBy": "idrabenia.altd",
+        "createdDate": "2015-07-09T09:29:35Z",
+        "modifiedBy": "idrabenia.altd",
+        "modifiedDate": "2015-07-09T09:29:35Z"
+      },
+      "customFields": []
+    },
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "expires": "-1",
+      "location": "/v2/groups/altd/de9318f18717455a98d28c815ad7e96e",
+      "date": "Thu, 09 Jul 2015 09:29:35 GMT",
+      "content-length": "1450"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "POST",
+    "path": "/v2/groups/ALTD/",
+    "body": {
+      "name": "Group-1-2",
+      "parentGroupId": "481294a58ee74340894aef21ec5e5e2d"
+    },
+    "status": 201,
+    "response": {
+      "id": "9ea0b8d211384768afcfd64b7896a2cd",
+      "name": "Group-1-2",
+      "locationId": "IL1",
+      "type": "default",
+      "status": "active",
+      "groups": [],
+      "links": [
+        {
+          "rel": "createGroup",
+          "href": "/v2/groups/altd",
+          "verbs": [
+            "POST"
+          ]
+        },
+        {
+          "rel": "createServer",
+          "href": "/v2/servers/altd",
+          "verbs": [
+            "POST"
+          ]
+        },
+        {
+          "rel": "self",
+          "href": "/v2/groups/altd/9ea0b8d211384768afcfd64b7896a2cd",
+          "verbs": [
+            "GET",
+            "PATCH",
+            "DELETE"
+          ]
+        },
+        {
+          "rel": "parentGroup",
+          "href": "/v2/groups/altd/481294a58ee74340894aef21ec5e5e2d",
+          "id": "481294a58ee74340894aef21ec5e5e2d"
+        },
+        {
+          "rel": "defaults",
+          "href": "/v2/groups/altd/9ea0b8d211384768afcfd64b7896a2cd/defaults",
+          "verbs": [
+            "GET",
+            "POST"
+          ]
+        },
+        {
+          "rel": "billing",
+          "href": "/v2/groups/altd/9ea0b8d211384768afcfd64b7896a2cd/billing"
+        },
+        {
+          "rel": "archiveGroupAction",
+          "href": "/v2/groups/altd/9ea0b8d211384768afcfd64b7896a2cd/archive"
+        },
+        {
+          "rel": "statistics",
+          "href": "/v2/groups/altd/9ea0b8d211384768afcfd64b7896a2cd/statistics"
+        },
+        {
+          "rel": "upcomingScheduledActivities",
+          "href": "/v2/groups/altd/9ea0b8d211384768afcfd64b7896a2cd/upcomingScheduledActivities"
+        },
+        {
+          "rel": "horizontalAutoscalePolicyMapping",
+          "href": "/v2/groups/altd/9ea0b8d211384768afcfd64b7896a2cd/horizontalAutoscalePolicy",
+          "verbs": [
+            "GET",
+            "PUT",
+            "DELETE"
+          ]
+        },
+        {
+          "rel": "scheduledActivities",
+          "href": "/v2/groups/altd/9ea0b8d211384768afcfd64b7896a2cd/scheduledActivities",
+          "verbs": [
+            "GET",
+            "POST"
+          ]
+        }
+      ],
+      "changeInfo": {
+        "createdBy": "idrabenia.altd",
+        "createdDate": "2015-07-09T09:29:35Z",
+        "modifiedBy": "idrabenia.altd",
+        "modifiedDate": "2015-07-09T09:29:35Z"
+      },
+      "customFields": []
+    },
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "expires": "-1",
+      "location": "/v2/groups/altd/9ea0b8d211384768afcfd64b7896a2cd",
+      "date": "Thu, 09 Jul 2015 09:29:35 GMT",
+      "content-length": "1450"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "POST",
+    "path": "/v2/groups/ALTD/",
+    "body": {
+      "name": "Group-1-1-1",
+      "parentGroupId": "de9318f18717455a98d28c815ad7e96e"
+    },
+    "status": 201,
+    "response": {
+      "id": "796fce6d7abd4133a6fbaf962d8b153a",
+      "name": "Group-1-1-1",
+      "locationId": "IL1",
+      "type": "default",
+      "status": "active",
+      "groups": [],
+      "links": [
+        {
+          "rel": "createGroup",
+          "href": "/v2/groups/altd",
+          "verbs": [
+            "POST"
+          ]
+        },
+        {
+          "rel": "createServer",
+          "href": "/v2/servers/altd",
+          "verbs": [
+            "POST"
+          ]
+        },
+        {
+          "rel": "self",
+          "href": "/v2/groups/altd/796fce6d7abd4133a6fbaf962d8b153a",
+          "verbs": [
+            "GET",
+            "PATCH",
+            "DELETE"
+          ]
+        },
+        {
+          "rel": "parentGroup",
+          "href": "/v2/groups/altd/de9318f18717455a98d28c815ad7e96e",
+          "id": "de9318f18717455a98d28c815ad7e96e"
+        },
+        {
+          "rel": "defaults",
+          "href": "/v2/groups/altd/796fce6d7abd4133a6fbaf962d8b153a/defaults",
+          "verbs": [
+            "GET",
+            "POST"
+          ]
+        },
+        {
+          "rel": "billing",
+          "href": "/v2/groups/altd/796fce6d7abd4133a6fbaf962d8b153a/billing"
+        },
+        {
+          "rel": "archiveGroupAction",
+          "href": "/v2/groups/altd/796fce6d7abd4133a6fbaf962d8b153a/archive"
+        },
+        {
+          "rel": "statistics",
+          "href": "/v2/groups/altd/796fce6d7abd4133a6fbaf962d8b153a/statistics"
+        },
+        {
+          "rel": "upcomingScheduledActivities",
+          "href": "/v2/groups/altd/796fce6d7abd4133a6fbaf962d8b153a/upcomingScheduledActivities"
+        },
+        {
+          "rel": "horizontalAutoscalePolicyMapping",
+          "href": "/v2/groups/altd/796fce6d7abd4133a6fbaf962d8b153a/horizontalAutoscalePolicy",
+          "verbs": [
+            "GET",
+            "PUT",
+            "DELETE"
+          ]
+        },
+        {
+          "rel": "scheduledActivities",
+          "href": "/v2/groups/altd/796fce6d7abd4133a6fbaf962d8b153a/scheduledActivities",
+          "verbs": [
+            "GET",
+            "POST"
+          ]
+        }
+      ],
+      "changeInfo": {
+        "createdBy": "idrabenia.altd",
+        "createdDate": "2015-07-09T09:29:36Z",
+        "modifiedBy": "idrabenia.altd",
+        "modifiedDate": "2015-07-09T09:29:36Z"
+      },
+      "customFields": []
+    },
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "expires": "-1",
+      "location": "/v2/groups/altd/796fce6d7abd4133a6fbaf962d8b153a",
+      "date": "Thu, 09 Jul 2015 09:29:36 GMT",
+      "content-length": "1452"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2/datacenters/ALTD/il1/deploymentCapabilities",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f227ec3b147c2b3c2acc38d4ec3b265c29bc397c2a7c38b6c52c3a6c2b3c28f1ec2b5c3b53a1f7d542c5655c39dc3bec3a417c29dc28fc29bc3b50ac29f372fc3ab7c51c2ac17c2afc39bc2aac38e2ec3b2c3aec2b7c2afc3a759c29dc38fc29e57c399c3ac495666c38b695e775b3cc2a1065fc3a46d56c2bec38ec3abc38bc2bc6e3e7a74c29ec2950d35c298c3a5c2abc2b2c2ba46c29f2fc3b2c3b6c2aac2aac39fc39257c39fc3bbc3851f2dc2b305c3b5c3b2c3912541c3bbc3bdc3b71ec39e7fc3b8c3bbc3afc3aec28c1fc39e1bc39f7fc3b8c391c3a8c2a3c2a5343c23243fc29a1d1cc3acc3afc3adc3acc3a6c3b7c2b307c2b3c3bdc3ac7c6772c3bfc3bec3b4c3bec383c39974c3b660c3b7c3a0c39ec3aec38309356fc2af5700c2b5c2aac28bc38bc2acc38dc3a9c2836c3ac2adc396c38bc3b6c3ac297d7ac3bcc3bcc38dc393c28f7ec389c3b7c2a955c2be58c295c3b47dc390c3bdc2932f5f7f7bc3bbc38bc297c2a72f5ec2bf393ec3b9c2bdc2b64fc29ec29f6c7fc3b5c3a4c2ab176fc2bec39a7ec3b3c3aac2abc3976f7ec29fc3adc38fc2bfc3bcc3bdc28f3f3f7dc3b1c28670c39cc39b23c39055c3b3467a5b4fc2a8c287c3b5c3aec3bec3afc3bfc3a9c3bec293c2a2c2a56f667933c2adc28b555b544bc3ba1ac2805302c297c2bec2a67ec2a77959c2a60ac2a01102c2bf2e7ec2907fc3bec3a4c2a3473bc2a3c28fc2a6c3992ac29b1465c39116c28cc39b4773c3aac2a06ec2a659c289c2a14c57c3abc3a3755bc389c29f34c28a3a6f40c39fc399531a6cc3be326bc3a7c3bcc38ac2a45852c39b495501c291c389c2ba2867c3b4733ac2abc2ab057e56c28b55c2862f6645c3833fc3b24bc3bac29758c2a4c2ae56c397c3b8c2adc29dc392c2bfc3b3c28a08425cc2b22cc39a7a362e1617c3b44759c280c2bcc3b4c3afc2a7c3bbc3b2337fc297c2a36d5935c3ad27c3a7446274c2b3c3886745c286c29f4b00c2af56c3b877555768570b42c28dc2a0c397c3a465c2b15cc2bfc3836f353068c2ae1bc3bac2b75dc2acc3a8c39f7553c393c2bfc29719c3bfc2bb40c2bb1f7cc3b4c3bd5f327ac3bf79c2a2c3b7c39f6bc28ac2be5cc3a5c38bc3976d367d1b4c16c2b5c3bdc3913cc3916f5f6fc29e5ec2bf39c3bdc3a2c3a4c3b4c3b9736ac393c299c28b4d336168c29fc2be5141c2a566c29d49c398c39b3c0b3f7fc389c3bec2934fc29ec3bf5ec39bc2bb3b3bc39b44c3b9c297c38fc28fc39fc29c52c2bb0ec3a937c28bc3814f56c3a57ac291c2a75b67301cc38bc2acc2bc43c38d3ac384c2bf47c2a41ac2a63d7dc3b9230900c2b541c38e5b692ac2b228073076c3af334fc3af05c2b8337fc29b65c287c2bec3bcc391c3bc61164ec288c2825fc2bec39ec2bec2bfc3bdc3a97e54c29ac2a634c29c2f5fc39f1fc29824785e5fc2be4ec3afc2a73fc293c392c3bb136ec391c299c287c39d0744c2a8c3a1c289c3b8",
+      "794fc3b94f3753c3bec393c38dc294c3bfc3b4c3ab53c29ec2bec3bcc29108c280c3904f4fc29fc29c1dc2bf18c29ec288593e29c2b2c3a5c390443cc3a56f3f64227ec39e53c3bec38166c38a3fc3984cc3b9073fc2a2c3bcc3bb53c3bec3a5c3af7d1ac2a5c3b8c3aa5dc3be443a09694dc3ad537cc2917ec3afc3b4c3b77e79c3bac3aac3ac0b525ec387c38fc2bf4fc3ad3a14c39f6c7607091e20c3b7c3aac39bc2a7c38fc2872d1205c3a6c39fc38ec39a21c28bc3b4c28ac2bf4d4fc3a1c39851c284c39cc3a4c3a9731ac3bcc2bb0f31513415c399c292c29ac38fc2be7c4dc2bfc3bf4869125a4467c38cc391c2a0c38ac294391a52c2994373c3b4013ac294463b344744424d05c3bd7cc29fc2ae413d2bc39335c2a467c287c2a66bc2a3c3a2c3bdc294c3a8c3b6c2b5c2a6c3abc3a7c3af1c6978c2b3c2bb37344d1a31c3ad0dc38cc39357c3bc75c2bac2bbc2b7695e6e12c2a31fc38d05c2a145c2b4c394c2b9c398c2bf612ec286c2a2573317c3bb3fc29a0b46c3af43c3a6c3a2c2bb672fc3b676760e5ec3ad3d7d7342c39341c2adc3ac2c5c15c38b5975c395c3a0c3abc2a7762160604ac2be2b6d53344e5fc3adc2a5780131565ec2a7c2a733c29ac2806ac2b961c2ae3ec39dc3acc3971005c39e5bc29fc2816e2031c2883543c2b3c299c3b9c3ba79c2bec2bc68c3a7c384203122c290c3a3354c04c2a7c2a36f4904c3b7c3823733781ac386373ac39ac3976fc29e0ec28fc3b6c29663c2a47cc3b772c296c395c2b3c3bfc3b7c28d7077134bc393c297c384c2a1c2b7646952c3ba68c3bdc3bf317ec39ec39dc39b28c394c3bc35c28dc3aac3b634c2a0c399c3860b3f0432c290c2b6c2bcc391c2abc2bc0d45c3a85301c28415c3832f5fc2830478c3b7177f54c3906ac3a0c2bd037a27c3b7473bc3a4c28b7dc3aac2865866c293c29775355b4fc39bc2936a067ac2bec3bec3b2c399c29bc3adc3a7c3874fc2b65fc29d3ec3bdc3b6c3b1c29bc3adc293c2975f51c2b3c2952cc28046c29ac2be7c75c3ba45c39856571cc2a573c3a3c3956332c281c3a4c3bec3bd2ec2926e4a4400c2bd29c2b905c296c38419c2af5fc3bd24045f3ac2bf01c3916e73c3855571000a1d2642c3bf06c3b7c2bd1ec281c3b53dc3821dc39cc3b773c28b3a300002167526c3bbc3b77fc389c3bf03c3aec2b5c394c280c3b61e0000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Thu, 09 Jul 2015 09:29:39 GMT",
+      "content-length": "1375"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2/datacenters/ALTD/il1/deploymentCapabilities",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f227ec3b147c2b3c2acc38d4ec3b265c29bc397c2a7c38b6c52c3a6c2b3c28f1ec2b5c3b53a1f7d542c5655c39dc3bec3a417c29dc28fc29bc3b50ac29f372fc3ab7c51c2ac17c2afc39bc2aac38e2ec3b2c3aec2b7c2afc3a759c29dc38fc29e57c399c3ac495666c38b695e775b3cc2a1065fc3a46d56c2bec38ec3abc38bc2bc6e3e7a74c29ec2950d35c298c3a5c2abc2b2c2ba46c29f2fc3b2c3b6c2aac2aac39fc39257c39fc3bbc3851f2dc2b305c3b5c3b2c3912541c3bbc3bdc3b71ec39e7fc3b8c3bbc3afc3aec28c1fc39e1bc39f7fc3b8c391c3a8c2a3c2a5343c23243fc29a1d1cc3acc3afc3adc3acc3a6c3b7c2b307c2b3c3bdc3ac7c6772c3bfc3bec3b4c3bec383c39974c3b660c3b7c3a0c39ec3aec38309356fc2af5700c2b5c2aac28bc38bc2acc38dc3a9c2836c3ac2adc396c38bc3b6c3ac297d7ac3bcc3bcc38dc393c28f7ec389c3b7c2a955c2be58c295c3b47dc390c3bdc2932f5f7f7bc3bbc38bc297c2a72f5ec2bf393ec3b9c2bdc2b64fc29ec29f6c7fc3b5c3a4c2ab176fc2bec39a7ec3b3c3aac2abc3976f7ec29fc3adc38fc2bfc3bcc3bdc28f3f3f7dc3b1c28670c39cc39b23c39055c3b3467a5b4fc2a8c287c3b5c3aec3bec3afc3bfc3a9c3bec293c2a2c2a56f667933c2adc28b555b544bc3ba1ac2805302c297c2bec2a67ec2a77959c2a60ac2a01102c2bf2e7ec2907fc3bec3a4c2a3473bc2a3c28fc2a6c3992ac29b1465c39116c28cc39b4773c3aac2a06ec2a659c289c2a14c57c3abc3a3755bc389c29f34c28a3a6f40c39fc399531a6cc3be326bc3a7c3bcc38ac2a45852c39b495501c291c389c2ba2867c3b4733ac2abc2ab057e56c28b55c2862f6645c3833fc3b24bc3bac29758c2a4c2ae56c397c3b8c2adc29dc392c2bfc3b3c28a08425cc2b22cc39a7a362e1617c3b44759c280c2bcc3b4c3afc2a7c3bbc3b2337fc297c2a36d5935c3ad27c3a7446274c2b3c3886745c286c29f4b00c2af56c3b877555768570b42c28dc2a0c397c3a465c2b15cc2bfc3836f353068c2ae1bc3bac2b75dc2acc3a8c39f7553c393c2bfc29719c3bfc2bb40c2bb1f7cc3b4c3bd5f327ac3bf79c2a2c3b7c39f6bc28ac2be5cc3a5c38bc3976d367d1b4c16c2b5c3bdc3913cc3916f5f6fc29e5ec2bf39c3bdc3a2c3a4c3b4c3b9736ac393c299c28b4d336168c29fc2be5141c2a566c29d49c398c39b3c0b3f7fc389c3bec2934fc29ec3bf5ec39bc2bb3b3bc39b44c3b9c297c38fc28fc39fc29c52c2bb0ec3a937c28bc3814f56c3a57ac291c2a75b67301cc38bc2acc2bc43c38d3ac384c2bf47c2a41ac2a63d7dc3b9230900c2b541c38e5b692ac2b228073076c3af334fc3af05c2b8337fc29b65c287c2bec3bcc391c3bc61164ec288c2825fc2bec39ec2bec2bfc3bdc3a97e54c29ac2a634c29c2f5fc39f1fc29824785e5fc2be4ec3afc2a73fc293c392c3bb136ec391c299c287c39d0744c2a8c3a1c289c3b8",
+      "794fc3b94f3753c3bec393c38dc294c3bfc3b4c3ab53c29ec2bec3bcc29108c280c3904f4fc29fc29c1dc2bf18c29ec288593e29c2b2c3a5c390443cc3a56f3f64227ec39e53c3bec38166c38a3fc3984cc3b9073fc2a2c3bcc3bb53c3bec3a5c3af7d1ac2a5c3b8c3aa5dc3be443a09694dc3ad537cc2917ec3afc3b4c3b77e79c3bac3aac3ac0b525ec387c38fc2bf4fc3ad3a14c39f6c7607091e20c3b7c3aac39bc2a7c38fc2872d1205c3a6c39fc38ec39a21c28bc3b4c28ac2bf4d4fc3a1c39851c284c39cc3a4c3a9731ac3bcc2bb0f31513415c399c292c29ac38fc2be7c4dc2bfc3bf4869125a4467c38cc391c2a0c38ac294391a52c2994373c3b4013ac294463b344744424d05c3bd7cc29fc2ae413d2bc39335c2a467c287c2a66bc2a3c3a2c3bdc294c3a8c3b6c2b5c2a6c3abc3a7c3af1c6978c2b3c2bb37344d1a31c3ad0dc38cc39357c3bc75c2bac2bbc2b7695e6e12c2a31fc38d05c2a145c2b4c394c2b9c398c2bf612ec286c2a2573317c3bb3fc29a0b46c3af43c3a6c3a2c2bb672fc3b676760e5ec3ad3d7d7342c39341c2adc3ac2c5c15c38b5975c395c3a0c3abc2a7762160604ac2be2b6d53344e5fc3adc2a5780131565ec2a7c2a733c29ac2806ac2b961c2ae3ec39dc3acc3971005c39e5bc29fc2816e2031c2883543c2b3c299c3b9c3ba79c2bec2bc68c3a7c384203122c290c3a3354c04c2a7c2a36f4904c3b7c3823733781ac386373ac39ac3976fc29e0ec28fc3b6c29663c2a47cc3b772c296c395c2b3c3bfc3b7c28d7077134bc393c297c384c2a1c2b7646952c3ba68c3bdc3bf317ec39ec39dc39b28c394c3bc35c28dc3aac3b634c2a0c399c3860b3f0432c290c2b6c2bcc391c2abc2bc0d45c3a85301c28415c3832f5fc2830478c3b7177f54c3906ac3a0c2bd037a27c3b7473bc3a4c28b7dc3aac2865866c293c29775355b4fc39bc2936a067ac2bec3bec3b2c399c29bc3adc3a7c3874fc2b65fc29d3ec3bdc3b6c3b1c29bc3adc293c2975f51c2b3c2952cc28046c29ac2be7c75c3ba45c39856571cc2a573c3a3c3956332c281c3a4c3bec3bd2ec2926e4a4400c2bd29c2b905c296c38419c2af5fc3bd24045f3ac2bf01c3916e73c3855571000a1d2642c3bf06c3b7c2bd1ec281c3b53dc3821dc39cc3b773c28b3a300002167526c3bbc3b77fc389c3bf03c3aec2b5c394c280c3b61e0000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Thu, 09 Jul 2015 09:29:39 GMT",
+      "content-length": "1375"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2/datacenters/ALTD/il1/deploymentCapabilities",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f227ec3b147c2b3c2acc38d4ec3b265c29bc397c2a7c38b6c52c3a6c2b3c28f1ec2b5c3b53a1f7d542c5655c39dc3bec3a417c29dc28fc29bc3b50ac29f372fc3ab7c51c2ac17c2afc39bc2aac38e2ec3b2c3aec2b7c2afc3a759c29dc38fc29e57c399c3ac495666c38b695e775b3cc2a1065fc3a46d56c2bec38ec3abc38bc2bc6e3e7a74c29ec2950d35c298c3a5c2abc2b2c2ba46c29f2fc3b2c3b6c2aac2aac39fc39257c39fc3bbc3851f2dc2b305c3b5c3b2c3912541c3bbc3bdc3b71ec39e7fc3b8c3bbc3afc3aec28c1fc39e1bc39f7fc3b8c391c3a8c2a3c2a5343c23243fc29a1d1cc3acc3afc3adc3acc3a6c3b7c2b307c2b3c3bdc3ac7c6772c3bfc3bec3b4c3bec383c39974c3b660c3b7c3a0c39ec3aec38309356fc2af5700c2b5c2aac28bc38bc2acc38dc3a9c2836c3ac2adc396c38bc3b6c3ac297d7ac3bcc3bcc38dc393c28f7ec389c3b7c2a955c2be58c295c3b47dc390c3bdc2932f5f7f7bc3bbc38bc297c2a72f5ec2bf393ec3b9c2bdc2b64fc29ec29f6c7fc3b5c3a4c2ab176fc2bec39a7ec3b3c3aac2abc3976f7ec29fc3adc38fc2bfc3bcc3bdc28f3f3f7dc3b1c28670c39cc39b23c39055c3b3467a5b4fc2a8c287c3b5c3aec3bec3afc3bfc3a9c3bec293c2a2c2a56f667933c2adc28b555b544bc3ba1ac2805302c297c2bec2a67ec2a77959c2a60ac2a01102c2bf2e7ec2907fc3bec3a4c2a3473bc2a3c28fc2a6c3992ac29b1465c39116c28cc39b4773c3aac2a06ec2a659c289c2a14c57c3abc3a3755bc389c29f34c28a3a6f40c39fc399531a6cc3be326bc3a7c3bcc38ac2a45852c39b495501c291c389c2ba2867c3b4733ac2abc2ab057e56c28b55c2862f6645c3833fc3b24bc3bac29758c2a4c2ae56c397c3b8c2adc29dc392c2bfc3b3c28a08425cc2b22cc39a7a362e1617c3b44759c280c2bcc3b4c3afc2a7c3bbc3b2337fc297c2a36d5935c3ad27c3a7446274c2b3c3886745c286c29f4b00c2af56c3b877555768570b42c28dc2a0c397c3a465c2b15cc2bfc3836f353068c2ae1bc3bac2b75dc2acc3a8c39f7553c393c2bfc29719c3bfc2bb40c2bb1f7cc3b4c3bd5f327ac3bf79c2a2c3b7c39f6bc28ac2be5cc3a5c38bc3976d367d1b4c16c2b5c3bdc3913cc3916f5f6fc29e5ec2bf39c3bdc3a2c3a4c3b4c3b9736ac393c299c28b4d336168c29fc2be5141c2a566c29d49c398c39b3c0b3f7fc389c3bec2934fc29ec3bf5ec39bc2bb3b3bc39b44c3b9c297c38fc28fc39fc29c52c2bb0ec3a937c28bc3814f56c3a57ac291c2a75b67301cc38bc2acc2bc43c38d3ac384c2bf47c2a41ac2a63d7dc3b9230900c2b541c38e5b692ac2b228073076c3af334fc3af05c2b8337fc29b65c287c2bec3bcc391c3bc61164ec288c2825fc2bec39ec2bec2bfc3bdc3a97e54c29ac2a634c29c2f5fc39f1fc29824785e5fc2be4ec3afc2a73fc293c392c3bb136ec391c299c287c39d0744c2a8c3a1c289c3b8",
+      "794fc3b94f3753c3bec393c38dc294c3bfc3b4c3ab53c29ec2bec3bcc29108c280c3904f4fc29fc29c1dc2bf18c29ec288593e29c2b2c3a5c390443cc3a56f3f64227ec39e53c3bec38166c38a3fc3984cc3b9073fc2a2c3bcc3bb53c3bec3a5c3af7d1ac2a5c3b8c3aa5dc3be443a09694dc3ad537cc2917ec3afc3b4c3b77e79c3bac3aac3ac0b525ec387c38fc2bf4fc3ad3a14c39f6c7607091e20c3b7c3aac39bc2a7c38fc2872d1205c3a6c39fc38ec39a21c28bc3b4c28ac2bf4d4fc3a1c39851c284c39cc3a4c3a9731ac3bcc2bb0f31513415c399c292c29ac38fc2be7c4dc2bfc3bf4869125a4467c38cc391c2a0c38ac294391a52c2994373c3b4013ac294463b344744424d05c3bd7cc29fc2ae413d2bc39335c2a467c287c2a66bc2a3c3a2c3bdc294c3a8c3b6c2b5c2a6c3abc3a7c3af1c6978c2b3c2bb37344d1a31c3ad0dc38cc39357c3bc75c2bac2bbc2b7695e6e12c2a31fc38d05c2a145c2b4c394c2b9c398c2bf612ec286c2a2573317c3bb3fc29a0b46c3af43c3a6c3a2c2bb672fc3b676760e5ec3ad3d7d7342c39341c2adc3ac2c5c15c38b5975c395c3a0c3abc2a7762160604ac2be2b6d53344e5fc3adc2a5780131565ec2a7c2a733c29ac2806ac2b961c2ae3ec39dc3acc3971005c39e5bc29fc2816e2031c2883543c2b3c299c3b9c3ba79c2bec2bc68c3a7c384203122c290c3a3354c04c2a7c2a36f4904c3b7c3823733781ac386373ac39ac3976fc29e0ec28fc3b6c29663c2a47cc3b772c296c395c2b3c3bfc3b7c28d7077134bc393c297c384c2a1c2b7646952c3ba68c3bdc3bf317ec39ec39dc39b28c394c3bc35c28dc3aac3b634c2a0c399c3860b3f0432c290c2b6c2bcc391c2abc2bc0d45c3a85301c28415c3832f5fc2830478c3b7177f54c3906ac3a0c2bd037a27c3b7473bc3a4c28b7dc3aac2865866c293c29775355b4fc39bc2936a067ac2bec3bec3b2c399c29bc3adc3a7c3874fc2b65fc29d3ec3bdc3b6c3b1c29bc3adc293c2975f51c2b3c2952cc28046c29ac2be7c75c3ba45c39856571cc2a573c3a3c3956332c281c3a4c3bec3bd2ec2926e4a4400c2bd29c2b905c296c38419c2af5fc3bd24045f3ac2bf01c3916e73c3855571000a1d2642c3bf06c3b7c2bd1ec281c3b53dc3821dc39cc3b773c28b3a300002167526c3bbc3b77fc389c3bf03c3aec2b5c394c280c3b61e0000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Thu, 09 Jul 2015 09:29:39 GMT",
+      "content-length": "1375"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2/datacenters/ALTD/il1/deploymentCapabilities",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f227ec3b147c2b3c2acc38d4ec3b265c29bc397c2a7c38b6c52c3a6c2b3c28f1ec2b5c3b53a1f7d542c5655c39dc3bec3a417c29dc28fc29bc3b50ac29f372fc3ab7c51c2ac17c2afc39bc2aac38e2ec3b2c3aec2b7c2afc3a759c29dc38fc29e57c399c3ac495666c38b695e775b3cc2a1065fc3a46d56c2bec38ec3abc38bc2bc6e3e7a74c29ec2950d35c298c3a5c2abc2b2c2ba46c29f2fc3b2c3b6c2aac2aac39fc39257c39fc3bbc3851f2dc2b305c3b5c3b2c3912541c3bbc3bdc3b71ec39e7fc3b8c3bbc3afc3aec28c1fc39e1bc39f7fc3b8c391c3a8c2a3c2a5343c23243fc29a1d1cc3acc3afc3adc3acc3a6c3b7c2b307c2b3c3bdc3ac7c6772c3bfc3bec3b4c3bec383c39974c3b660c3b7c3a0c39ec3aec38309356fc2af5700c2b5c2aac28bc38bc2acc38dc3a9c2836c3ac2adc396c38bc3b6c3ac297d7ac3bcc3bcc38dc393c28f7ec389c3b7c2a955c2be58c295c3b47dc390c3bdc2932f5f7f7bc3bbc38bc297c2a72f5ec2bf393ec3b9c2bdc2b64fc29ec29f6c7fc3b5c3a4c2ab176fc2bec39a7ec3b3c3aac2abc3976f7ec29fc3adc38fc2bfc3bcc3bdc28f3f3f7dc3b1c28670c39cc39b23c39055c3b3467a5b4fc2a8c287c3b5c3aec3bec3afc3bfc3a9c3bec293c2a2c2a56f667933c2adc28b555b544bc3ba1ac2805302c297c2bec2a67ec2a77959c2a60ac2a01102c2bf2e7ec2907fc3bec3a4c2a3473bc2a3c28fc2a6c3992ac29b1465c39116c28cc39b4773c3aac2a06ec2a659c289c2a14c57c3abc3a3755bc389c29f34c28a3a6f40c39fc399531a6cc3be326bc3a7c3bcc38ac2a45852c39b495501c291c389c2ba2867c3b4733ac2abc2ab057e56c28b55c2862f6645c3833fc3b24bc3bac29758c2a4c2ae56c397c3b8c2adc29dc392c2bfc3b3c28a08425cc2b22cc39a7a362e1617c3b44759c280c2bcc3b4c3afc2a7c3bbc3b2337fc297c2a36d5935c3ad27c3a7446274c2b3c3886745c286c29f4b00c2af56c3b877555768570b42c28dc2a0c397c3a465c2b15cc2bfc3836f353068c2ae1bc3bac2b75dc2acc3a8c39f7553c393c2bfc29719c3bfc2bb40c2bb1f7cc3b4c3bd5f327ac3bf79c2a2c3b7c39f6bc28ac2be5cc3a5c38bc3976d367d1b4c16c2b5c3bdc3913cc3916f5f6fc29e5ec2bf39c3bdc3a2c3a4c3b4c3b9736ac393c299c28b4d336168c29fc2be5141c2a566c29d49c398c39b3c0b3f7fc389c3bec2934fc29ec3bf5ec39bc2bb3b3bc39b44c3b9c297c38fc28fc39fc29c52c2bb0ec3a937c28bc3814f56c3a57ac291c2a75b67301cc38bc2acc2bc43c38d3ac384c2bf47c2a41ac2a63d7dc3b9230900c2b541c38e5b692ac2b228073076c3af334fc3af05c2b8337fc29b65c287c2bec3bcc391c3bc61164ec288c2825fc2bec39ec2bec2bfc3bdc3a97e54c29ac2a634c29c2f5fc39f1fc29824785e5fc2be4ec3afc2a73fc293c392c3bb136ec391c299c287c39d0744c2a8c3a1c289c3b8",
+      "794fc3b94f3753c3bec393c38dc294c3bfc3b4c3ab53c29ec2bec3bcc29108c280c3904f4fc29fc29c1dc2bf18c29ec288593e29c2b2c3a5c390443cc3a56f3f64227ec39e53c3bec38166c38a3fc3984cc3b9073fc2a2c3bcc3bb53c3bec3a5c3af7d1ac2a5c3b8c3aa5dc3be443a09694dc3ad537cc2917ec3afc3b4c3b77e79c3bac3aac3ac0b525ec387c38fc2bf4fc3ad3a14c39f6c7607091e20c3b7c3aac39bc2a7c38fc2872d1205c3a6c39fc38ec39a21c28bc3b4c28ac2bf4d4fc3a1c39851c284c39cc3a4c3a9731ac3bcc2bb0f31513415c399c292c29ac38fc2be7c4dc2bfc3bf4869125a4467c38cc391c2a0c38ac294391a52c2994373c3b4013ac294463b344744424d05c3bd7cc29fc2ae413d2bc39335c2a467c287c2a66bc2a3c3a2c3bdc294c3a8c3b6c2b5c2a6c3abc3a7c3af1c6978c2b3c2bb37344d1a31c3ad0dc38cc39357c3bc75c2bac2bbc2b7695e6e12c2a31fc38d05c2a145c2b4c394c2b9c398c2bf612ec286c2a2573317c3bb3fc29a0b46c3af43c3a6c3a2c2bb672fc3b676760e5ec3ad3d7d7342c39341c2adc3ac2c5c15c38b5975c395c3a0c3abc2a7762160604ac2be2b6d53344e5fc3adc2a5780131565ec2a7c2a733c29ac2806ac2b961c2ae3ec39dc3acc3971005c39e5bc29fc2816e2031c2883543c2b3c299c3b9c3ba79c2bec2bc68c3a7c384203122c290c3a3354c04c2a7c2a36f4904c3b7c3823733781ac386373ac39ac3976fc29e0ec28fc3b6c29663c2a47cc3b772c296c395c2b3c3bfc3b7c28d7077134bc393c297c384c2a1c2b7646952c3ba68c3bdc3bf317ec39ec39dc39b28c394c3bc35c28dc3aac3b634c2a0c399c3860b3f0432c290c2b6c2bcc391c2abc2bc0d45c3a85301c28415c3832f5fc2830478c3b7177f54c3906ac3a0c2bd037a27c3b7473bc3a4c28b7dc3aac2865866c293c29775355b4fc39bc2936a067ac2bec3bec3b2c399c29bc3adc3a7c3874fc2b65fc29d3ec3bdc3b6c3b1c29bc3adc293c2975f51c2b3c2952cc28046c29ac2be7c75c3ba45c39856571cc2a573c3a3c3956332c281c3a4c3bec3bd2ec2926e4a4400c2bd29c2b905c296c38419c2af5fc3bd24045f3ac2bf01c3916e73c3855571000a1d2642c3bf06c3b7c2bd1ec281c3b53dc3821dc39cc3b773c28b3a300002167526c3bbc3b77fc389c3bf03c3aec2b5c394c280c3b61e0000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Thu, 09 Jul 2015 09:29:39 GMT",
+      "content-length": "1375"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "POST",
+    "path": "/v2/servers/ALTD/",
+    "body": {
+      "name": "nginx",
+      "description": "NGINX Server",
+      "template": {
+        "dataCenter": {
+          "id": "il1",
+          "name": "IL1 - US Central (Chicago)"
+        },
+        "operatingSystem": {
+          "family": "centOS",
+          "version": "6",
+          "architecture": "64Bit"
+        }
+      },
+      "machine": {
+        "cpu": 1,
+        "memoryGB": 1,
+        "disks": [
+          {
+            "size": 2
+          }
+        ]
+      },
+      "groupId": "9ea0b8d211384768afcfd64b7896a2cd",
+      "sourceServerId": "CENTOS-6-64-TEMPLATE",
+      "cpu": 1,
+      "memoryGB": 1,
+      "additionalDisks": [
+        {
+          "sizeGB": 2,
+          "type": "raw"
+        }
+      ],
+      "type": "standard",
+      "storageType": "standard"
+    },
+    "status": 202,
+    "response": {
+      "server": "nginx",
+      "isQueued": true,
+      "links": [
+        {
+          "rel": "status",
+          "href": "/v2/operations/altd/status/il1-104814",
+          "id": "il1-104814"
+        },
+        {
+          "rel": "self",
+          "href": "/v2/servers/ALTD/1dae24e0083a445581d74fab73772bc0?uuid=True",
+          "id": "1dae24e0083a445581d74fab73772bc0",
+          "verbs": [
+            "GET"
+          ]
+        }
+      ]
+    },
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "expires": "-1",
+      "date": "Thu, 09 Jul 2015 09:29:44 GMT",
+      "content-length": "266"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "POST",
+    "path": "/v2/servers/ALTD/",
+    "body": {
+      "name": "mysql",
+      "description": "My SQL Server",
+      "template": {
+        "dataCenter": {
+          "id": "il1",
+          "name": "IL1 - US Central (Chicago)"
+        },
+        "operatingSystem": {
+          "family": "centOS",
+          "version": "6",
+          "architecture": "64Bit"
+        }
+      },
+      "machine": {
+        "cpu": 1,
+        "memoryGB": 1,
+        "disks": [
+          {
+            "size": 2
+          }
+        ]
+      },
+      "groupId": "9ea0b8d211384768afcfd64b7896a2cd",
+      "sourceServerId": "CENTOS-6-64-TEMPLATE",
+      "cpu": 1,
+      "memoryGB": 1,
+      "additionalDisks": [
+        {
+          "sizeGB": 2,
+          "type": "raw"
+        }
+      ],
+      "type": "standard",
+      "storageType": "standard"
+    },
+    "status": 202,
+    "response": {
+      "server": "mysql",
+      "isQueued": true,
+      "links": [
+        {
+          "rel": "status",
+          "href": "/v2/operations/altd/status/il1-104815",
+          "id": "il1-104815"
+        },
+        {
+          "rel": "self",
+          "href": "/v2/servers/ALTD/1d8daccf3ff04e0984e029d1016f60d3?uuid=True",
+          "id": "1d8daccf3ff04e0984e029d1016f60d3",
+          "verbs": [
+            "GET"
+          ]
+        }
+      ]
+    },
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "expires": "-1",
+      "date": "Thu, 09 Jul 2015 09:29:44 GMT",
+      "content-length": "266"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "POST",
+    "path": "/v2/servers/ALTD/",
+    "body": {
+      "name": "web",
+      "description": "My web server",
+      "template": {
+        "dataCenter": {
+          "id": "il1",
+          "name": "IL1 - US Central (Chicago)"
+        },
+        "operatingSystem": {
+          "family": "centOS",
+          "version": "6",
+          "architecture": "64Bit"
+        }
+      },
+      "machine": {
+        "cpu": 1,
+        "memoryGB": 1,
+        "disks": [
+          {
+            "size": 2
+          }
+        ]
+      },
+      "groupId": "de9318f18717455a98d28c815ad7e96e",
+      "sourceServerId": "CENTOS-6-64-TEMPLATE",
+      "cpu": 1,
+      "memoryGB": 1,
+      "additionalDisks": [
+        {
+          "sizeGB": 2,
+          "type": "raw"
+        }
+      ],
+      "type": "standard",
+      "storageType": "standard"
+    },
+    "status": 202,
+    "response": {
+      "server": "web",
+      "isQueued": true,
+      "links": [
+        {
+          "rel": "status",
+          "href": "/v2/operations/altd/status/il1-104816",
+          "id": "il1-104816"
+        },
+        {
+          "rel": "self",
+          "href": "/v2/servers/ALTD/d016d10727bd42c0b8fd50a57af2257c?uuid=True",
+          "id": "d016d10727bd42c0b8fd50a57af2257c",
+          "verbs": [
+            "GET"
+          ]
+        }
+      ]
+    },
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "expires": "-1",
+      "date": "Thu, 09 Jul 2015 09:29:44 GMT",
+      "content-length": "264"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "POST",
+    "path": "/v2/servers/ALTD/",
+    "body": {
+      "name": "mysql",
+      "description": "My SQL Server",
+      "template": {
+        "dataCenter": {
+          "id": "il1",
+          "name": "IL1 - US Central (Chicago)"
+        },
+        "operatingSystem": {
+          "family": "centOS",
+          "version": "6",
+          "architecture": "64Bit"
+        }
+      },
+      "machine": {
+        "cpu": 1,
+        "memoryGB": 1,
+        "disks": [
+          {
+            "size": 2
+          }
+        ]
+      },
+      "groupId": "9ea0b8d211384768afcfd64b7896a2cd",
+      "sourceServerId": "CENTOS-6-64-TEMPLATE",
+      "cpu": 1,
+      "memoryGB": 1,
+      "additionalDisks": [
+        {
+          "sizeGB": 2,
+          "type": "raw"
+        }
+      ],
+      "type": "standard",
+      "storageType": "standard"
+    },
+    "status": 202,
+    "response": {
+      "server": "mysql",
+      "isQueued": true,
+      "links": [
+        {
+          "rel": "status",
+          "href": "/v2/operations/altd/status/il1-104817",
+          "id": "il1-104817"
+        },
+        {
+          "rel": "self",
+          "href": "/v2/servers/ALTD/18a49b4b5a0d449b9d5114fee5ea15de?uuid=True",
+          "id": "18a49b4b5a0d449b9d5114fee5ea15de",
+          "verbs": [
+            "GET"
+          ]
+        }
+      ]
+    },
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "expires": "-1",
+      "date": "Thu, 09 Jul 2015 09:29:44 GMT",
+      "content-length": "266"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2/operations/ALTD/status/il1-104817",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f227ec3b1474dc29bc2b5c3abc3a6c2a3471f35c3abc3a934c38f67c3b9c3acc2a35fc3b2c3bf00c3b707c3a76216000000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Thu, 09 Jul 2015 09:32:09 GMT",
+      "content-length": "141"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2/operations/ALTD/status/il1-104815",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f227ec3b1474dc29bc2b5c3abc3a6c2a3471f35c3abc3a934c38f67c3b9c3acc2a35fc3b2c3bf00c3b707c3a76216000000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Thu, 09 Jul 2015 09:32:09 GMT",
+      "content-length": "141"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2/servers/ALTD/18a49b4b5a0d449b9d5114fee5ea15de?uuid=True",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f227ec3b147c385c3acc2a3471f15c3a56e56c2b6c2b3c38575c3b3c28bc38ac2bdc2bdc28f461f2dc2b3454ec29fc29f3dc39f3d7ec3bec3a6c3a917c2bfc38fc3abc29f78c38ec29fc38fc3b2665a17c2abc2b6c2a8c296c3b4c3b517c397297dc291c2bec38ec3abc38bc2bcc2a66f2fc3aa6ac2bd3a03c380c28779c2b63339c298c3adc3adc3aec39e3bc3987fc3b0c3a941763e3dc29f7dc2ba3f7970c3b0c3b0c3936c6f3ac2a3c38645c3b3265fc2acc38ac2acc2a5c28ec38ec2b3c2b2c389471fc295c39534036806417d53c2abc2aa7973c2bdc2a2161fc29dc3a4c38bc3b6c38bc397c3a9c2a7c3a9c2a7c3bbc39bc293c2a2c3a5c2afc3a8c3a3297fc3bcc3a9c3afc3bfc3a9c3be13c3bec2b069c2b376c28d2fc2b2695b5cc3a6c3b4c3892c6fc2b3c2a2c2a4c28f68c2acc2abc3a3c399c2acc38ec29b26c2a73fc2bf477f2fc39bc2bc5e662535c39fc39d193fc2bc37c2bec3bf70c2bc7bc3b0c3912fc3b9c3bec3a8c2a3c2acc38cc3abc3b6655516c393c2821bc39347c393c395c3bac2a347c2bb04c2b068c39ec29e54c3ab65c3bbc391c2a3c3bdc39147c3b3c2aa695f08c2b5c2a8c2b362c3b94506c2a8c38b6c39c38dc2bfc2a866c3b4c2b1c28e6dc2912fc2aac3bac3bac28b27046267c28fc39e5b555779c3bdc29ac2b0c2a526c380c2ba6e7350c2a569c2ab3ac2bbc3883f47c2bbc287c39217c2ba275c41c293c29d473b6853c3bc401a10147ac2af00c3895e66c3ad1c0dc2bfc3bf4b46c2b62dc3a867c39ac3aec39dc39016c2936bc39ac3ae02c2bd4dc28dc3af79c28dc3a3c280c2895cc3b653c3bec2845e5866c2ab665ec2b5c3bac3a7744d435d3c2bc3b272c386c29fc3bcc292c39147c2adc38c34116339c38b6ac28f1ac38a02c39e17c39379c2b6c2bcc388c38fc296c3a715c3a6755ac3a744c387c399c2936b6a54c38cc3aa6cc2922fc28b6c0cc28e4653c3b9c3b229c3bd435fc3afc3adc3acc39ec39fc39e79c2b0c2bdc3b3c3b0c38dc38ec38347c3b7c288c2a0c3b77fc28a1a2dc2aa59715e0cc28130c39fc38661c3ac3dc39a79c3b0531f11c3be65c2b1c394c389c2aa73c3b054c293c297c3a7c3b4c3b6c2bcc38ec38fc3a9c2afc2bbc2977b771bc296c294c3a62ec3a0c39ec3ad091d53c2b7c3b729c2bd3001c394c28f3e3f7d437fc2be3c7e73c3b26dc3bac3b9c3b4c3b4c3b9c3a9c29bc393c28fc2886ec2a63bc2963ec3bac386c3abc28f3fc392c3ae6e23c29240c3a0c38676c2aec3876c3a653908c3bac3940fc2a557c3bac28ac281c3b2c3afc3aec385495112c2b12ec3a85bc3af45c3bdc290c39f534ac2bdc2ac49c3bec3a8c2a30e511c2062c289c2b668c39a62c39ac284c2b0c3a475c381c2a1c3b3c3b65dc3af1d0768c2bdc29a560bc3aac3aac3b574c29ec38fc396653e3bc286c3be20c3be25c3a91fc286c2bc7bc290c3ad3fc29cc3ac4fc3ae673bc2b37dc3bac3adc3a1c3acc3bec3aec3aec3be79c29ec39fc38fc2b3c39dc3bbc2b3c3bc",
+      "c3ae26c2b0c2aec3b326c3b2c3ad07741a074700023ec3bac3b2c3b51bc29f7b56c3ab0929c2bbc2b3c2974e430e63c3902168c3ac556a2cc2bd75c3bb71c28ac3b5c3bac28b6cc2b522c39ac2a0c3b92d7b722f77c386c394c3ab65c39916c387c3a7c3a7c385c2b268c2afc2b9c2bdc3a9c28c5ec2ba6d5f3d10c3b42ec2b5c3960ec2bf0211c3bb424846c3a278c39d56c38dc29450c295c2b7c39ec2bbc3a33e087ac2975ac39fc39071c2b6c38a48c282c38c6cc39fc2b62fc3bf2d0f58c29dc38fc388c2b01664c2bac39e03c296c3b7c3922fc3b9c3be2fc3b97f00c3b9c39e64455b080000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Thu, 09 Jul 2015 09:32:09 GMT",
+      "content-length": "951"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2/servers/ALTD/1d8daccf3ff04e0984e029d1016f60d3?uuid=True",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f227ec3b147c385c3acc2a3471f15c3a56e56c2b6c2b3c38575c3b3c28bc38ac2bdc39dc28f461f2dc2b3454ec29fc29f3dc39f3d7ec3bec3a6c3a917c2bfc38fc3abc29f78c38ec29fc38fc3b2665a17c2abc2b6c2a8c296c3b4c3b517c397297dc291c2bec38ec3abc38bc2bcc2a66f2fc3aa6ac2bd3a03c380c28779c2b63339c298c3adc3adc3aec39e3bc3987fc3b0c3a941763e3dc29f7dc2ba3f7970c3b0c3b0c3936c6f3ac2a3c38645c3b3265fc2acc38ac2acc2a5c28ec38ec2b3c2b2c389471fc295c39534036806417d53c2abc2aa7973c2bdc2a2161fc29dc3a4c38bc3b6c38bc397c3a9c2a7c3a9c2a7c3bbc39bc293c2a2c3a5c2afc3a8c3a3297fc3bcc3a9c3afc3bfc3a9c3be13c3bec2b069c2b376c28d2fc2b2695b5cc3a6c3b4c3892c6fc2b3c2a2c2a4c28f68c2acc2abc3a3c399c2acc38ec29b26c2a73fc2bf477f2fc39bc2bc5e662535c39fc39d193fc2bc37c2bec3bf70c2bcc3bbc3a0c2a35fc3b2c3bdc3914759c299c397c3adc38bc2aa2cc2a60537c2a6c28fc2a6c2abc3b547c28f760960c391c2bc3dc2a9c396c38bc3b6c2a347c3bbc2a3c28fc3a655c393c2be106a5167c385c3b2c28b0c50c297c39972c29a7f51c38dc3a8631dc39b225f54c3b5c3b5174f08c384c38e1ec2bdc2b7c2aac2aec3b2c3ba35614b4dc28075c39dc3a6c2a04ac393567576c2917fc28e760fc2a52f744fc2b8c282263bc28f76c390c2a6c3b8c281342028c3b45e01c292c2bdc38cc39a391a7ec3bfc297c28c6c5bc390c38fc2b4c39dc2bbc2a1c3adc29ec3977617c3a86d6a7cc38f6b1c074cc3a4c2b2c29fc3b227c3b4c382325b35c3b3c2aac3953fc2a76b1ac3aac3a259c291c29733c3bec3a4c297c28c3e6a65c2a6c28918c38b59567bc3945016c3b0c2bec298c38ec2b3c3a5457ec2b63cc2af30c2afc3933a273ac38ec29e5c53c2a3625667c2937c5964637034c29ac38ac2974fc3a91fc3ba7a6f67c3b7c3bec3b6c38ec283c3adc29dc2876f761e3ec2ba4704c39dc3bb296ac2b4c2a866c385793104c3827c1bc287c2b1c3b768c3a7c3be4f7d44c3b8c297c3855227c2abc38ec381534d5ec29ec393c39bc3b33a3fc2a7c2bfc3ae5ec3aec39d6d5852c29ac2bbc2807bc2b727744cc39dc39ec2a7c3b4c38204503fc3bac3bcc3b40dc3bdc3b9c3b2c3b8c38dc389c2b7c3a9c3a7c393c393c3a7c2a76f4e3f22c2bac299c3ae58c3bac3a81bc2af3fc3be48c2bbc2bbc28d4802c2811bc39bc2b91ec2b3c3a9c294c3a520c3a8533fc2945ec3a92b06c38ac2bfc2bb17274549c384c2bac2a06fc2bd17c3b5437e4f29c3b5c2b226c3b9c2a3c28f3a4471c280c28825c39ac2a269c28b6913c382c292c39705c287c38ec39b77c2bd771cc2a0c3b56a5a2dc2a8c2abc397c393793e5bc297c3b9c3ac18c3bac283c3b8c297c2a47f18c3b2c3aec3ac6046c3a33dc2bf777ec2bec2b3c29fc3af3c3cc2a07fc3b61ec38e7677763f3dc3bf746776c3af",
+      "c3ae26c2b0c2aec3b326c3b2c3ad07741a074700023ec3bac3b2c3b51bc29f7b56c3ab0929c2bbc2b3c2974e430e63c3902168c3ac556a2cc2bd75c3bb71c28ac3b5c3bac28b6cc2b522c39ac2a0c3b92d7b722f77c386c394c3ab65c39916c387c3a7c3a7c385c2b268c2afc2b9c2bdc3a9c28c5ec2ba6d5f3d10c3b42ec2b5c3960ec2bf0211c3bb424846c3a278c39d56c38dc29450c295c2b7c39ec2bbc3a33e087ac2975ac39fc39071c2b6c38a48c282c38c6cc39fc2b62fc3bf2d0f58c29dc38fc388c2b01664c2bac39e03c296c3b7c3922fc3b9c3be2fc3b97f0044c28659c2ac5b080000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Thu, 09 Jul 2015 09:32:10 GMT",
+      "content-length": "951"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2/operations/ALTD/status/il1-104816",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f227ec3b1474dc29bc2b5c3abc3a6c2a3471f35c3abc3a934c38f67c3b9c3acc2a35fc3b2c3bf00c3b707c3a76216000000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Thu, 09 Jul 2015 09:32:20 GMT",
+      "content-length": "141"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2/operations/ALTD/status/il1-104814",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f227ec3b1474dc29bc2b5c3abc3a6c2a3471f35c3abc3a934c38f67c3b9c3acc2a35fc3b2c3bf00c3b707c3a76216000000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Thu, 09 Jul 2015 09:32:20 GMT",
+      "content-length": "141"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2/servers/ALTD/d016d10727bd42c0b8fd50a57af2257c?uuid=True",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f227ec3b147c385c3acc2a3471f15c3a56e56c2b6c2b3c2ab7cc2b27bc3bfc2a3c39147c38b6cc291c393c2a767c38f77c28fc29fc2bf79c3bac39dc39327c3bcc3a92c6fc2a675c2b16ac28b6a495f7e71c29d52c3b3c2b4c389c3abc38bc2bcc2a66f2fc3aa6ac2bd3a03c2b059c3bec3b0c39ec3aec381c3b9c3aec381c283c39d07c3bbc3b7c3af670f0f667b07c393c283c39dc3bbc399c3ac41c3bec3b0c393c29c1a17c38dc29b7cc2b12ac2b3c296c2ba39c38fc38a261f7d5456c3930cc2a01904c3b54cc2adc2aac3a6c38dc3b5c28a5a7c74c2922fc39b2f5fc2a7c29fc2a6c29fc3ae6f4fc28ac296c2bfc2a2c28fc2a7c3bcc3b1c2a7c2bfc3bfc2a7c3bb4fc3b8c383c2a6c38dc39a35c2bec388c2a66d71c2897e6679c29b15257d44c3a35c1dc38f6675c39e3439c3bdc3b93dc3ba7bc399c3a6c3b5322bc2a9c3b9c3aec38ec3b8c3a1c2bdc3b1c3bdc287c3a3c39dc2871fc3bdc292c3afc28f3ec38ac38ac2bc6e5f5665312dc2b8317d345dc2ad3f7ac2b44b00c28bc3a6c3ad49c2b55ec2b61f3dc39a1f7d34c2afc29ac3b6c285c390c28a3a2bc2965f64c280c2bac38cc296c393c3bcc28b6a461fc3abc39816c3b9c2a2c2aac2afc2bf78422076c3b6c3a8c2bd5575c295c397c2af095b6a02c2acc3ab36c29f11c280c2a6c2adc3aac3ac22c3bf1cc3ad1e4a5fc3a8c29e70054d761ec3adc2a04dc3b103694050c3a8c2bd02247bc299c2b57334c3bcc3be2f19c399c2b6c2a0c29f69c2bb7743c39b3dc2afc3ad2ec390c39bc394c3b8c29ec397380ec298c388653fc3a54fc3a8c28565c2b66ac3a655c2ab7f4ec39734c394c385c2b3222f67c3bcc3892f197dc394c38a4c1331c296c2b3c2acc3b6c2a8c2a12cc3a07d31c29d67c38bc28bc3bc6c795e615ec2a7754e74c29c3dc2b9c2a646c385c2acc38e26c3b9c2b2c388c386c3a06634c2952fc29fc3923fc3b4c3b5c39ec38ec3aec3bdc3adc29d07c39b3b0fc39fc3ac3c7c74c28f087ac3bfc2a7c2a8c391c2a2c29a15c3a7c3851008c3b36d1cc386c39ec2a3c39d7b3fc3b511c3a15f164bc29dc2ac3a074f3579794e6fc38fc3abc3bcc29cc3bec2ba7bc2b9775724c2a5c2b90bc2b8773b02c387c2b4c3ad7c46c28d27c280c3b8c391c3a7c2a76fc3a8c38fc297c3876f4ec2be4d3fc29fc29e3e3f7d73c3ba11c391c38c74c385c29247c39f787dc3b147c39ac3956dc38411c39dc39fc398c38ec3b5c2984dc2a72c0341c29fc3bac2a1c3b44a5f3150c3bec39dc2bd38294a22c394057dc3abc2bdc2a81fc3b27b4ac2a5c29735c3891e7d14c290c384c281216668c28bc2a62dc2a64d08495e160cc28277c3af7a6f3830c3abc395c2b45a5037c2afc2a7c3b37cc2b62ec3b3c39931c3b406c3b12d49c3bd30c39cc399c38ec3aec2a7c2b3c39dc29d077b0f26c2b3c3bdc2bdc3a9c38ec3a4c3a07c767f27c2bbc3bf203bc39fc39bc2bbc3bf607a771358c39779",
+      "13c3b9c3b6033ac28dc2832300010f7dc3b9c3bac28dc38f39c2abc3b5c284c294c39cc3994bc2a719c2873108c388197bc291c29a4a5fc39d5ec29c3ac2bdc3be225bc2adc28832687ec2ab7ec39cc2abc29dc3b1c3b4c3ba58c2b6c385c3b1c3b979c2b12cc39a6b6e6fc2bac2a2c2976ec397530f00c2bd496dc2b5c2bbc2af40c2bec2bec3a8c29159385ec2b755332544c3a5c2adc3b7c3acc2b60fc280c39ec2a4c2b63774c29bc2ad32c2921a33c38bc2b7c3abc3897fc3870355c3a73332c2a30519c2aa5b43c3b25ec3b925c39fc3bf25c3bf0f33c39b6ac28343080000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Thu, 09 Jul 2015 09:32:20 GMT",
+      "content-length": "945"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2/servers/ALTD/1dae24e0083a445581d74fab73772bc0?uuid=True",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f227ec3b147c385c3acc2a3471f15c3a56e56c2b6c2b3c3a545c2b17cc2b7c2bbc3bbc391c3a8c2a365c2b6c388c3a9c3b3c2b3c3a7c2bbc387c38fc39f3c7dc3b1c3b9c399c28bc39fc29b3fc29fc3a5c38dc2b42e566d512dc3a96bc3be3c7dc29dc397c297794d5f5ec394c3957a7506780fc3b36c677230c39bc39bc39dc2bd77c2b0c3bfc3a0c393c283c3ac7c7a3ec3bb747fc3b2c3a0c3a0c3a1c2a7c399c39e7446c28dc28bc3a64dc2be58c295594bc3bdc29c6765c293c28f3e2ac2ab6906c3880cc282c2bac2a65655c3b3c3a67a452d3e3ac389c297c3adc297c2afc3934fc3934fc3b7c2b72745c38b5fc391c38753c3bec3b8c393c39fc3bfc393c3bd27c3bc61c39366c3ad1a5f64c393c2b6c2b8c38cc3a9c29359c39e6645491fc3915057c387c2b359c29d374d4e7f7ec28fc3be5ec2b679c2bdc38c4a6ac2bec2bb337e786f7cc3bfc3a1786fc3a7c2a35fc3b2c3bdc3914759c299c397c3adc38bc2aa2cc2a60537c2a6c28fc2a6c2abc3b547c28f760960c391c2bc3dc2a9c396c38bc3b6c2a347c3bbc2a3c28fc3a655c393c2be10625167c385c3b2c28b0c50c297c39972c29a7f51c38dc3a8631dc39b225f54c3b5c3b5174f08c384c38e1ec2bdc2b7c2aac2aec3b2c3ba35614b4dc28075c39dc3a6c2a04ac393567576c2917fc28e760fc2a52f744fc2b8c282263bc28f76c390c2a6c3b8c281342028c3b45e01c292c2bdc38cc39a391a7ec3bfc297c28c6c5bc390c38fc2b4c39dc2bbc2a1c3adc29ec3977617c3a86d6a7cc38f6b1c074cc3a4c2b2c29fc3b227c3b4c382325b35c3b3c2aac3953fc2a76b1ac3aac3a259c291c29733c3bec3a4c297c28c3e6a65c2a6c28918c38b59567bc3945016c3b0c2bec298c38ec2b3c3a5457ec2b63cc2af30c2afc3933a273ac38ec29e5c53c2a3625667c2937c5964633034c29ac38ac2974fc3a91fc3ba7a6f67c3b7c3bec3b6c38ec283c3adc29dc2876f761e3ec2ba47047dc3b053c3946851c38dc28ac3b36208c284c3b9360e63c3afc391c3aec2bdc29fc3bac288c3b02fc28bc2a54e56c29dc283c2a7c29ac2bc3cc2a7c2b7c3a7757e4e7fc39dc2bdc39cc2bbc39bc2b0c2a4347701c3b76e4fc3a6c298c2bac2bd4fc3a9c28509c2a07ec3b4c3b9c3a91bc3bac3b3c3a5c3b1c29bc2936fc393c38fc2a7c2a7c38f4fc39fc29c7e447433c39dc2b1c3b4c391375e7fc3bcc29176771bc291040237c2b6733d66c39329c38b41c390c2a77e28c2bdc392570cc2947f772f4ec28ac292c2887541c39f7a2fc3aac287c3bcc29e52c3aa654dc3b2471f75c288c3a200114bc2b445c39316c39326c28425c2af0b0ec29dc2b7c3af7ac3af3840c3abc395c2b45a5057c2afc2a7c3b37cc2b62ec3b3c39931c3b407c3b12f49c3bf30c3a4c39d59c296c3afc3adc3a73b3b07c3b7c2b2c3bdc3bdc3bbc3b70f76670fc3b6c38fc2b3c389c2837b0f1ec3ac4dc2a63b7737c281",
+      "75c29d37c2916f3fc2a0c39338380210c3b0c391c297c2afc39fc3b8c39cc2b35a4f48c399c29dc2bd741a7218c2830e4163c2af5263c3a9c2adc39bc28f53c2acc3975f64c2ab15c39106c38d6fc399c2937bc2b933c2a65e2fc38bc2b6383e3f2fc296457bc38dc3ad4d67c3b4c3926dc3bbc3aac281c2a077c2a9c2b576c3b815c288c39817423212c387c3abc2b66ac2a6c284c2aac2bcc3b5c39e1dc3b741c390c2bbc394c3bac286c28ec2b35546126466c3bbc2b67dc3b96f79c380c3aa7c46c286c2b520c393c3b51ec2b0c2bcc2977ec389c3b77fc389c3bf03c2bf1147c2a95a080000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Thu, 09 Jul 2015 09:32:21 GMT",
+      "content-length": "948"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2/groups/ALTD/481294a58ee74340894aef21ec5e5e2d?serverDetail=detailed",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f227ec3b147c385c3acc2a3471fc3ad1fc3acc3ae3dc39cc38fc3ae1fc3a4c3b9c283c3bd7bc3bb3b07c3b4477ec2bec2b7c29b4fc3afc3a7c3b7c3b3c2bdc39947c2a3c28fc296c39922c2a7c296c29fc397c3957ac2b5c2bd4b1fc38cc3b2665a17c2abc2b6c2a8c296c3b4c3b9c29bc2bc6953c3bec292c2be2ac2ab69c286c38fc38f00c3bbc3ac395ac2b7c3972bc2bc3ec38bc38fc2b375c399c392074dc29bc2b5c3abc2863ec38ac2a66d71c299c3a3c293c2bcc2bec38cc3abc3a6c2a45a2fc39bc28f1ec3adc39b0f3e7ac3b4c2bdc3afc28f3ec2ba006cc3bcc2ae28c38fc3b2c287c3b7760fc38e770f1ec3ac3ec398c2bf7f3f7b7830c39b3bc2981ec3acc39ec38f660fc3b2c287c29f0260c2883223c3bd4d60c2b66b3f70c39814c3a56e56c2b6c2b3c2ab7cc2b27bc29f5ec390c29ec2a9c283c3a3c3a76fc29e7ec3b7c3b4097f1a52c3acc28bc3abc294c29ac2a702c28ac2bec3a501325ec2b7185ac391c2bcc38917c2ab326bc2a9c29bc3b3c2ac6cc3b2c3a8c390c2aac3a6c28d0cc3ae245fc2b65fc2be4e3f4d3fc39dc39fc29e14186445c3887f34c3a5c28f3fc3bdc3bd3fc39d7fc3821fc3b6473ec38bc39bc2ac28c3a9231ac3a7c3aa7836c2abc3b3c2a6c389c3a94fc28c7bc399c3a6c3b5322bc2a9c3b9c3aec38ec3b8c3a1c2bdc3b1c3bdc287c3a3c39dc2871fc3bd12c29ac2abc2acc38cc3abc3b6655516c393c2821bc39347c393c395c29a29372bc29ac2b74a47c29ac3a179c395c2b42fc28456c39459c2b1c3bc2203c39465c2b6c29cc3a65f5433c3ba58c387c2b6c38817557dc3bdc3851302c2b1c2b347c3afc2adc2aac2abc2bc7e4dc3985213605dc2b73978c2b469c2ab3ac2bbc3883f47c2bbc287c39217c2ba275c41c293c29d473b6853c3bc401a10147ac2af00c3895e66c3ad1c0dc2bfc3bf4b46c2b62dc3a867c39ac3aec39dc39076c38f6bc2bb0bc3b43635c2bec3a735c28e032672c3994fc3b1c3892fc2b6c3ad77c3863bc3b8c2aec29d13c2a4c2adc3a62a5bc39dc3b908c290635fc39f1dc3be6652552dc38f53c2b3c38c56c38dc2bc6ac39109c3bd395d130117c38fc28ac2bcc29cc3b127c2bfc3840a07c2917839c38b6ac28fc386c38a58c39e17c39379c2b6c2bcc388c38fc296c3a715c2b8655ac3a7343bc2b327c397c394c2a8c298c395c399245f16c3991832c282c2a6c3b2c3a553c3bac287c2bec39ec39bc399c2bdc2bfc2bdc3b3607bc3a7c3a1c29bc29dc287c28fc3aec39134c39dc3bf296ac2b4c2a866c385793104c3827c1bc287c2b1c3b768c3b7c39e4f11013e2ac28bc2a5c2b240c29dc28353c29bc2bc3cc2a7c2b7c3a7757e4e7fc39dc2bdc39cc2bb2bc3b2c397c39c05c39cc2bb1d31c3a619c3ab7c46c28d27c280c3b8c391c3a7c2a76fc3a8c38fc297c3876f4ec2be4d3fc29fc29e3e3f7d73c3ba11c391c38c74c385c3b24cc39f787dc3b147c39ac3956dc2841cc39dc39fc398c38ec3b5c2984dc2a72c",
+      "5941c29fc3bac2a1c3b44a5f3150c3bec39dc2bd38294a22c394057dc3abc2bdc2a81fc3b27b4ac2a5c2973549347d14c290c384c281216668c28bc2a62dc2a64d08495e160cc28277c3af7a6f3830c3abc395c2b45a5037c2afc2a7c3b37cc2b62ec3b3c39931c2b4114903c3a9c29261c2b8c2b3c29dc39d4f67c2bb3b0fc3b61e4c66c3bb7bc393c29dc389c381c3b9c3acc3be4e76c3bf4176c2bec2b777c3bfc381c3b4c3ae26c2b0c2aec3b326c3b2c3ad07741a074700021ec3bac3b2c3b51bc29f7356c3ab09c2a9c38ec2b3c2974ec39f0e6310c29033c3b62235c295c2bec2bac2bd38257dc3bd45c2b65a1165c390c3bc56c3bdc2b8573bc3a3c3a9c3b5c2b16cc28bc3a3c3b3c3b36259c2b4c397c39cc39e74452fc39dc2aec2a71e007ac293c39a6a775fc2817c7dc391236373c2bc6ec2ab664ac288c38a5bc3afc3996d1f00c2bd496d6fc3a8365b65243566c2966fc397c293c3bfc28e07c2aac38e6764c29c0b327fc2b7c286c3a4c2bdc3b24bc398c288c288c2ba21c28cc395c3b63c78c3b8c3a9c3b934c3bf74c3b620236ec39dc2bd772fc3bbc3b47cc292c29d3fc3bc746f764000c3ae65c394c2933a2ec39665c3bac386c29c26323fc3ba01c3a1c3a3c3a346c2bfc293c29a09c29434c28dc284c2b43ac3a34070c2bcc381c38b4b3c76c3bac282c280c3a97c74c2b84ec39e7fc38dc39d513b0fc280c2a27023c284c2bec299c3b0c2bac2be7b0b3a5ac3882ac3a1c28356c2820c3d4dc39ac3a6c2b1c3be6cc3980ac29dc2b90e77c3b9c29dc39e344ac382c38ac282c3a80ec2b7434e6270c29ac3a3c28ec3b4c2bd575f06c282c283c299c395c39339311a530ec38ac2957cc3aac2af0f5ec28179c3a0c381c38f6ac299c2be3e580fc288c283c2bcc3890e7dc3bdc2ae3641757dc38fc2abc2bac3b841c2b56cc2b3c2b2c2a3c39ec2a2c3bac3b1c2bd1018044d30c2bbc3ac31c2a03fc3a3c386c3b2c3ab2214c287c396454538c295c294c39037c3a4c2bec3aec291c3b7c3b9c3a907c2bac2af0ac283c39cc397c29e474ec288c2921cc3bc7f4a5bc39ec2a8c2943cc3883a291fc2a62d6fc291c38c606d79633bc397c2afc2a7c3aa063ac2bd69c294c394c380c282c3a80ec2b7434ec2a3c3abc2be7e5f06c282c283c2a90ac28e290779c398c2a42d6f04c2afc3803cc3b0c29ec2a2c3bbc3ba603d200ec3b226c2bdc3b6c3b5c2bbc39a04c395c3b53dc2a8c3926ec394c29637223008c29a6076c399c3a3c29bc390c296372214c287c396454538c295c294c39037c2a82d3f34c3985718316d49c2b462497fc2986714c29ac38dc3b67677c3af1dc3ac3fc3b8c3b4203bc29fc29ec38f3ec39dc29f3c3878c3b869c2b63745171dc3871719c29d6fc382c3adc2bd673f20c284141bc3b5c39a17c397c38d2f2ac3b70055c3bbc2a62ec2902dc3bcc3a2c3b779c3bd13c38fc3b9c3b35ec2bec290c2be48c2adc2a2c3a6c3a965c39c6e31c2bcc3bfc2b7c3a60b1f50c2a8c3b2c2a37cc3a1c386c3863fc38a17c29a2fc2a3c3a27fc28fc2a669c3af035508c3a50bc2917324c3bcc3896c2a0bc2a8c292c3adc2b9362ac38ec2a2567bc2a2c38c73c396c3bbc2945e08c394c3a8c2a07fc383324dc39f78c3bdc3b147c39ac39d6d041d08c39cc398c38ec3b5c2a8c3a9417ac393c3ab533fc2945ec3a92b06c38ac2bfc2bb17c28dc28f11c2bcc2a81fc3b27b4ac2a94ec38ec39010c3850122c29630663fc28025c2af0b0ec29dc2b73fc390550820c3afc38e0e6634c39ec3b37bc3a7c3a73bc3bbc3b9c38ec38303c3ba67c3af2125c3b5763f3dc3bf746776c3afc296c2be42c39c7e7ec3ad4ec3a3c3a00840c3804762c28e2d0ec2b1c3b4c39f10061dc282c3865ec2a5c386c3925bc2b71fc2a7c2aec28d27c284c3a6c2b7c3acc389c2bdc39c1953c2af17c38a65c285c2a93fc3adc28c5ec2ba6d5f3d10c3b42ec2b5c3960e071c2b323d1dc2a7c3acc2bd3bc3aec283c2a077c2a9c3b50d1dc3bbc2b9c380c39bc3b7c3a5c2bfc3a501c3b3c392c281c2b7c287c3a5c2bd44394402c386c2a21fc2b4c282c3b1c28a792cc3b8c3bcc3a7c281c3877240c284c3b9c3bfc28fc38762c3ac7dc39cc2b130c3b3c3bf23c28fc285c2bfc3b8063d16c3b236c29c4f120761c2bec28dc38320c28fc3a5c381077b2cc298",
+      "55c29ec2b3c39ec2a7c3b4c282c3a82ac2b5343fc3af3dc2963d0f10c2b1c284c3b13e0258c3b2c2bac3a0c39079c3bb1bc3b5580ec2b2c3bdc287c293c3bdc389c3bd6c67c2b64fc2bf3dc29cc39dc39fc39dc39d3fc38f2969c295c3adc39ec29fc39d36c2bb117731c2be76c2a771700420c3a0c2a3c28ec28dc28fc2b91d431874081a7bc2951a4b6fc39d7ec3880cc2abc393616c39c29ac39fc2b227c3b772674cc2bd5ec38872c286c3aec28676462fc39dc2b6c2af1e087ac2975a6bc28743c28e43c38fc39d78c3afc28ec3bb20c3a85d6a7d43c387c2bec3af71c3bbc2bec3bcc2b73c60c29ec3b3717b58c39e4b7dc28f6579512cc39fc3adc38251083dc29617c29fc29fc2bdc3b8c2bdc3b9c3b3c39063c3a1c38fc3bfc3bfc3a5c2b0c3acc3ad105d7ec3a4c2b06c6cc3bc23c287c3857c19773668c29ac388c399c2a03957c297240ec3827c1bc287c2b1c3b768c3b7c39e07382c4ec29279c38e7ac29fc3920bc2a2c2aac394c390c3bc3c76580c511c206209c3a37c04c2b0c3a475c381c2a1c3b3c3b637c3aac2b0c38cc2b27cc28f321c3b07c3b7c2b27d5a7d38c398c29d3dc3983fc38f260fc3ae3d78c2b037c299c3aec3bcc3ac382c37751a074700023ec3aac298c3b8c298c39731c28441c287c2a0c2b157c2a9c2b1c3b4c396c3adc387c2a96b63c38ac391c3bcc2963dc2b9c2973b63c3aac3b542c28633c3b436c2b4337ac3a9c2b67dc3b540c390c2bbc3945a3b1cc3b21b7ac39ec3867b77c39c0741c3af52c3ab1b3ac3b65dc28fc39bc3b7c3a5c2bfc3a501c3b37cc28fc39bc383c3b25e22c287c28574c2bcc2a81fc382c29a7e27c3910ec29423c2b5266dc38ac2ab526117c3b212c3b7405f506f3ac3aec38e0cc38bc3bbc396c2a1c3b100c3b838c39237c3b47b1c425f3d7b5dc39f465d5ac3882a51c283c29ac2990c2c1166c3b3587f6e16c3b76f1a252dc2af5a10c39dc3a176c388496c4473c39cc3a1c3b3c3b7c3aac38b407030753dc29e29076546c2aec3acc39707c2afc3803cc3b0c29e25c3b8c3ba603d200ec3b226c2bdc3bfc3b5c2bbc39a04c395c3b53dc2b8021fc39544c3afc285c3802068c282c39965c28f013d15374e5f17c2a138c2b42e2ac382c2a9c2a4c284c2be21c2b75117c3a6c29d63180761c2bec39d04c283c39cc386c29e274cc288c2921cc3bc7f4a5bc39ec2a8c2943cc3883a291fc2a62d3f7dc2b8c3bf70763ec29d4c273bc393c3bdc3bb0fc3b70e1ec38e1ec3ae1ec3acc3ad4e76c3b6c38f3fc38dc2b309c2bdc389c39ac3b2c38676c2ae5f4fc3950d747ac39328c2bf496d79635f06c282c283c2a90ac28e290779c398c2a42d6f04c2afc3803cc3b0c29ec2a2c3bbc3ba603d200ec3b226c2bdc3b6c3b5c2bbc39a04c395c3b53dc2a8c3926ec394c29637223008c29a6076c399c3a3c29bc390c296372214c287c396454538c295c294c390c3bf37c2b4c3a5c3bf034cc2b66dc3a4c3a9390000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Thu, 09 Jul 2015 09:32:22 GMT",
+      "content-length": "2534"
+    }
+  }
+]
