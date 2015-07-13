@@ -16,10 +16,6 @@ function clearAccount() {
         .then(clearDone);
 }
 
-function errorLog(err) {
-    console.error(err);
-}
-
 function deleteServers(dataCenters) {
     console.log('delete all servers');
     return compute.servers().delete({
@@ -53,8 +49,7 @@ function deleteGroups(dataCenters) {
                 compute.groups().delete(subGroups);
             }
             return;
-        })
-        .catch(errorLog);
+        });
 }
 
 function clearDone() {
