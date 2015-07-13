@@ -42,7 +42,7 @@ describe('Server converter test [UNIT]', function() {
     it('Should convert ttl property from String', function (done) {
         var ttlString = new Date().toISOString();
         var command = converter.convertTtl({ttl: ttlString});
-        checkTtl(ttlString, command.ttl)
+        checkTtl(ttlString, command.ttl);
 
         done();
     });
