@@ -1,13 +1,18 @@
 
 var _ = require('underscore');
+var assert = require('assert');
 var vcr = require('nock-vcr-recorder-mocha');
+
+var Port = require('../../../lib/compute-services/servers/domain/port.js');
+var Protocol = require('../../../lib/compute-services/servers/domain/protocol.js');
+
 var Sdk = require('./../../../lib/clc-sdk.js');
 var compute = new Sdk('cloud_user', 'cloud_user_password').computeServices();
 
-vcr.describe('Create server operation [UNIT]', function () {
+vcr.describe('Create server with publicIp operation [UNIT]', function () {
 
     it('Should create new server', function (done) {
-        this.timeout(10000);
+        this.timeout(1000 * 60 * 15);
 
         var DataCenter = compute.DataCenter;
         var Server = compute.Server;
@@ -16,7 +21,7 @@ vcr.describe('Create server operation [UNIT]', function () {
         var promise = compute
             .servers()
             .create({
-                name: "web",
+                name: "webIp",
                 description: "My web server",
                 group: {
                     dataCenter: DataCenter.DE_FRANKFURT,
@@ -49,11 +54,58 @@ vcr.describe('Create server operation [UNIT]', function () {
                         name: "Type",
                         value: 0
                     }
-                ]
+                ],
+                publicIp: {
+                    openPorts: [
+                        Port.HTTP,
+                        Port.HTTPS,
+                        { from: 8080, to: 8081 },
+                        { protocol: Protocol.TCP, port: 23 }
+                    ],
+                    sourceRestrictions: [
+                        '71.100.60.0/24',
+                        { ip: '192.168.3.0', mask: '255.255.255.128' }
+                    ]
+                }
             });
+
+        promise.then(function(server) {
+            return compute.servers()
+                .findPublicIp(server)
+                .then(function(publicIpData) {
+                    checkPublicIpData(publicIpData);
+
+                    return server;
+                });
+        });
 
         promise.then(_.partial(deleteServer, done));
     });
+
+    function checkPublicIpData(data) {
+        assert.equal(data.length, 1);
+        var publicIpData = data[0];
+
+        assert(publicIpData.internalIPAddress);
+
+        assert.deepEqual(
+            publicIpData.ports,
+            [
+                { port: Port.HTTP, protocol: Protocol.TCP },
+                { port: Port.HTTPS, protocol: Protocol.TCP },
+                { port: 8080, portTo: 8081, protocol: Protocol.TCP },
+                { port: 23, protocol: Protocol.TCP }
+            ]
+        );
+
+        assert.deepEqual(
+            publicIpData.sourceRestrictions,
+            [
+                { cidr: '71.100.60.0/24' },
+                { cidr: '192.168.3.0/25' }
+            ]
+        );
+    }
 
     function deleteServer (done, server) {
         compute
