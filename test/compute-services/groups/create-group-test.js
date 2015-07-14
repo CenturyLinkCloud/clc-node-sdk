@@ -8,8 +8,10 @@ var GroupBuilder = require('./../group-builder.js');
 
 
 vcr.describe('Create Group Operation [UNIT]', function () {
+    var timeout = 2000;
+
     it('Should create Group1 in DE1 DataCenter', function (done) {
-        this.timeout(50 * 1000);
+        this.timeout(timeout);
 
         compute
             .groups()
@@ -32,7 +34,7 @@ vcr.describe('Create Group Operation [UNIT]', function () {
     });
 
     it('Should create Group1 in DE1 DataCenter with custom fields', function (done) {
-        this.timeout(50 * 1000);
+        this.timeout(timeout);
 
         compute
             .groups()
@@ -70,8 +72,32 @@ vcr.describe('Create Group Operation [UNIT]', function () {
             });
     });
 
+    it('Should create group in DE1 in root group', function (done) {
+        this.timeout(timeout);
+
+        compute
+            .groups()
+            .create({
+                parentGroup: {
+                    dataCenter: compute.DataCenter.DE_FRANKFURT,
+                    rootGroup: true
+                },
+                name: 'Test Group'
+            })
+            .then(assertThatGroupRefIsCorrect)
+            .then(compute.groups().findSingle)
+            .then(assertThatGroupInRoot)
+
+            .then(deleteGroup)
+            .then(assertThatGroupRefIsCorrect)
+
+            .then(function () {
+                done();
+            });
+    });
+
     it('Should delete specified group', function (done) {
-        this.timeout(5 * 60 * 1000);
+        this.timeout(timeout);
 
         var groupBuilder = new GroupBuilder(compute);
 
@@ -81,6 +107,16 @@ vcr.describe('Create Group Operation [UNIT]', function () {
 
             .then(groupBuilder.deleteGroup(done));
     });
+
+    function assertThatGroupInRoot(group) {
+        return compute.groups().findSingle({id: group.getParentGroupId()})
+            .then(function(rootGroup) {
+                assert.equal(rootGroup.id, group.getParentGroupId());
+                assert.equal(rootGroup.getParentGroupId(), null);
+
+                return group;
+            });
+    }
 
     function assertThatGroupWithCustomFields(group) {
         assert.equal(group.customFields.length, 1);
