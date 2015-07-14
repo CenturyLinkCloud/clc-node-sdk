@@ -7,7 +7,7 @@ var compute = new Sdk('cloud_user', 'cloud_user_password').computeServices();
 var assert = require('assert');
 
 
-vcr.describe('Modify group Operation [UNIT]', function () {
+vcr.describe('Modify Group Operation [UNIT]', function () {
     var groups = compute.groups();
     var DataCenter = compute.DataCenter;
     var Group = compute.Group;
