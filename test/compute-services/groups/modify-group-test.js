@@ -151,10 +151,7 @@ vcr.describe('Modify group Operation [UNIT]', function () {
 
     function deleteGroup (done) {
         return function (groupCriteria) {
-            groups.delete(groupCriteria);
-            done();
-
-            return groupCriteria;
+            return groups.delete(groupCriteria).then(_.partial(done, undefined));
         };
     }
 });
