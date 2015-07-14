@@ -7,7 +7,7 @@ var compute = new Sdk('cloud_user', 'cloud_user_password').computeServices();
 vcr.describe('Create server operation [UNIT]', function () {
 
     it('Should create new server', function (done) {
-        this.timeout(1000 * 60 * 15);
+        this.timeout(10000);
 
         var DataCenter = compute.DataCenter;
         var Server = compute.Server;
