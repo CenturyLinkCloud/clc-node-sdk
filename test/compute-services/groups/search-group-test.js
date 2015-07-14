@@ -53,10 +53,31 @@ vcr.describe('Search group operation [UNIT]', function () {
                 dataCenterId: DataCenter.DE_FRANKFURT.id,
                 dataCenterName: DataCenter.DE_FRANKFURT.name
             })
-            .then(function(result) {
-                return result[0];
-            })
+            .get(0)
             .then(assertThatGroupIsDefault)
+            .then(function () {
+                done();
+            });
+    });
+
+    it('Should found root group in DE1', function (done) {
+        this.timeout(timeout);
+
+        compute
+            .groups()
+            .find({
+                dataCenter: compute.DataCenter.DE_FRANKFURT,
+                rootGroup: true
+            })
+            .then(function(result) {
+                assert.equal(result.length, 1);
+
+                return result;
+            })
+            .get(0)
+            .then(function(result) {
+                assert.equal(result.name, 'DE1 Hardware');
+            })
             .then(function () {
                 done();
             });
