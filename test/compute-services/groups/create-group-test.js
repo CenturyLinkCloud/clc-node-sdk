@@ -8,7 +8,7 @@ var GroupBuilder = require('./../group-builder.js');
 
 
 vcr.describe('Create Group Operation [UNIT]', function () {
-    var timeout = 2000;
+    var timeout = 15 * 60 * 1000;
 
     it('Should create Group1 in DE1 DataCenter', function (done) {
         this.timeout(timeout);
@@ -127,15 +127,14 @@ vcr.describe('Create Group Operation [UNIT]', function () {
         return group;
     }
 
-    function assertThatGroupRefIsCorrect (groupRef) {
+    function assertThatGroupRefIsCorrect (groupRefValue) {
+        var groupRef = groupRefValue instanceof Array ? groupRefValue[0] : groupRefValue;
         assert(!_.isUndefined(groupRef.id));
 
         return groupRef;
     }
 
     function deleteGroup (groupCriteria) {
-        compute.groups().delete(groupCriteria);
-
-        return groupCriteria;
+        return compute.groups().delete(groupCriteria);
     }
 });

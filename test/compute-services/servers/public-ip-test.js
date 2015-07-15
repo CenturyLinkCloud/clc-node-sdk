@@ -7,11 +7,9 @@ var compute = new Sdk('cloud_user', 'cloud_user_password').computeServices();
 var _ = require('underscore');
 var assert = require('assert');
 
-var Port = require('../../../lib/compute-services/servers/domain/port.js');
-var Protocol = require('../../../lib/compute-services/servers/domain/protocol.js');
-
-
 vcr.describe('Public IP Address Operations [UNIT]', function () {
+
+    var Server = compute.Server;
 
     var searchCriteria = {
         dataCenter: compute.DataCenter.DE_FRANKFURT,
@@ -20,10 +18,10 @@ vcr.describe('Public IP Address Operations [UNIT]', function () {
 
     var publicIpConfig = {
         openPorts: [
-            Port.HTTP,
-            Port.HTTPS,
+            Server.Port.HTTP,
+            Server.Port.HTTPS,
             { from: 8080, to: 8081 },
-            { protocol: Protocol.TCP, port: 23 }
+            { protocol: Server.Protocol.TCP, port: 23 }
         ],
         sourceRestrictions: [
             '71.100.60.0/24',
@@ -61,8 +59,8 @@ vcr.describe('Public IP Address Operations [UNIT]', function () {
 
         var modifiedPublicIpConfig = {
             openPorts: [
-                Port.HTTP,
-                Port.HTTPS
+                Server.Port.HTTP,
+                Server.Port.HTTPS
             ],
             sourceRestrictions: [
                 '192.168.3.0/25'
@@ -101,10 +99,10 @@ vcr.describe('Public IP Address Operations [UNIT]', function () {
         assert.deepEqual(
             publicIpData.ports,
             [
-                { port: Port.HTTP, protocol: Protocol.TCP },
-                { port: Port.HTTPS, protocol: Protocol.TCP },
-                { port: 8080, portTo: 8081, protocol: Protocol.TCP },
-                { port: 23, protocol: Protocol.TCP }
+                { port: Server.Port.HTTP, protocol: Server.Protocol.TCP },
+                { port: Server.Port.HTTPS, protocol: Server.Protocol.TCP },
+                { port: 8080, portTo: 8081, protocol: Server.Protocol.TCP },
+                { port: 23, protocol: Server.Protocol.TCP }
             ]
         );
         assert.deepEqual(
@@ -124,8 +122,8 @@ vcr.describe('Public IP Address Operations [UNIT]', function () {
         assert.deepEqual(
             publicIpData.ports,
             [
-                { port: Port.HTTP, protocol: Protocol.TCP },
-                { port: Port.HTTPS, protocol: Protocol.TCP }
+                { port: Server.Port.HTTP, protocol: Server.Protocol.TCP },
+                { port: Server.Port.HTTPS, protocol: Server.Protocol.TCP }
             ]
         );
         assert.deepEqual(
