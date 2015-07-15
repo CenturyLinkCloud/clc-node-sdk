@@ -82,16 +82,17 @@ vcr.describe('Create server with publicIp operation [UNIT]', function () {
     function checkPublicIpData(data) {
         assert.equal(data.length, 1);
         var publicIpData = data[0];
+        var Server = compute.Server;
 
         assert(publicIpData.internalIPAddress);
 
         assert.deepEqual(
             publicIpData.ports,
             [
-                { port: Port.HTTP, protocol: Protocol.TCP },
-                { port: Port.HTTPS, protocol: Protocol.TCP },
-                { port: 8080, portTo: 8081, protocol: Protocol.TCP },
-                { port: 23, protocol: Protocol.TCP }
+                { port: Server.Port.HTTP, protocol: Server.Protocol.TCP },
+                { port: Server.Port.HTTPS, protocol: Server.Protocol.TCP },
+                { port: 8080, portTo: 8081, protocol: Server.Protocol.TCP },
+                { port: 23, protocol: Server.Protocol.TCP }
             ]
         );
 
