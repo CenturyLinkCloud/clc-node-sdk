@@ -20,8 +20,6 @@ vcr.describe('Get group billing stats [UNIT]', function () {
     });
 
     function checkAsserts(stats) {
-        console.log(JSON.stringify(stats, null, 2));
-
         assert.equal(stats.length, 1);
         var billingStats = stats[0];
 
