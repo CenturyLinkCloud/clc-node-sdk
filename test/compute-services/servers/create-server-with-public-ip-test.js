@@ -3,9 +3,6 @@ var _ = require('underscore');
 var assert = require('assert');
 var vcr = require('nock-vcr-recorder-mocha');
 
-var Port = require('../../../lib/compute-services/servers/domain/port.js');
-var Protocol = require('../../../lib/compute-services/servers/domain/protocol.js');
-
 var Sdk = require('./../../../lib/clc-sdk.js');
 var compute = new Sdk('cloud_user', 'cloud_user_password').computeServices();
 
@@ -57,10 +54,10 @@ vcr.describe('Create server with publicIp operation [UNIT]', function () {
                 ],
                 publicIp: {
                     openPorts: [
-                        Port.HTTP,
-                        Port.HTTPS,
+                        Server.Port.HTTP,
+                        Server.Port.HTTPS,
                         { from: 8080, to: 8081 },
-                        { protocol: Protocol.TCP, port: 23 }
+                        { protocol: Server.Protocol.TCP, port: 23 }
                     ],
                     sourceRestrictions: [
                         '71.100.60.0/24',
