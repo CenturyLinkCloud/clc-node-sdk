@@ -96,7 +96,6 @@
         },
         "name": "Default Group"
       },
-      "managedOS": true,
       "template": {
         "dataCenter": {
           "id": "va1",
