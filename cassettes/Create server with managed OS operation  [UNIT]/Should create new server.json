@@ -89,44 +89,24 @@
     "body": {
       "name": "webOS",
       "description": "My web server with managed OS",
-      "group": {
-        "dataCenter": {
-          "id": "va1",
-          "name": "VA1 - US East (Sterling)"
-        },
-        "name": "Default Group"
-      },
-      "template": {
-        "dataCenter": {
-          "id": "va1",
-          "name": "VA1 - US East (Sterling)"
-        },
-        "operatingSystem": {
-          "family": "redHat",
-          "version": "5",
-          "architecture": "64Bit"
-        }
-      },
-      "machine": {
-        "cpu": 1,
-        "memoryGB": 1,
-        "disks": [
-          {
-            "size": 1
-          }
-        ]
-      },
       "type": "standard",
       "storageType": "standard",
       "groupId": "cba61ae9357d480da63958e158bf10c7",
       "isManagedOS": true,
       "sourceServerId": "RHEL-5-64-TEMPLATE",
+      "primaryDns":"172.17.1.26",
+      "secondaryDns":"172.17.1.27",
       "cpu": 1,
       "memoryGB": 1,
       "additionalDisks": [
         {
-          "sizeGB": 1,
+          "sizeGB": 2,
           "type": "raw"
+        },
+        {
+          "sizeGB":4,
+          "type":"partitioned",
+          "path":"/data"
         }
       ]
     },

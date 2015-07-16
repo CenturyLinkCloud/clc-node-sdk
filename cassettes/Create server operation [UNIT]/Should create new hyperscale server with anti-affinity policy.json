@@ -68,43 +68,22 @@
     "body": {
       "name": "web",
       "description": "My hyperscale server",
-      "group": {
-        "dataCenter": {
-          "id": "ca3",
-          "name": "CA3 - Canada (Toronto)"
-        },
-        "name": "Default Group"
-      },
-      "template": {
-        "dataCenter": {
-          "id": "ca3",
-          "name": "CA3 - Canada (Toronto)"
-        },
-        "operatingSystem": {
-          "family": "centOS",
-          "version": "6",
-          "architecture": "64Bit"
-        }
-      },
-      "machine": {
-        "cpu": 1,
-        "memoryGB": 1,
-        "disks": [
-          {
-            "size": 2
-          }
-        ]
-      },
       "type": "hyperscale",
       "groupId": "8e988358a4454e64be2c0354ccafdb1c",
       "storageType": "hyperscale",
       "sourceServerId": "CENTOS-6-64-TEMPLATE",
       "cpu": 1,
       "memoryGB": 1,
+      "primaryDns":"172.17.1.26",
+      "secondaryDns":"172.17.1.27",
       "additionalDisks": [
         {
           "sizeGB": 2,
           "type": "raw"
+        },{
+          "sizeGB": 4,
+          "type": "partitioned",
+          "path": "/data"
         }
       ],
       "antiAffinityPolicyId": "bd53da40a07b43b4b488f230b2c7dbcd"
