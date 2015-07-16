@@ -109,41 +109,6 @@
     "body": {
       "name": "web",
       "description": "My web server",
-      "group": {
-        "dataCenter": {
-          "id": "de1",
-          "name": "DE1 - Germany (Frankfurt)"
-        },
-        "name": "Default Group"
-      },
-      "template": {
-        "dataCenter": {
-          "id": "de1",
-          "name": "DE1 - Germany (Frankfurt)"
-        },
-        "operatingSystem": {
-          "family": "centOS",
-          "version": "6",
-          "architecture": "64Bit"
-        }
-      },
-      "network": {
-        "primaryDns": "172.17.1.26",
-        "secondaryDns": "172.17.1.27"
-      },
-      "machine": {
-        "cpu": 1,
-        "memoryGB": 1,
-        "disks": [
-          {
-            "size": 2
-          },
-          {
-            "path": "/data",
-            "size": 4
-          }
-        ]
-      },
       "type": "standard",
       "storageType": "standard",
       "customFields": [

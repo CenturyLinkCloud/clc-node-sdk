@@ -553,26 +553,6 @@
     "body": {
       "name": "nginx",
       "description": "NGINX Server",
-      "template": {
-        "dataCenter": {
-          "id": "il1",
-          "name": "IL1 - US Central (Chicago)"
-        },
-        "operatingSystem": {
-          "family": "centOS",
-          "version": "6",
-          "architecture": "64Bit"
-        }
-      },
-      "machine": {
-        "cpu": 1,
-        "memoryGB": 1,
-        "disks": [
-          {
-            "size": 2
-          }
-        ]
-      },
       "groupId": "9ea0b8d211384768afcfd64b7896a2cd",
       "sourceServerId": "CENTOS-6-64-TEMPLATE",
       "cpu": 1,
@@ -622,26 +602,6 @@
     "body": {
       "name": "mysql",
       "description": "My SQL Server",
-      "template": {
-        "dataCenter": {
-          "id": "il1",
-          "name": "IL1 - US Central (Chicago)"
-        },
-        "operatingSystem": {
-          "family": "centOS",
-          "version": "6",
-          "architecture": "64Bit"
-        }
-      },
-      "machine": {
-        "cpu": 1,
-        "memoryGB": 1,
-        "disks": [
-          {
-            "size": 2
-          }
-        ]
-      },
       "groupId": "9ea0b8d211384768afcfd64b7896a2cd",
       "sourceServerId": "CENTOS-6-64-TEMPLATE",
       "cpu": 1,
@@ -691,26 +651,6 @@
     "body": {
       "name": "web",
       "description": "My web server",
-      "template": {
-        "dataCenter": {
-          "id": "il1",
-          "name": "IL1 - US Central (Chicago)"
-        },
-        "operatingSystem": {
-          "family": "centOS",
-          "version": "6",
-          "architecture": "64Bit"
-        }
-      },
-      "machine": {
-        "cpu": 1,
-        "memoryGB": 1,
-        "disks": [
-          {
-            "size": 2
-          }
-        ]
-      },
       "groupId": "de9318f18717455a98d28c815ad7e96e",
       "sourceServerId": "CENTOS-6-64-TEMPLATE",
       "cpu": 1,
@@ -760,26 +700,6 @@
     "body": {
       "name": "mysql",
       "description": "My SQL Server",
-      "template": {
-        "dataCenter": {
-          "id": "il1",
-          "name": "IL1 - US Central (Chicago)"
-        },
-        "operatingSystem": {
-          "family": "centOS",
-          "version": "6",
-          "architecture": "64Bit"
-        }
-      },
-      "machine": {
-        "cpu": 1,
-        "memoryGB": 1,
-        "disks": [
-          {
-            "size": 2
-          }
-        ]
-      },
       "groupId": "9ea0b8d211384768afcfd64b7896a2cd",
       "sourceServerId": "CENTOS-6-64-TEMPLATE",
       "cpu": 1,
