@@ -5,38 +5,37 @@ var compute = new Sdk('cloud_user', 'cloud_user_password').computeServices();
 var assert = require('assert');
 var _ = require("underscore");
 
-vcr.describe('Search anti-affinity policy operation [UNIT]', function () {
+vcr.describe('Search alert policy operation [UNIT]', function () {
 
-    var DataCenter = compute.DataCenter;
-
-    var timeout = 10000;
+    var timeout = 2000;
 
     it('Should found policies by name', function (done) {
         this.timeout(timeout);
 
         var criteria = {
-            dataCenter: DataCenter.DE_FRANKFURT,
-            name: 'My Policy'
+            name: 'My Alert Policy'
         };
 
         compute
             .policies()
-            .antiAffinity()
+            .alert()
             .find(criteria)
             .then(assertPolicies(criteria))
             .then(done);
     });
 
-    it('Should found policies by data center', function (done) {
+    it('Should found policies by recipient', function (done) {
         this.timeout(timeout);
 
         var criteria = {
-            dataCenter: DataCenter.DE_FRANKFURT
+            where: function(policy) {
+                return policy.actions[0].settings.recipients.indexOf("user@company.com") > -1;
+            }
         };
 
         compute
             .policies()
-            .antiAffinity()
+            .alert()
             .find(criteria)
             .then(assertPolicies(criteria))
             .then(done);
@@ -49,7 +48,7 @@ vcr.describe('Search anti-affinity policy operation [UNIT]', function () {
 
         compute
             .policies()
-            .antiAffinity()
+            .alert()
             .find(criteria)
             .then(assertPolicies(criteria))
             .then(done);
@@ -64,7 +63,37 @@ vcr.describe('Search anti-affinity policy operation [UNIT]', function () {
 
         compute
             .policies()
-            .antiAffinity()
+            .alert()
+            .find(criteria)
+            .then(assertPolicies(criteria))
+            .then(done);
+    });
+
+    it('Should found policies that contain metric', function (done) {
+        this.timeout(timeout);
+
+        var criteria = {
+            metrics: compute.Policy.Alert.Metric.DISK
+        };
+
+        compute
+            .policies()
+            .alert()
+            .find(criteria)
+            .then(assertPolicies(criteria))
+            .then(done);
+    });
+
+    it('Should found policies that contain action', function (done) {
+        this.timeout(timeout);
+
+        var criteria = {
+            actions: "email"
+        };
+
+        compute
+            .policies()
+            .alert()
             .find(criteria)
             .then(assertPolicies(criteria))
             .then(done);
@@ -74,8 +103,12 @@ vcr.describe('Search anti-affinity policy operation [UNIT]', function () {
         return function(criteria) {
             assert.notEqual(policies.length, 0);
 
-            if (criteria.dataCenter) {
-                _.each(policies, _.partial(assertDataCenter, _, criteria.dataCenter));
+            if (criteria.actions) {
+                _.each(policies, _.partial(assertAction, _, criteria.actions));
+            }
+
+            if (criteria.metrics) {
+                _.each(policies, _.partial(assertMetric, _, criteria.triggers));
             }
 
             if (criteria.name) {
@@ -88,8 +121,12 @@ vcr.describe('Search anti-affinity policy operation [UNIT]', function () {
         };
     }
 
-    function assertDataCenter(policy, dataCenter) {
-        assert.equal(policy.location, dataCenter.id.toUpperCase());
+    function assertAction(policy, actions) {
+        assert(_.asArray(actions).indexOf(policy.actions[0].action) > -1);
+    }
+
+    function assertMetric(policy, triggers) {
+        assert(_.asArray(triggers).indexOf(policy.triggers[0].metric) > -1);
     }
 
     function assertName(policy, name) {
