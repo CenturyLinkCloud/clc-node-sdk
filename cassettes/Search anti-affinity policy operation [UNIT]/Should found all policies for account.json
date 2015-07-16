@@ -1,0 +1,22 @@
+[
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2/antiAffinityPolicies/ALTD/",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f227ec3b14745c29b2fc29ac28f1e7dc28f7ec29b7dc3b4c3a8c2a3c28307c2934f1f4cc38e1f6479c3be70c3bf60c296670fc3af3d3cc2bf3fc38bc3b7660f277bc2b3c3a9c2bdc28f461f2dc2b3454e2dc2bfc2b84e5f566531c2bdc2a6c28fc38a6ac29ac2b545c2b5c2a4c28fc29fc29ec3aec3a2c28362c3b956c2a0c3967949c29f3679794e1fc38fc3abc3bcc29cc3bec2ba7bc2b977375bc2b6c385c3b1c3b979c2b12cc39a6bc28653c3a4c38dc39dc2ac6c67776fc281c382655e4f00c3bec2a3c38f4fc39fc390c29f4f4fc29fc29fc2be39c2a55f5e7ec3b5c3a6c2a3c3afc3bfc292c291c3a9c395c2a215c3b43cc38bc39a6cc29a2fc39bc2bcc3960e05651ec3be2cc387c2af3a42c3ba3cc39d4e3fc38fc3ab45c2b6c2bc4ec2b7c29ec395c399c3b2c3adc3b9c2ba6ec3af7cc3b44bc2b8137ec3a3c393c389c2a77bc3bb0fc38ec2b3c283c389c283c2bdc3bdc399c3b9c3acc3a0c381c3bec2a7c393c283c3a96472c3afc3bec3be6cc28fc2b1557003043b39c39ec383071f40c2b05bc2a0c3b0c38d124c50c3a6c3a14f33c3bcc2aa23c2a4c38fc2896027c39932c29b65c3a9c396c29bc2aac2aec2966d15506b76c3bfc3a05e36c389724279c2b2c3bfc3a9c3b9c3a4c3a0c393c29d7bc3b9c3b9c283c2bd4fc3af1dc39c7bc3b0c3a03c77c2b078c288c39729c2a6c38362c38553c2820f3ec28058c2b7c380c3a0c29b25c296c2a02cc2a37f7fc3aec39ac29bc3ae3cc3bc34c29b4cc289c3b3c3b7c2a7c399c2bdc3896ec29ec38dc3a8c28f2cc38b67c3b7c3ae4dc3ae3b703cc38ac29f057ac39d02c283c3bf17c390c3abc3bb1f34486ac39619c383c38b2f5f03c3b7c3afc3bfc292c3bf073fc2a2392e21050000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Thu, 16 Jul 2015 08:53:29 GMT",
+      "content-length": "514"
+    }
+  }
+]
