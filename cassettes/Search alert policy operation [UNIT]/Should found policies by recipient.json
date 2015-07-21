@@ -1,0 +1,22 @@
+[
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2/alertPolicies/ALTD/",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f227ec3b14745c29b2fc29ac28f1e7dc28f7ec29b7dc3b4c3a8c2a3c2873b3bc3b73ec38d771ec39c7f786fc2bac2bfc29b4f1fc3aec38ec3b6c38f77c3aec39f7fc3b0c3a9c2a77b0f0e3ec29d7c34c3ba68c2992d726ac3b9c385757a5cc3a675c29bc2bec2acc38a627a4d5f64c393c2b6c2a8c296024c7ec2a766c3b9222b4ac3bac2b2c389c39bc2b6585ec390c2b7c2bfc3b8c2a33ac29f16c2ab225fc2b6c3b4c397c3b73e5a3779c3bd7b4ec2abc3852a5b5ec28fc3a9c3a747c39fc3bf25c2bfc3a4c3bbc2a3c28fc38a62c3b916c39fc2a37949c280c29ac2bc3c2738c3b33a3fc2a7c2bfc3ae5ec3aec39dc38dc3903dc3b75ec3a40dc3bdc395c38ec3aec39e02c3bdc38bc2bcc29e00c3ae47c29fc29fc2bec2a13fc29fc29e3e3f7d734ac2bfc2bcc3bcc3aa0dc3b54c1dc2b7757171c291c39768c3b3c28b3f5ac3a4c3b4c3a7c2943ac29c15c38d5b6a355bc397c299c28e6c67c3a7c391c38ec3bd473b3bc3b4694b5835c3b3c2aa240a1ec3acc28c777ec389c3b77fc38948c3a9c2b933c38b26c3b7770e6607c3bb0fc38fc3b767c399417670c2bec3bf606f76c290c38fc3aec3a70f0e1e3ec2a0c297c3bfc39f4cc38f5bc2a0c3bfc383c2a127c381c3b93a03c2a0c3af3bc3b8c2bdc3bcc3b235c3a3c3b54bc3be1fc3905bc2b9c2aec3bb020000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Thu, 16 Jul 2015 15:40:44 GMT",
+      "content-length": "428"
+    }
+  }
+]
