@@ -39,6 +39,10 @@ var sourceRestrictionsConfig = [
 var mysqlDiskSize = 10;
 var mysqlDiskPath = "/db";
 
+var mysqlServerName = "mySql";
+var nginxServerName = "nginx";
+var apacheServerName = "apache";
+
 var infrastructureConfig = {
     dataCenter: dataCenter,
     group: {
@@ -69,7 +73,7 @@ function deleteGroup() {
 
 function nginxServer() {
     return _.extend(centOsServerConfig(), {
-        name: "nginx",
+        name: nginxServerName,
         publicIp: {
             openPorts: portsConfig,
             sourceRestrictions: sourceRestrictionsConfig
@@ -79,13 +83,13 @@ function nginxServer() {
 
 function apacheServer() {
     return _.extend(centOsServerConfig(), {
-        name: "apache"
+        name: apacheServerName
     });
 }
 
 function mySqlServer() {
     return _.extend(centOsServerConfig(), {
-        name: "mySql",
+        name: mysqlServerName,
         machine: {
             cpu: 1,
             memoryGB: 1,
@@ -118,9 +122,9 @@ function checkServers(servers) {
 
     _.each(servers, function(server) {
         assert(
-            containsIgnoreCase(server.id, "mysql") ||
-            containsIgnoreCase(server.id, "apache") ||
-            containsIgnoreCase(server.id, "nginx")
+            containsIgnoreCase(server.id, mysqlServerName) ||
+            containsIgnoreCase(server.id, apacheServerName) ||
+            containsIgnoreCase(server.id, nginxServerName)
         );
     });
 
@@ -151,10 +155,10 @@ function checkNginxServer() {
     console.log("Check nginx server");
 
     return compute.servers()
-        .findSingle(_.extend(groupSearchCriteria, {nameContains: "nginx"}))
+        .findSingle(_.extend(groupSearchCriteria, {nameContains: nginxServerName}))
         .then(displayResult)
         .then(function(server) {
-            assert(containsIgnoreCase(server.name, "nginx"));
+            assert(containsIgnoreCase(server.name, nginxServerName));
             assert.equal(server.group.name, appGroupName);
 
             return server;
@@ -194,13 +198,13 @@ function checkMysqlServer() {
     console.log("Check mysql server");
 
     return compute.servers()
-        .findSingle(_.extend(groupSearchCriteria, {nameContains: "mysql"}))
+        .findSingle(_.extend(groupSearchCriteria, {nameContains: mysqlServerName}))
         .then(displayResult)
         .then(checkDisk);
 }
 
 function checkDisk(server) {
-    assert(containsIgnoreCase(server.name, "mysql"));
+    assert(containsIgnoreCase(server.name, mysqlServerName));
 
     console.log("  Check additional disk");
     assert.equal(_.last(server.details.disks).sizeGB, mysqlDiskSize);
@@ -220,7 +224,6 @@ function run() {
         .then(checkMysqlServer)
 
         .then(deleteGroup)
-    //deleteGroup()
         .tap(function() {console.log("Finished!");});
 }
 
