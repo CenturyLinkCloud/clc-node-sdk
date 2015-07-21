@@ -10,6 +10,11 @@ vcr.describe('Get aggregated billing stats [UNIT]', function () {
     var Group = compute.Group;
     var Resource = compute.Resource;
 
+    var defaultGroupCriteria = {
+        dataCenter: DataCenter.US_EAST_STERLING,
+        name: Group.DEFAULT
+    };
+
     var timeout = 10000;
 
     it('Should return stats for Default group in VA1 aggregated by group', function (done) {
@@ -18,10 +23,7 @@ vcr.describe('Get aggregated billing stats [UNIT]', function () {
         compute
             .statistics()
             .billingStats({
-                group: {
-                    dataCenter: DataCenter.US_EAST_STERLING,
-                    name: Group.DEFAULT
-                },
+                group: defaultGroupCriteria,
                 groupBy: Resource.GROUP,
                 aggregateSubItems: true
             })
@@ -62,10 +64,7 @@ vcr.describe('Get aggregated billing stats [UNIT]', function () {
         compute
             .statistics()
             .billingStats({
-                group: {
-                    dataCenter: DataCenter.US_EAST_STERLING,
-                    name: Group.DEFAULT
-                },
+                group: defaultGroupCriteria,
                 groupBy: Resource.SERVER
             })
             .then(checkStatsData)
@@ -113,10 +112,7 @@ vcr.describe('Get aggregated billing stats [UNIT]', function () {
         compute
             .statistics()
             .billingStats({
-                group: {
-                    dataCenter: DataCenter.US_EAST_STERLING,
-                    name: Group.DEFAULT
-                },
+                group: defaultGroupCriteria,
                 groupBy: Resource.DATACENTER
             })
             .then(checkStatsData)
