@@ -20,6 +20,7 @@
     "restling": "^0.9.1",
     "underscore": "^1.8.3",
     "ip-subnet-calculator": "^1.0.2",
+    "moment": "2.10.3",
     "simple-ssh": "^0.8.6"
   },
   "devDependencies": {
