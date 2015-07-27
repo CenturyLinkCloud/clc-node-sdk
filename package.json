@@ -19,13 +19,13 @@
     "bluebird": "^2.9.26",
     "restling": "^0.9.1",
     "underscore": "^1.8.3",
-    "ip-subnet-calculator": "^1.0.2"
+    "ip-subnet-calculator": "^1.0.2",
+    "simple-ssh": "^0.8.6"
   },
   "devDependencies": {
     "istanbul": "^0.3.17",
     "jsdoc": "^3.3.1",
     "jshint": "^2.8.0",
-    "jsmockito": "^1.0.5",
     "mocha": "^2.2.5",
     "moment": "^2.10.3",
     "nock-vcr-recorder-mocha": "^0.3.2",
