@@ -3,6 +3,7 @@ var vcr = require('nock-vcr-recorder-mocha');
 var Sdk = require('./../../../lib/clc-sdk.js');
 var compute = new Sdk('cloud_user', 'cloud_user_password').computeServices();
 var assert = require('assert');
+var _ = require('underscore');
 
 vcr.describe('Get group monitoring stats [UNIT]', function () {
 
@@ -30,8 +31,9 @@ vcr.describe('Get group monitoring stats [UNIT]', function () {
 
             var groupStats = stats[0];
             assert.notEqual(groupStats.length, 0);
+            assert.equal(groupStats.group.name, compute.Group.DEFAULT);
 
-            var serverStats = groupStats[0];
+            var serverStats = groupStats.servers[0];
             assert.notEqual(serverStats.name, undefined);
             assert.notEqual(serverStats.stats, undefined);
             assert.equal(serverStats.stats.length, 1);
@@ -40,7 +42,7 @@ vcr.describe('Get group monitoring stats [UNIT]', function () {
     });
 
 
-    /* TODO tests can't be running due to start param can be incorrect over time */
+    ///* TODO tests can't be running due to start param can be incorrect over time */
     //it('Should return hourly stats for Default group in VA1', function (done) {
     //    this.timeout(50000);
     //
@@ -63,8 +65,9 @@ vcr.describe('Get group monitoring stats [UNIT]', function () {
     //
     //        var groupStats = stats[0];
     //        assert.notEqual(groupStats.length, 0);
+    //        assert.equal(groupStats.group.name, compute.Group.DEFAULT);
     //
-    //        var serverStats = groupStats[0];
+    //        var serverStats = groupStats.servers[0];
     //        assert.notEqual(serverStats.name, undefined);
     //        assert.notEqual(serverStats.stats, undefined);
     //        assert.equal(serverStats.stats.length, 2);
@@ -95,8 +98,9 @@ vcr.describe('Get group monitoring stats [UNIT]', function () {
     //
     //        var groupStats = stats[0];
     //        assert.notEqual(groupStats.length, 0);
+    //        assert.equal(groupStats.group.name, compute.Group.DEFAULT);
     //
-    //        var serverStats = groupStats[0];
+    //        var serverStats = groupStats.servers[0];
     //        assert.notEqual(serverStats.name, undefined);
     //        assert.notEqual(serverStats.stats, undefined);
     //        assert.equal(serverStats.stats.length, 3);
