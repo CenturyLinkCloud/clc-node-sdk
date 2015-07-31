@@ -1,7 +1,7 @@
 
 var vcr = require('nock-vcr-recorder-mocha');
 var Sdk = require('./../../../lib/clc-sdk.js');
-var compute = new Sdk().computeServices();
+var compute = new Sdk('cloud_user', 'cloud_user_password').computeServices();
 var assert = require('assert');
 
 vcr.describe('Get aggregated monitoring stats [UNIT]', function () {

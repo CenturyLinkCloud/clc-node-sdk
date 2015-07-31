@@ -4,8 +4,8 @@
     "method": "POST",
     "path": "/v2/authentication/login",
     "body": {
-      "username": "idrabenia.altd",
-      "password": "RenVortEr9"
+      "username": "cloud_user",
+      "password": "cloud_user_password"
     },
     "status": 200,
     "response": [
