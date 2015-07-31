@@ -282,6 +282,67 @@ vcr.describe('Get aggregated monitoring stats [UNIT]', function () {
         }
     });
 
+    it('Should return stats for Default group with subgroups in VA1 aggregated by group', function (done) {
+        this.timeout(timeout);
+
+        compute
+            .statistics()
+            .monitoringStats({
+                group: defaultGroupCriteria,
+                groupBy: Resource.GROUP,
+                timeFilter: {
+                    type: compute.MonitoringStatsType.LATEST
+                },
+                aggregateSubItems: true
+            })
+            .then(checkStatsData)
+            .then(done);
+
+        function checkStatsData(statsData) {
+            assert.equal(statsData.length, 2);
+            var groupStatsData = statsData[0];
+            var subGroupStatsData = statsData[1];
+
+            assert.equal(groupStatsData.entity.name, Group.DEFAULT);
+            assert.equal(groupStatsData.entity.locationId.toLowerCase(), DataCenter.US_EAST_STERLING.id);
+
+            assert.deepEqual(groupStatsData.statistics, [{
+                "timestamp": "2015-07-31T09:26:40Z",
+                "cpu": 3,
+                "cpuPercent": 0.25666666666666665,
+                "memoryMB": 3072,
+                "memoryPercent": 1.1600000000000001,
+                "networkReceivedKBps": 0,
+                "networkTransmittedKBps": 0,
+                "diskUsageTotalCapacityMB": 50688,
+                "diskUsage": [
+                    {"id": "0:0", "capacityMB": 1536},
+                    {"id": "0:1", "capacityMB": 6144},
+                    {"id": "0:2", "capacityMB": 43008}
+                ],
+                "guestDiskUsage": [
+                    {"path": "/", "capacityMB": 41949, "consumedMB": 3948},
+                    {"path": "/boot", "capacityMB": 1482, "consumedMB": 324}
+                ]
+            }]);
+
+            assert.equal(subGroupStatsData.entity.name, 'Subgroup');
+            assert.equal(subGroupStatsData.entity.locationId.toLowerCase(), DataCenter.US_EAST_STERLING.id);
+
+            assert.deepEqual(subGroupStatsData.statistics, [{
+                "timestamp": null,
+                "cpu": 0,
+                "cpuPercent": 0,
+                "memoryMB": 0,
+                "memoryPercent": 0,
+                "networkReceivedKBps": 0,
+                "networkTransmittedKBps": 0,
+                "diskUsageTotalCapacityMB": 0,
+                "diskUsage": [],
+                "guestDiskUsage": []
+            }]);
+        }
+    });
 
     ///* TODO tests can't be running due to start param can be incorrect over time */
     //it('Should return summarized stats for Default group in VA1', function (done) {
