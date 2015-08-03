@@ -8,7 +8,7 @@ var GroupBuilder = require('./../group-builder.js');
 
 
 vcr.describe('Create Group Operation [UNIT]', function () {
-    var timeout = 15 * 60 * 1000;
+    var timeout = 10 * 1000;
 
     it('Should create Group1 in DE1 DataCenter', function (done) {
         this.timeout(timeout);
