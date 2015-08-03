@@ -13,12 +13,9 @@ describe('Monitoring stats converter [UNIT]', function () {
     it('Should throw validation exceptions', function () {
         try {
             converter.validateAndConvert({
-                start: moment()
-                    .format(converter.TIME_FORMAT),
-                end: moment()
-                    .subtract(1, 'minutes')
-                    .format(converter.TIME_FORMAT),
-                sampleInterval: '02:00:00',
+                start: moment(),
+                end: moment().subtract(1, 'minutes'),
+                sampleInterval: moment.duration(2, 'hours'),
                 type: compute.MonitoringStatsType.HOURLY
             });
         } catch(error) {
@@ -27,7 +24,7 @@ describe('Monitoring stats converter [UNIT]', function () {
 
         try {
             converter.validateAndConvert({
-                start: '1915-07-23T12:00:00',
+                start: new Date('1915-07-23T12:00:00'),
                 sampleInterval: '03:00:00',
                 type: compute.MonitoringStatsType.HOURLY
             });
@@ -41,8 +38,7 @@ describe('Monitoring stats converter [UNIT]', function () {
         try {
             converter.validateAndConvert({
                 start: '1915-07-23T12:00:00',
-                end: moment()
-                    .format(converter.TIME_FORMAT),
+                end: moment(),
                 sampleInterval: '50:00',
                 type: compute.MonitoringStatsType.REALTIME
             });
@@ -55,12 +51,9 @@ describe('Monitoring stats converter [UNIT]', function () {
 
         try {
             converter.validateAndConvert({
-                start: moment()
-                    .subtract(2, 'hours')
-                    .format(converter.TIME_FORMAT),
-                end: moment()
-                    .format(converter.TIME_FORMAT),
-                sampleInterval: '50:00',
+                start: moment().subtract(2, 'hours'),
+                end: moment(),
+                sampleInterval: moment.duration(50, 'minutes'),
                 type: compute.MonitoringStatsType.HOURLY
             });
         } catch(error) {
@@ -72,7 +65,7 @@ describe('Monitoring stats converter [UNIT]', function () {
 
         try {
             converter.validateAndConvert({
-                start: moment().format(converter.TIME_FORMAT),
+                start: moment(),
                 sampleInterval: '00:01',
                 type: compute.MonitoringStatsType.REALTIME
             });
@@ -85,12 +78,9 @@ describe('Monitoring stats converter [UNIT]', function () {
 
         try {
             converter.validateAndConvert({
-                start: moment()
-                    .subtract(1, 'hours')
-                    .format(converter.TIME_FORMAT),
-                end: moment()
-                    .format(converter.TIME_FORMAT),
-                sampleInterval: '02:00:00',
+                start: moment().subtract(1, 'hours'),
+                end: moment(),
+                sampleInterval: moment.duration(2, 'hours'),
                 type: compute.MonitoringStatsType.HOURLY
             });
         } catch(error) {
@@ -99,8 +89,7 @@ describe('Monitoring stats converter [UNIT]', function () {
 
         try {
             converter.validateAndConvert({
-                end: moment()
-                    .format(converter.TIME_FORMAT),
+                end: moment(),
                 sampleInterval: '00:10',
                 type: compute.MonitoringStatsType.REALTIME
             });
@@ -110,11 +99,8 @@ describe('Monitoring stats converter [UNIT]', function () {
 
         try {
             converter.validateAndConvert({
-                start: moment()
-                    .subtract(1, 'hours')
-                    .format(converter.TIME_FORMAT),
-                end: moment()
-                    .format(converter.TIME_FORMAT),
+                start: moment().subtract(1, 'hours'),
+                end: moment(),
                 sampleInterval: 'bla-bla:20',
                 type: compute.MonitoringStatsType.REALTIME
             });
