@@ -3,8 +3,23 @@ var vcr = require('nock-vcr-recorder-mocha');
 var Sdk = require('./../../../lib/clc-sdk.js');
 var compute = new Sdk('cloud_user', 'cloud_user_password').computeServices();
 var assert = require('assert');
+var MonitoringStatsConverter = require('./../../../lib/compute-services/statistics/domain/monitoring-stats-converter.js');
 
 vcr.describe('Get aggregated monitoring stats [UNIT]', function () {
+
+    var defaultMaxHourlyPeriodDays = MonitoringStatsConverter.MAX_HOURLY_PERIOD_DAYS;
+    var defaultRealtimePeriodHours = MonitoringStatsConverter.MAX_REALTIME_PERIOD_HOURS;
+
+    before(function() {
+        /* it is necessary to cassette usage */
+        MonitoringStatsConverter.MAX_HOURLY_PERIOD_DAYS = 100000;
+        MonitoringStatsConverter.MAX_REALTIME_PERIOD_HOURS = 1000000;
+    });
+
+    after(function() {
+        MonitoringStatsConverter.MAX_HOURLY_PERIOD_DAYS = defaultMaxHourlyPeriodDays;
+        MonitoringStatsConverter.MAX_REALTIME_PERIOD_HOURS = defaultRealtimePeriodHours;
+    });
 
     var DataCenter = compute.DataCenter;
     var Group = compute.Group;
@@ -344,71 +359,70 @@ vcr.describe('Get aggregated monitoring stats [UNIT]', function () {
         }
     });
 
-    ///* TODO tests can't be running due to start param can be incorrect over time */
-    //it('Should return summarized stats for Default group in VA1', function (done) {
-    //    this.timeout(timeout);
-    //
-    //    compute
-    //        .statistics()
-    //        .monitoringStats({
-    //            group: defaultGroupCriteria,
-    //            timeFilter: {
-    //                start: '2015-07-28T18:00:00',
-    //                end: '2015-07-28T20:00:00',
-    //                sampleInterval: '02:00:00',
-    //                type: compute.MonitoringStatsType.HOURLY
-    //            },
-    //            summarize: true
-    //        })
-    //        .then(checkStatsData)
-    //        .then(done);
-    //
-    //    function checkStatsData(statsData) {
-    //        assert.equal(statsData.length, 2);
-    //
-    //        var firstTimeIntervalData = statsData[0];
-    //        var secondTimeIntervalData = statsData[1];
-    //
-    //        assert.deepEqual(firstTimeIntervalData, {
-    //            "timestamp": "2015-07-28T18:00:00Z",
-    //            "cpu": 3,
-    //            "cpuPercent": 0.26333333333333336,
-    //            "memoryMB": 3072,
-    //            "memoryPercent": 1.5566666666666666,
-    //            "networkReceivedKBps": 0,
-    //            "networkTransmittedKBps": 0,
-    //            "diskUsageTotalCapacityMB": 50688,
-    //            "diskUsage": [
-    //                {"id": "0:2", "capacityMB": 43008},
-    //                {"id": "0:1",  "capacityMB": 6144},
-    //                {"id": "0:0", "capacityMB": 1536}
-    //            ],
-    //            "guestDiskUsage": [
-    //                {"path": "/", "capacityMB": 41949, "consumedMB": 3948},
-    //                {"path": "/boot", "capacityMB": 1482, "consumedMB": 324}
-    //            ]
-    //        });
-    //
-    //        assert.deepEqual(secondTimeIntervalData, {
-    //            "timestamp": "2015-07-28T20:00:00Z",
-    //            "cpu": 3,
-    //            "cpuPercent": 0.26333333333333336,
-    //            "memoryMB": 3072,
-    //            "memoryPercent": 1.7633333333333334,
-    //            "networkReceivedKBps": 0,
-    //            "networkTransmittedKBps": 0,
-    //            "diskUsageTotalCapacityMB": 50688,
-    //            "diskUsage": [
-    //                {"id": "0:2", "capacityMB": 43008},
-    //                {"id": "0:1", "capacityMB": 6144},
-    //                {"id": "0:0", "capacityMB": 1536}
-    //            ],
-    //            "guestDiskUsage": [
-    //                {"path": "/", "capacityMB": 41949, "consumedMB": 3948},
-    //                {"path": "/boot","capacityMB": 1482,"consumedMB": 324}
-    //            ]
-    //        });
-    //    }
-    //});
+    it('Should return summarized stats for Default group in VA1', function (done) {
+        this.timeout(timeout);
+
+        compute
+            .statistics()
+            .monitoringStats({
+                group: defaultGroupCriteria,
+                timeFilter: {
+                    start: '2015-07-28T18:00:00',
+                    end: '2015-07-28T20:00:00',
+                    sampleInterval: '02:00:00',
+                    type: compute.MonitoringStatsType.HOURLY
+                },
+                summarize: true
+            })
+            .then(checkStatsData)
+            .then(done);
+
+        function checkStatsData(statsData) {
+            assert.equal(statsData.length, 2);
+
+            var firstTimeIntervalData = statsData[0];
+            var secondTimeIntervalData = statsData[1];
+
+            assert.deepEqual(firstTimeIntervalData, {
+                "timestamp": "2015-07-28T18:00:00Z",
+                "cpu": 3,
+                "cpuPercent": 0.26333333333333336,
+                "memoryMB": 3072,
+                "memoryPercent": 1.5566666666666666,
+                "networkReceivedKBps": 0,
+                "networkTransmittedKBps": 0,
+                "diskUsageTotalCapacityMB": 50688,
+                "diskUsage": [
+                    {"id": "0:2", "capacityMB": 43008},
+                    {"id": "0:1",  "capacityMB": 6144},
+                    {"id": "0:0", "capacityMB": 1536}
+                ],
+                "guestDiskUsage": [
+                    {"path": "/", "capacityMB": 41949, "consumedMB": 3948},
+                    {"path": "/boot", "capacityMB": 1482, "consumedMB": 324}
+                ]
+            });
+
+            assert.deepEqual(secondTimeIntervalData, {
+                "timestamp": "2015-07-28T20:00:00Z",
+                "cpu": 3,
+                "cpuPercent": 0.26333333333333336,
+                "memoryMB": 3072,
+                "memoryPercent": 1.7633333333333334,
+                "networkReceivedKBps": 0,
+                "networkTransmittedKBps": 0,
+                "diskUsageTotalCapacityMB": 50688,
+                "diskUsage": [
+                    {"id": "0:2", "capacityMB": 43008},
+                    {"id": "0:1", "capacityMB": 6144},
+                    {"id": "0:0", "capacityMB": 1536}
+                ],
+                "guestDiskUsage": [
+                    {"path": "/", "capacityMB": 41949, "consumedMB": 3948},
+                    {"path": "/boot","capacityMB": 1482,"consumedMB": 324}
+                ]
+            });
+        }
+    });
 
 });

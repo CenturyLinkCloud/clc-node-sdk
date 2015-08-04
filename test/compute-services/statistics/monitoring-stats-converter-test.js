@@ -31,7 +31,7 @@ describe('Monitoring stats converter [UNIT]', function () {
         } catch(error) {
             assert.equal(error, util.format(
                     '"start" should be within the past %s day(s)',
-                    converter.MAX_HOURLY_PERIOD_DAYS)
+                    MonitoringStatsConverter.MAX_HOURLY_PERIOD_DAYS)
             );
         }
 
@@ -45,7 +45,7 @@ describe('Monitoring stats converter [UNIT]', function () {
         } catch(error) {
             assert.equal(error, util.format(
                     '"start" should be within the past %s hour(s)',
-                    converter.MAX_REALTIME_PERIOD_HOURS)
+                    MonitoringStatsConverter.MAX_REALTIME_PERIOD_HOURS)
             );
         }
 
@@ -59,7 +59,7 @@ describe('Monitoring stats converter [UNIT]', function () {
         } catch(error) {
             assert.equal(error, util.format(
                     '"sampleInterval" should be not less than %s hour(s)',
-                    converter.MIN_HOURLY_INTERVAL_HOURS)
+                    MonitoringStatsConverter.MIN_HOURLY_INTERVAL_HOURS)
             );
         }
 
@@ -72,7 +72,7 @@ describe('Monitoring stats converter [UNIT]', function () {
         } catch(error) {
             assert.equal(error, util.format(
                     '"sampleInterval" should be not less than %s minute(s)',
-                    converter.MIN_REALTIME_INTERVAL_MINUTES)
+                    MonitoringStatsConverter.MIN_REALTIME_INTERVAL_MINUTES)
             );
         }
 
