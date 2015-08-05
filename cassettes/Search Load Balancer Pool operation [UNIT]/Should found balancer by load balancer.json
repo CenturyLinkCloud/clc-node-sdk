@@ -1,0 +1,123 @@
+[
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2/sharedLoadBalancers/ALTD/de1",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3bac3a8c39ec39e247b30c3bd7432c2b9c297c3adc3ad3f38c398c29fc3ac1ec29cc3afc3ae4f277bc2b3c389c383c2bdc29dc39dc3acc2a3c39147c38b6cc29153c38b2759c2992dc2a7794dc29fc38cc3b2665a17c2abc2b6c2a8c296c3b4c385c29bc2bc6953c3afc39b62753cc29bc39579c393c39077c29f7e3ac39ec2bd7f7fc3bc707fc2bcc2b7435f356dc396c2aec3b179c2bec38c26653ec2a3c28f565555c3922706c29fc39dc3bd4fc3afc3afc3ac3ec39c39c3883fc29dc3ac67c2bb07073b0707c2b3c3bbc2b3c3b3c3bbc3b7c2a7c3b97ec2b67fc28fc39fc2a8c39bc28f1e1dc3acc28c3e5ac3a4c3adc2bcc3825b75c2b55ec38e5e55c29362c289c3afc3b3c2ba29c29a362774c3a82bc3aa7239c38b6a74c2b5c2ac0871c3aac3aac3bbc2a3c28fc38a62c3b916c2bfc3bec3a2c28fc3aac2bc44c2abc2bc3cc2a716c3b33a3fc2a7c2bfc3ae5ec3aec39d6dc3a659c29dc38fc29e57c399c38c0cc2adc2b9c29bc295c3adc3acc3ae2cc39fc2bd7b13c395c3aec3b2c2a8c3aec39e6230c297793d01221f7d7ec3bac286c3be7cc3b915c3be7d7ac3bac3bcc3b4c38dc3a947c39fc3bf2523c283c29fc2a0c3be4347c3b0c2aec3a937c282c3a6c3b77f09c3a3c387c2b376c3bfc3812cc3bfc3b4c381c3bec39ec3b420c39fc39fc39fc38bc3af3dc2bc77c3be603239c2b83779c2b8c3bbc3a9c3bd4f1f4cc3a915c299c2b5c3bdc3bd7bc3bfc3afc29fc2b65bc28c2642c28f1fc3a2c2b4c39dc284c3a04dc393c3b6c2b34f490215c3a93b46221e117dc3b34dc3b52c2422c280c39dc3bec2bf7c2dc283c2a7c29ec28567c3b34f3fc2bdc29fc3adc29c1fc39cc39f21c2aec2bcc3b760c3b2c3a0c3bc7ec2964d1f4c1fc3ae1d4c1e4c27c3b44e47c3b3c3adc3924744c397c3b7567dc2bbc2bb78c293387a48c3b77dc3b87cc39c62305d7a7c43c3b37153c38fc2b7c29ec28fc2bdc29d07c29fc3ae1cc39cc2bbc297c39dc39fc29fc3ad3fc398c38d1fc39e7bc298c3adc3ae4fc2b27bc3bbc3b96c363b00353ac3b341c29fc2bcc3b774c3906c3c3cc2a0c2af7e5667c3a31643c3a952c3a31bc29ac28dc29b7ac2bec3b56c3cc398c29bc3ae7ec2bac3bf60c3b2c3b0c39e5ec2be7f3fc39bc38b7648c3a93c20c2b1c29b64c3a7070f6660c2a8c38e6cc280c387c39f7b3a583a1ec392773fc2abc3b371c28bc38174c3a9c3b10dc38dc3874d3dc39f7a3ec2b259c2b67740c386c3ba7cc2921dc3ac3f7c70c290c3ad4d27c3b9c38ec3bec2bd4fc2b37bc393c399c3817dc290c3b01bc29bc28f4fc3a9c2bbc29fc395c3b9c2b8c38560c2bac3b4c3b8c286c3a6c3a3c2a6c29e6f3d1fc3b9c2831d7a6dc3b67072c2be33c39dc2bf37c399c29fc39cc2bfc3bfc3a0c381c3bdc39d6c3ac39bc2997dc29a7fc2ba4fc3af74c3a6c2833e79c3afc3a9c2a0c39938c3803cc3bec2acc38ec3862dc286c392c2a5c38637341b37c3b57cc3ab",
+      "c399c298c3ac4f773ec29d4dc2a7c3b767c3b70ec3b6c3b7c38ec3b71e4e1e64c393c3bbc2bbc393c38964c3bfc393c3ac7c0f02c3be0dc38c06c28403c2bcc3b9c2b33a1bc2b7184ac2971ac39fc3906cc39cc394c3b37bc38cc38624c38b0fc3aec3a7c3a7c399c3b9c2a7c3bb3b7bc2bb07c39901c3bd797fc29f4cc3936477c38ac38ec39037341b3b08c2a17ec296c2a7c3a3c386c2b174c389c3b1c28d4dc387c3a6c29e6fc29cc28ec3afc3bf3f772e3cc3bfc3a40f0000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Tue, 04 Aug 2015 11:35:49 GMT",
+      "content-length": "916"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2/sharedLoadBalancers/ALTD/de1/e70043d9bf0c43b4b557751acd0d6e64/pools",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c3bdc3bf0729c2bb4c0d02000000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Tue, 04 Aug 2015 11:35:49 GMT",
+      "content-length": "122"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2/sharedLoadBalancers/ALTD/de1/b4c06dcc5d3842f29b7ac51cbb46af2b/pools",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c3bdc3bf0729c2bb4c0d02000000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Tue, 04 Aug 2015 11:35:49 GMT",
+      "content-length": "122"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2/sharedLoadBalancers/ALTD/de1/20760833a54d471e939a14ba34eddd8f/pools",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c3bdc3bf0729c2bb4c0d02000000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Tue, 04 Aug 2015 11:35:49 GMT",
+      "content-length": "122"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2/sharedLoadBalancers/ALTD/de1/b4bae85efaf640218a8e8554760b1c11/pools",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c3bdc3bf0729c2bb4c0d02000000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Tue, 04 Aug 2015 11:35:49 GMT",
+      "content-length": "122"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2/sharedLoadBalancers/ALTD/de1/32ba7c6bb3a24784b18f14cb2db9201a/pools",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba6877c3bfc393c3bb3bc2bb0f770ec3b24f27c3bbc399c3aec381c381c38ec381c381c3acc3bec3acc3bcc3bec3bd69c2bec29fc3adc39fc3bb68c3b4c391c2aac2aac39bc28f1e1dc3acc28c3e5ac3a4c3adc2bcc3825b75c2b55ec38e5e55c29362c289c3afc3b3c2ba29c29a365f4e73c3bac2aa69c2b3c3a52cc2ab67c3b4c385c2b2c29ac3a5c38d47c28fc2bec3b7c3bdc3914765c2b17cc28b5f7fc3b147755ec2a2555ec29e53c28b79c29dc29fc3935f772fc3b7c3ae36c3b3c2acc38e67c38fc2ab6cc3b6242b33c282553777c2b3c2b2c29dc39dc29dc3a5c2bb77c3afc3ad4dc2b207c3934f27c2937bc399c39ec3bec283c283c3bdc389c3aec381c3b9c3aec3be74c2b237c29b3cc39cc39bc399c38dc3aec2aec2aac2aa6cc3aec39e6230c297793d01221f7d7ec3bac286c3be7cc3b915c3be7d7ac3bac3bcc3b4c38dc3a947c39fc3bf2523c283c29fc2a0c3be4347c3b0c2aec3a937c282c3a6c3b77f09c3a3c387c2b376c3bfc3812cc3bfc3b4c381c3bec39ec3b420c39fc39fc39fc38bc3af3dc2bc77c3be603239c2b83779c2b8c3bbc3a9c3bd4f1f4cc3a915c299c2b5c3bdc3bd7bc3bfc3afc29fc2b65bc28c2642c28f1fc3a2c2b4c39dc284c3a04dc393c3b6c3bdc3bf0754c290c291406e030000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Tue, 04 Aug 2015 11:35:49 GMT",
+      "content-length": "411"
+    }
+  }
+]
