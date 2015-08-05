@@ -3,7 +3,6 @@ var _ = require('underscore');
 var moment = require('moment');
 var Promise = require("bluebird");
 var Sdk = require('./../lib/clc-sdk.js');
-var Resource = require('./../lib/compute-services/statistics/domain/resource.js');
 var SampleUtils = require('./sample-utils.js');
 
 var sdk = new Sdk();
@@ -23,7 +22,7 @@ function __getTotalBillingStatistics() {
         .statistics()
         .billingStats({
             dataCenter: {},
-            groupBy: Resource.GROUP,
+            groupBy: compute.Resource.GROUP,
             summarize: true
         })
         .then(_.partial(__print, 'Total billing statistics:'));
@@ -35,7 +34,7 @@ function __getBillingStatisticsGroupedByDataCenters() {
         .statistics()
         .billingStats({
             dataCenter: {},
-            groupBy: Resource.DATACENTER
+            groupBy: compute.Resource.DATACENTER
         })
         .then(_.partial(__print, 'Billing statistics grouped by datacenters:'));
 }
@@ -46,7 +45,7 @@ function __getCa1BillingStatisticsGroupedByServers() {
         .statistics()
         .billingStats({
             dataCenter: DataCenter.CA_VANCOUVER,
-            groupBy: Resource.SERVER
+            groupBy: compute.Resource.SERVER
         })
         .then(_.partial(__print, 'Billing statistics grouped by servers within CA1 Datacenter:'));
 }
@@ -57,7 +56,7 @@ function __getMonitoringStatisticsGroupedByDataCenters() {
         .statistics()
         .monitoringStats({
             dataCenter: {},
-            groupBy: Resource.DATACENTER,
+            groupBy: compute.Resource.DATACENTER,
             timeFilter: {
                 start: moment().subtract(5, 'hours'),
                 end: moment().subtract(3, 'hours'),
@@ -74,7 +73,7 @@ function __getMonitoringStatisticsGroupedByGroup() {
         .statistics()
         .monitoringStats({
             dataCenter: DataCenter.CA_VANCOUVER,
-            groupBy: Resource.GROUP,
+            groupBy: compute.Resource.GROUP,
             timeFilter: {
                 start: moment().subtract(5, 'hours'),
                 end: moment().subtract(3, 'hours'),
@@ -91,7 +90,7 @@ function __getLatestMonitoringStatisticsByDataCenter() {
         .statistics()
         .monitoringStats({
             dataCenter: DataCenter.CA_VANCOUVER,
-            groupBy: Resource.DATACENTER,
+            groupBy: compute.Resource.DATACENTER,
             timeFilter: {
                 type: compute.MonitoringStatsType.LATEST
             }
