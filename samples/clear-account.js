@@ -6,11 +6,21 @@ var sdk = new Sdk();
 var compute = sdk.computeServices();
 var dataCenters = sdk.baseServices().dataCenters();
 
+var DataCenter = compute.DataCenter;
+
 var Group = compute.Group;
+
+var allDataCenterExceptCa1 = function (dataCenterMetadata) {
+    return dataCenterMetadata.id !== DataCenter.CA_VANCOUVER.id;
+};
 
 function clearAccount() {
     console.log('clear environment');
-    return dataCenters.find()
+
+    return dataCenters
+        .find({
+            where: allDataCenterExceptCa1
+        })
         .then(deleteServers)
         .then(deleteGroups)
         .then(clearDone);
