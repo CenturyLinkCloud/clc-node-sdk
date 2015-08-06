@@ -7,7 +7,7 @@ var assert = require('assert');
 
 
 vcr.describe('Create Shared Load Balancer Operation [UNIT]', function () {
-    var timeout = 15 * 1000;
+    var timeout = 10 * 1000;
 
     var balancerName = 'Balancer';
     var balancerDescription = 'Test Balancer';

@@ -2,16 +2,18 @@ var vcr = require('nock-vcr-recorder-mocha');
 
 var _ = require('underscore');
 var Sdk = require('./../../../lib/clc-sdk.js');
-var compute = new Sdk().computeServices();
+var compute = new Sdk('cloud_user', 'cloud_user_password').computeServices();
 var TestAsserts = require("./../../test-asserts.js");
 var assert = require('assert');
 
 
-vcr.describe('Search templates test [UNIT]', function () {
+vcr.describe('Search templates operation [UNIT]', function () {
     var OsFamily = compute.OsFamily;
     var DataCenter = compute.DataCenter;
 
     var service = compute.templates();
+
+    var timeout = 10 * 1000;
 
     function compareIgnoreCase(expected, actual) {
         if (_.isString(expected) && _.isString(actual)) {
@@ -22,12 +24,12 @@ vcr.describe('Search templates test [UNIT]', function () {
     }
 
     it('Should return list of all de1 templates', function (done) {
-        this.timeout(1000 * 60 * 5);
+        this.timeout(timeout);
 
         compute
             .templates()
             .find({
-                dataCenterIds: [DataCenter.DE_FRANKFURT.id, "va1"]
+                dataCenterId: [DataCenter.DE_FRANKFURT.id, "va1"]
             })
             .then(TestAsserts.assertThatResultNotEmpty)
             .then(function () {
@@ -36,7 +38,7 @@ vcr.describe('Search templates test [UNIT]', function () {
     });
 
     it('Should return centOs template in de1 templates', function (done) {
-        this.timeout(1000 * 60 * 5);
+        this.timeout(timeout);
 
         service
             .find({
@@ -67,7 +69,7 @@ vcr.describe('Search templates test [UNIT]', function () {
     });
 
     it('Should return WINDOWS and RHEL templates in de1 and RHEL in va1', function (done) {
-        this.timeout(1000 * 60 * 5);
+        this.timeout(timeout);
 
         compute.templates()
             .find({
@@ -117,7 +119,7 @@ vcr.describe('Search templates test [UNIT]', function () {
     });
 
     it('Should return empty result', function (done) {
-        this.timeout(1000 * 60 * 5);
+        this.timeout(timeout);
 
         compute.templates()
             .find({
@@ -151,7 +153,7 @@ vcr.describe('Search templates test [UNIT]', function () {
     });
 
     it('Should return template with cpuAutoscale capability in de1 templates (by search func)', function (done) {
-        this.timeout(1000 * 60 * 15);
+        this.timeout(timeout);
 
         compute
             .templates()
