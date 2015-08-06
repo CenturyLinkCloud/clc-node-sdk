@@ -2,6 +2,7 @@ var assert = require('assert');
 var _ = require('underscore');
 var Promise = require("bluebird");
 var Sdk = require('./../lib/clc-sdk.js');
+var SampleUtils = require('./sample-utils.js');
 
 var sdk = new Sdk();
 var compute = sdk.computeServices();
@@ -24,40 +25,6 @@ var server2Name = "srv-2";
 var server3Name = "srv-3";
 
 var serverIds = [];
-
-function __createServer(name, dataCenter) {
-    return compute
-        .servers()
-        .create({
-            name: name,
-            description: name + " description",
-            group: {
-                dataCenter: dataCenter,
-                name: Group.DEFAULT
-            },
-            template: {
-                dataCenter: dataCenter,
-                operatingSystem: {
-                    family: OsFamily.CENTOS,
-                    version: "6",
-                    architecture: Machine.Architecture.X86_64
-                }
-            },
-            network: {
-                primaryDns: "172.17.1.26",
-                secondaryDns: "172.17.1.27"
-            },
-            machine: {
-                cpu: 1,
-                memoryGB: 1
-            },
-            type: Server.STANDARD,
-            storageType: Server.StorageType.STANDARD
-        })
-        .then(function(result) {
-            return result.id;
-        });
-}
 
 function __checkServers(servers) {
     assert.equal(servers.length, 3);
@@ -188,9 +155,9 @@ function __listCentOsTemplates() {
 
 function run() {
     Promise.join(
-        __createServer(server1Name, DataCenter.US_EAST_STERLING),
-        __createServer(server2Name, DataCenter.US_WEST_SANTA_CLARA),
-        __createServer(server3Name, DataCenter.US_EAST_STERLING),
+        SampleUtils.createServer(compute, server1Name, DataCenter.US_EAST_STERLING),
+        SampleUtils.createServer(compute, server2Name, DataCenter.US_WEST_SANTA_CLARA),
+        SampleUtils.createServer(compute, server3Name, DataCenter.US_EAST_STERLING),
 
         function(serverId1, serverId2, serverId3) {
             serverIds.push(serverId1);
