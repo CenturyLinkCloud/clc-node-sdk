@@ -1,0 +1,422 @@
+[
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2/sharedLoadBalancers/ALTD/ca2",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c3bdc3bf0729c2bb4c0d02000000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Wed, 05 Aug 2015 06:37:45 GMT",
+      "content-length": "122"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2/sharedLoadBalancers/ALTD/gb1",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c3bdc3bf0729c2bb4c0d02000000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Wed, 05 Aug 2015 06:37:44 GMT",
+      "content-length": "122"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2/sharedLoadBalancers/ALTD/ca3",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c3bdc3bf0729c2bb4c0d02000000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Wed, 05 Aug 2015 06:37:44 GMT",
+      "content-length": "122"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2/sharedLoadBalancers/ALTD/ca1",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c3bdc3bf0729c2bb4c0d02000000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Wed, 05 Aug 2015 06:37:45 GMT",
+      "content-length": "122"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2/sharedLoadBalancers/ALTD/gb3",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c3bdc3bf0729c2bb4c0d02000000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Wed, 05 Aug 2015 06:37:44 GMT",
+      "content-length": "122"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2/sharedLoadBalancers/ALTD/il1",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c3bdc3bf0729c2bb4c0d02000000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Wed, 05 Aug 2015 06:37:45 GMT",
+      "content-length": "122"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2/sharedLoadBalancers/ALTD/uc1",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c3bdc3bf0729c2bb4c0d02000000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Wed, 05 Aug 2015 06:37:45 GMT",
+      "content-length": "122"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2/sharedLoadBalancers/ALTD/ny1",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c3bdc3bf0729c2bb4c0d02000000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Wed, 05 Aug 2015 06:37:45 GMT",
+      "content-length": "122"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2/sharedLoadBalancers/ALTD/ut1",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c3bdc3bf0729c2bb4c0d02000000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Wed, 05 Aug 2015 06:37:45 GMT",
+      "content-length": "122"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2/sharedLoadBalancers/ALTD/sg1",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c3bdc3bf0729c2bb4c0d02000000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Wed, 05 Aug 2015 06:37:45 GMT",
+      "content-length": "122"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2/sharedLoadBalancers/ALTD/wa1",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c3bdc3bf0729c2bb4c0d02000000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Wed, 05 Aug 2015 06:37:45 GMT",
+      "content-length": "122"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2/sharedLoadBalancers/ALTD/de1",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3bac3a8c39ec39e247b30c3bd7432c2b9c297c3adc3ad3f38c398c29fc3ac1ec29cc3afc3ae4f277bc2b3c389c383c2bdc29dc39dc3acc2a3c39147c38b6cc29153c38b2759c2992dc2a7794dc29fc38cc3b2665a17c2abc2b6c2a8c296c3b4c385c29bc2bc6953c3afc39b62753cc29bc39579c393c39077c29f7e3ac39ec2bd7f7fc3bc707fc2bcc2b7435f356dc396c2aec3b179c2bec38c26653ec2a3c28f565555c3922706c29f7cc3a7c280c3bac39d79c3b060c3b2c3b0c381c3be74c3a7c381c3834fc2a7c29fc3aec29d67c393c287c393c29dc39d49c2b63bc3a137c3aac3b6c2a347073bc2a3c28f16793bc2afc3b0565dc2adc297c2b357c395c2a458c3a2c3bbc2bc6ec28ac2a6c38d091dc3bac28ac2ba5cc38ec2b21a5d2d2b42c29cc2bbc2a20fc2bb7844c2b0c39e1f3fc2b847c39fc2acc3aac3a2326bc3b3c297c39ac3adc381c2bd5fc3b2c3bdc3914765c2b17c4b4d0956c29dc297c3b44ac293c297c3a7c394765ec3a7c3a7c3b4c397c39dc38bc2bdc2bbc38d3cc2abc3b3c399c3b32ac29b19c39a3477c2b3c2b2c29dc39dc29dc3a5c2bb776f22c3bb5d26c38bc39d5b50c3a332c2af2740c3a4c2a3c38f4fc39fc390c29f2fc2bfc382c2bf4f4fc29fc29fc2be39c3bdc3a8c3bbc2bf6464c3b0c293c2b1c3bfc39011c2bc6bc3bac28dc2a0c3b9c3bd5fc382c3b8c3b1c2b4c39f7f30c38b3f7dc2b0c2bf373dc388c3b7c3b7c3b7c3b27b0fc3afc29d3fc2984c0ec3ae4d1ec3ae7e7ac3bfc39307537a45c2a67d7fc3bfc39ec38fc395c2bcc3af03c39b0fc282c2b0c3b3c38110c3b67f78c2bc77c28b29c2894cc3aa0fc291c3b76e42c3b026c39ec3bbc399c2a724c281c28ac3b41d2311c28fc288c2bec3b9c2a67a161211c3806ec3bf5fc2bec296c38153c38f2c787b3b0f3e25c295762fc2bbc2bf3fc39b7fc2b0c29b3fc2bcc3b730c39bc39dc29f64c3b7c3b6c3b3c3996c76006a7c03c3ba7f7fc2bcc3bbc3b0c280c2bec28ac3b0c2be20c3bac3a87b1f3e1bc2b7184ac2971ac39fc3906cc39cc394c3b3c2ad6763423ac3b4c393c399747a7f76c3af607fc3af7cc3afc3a1c3a44136c2bdc2bf3bc29d4cc3b63fc38dc38ec3b7c2a0c3afc2bfc281c399206bc2bcc3bbc290c2bec3ba59c29dc28d5b0cc2a54bc28d6f68366ec3aac3b9c396c2b3c3b1606fc2bac3bbc3a93ec299c2b67b7bc3b9c3bec3bd6c2fc39b21c295c3b3c280c2846ec292c29d1f3cc2986108c29dc399c398c2a5c28fc2bec39674c3bcc3acc38fc3872d06c393c2a5c38737341f37c3b57cc3abc3b9c38866c399c39ec381c2a7c3b777c38e27c399c381c3bec3830707c399c39e74c292c3afc3acc39fc3bb34c2bb37c29d1dc39c0709c2bfc2b1c3b9c3b8c294c2bec3bb59c29dc28f5b0cc2a64bc28f6f683e6ec3aac3b9c386c3b9c3b8c3bec3bf03c3b32856c3a03d0c0000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Wed, 05 Aug 2015 06:37:45 GMT",
+      "content-length": "774"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2/sharedLoadBalancers/ALTD/va1",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba68c3b7c3937c7a7f36c38d1fc3aec39fc38bc3b767c3bb0f27c29fc39e7fc2b873c3bfc3a1c2a7c399c283c2bdc3b303c3bac3b7c2a3c39147c38b6cc291c2a325c3bd3ac38bc29b695dc2acc39ac2a25ac392277bc3b449c2b13ac29ec38dc3aac2bc69c3b0c3b7c38ec2a7c3a3c39dc2bdc283c3b1c3aec3bd07c3a3c3bd1dc3bac2b269c2b376c28d6fc3b2653629c3b3197dc2b4c2aac2aac2923ec3b9c39ec3b7471fc295c385c3b22d7ec3bdc3851fc3957949c28dc29ac2bc3cc2a716c3b33a3fc2a7c2bfc3ae5ec3aec39d6dc3a659c29dc38fc29e57c399c3ac495666c38b695e3777c2b3c2b2c29dc39dc2bdc38c76c3afc39e02c3b3c38bc2bcc29ec2a0c287c28f3e3f7d437fc2bec3bc0ac3bf3e3d7d7ec3bac3a6c3b4c2a3c3afc3bfc292c291c3a95870c3bac3a67ac2be6b0076c3bbc3bfc3b2c3b51bc3aac3b7c3bbc2bfc3a4c3bbc3bf0fc2bc1cc3994e7e010000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Wed, 05 Aug 2015 06:37:45 GMT",
+      "content-length": "331"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2/sharedLoadBalancers/ALTD/de1/20760833a54d471e939a14ba34eddd8f/pools",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c3bdc3bf0729c2bb4c0d02000000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Wed, 05 Aug 2015 06:37:45 GMT",
+      "content-length": "122"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2/sharedLoadBalancers/ALTD/de1/b4c06dcc5d3842f29b7ac51cbb46af2b/pools",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c3bdc3bf0729c2bb4c0d02000000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Wed, 05 Aug 2015 06:37:45 GMT",
+      "content-length": "122"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2/sharedLoadBalancers/ALTD/de1/32ba7c6bb3a24784b18f14cb2db9201a/pools",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba28c39f3978c2b8c2b7c2b3c3b3c3a0c381c3a4c3a1c283c3bdc3a9c38ec283c287c29f4e3fc39d3bc38fc2a60fc2a73bc2bbc2936c77c3b2c391c3a8c2a35555c2b71f3d3ac398197dc2b4c388c39b79c285c2b7c3aa6ac2bdc29cc2bdc2aa26c38512c39fc3a77553346dc2bec29cc3a6c3b455c39366c38b5956c38fc3a8c28b6535c38bc29bc28f1e5157c3b461c2bbc2a65f3fc38ac297c399c2a4c38cc3b165c2b13ac29ec38dc3aac2bcc381c2a7c29f7e3ac39ec2bd7f7fc2bc3f7e70c28fc2be59c395c38565c396c3a62fc2b5c39bc2837bc2bfc3a4c3bbc2a3c28fc38a62c3b9c296c29a12c2ac3a2fc3a9c295262fc38fc2a9c3adc2bcc38ec38fc3a9c2afc2bbc2977b77c29b7956c3a7c2b3c3a755367bc292c2951921533777c2b3c2b2c29dc39dc29dc3a5c2bb77c3afc3ad4dc2b207c3934f27c2937bc399c39ec3bec283c283c3bdc389c3aec381c3b9c3aec3be74c2b237c29bc390c3b077c2b3c2bbc2abc2aa2ac29bc2bbc2b7c2a0c386655e4fc280c38847c29fc29fc2bec2a13f5f7ec2857fc29fc29e3e3f7d73c3bac391c3b77fc389c388c3a02763c3bfc2a12378c397c3b41b41c3b3c3bbc2bfc284c3b1c3a369c2bfc3bf60c2967fc3ba607f6f7ac290c3afc3afc3afc3a5c3b71ec39e3b7f30c2991cc39cc29b3cc39cc3bdc3b4c3bec2a70fc2a6c3b4c28a4cc3bbc3bec3bec2bdc29fc2ab79c39f07c2b61f0461c3a7c28321c3acc3bfc3b078c3af165312c299c3941f22c3afc39dc284c3a04dc2bcc3b7c3bdc3bf07401ec2b3c38e74040000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Wed, 05 Aug 2015 06:37:46 GMT",
+      "content-length": "470"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2/sharedLoadBalancers/ALTD/de1/ada28650fba84978a2cbe0436a3cd859/pools",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c3bdc3bf0729c2bb4c0d02000000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Wed, 05 Aug 2015 06:37:45 GMT",
+      "content-length": "122"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2/sharedLoadBalancers/ALTD/de1/72c1647b932e45a2a057d76bbbaf87db/pools",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c3bdc3bf0729c2bb4c0d02000000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Wed, 05 Aug 2015 06:37:46 GMT",
+      "content-length": "122"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2/sharedLoadBalancers/ALTD/va1/16ec5dce943e4d49b6590596a72f86a7/pools",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c3bdc3bf0729c2bb4c0d02000000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Wed, 05 Aug 2015 06:37:46 GMT",
+      "content-length": "122"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2/sharedLoadBalancers/ALTD/de1/32ba7c6bb3a24784b18f14cb2db9201a/pools/57de6742c8e442e393f7bb83b916567c/nodes",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f6ac39ac2ac5d371f3dc3ba285f66c29332c29f7d34c3bac2a8581dc38f6675c39ec3a0c3934f3f1dc3afc39ec2bf3fc39e1f3fc2b847c39fc2acc3aac3a2326bc3b3c29755c39d7ec3b4c3a860c3a760c3bfc297c28c3e10c382c38e0743c398c3bf25c39fc3bf7f006ec28e472ac387000000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Wed, 05 Aug 2015 06:37:46 GMT",
+      "content-length": "191"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2/sharedLoadBalancers/ALTD/de1/32ba7c6bb3a24784b18f14cb2db9201a/pools/e08920077b974c0796c62fac9c01ba1b/nodes",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f6ac39ac2ac5d371f3dc3ba285f66c29332c29f7d34c3bac2a8581dc38f6675c39ec3a0c3934f3f1dc3afc39ec2bf3fc39e1f3fc2b847c39fc2acc3aac3a2326bc3b3c29755c39d7ec3b4c3a860c3a7c3a0c39e2fc3b9c3bec3bf0336650dc3a443000000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Wed, 05 Aug 2015 06:37:46 GMT",
+      "content-length": "181"
+    }
+  }
+]
