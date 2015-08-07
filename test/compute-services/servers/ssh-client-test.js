@@ -10,7 +10,7 @@ describe('SSH client operation [INTEGRATION]', function () {
     var builder = new ServerBuilder(compute);
 
     it('Should execute commands through SSH', function (done) {
-        this.timeout(3 * 60 * 1000);
+        this.timeout(5 * 60 * 1000);
 
         compute.servers()
             .find({
