@@ -18,7 +18,7 @@ vcr.describe('Test DataCenter client functions [UNIT]', function () {
     });
 
     it('Should return datacenter deployment capabilities', function (done) {
-        this.timeout(15000);
+        this.timeout(5000);
 
         dataCenterClient
             .getDeploymentCapabilities(DataCenter.DE_FRANKFURT.id)
