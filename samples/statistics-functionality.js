@@ -21,7 +21,6 @@ function __getTotalBillingStatistics() {
     return compute
         .statistics()
         .billingStats({
-            dataCenter: {},
             groupBy: compute.Resource.GROUP,
             summarize: true
         })
@@ -33,7 +32,6 @@ function __getBillingStatisticsGroupedByDataCenters() {
     return compute
         .statistics()
         .billingStats({
-            dataCenter: {},
             groupBy: compute.Resource.DATACENTER
         })
         .then(_.partial(__print, 'Billing statistics grouped by datacenters:'));
@@ -55,7 +53,6 @@ function __getMonitoringStatisticsGroupedByDataCenters() {
     return compute
         .statistics()
         .monitoringStats({
-            dataCenter: {},
             groupBy: compute.Resource.DATACENTER,
             timeFilter: {
                 start: moment().subtract(5, 'hours'),
