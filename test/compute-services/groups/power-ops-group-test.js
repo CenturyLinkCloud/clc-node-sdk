@@ -110,29 +110,6 @@ vcr.describe('Power operations group operation [UNIT]', function () {
             .then(done);
     });
 
-    //TODO record test, when the environment will be fixed
-    //it('Should restore servers to Power operations group', function (done) {
-    //    this.timeout(timeout);
-    //
-    //    criteria.nameContains = Group.ARCHIVE;
-    //
-    //    compute.groups()
-    //        .restore(criteria,
-    //        {
-    //            dataCenter: DataCenter.DE_FRANKFURT,
-    //            nameContains: "power"
-    //        })
-    //        .then(function (serverRefs) {
-    //            assert.equal(!_.isEmpty(serverRefs), true);
-    //
-    //            return compute.servers().find(serverRefs);
-    //        })
-    //        .then(function(modifiedServers) {
-    //            _.each(modifiedServers, _.partial(assertThatServerInState, _, "active"));
-    //        })
-    //        .then(done);
-    //});
-
     function loadServerDetails(serverRefs) {
         assert(!_.isEmpty(serverRefs));
 

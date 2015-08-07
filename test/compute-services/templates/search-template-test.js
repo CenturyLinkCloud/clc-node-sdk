@@ -152,6 +152,19 @@ vcr.describe('Search templates operation [UNIT]', function () {
             });
     });
 
+    it('Should not found any template by incorrect criteria', function (done) {
+        this.timeout(timeout);
+
+        compute.templates()
+            .find({
+                dataCenterId: 'fakeId'
+            })
+            .then(TestAsserts.assertThatArrayIsEmpty)
+            .then(function () {
+                done();
+            });
+    });
+
     it('Should return template with cpuAutoscale capability in de1 templates (by search func)', function (done) {
         this.timeout(timeout);
 

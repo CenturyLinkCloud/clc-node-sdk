@@ -70,6 +70,23 @@ vcr.describe('Search anti-affinity policy operation [UNIT]', function () {
             .then(done);
     });
 
+    it('Should not found any policies by incorrect criteria', function (done) {
+        this.timeout(timeout);
+
+        var criteria = {
+            dataCenterId: "fakeId"
+        };
+
+        compute
+            .policies()
+            .antiAffinity()
+            .find(criteria)
+            .then(function(result) {
+                assert.equal(result.length, 0);
+            })
+            .then(done);
+    });
+
     function assertPolicies(policies) {
         return function(criteria) {
             assert.notEqual(policies.length, 0);

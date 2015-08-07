@@ -11,8 +11,10 @@ var assert = require('assert');
 vcr.describe('Search server operation [UNIT]', function () {
     var DataCenter = compute.DataCenter;
 
+    var timeout = 10000;
+
     it('Should find server by ID reference', function (done) {
-        this.timeout(10000);
+        this.timeout(timeout);
 
         compute.servers()
             .findSingle({ id: 'de1altdweb580' })
@@ -24,7 +26,7 @@ vcr.describe('Search server operation [UNIT]', function () {
     });
 
     it('Should search servers', function (done) {
-        this.timeout(30000);
+        this.timeout(timeout);
 
         compute
             .servers()
@@ -50,13 +52,13 @@ vcr.describe('Search server operation [UNIT]', function () {
     });
 
     it('Should search all servers', function (done) {
-        this.timeout(30000);
+        this.timeout(timeout);
 
         compute
             .servers()
             .find()
             .then(function(servers) {
-                assert.equal(servers.length > 0, true);
+                assert(servers.length > 0);
 
                 done();
             });
