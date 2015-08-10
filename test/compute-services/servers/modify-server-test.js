@@ -13,26 +13,25 @@ vcr.describe('Modify server operation [UNIT]', function () {
     var Group = compute.Group;
 
     it('Should modify server', function (done) {
-        this.timeout(10 * 60 * 1000);
+        this.timeout(15 * 1000);
 
         var newMemory = 2;
         var newCpu = 2;
 
+        var newPassword = "!QWE123rty1";
+
         compute.servers()
             .modify(
-            {id: 'de1altdtest101'},
+            {id: 'de1altdweb598'},
             {
-                description: "My web server",
+                description: "My updated web server",
                 group: {
                     dataCenter: DataCenter.DE_FRANKFURT,
                     name: Group.DEFAULT
                 },
                 cpu: newCpu,
                 memory: newMemory,
-                password: {
-                    old: "!QWE123rty1",
-                    new: "!QWE123rty1"
-                },
+                password: newPassword,
                 disks: {
                     add: {
                         "path": "/temp",
@@ -77,7 +76,7 @@ vcr.describe('Modify server operation [UNIT]', function () {
                 return compute.servers().findCredentials({id: modifiedServer.id});
             })
             .then(_.property('password'))
-            .then(_.partial(assert.equal, '!QWE123rty1'))
+            .then(_.partial(assert.equal, newPassword))
             .then(done);
     });
 
