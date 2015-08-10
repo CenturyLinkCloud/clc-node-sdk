@@ -32,8 +32,6 @@ vcr.describe('Clone server operation [UNIT]', function () {
         return compute
             .servers()
             .clone({
-                sourceServerPassword: password,
-                sourceServerId: serverToBeClonedId.toUpperCase(),
                 name: "cln",
                 description: "Cloned server",
                 group: {
@@ -47,6 +45,10 @@ vcr.describe('Clone server operation [UNIT]', function () {
                         { size: 2 },
                         { path: "/data", size: 4 }
                     ]
+                },
+                from: {
+                    serverId: serverToBeClonedId.toUpperCase(),
+                    serverPassword: password
                 },
                 type: Server.STANDARD,
                 storageType: Server.StorageType.STANDARD
