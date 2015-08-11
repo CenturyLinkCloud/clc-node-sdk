@@ -12,25 +12,12 @@ var Group = compute.Group;
 
 vcr.describe('Clone server operation [UNIT]', function () {
 
-    var serverToBeClonedId = 'de1altdweb598';
-
     it('Should clone created server', function (done) {
         this.timeout(10000);
 
-        compute.servers()
-            .findSingle({ id: serverToBeClonedId })
-            .then(compute.servers().findCredentials)
-            .then(_.property('password'))
-            .then(clone)
-            .then(function (result) {
-                assert.equal(result.id, 'de1altdcln03');
-                done();
-            });
-    });
+        var serverToBeClonedId = 'de1altdweb598';
 
-    function clone(password) {
-        return compute
-            .servers()
+        compute.servers()
             .clone({
                 name: "cln",
                 description: "Cloned server",
@@ -47,12 +34,16 @@ vcr.describe('Clone server operation [UNIT]', function () {
                     ]
                 },
                 from: {
-                    serverId: serverToBeClonedId.toUpperCase(),
-                    serverPassword: password
+                    server: { id: serverToBeClonedId }
                 },
                 type: Server.STANDARD,
                 storageType: Server.StorageType.STANDARD
+            })
+            .then(function (result) {
+                assert.equal(result.id, 'de1altdcln04');
+
+                done();
             });
-    }
+    });
 
 });
