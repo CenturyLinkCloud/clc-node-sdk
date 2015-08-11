@@ -110,9 +110,9 @@ vcr.describe('Create Infrastructure Operation [UNIT]', function () {
         };
     }
 
-    function loadParentGroup(groupIds, config) {
+    function loadParentGroup(parentGroupRefs, config) {
         return Promise.props({
-            item: compute.groups()._findByRef({id: _.first(groupIds)}, true),
+            item: compute.groups()._findByRef(_.first(parentGroupRefs), true),
             config: config
         });
     }
