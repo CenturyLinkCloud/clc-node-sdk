@@ -4,6 +4,10 @@ Documentation
 See the [wiki](https://github.com/CenturyLinkCloud/clc-node-sdk/wiki) for CLC Node.js SDK getting-started and user guides.
 Also you can run `npm run gen-docs` and see generated documentation in `/docs.index.html`.
 
+Requirements
+-------------
+* Node.js 0.12 (or later)
+
 Build process details
 ---------------------
 To build sources, you need to install Node.js 0.12 or later. To check out and build the CLC SDK source, issue the following commands:
