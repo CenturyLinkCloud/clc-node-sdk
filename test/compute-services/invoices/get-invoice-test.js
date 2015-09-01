@@ -9,7 +9,7 @@ vcr.describe('Get invoice [UNIT]', function () {
 
     var timeout = 10000;
 
-    it('Should return invoice data for previous month', function (done) {
+    it('Should return invoice data for certain year and month', function (done) {
         this.timeout(timeout);
 
         compute
@@ -35,10 +35,10 @@ vcr.describe('Get invoice [UNIT]', function () {
         compute
             .invoices()
             .getInvoice(
-            {
-                date: moment().year(2015).month(5)
-            }
-        )
+                {
+                    date: moment().year(2015).month(5)
+                }
+            )
             .then(checkAsserts)
             .then(done);
 
@@ -57,12 +57,12 @@ vcr.describe('Get invoice [UNIT]', function () {
         compute
             .invoices()
             .getInvoice(
-            {
-                year: 2015,
-                month: 3,
-                pricingAccountAlias: accountAlias
-            }
-        )
+                {
+                    year: 2015,
+                    month: 3,
+                    pricingAccountAlias: accountAlias
+                }
+            )
             .then(checkAsserts)
             .then(done);
 
