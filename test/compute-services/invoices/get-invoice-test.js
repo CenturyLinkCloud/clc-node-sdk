@@ -36,7 +36,7 @@ vcr.describe('Get invoice [UNIT]', function () {
             .invoices()
             .getInvoice(
                 {
-                    date: moment().year(2015).month(5)
+                    date: moment().year(2015).month(4)
                 }
             )
             .then(checkAsserts)
