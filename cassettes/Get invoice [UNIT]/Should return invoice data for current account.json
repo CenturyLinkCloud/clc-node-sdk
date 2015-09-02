@@ -1,0 +1,45 @@
+[
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "POST",
+    "path": "/v2/authentication/login",
+    "body": {
+      "username": "cloud_user",
+      "password": "cloud_user_password"
+    },
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f227ec3b147c3ab26c2af5f64c28bc3bcc2a3471f15c2b33ac29bc3a4c38b221b67653bc3bb68c3b45136c29d56c3ab657b5c165943c39f1f3f7fc3b3c2943e2dc2ab69c39616c395c3927cc3bcc293c387c2bbc3b4695dc29539c3bdc3b5c2bdc28fc28ec3b5c2a5c399c2a258c392c3a7c3bac3a74f16c3b9555ec393c39f4fc28ac2b22cc29617c3a6c3abc2a72f5e7fc2912dc2b30bc3bec3ae45c39e5e55c3b55bc3b3c39dc3ab7cc2bac2aec28bc3b6c39ac3bd5d5fc3a675c3b8c397c297c2abc2bcc38ec39a0a6fc38b07c2afc2a7c3b37cc2b62e09c39ec3b7471f4dc3b2c2acc38ec3ab37c395c39b7c49c288c3a6c397c39fc399c3897fc3afc3a3c3a2c38bc3a23bc2bfc3974fc3aec3be44c3b1c3bcc3a43bc3b3c389c3a753c3bc7dc3b6c3950fc38e765f14c39f7938c2a646c2abc3a9c2bd2f0ac3ba7077c2bac398c3bfc3b4c3b7c3b9c2bdc29fc2acc29ec3bfc39ec2af563fc3b57bc29fc3bdc3a0c2acc2b82a7ec29fc39fc3bb27c39fc29ec3bd7455c38c7ec3afc3afc2acc2bf5cc38ac3a7c38f7fc3afc29fc3bcc3814fc3bdc39ec39fc3a1c3af27c28bc3af2cc3a8c3bb772fc29ec3bec384c2bb2fc29e7ec3b1c2832fc39e5cc3ac534765c3be6dc3aac3b8c2a74f775e3c3dc2bbc2a6c3bfc39fc3bbc3b2c3a94573c2b6c3bcc38ec3a5c3a4c3b3c2afc28a2fc38bc2a6c3b8c289c3afc2bec3b8c3a9c389c2bdc29f5cc38f4ec29fc2bdc29d7cc2b75c03c296c3bdc3acc3994f513fc2b3725ac29c35676fc2bfc2b3c29a7cc3be6e3559c38cc29ec3bcc394c3a7c2bbc2ab097fc3b6c3aac38bc2af7676c3a7c293c385c2b325c3a1c283c2817dc3b953c2bfc3b7c2ab7bc2937bc39fc2a97fc3a2c2bbc2afc39ac3acc2bbc3bbc3b8c3acc38d4f7dc3b705c28dc2a9c39cc389c2bf727d7cc2b5c3b7c293c397c2b3c3854f5e07c3ad7ec3afc3afc3acc391c3bf5f4e3fc3bfc389c3abc39fc3a7c3b77e75c389c3bdc2962fc38ac3a9c3b2c2a7c38a69c3b9c3a2c2a7c2b3c38f7fc3b2c3adc3acc2bbc3af08c29fc3afc38cc2a8c3bdc3ae6451c2bec29b7dc3b727c38fc2a9c3bfc3b6c2a75ec29f7d7ac2b628c39f4e17c38fc28ac29fc3bac3aec3bdc395c3afc3b3c3bac3be7cc3b2c3ad576fc391c2974fc2b32f17c38f7ec3bac3b7c3997bc2b83b59c3be44c3bbc3bb7cc3b7c39dc3aac3b7c3b9c2bdc299c3a64fc39e3c7b75c39a6fc3bbc3aec3b2c3b7c3997bc2b6c2937dc3b7c3a1c3bac3b977c29f35c39977c29fc3bdc280685cc3bcc3a4c39bc3937767c38bc29d71c3bdc3a9c3bd2fc39ac3b3c2a7c2bfc3b7c3abc399773e7dc3b3c283c3a5c389c381c383c397c29fc3be5ec3974fc38f5fc2bf7bc39ac3bc5e3f3dc2bdc3bfc3aac3b9c2bdc2abc3bac3b4c2b4c38cc39f1e7fc3b44bc3be1f60543079c3b3020000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Mon, 31 Aug 2015 14:59:48 GMT",
+      "content-length": "736"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2/invoice/ALTD/2015/3?pricingAccountAlias=ALTD",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f227ec3b147c385c3acc2a3471f1d3f7fc3b3c3b4c3bec381c293c293c39d677bc29f7e34c3bac2a8c38dc3ab45431f7fc2b5c2aac296c3a9c2ab7cc29a17c2abc2963ec29e56c28b55c2b6c2bc7ec2912d72c3bac3b2c2b86cc2abc2ba6ac392c2a7c3b9655e56c2ab45c2be6cc393c3a7c38f4fc2a85d36c29d56c3ab657b5c1619c2a000387dc2bac2aac28b69c2b1c2bc38c28e7fc299c395c3b47ec3bfc2bb57c3b45d36c29bc39579c393c3acc3a213c3b935c39dc2a5c28fc2a7457b4d1fc2bdc38ec2b3c2b62d73c3bac2a069c2b3367f5957c297c385722a0866c2936cc291c39137c2abc28ac2be2b4fc2aa193ec39e3fc2b8c2b7c2b3431f4ec28ac2b2247c4ec2aa65c29b4dc39bc3934556c294c3b4c3ad22c2abc28b6c5c67c397c2bfc3a7c2b42dc38745450dc28bc3a565554cc3b3c29313c393c2863e6b2b0278c2bc00c2b61f3dc39a19c3afc398564f09076ac2b2c2b7c2b37b7f7b677f7b67c3b7c38dc38ec38e23c3bec39f4fc3916bc394617ec396c3a620c3aec3b7c2bec3bf4bc3be1f29c38cc3b17f7d010000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Mon, 31 Aug 2015 14:59:54 GMT",
+      "content-length": "375"
+    }
+  }
+]
