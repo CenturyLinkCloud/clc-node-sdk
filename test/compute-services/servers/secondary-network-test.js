@@ -24,8 +24,9 @@ vcr.describe('Secondary Networks Operations [UNIT]', function () {
     it('Should add secondary network', function (done) {
         this.timeout(timeout);
 
-        compute.servers()
-            .addSecondaryNetwork(searchCriteria, networkConfig)
+        loadServerDetails(searchCriteria)
+            .then(assertServersHasNoSecondaryNetwork)
+            .then(_.partial(compute.servers().addSecondaryNetwork, searchCriteria, networkConfig))
             .then(loadServerDetails)
             .then(function(servers) {
                 _.each(servers, function(server) {
@@ -41,19 +42,19 @@ vcr.describe('Secondary Networks Operations [UNIT]', function () {
         compute.servers()
             .removeSecondaryNetwork(searchCriteria, networkConfig)
             .then(loadServerDetails)
-            .then(function(servers) {
-                _.each(servers, serverHasNoSecondaryNetwork);
-            })
+            .then(assertServersHasNoSecondaryNetwork)
             .then(done);
     });
 
-    function serverHasNoSecondaryNetwork(server) {
-        assert(
-            _.isEmpty(
-                _.chain(server.details.secondaryIPAddresses)
-                    .value()
-            )
-        );
+    function assertServersHasNoSecondaryNetwork(servers) {
+        _.each(servers, function(server) {
+            assert(
+                _.isEmpty(
+                    _.chain(server.details.secondaryIPAddresses)
+                        .value()
+                )
+            );
+        });
     }
 
     function loadServerDetails(serverRefs) {
