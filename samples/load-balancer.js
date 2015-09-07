@@ -8,10 +8,6 @@ var sdk = new Sdk();
 var compute = sdk.computeServices();
 
 var DataCenter = compute.DataCenter;
-var Group = compute.Group;
-
-var OsFamily = compute.OsFamily;
-var Machine = compute.Machine;
 
 var contains = function (str, substr) { return str.indexOf(substr) > -1; };
 
