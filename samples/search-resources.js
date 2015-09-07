@@ -155,14 +155,13 @@ function __listCentOsTemplates() {
 
 function run() {
     Promise.join(
-        SampleUtils.createServer(compute, server1Name, DataCenter.US_EAST_STERLING),
-        SampleUtils.createServer(compute, server2Name, DataCenter.US_WEST_SANTA_CLARA),
-        SampleUtils.createServer(compute, server3Name, DataCenter.US_EAST_STERLING),
 
-        function(serverId1, serverId2, serverId3) {
-            serverIds.push(serverId1);
-            serverIds.push(serverId2);
-            serverIds.push(serverId3);
+        SampleUtils.createServer(compute, {name: server1Name, dataCenter: DataCenter.US_EAST_STERLING}),
+        SampleUtils.createServer(compute, {name: server2Name, dataCenter: DataCenter.US_WEST_SANTA_CLARA}),
+        SampleUtils.createServer(compute, {name: server3Name, dataCenter: DataCenter.US_EAST_STERLING}),
+
+        function(serverRef1, serverRef2, serverRef3) {
+            serverIds = _.pluck([serverRef1, serverRef2, serverRef3], 'id');
         }
     )
     .then(__findAllServers)

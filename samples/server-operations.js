@@ -2,6 +2,7 @@ var assert = require('assert');
 var _ = require('underscore');
 var Promise = require("bluebird");
 var Sdk = require('./../lib/clc-sdk.js');
+var SampleUtils = require('./sample-utils');
 
 var sdk = new Sdk();
 var compute = sdk.computeServices();
@@ -64,32 +65,14 @@ function createServers() {
 
 function createServer(name, description) {
     console.log("Create server " + name);
-    return compute
-        .servers()
-        .create({
+    return SampleUtils.createServer(compute,
+        {
             name: name,
             description: description,
             group: {
                 dataCenter: dataCenter,
                 name: groupName
-            },
-            template: {
-                dataCenter: dataCenter,
-                operatingSystem: {
-                    family: OsFamily.CENTOS,
-                    version: "6",
-                    architecture: Machine.Architecture.X86_64
-                }
-            },
-            machine: {
-                cpu: 1,
-                memoryGB: 1
-            },
-            type: Server.STANDARD,
-            storageType: Server.StorageType.STANDARD
-        })
-        .then(function(result) {
-            return result.id;
+            }
         });
 }
 
