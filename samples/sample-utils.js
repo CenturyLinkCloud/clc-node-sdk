@@ -37,6 +37,46 @@ var SampleUtils = {
         return computeServices
             .servers()
             .create(_.extend(defaultCfg, config));
+    },
+
+    createLoadBalancer: function(computeServices, dataCenter, name) {
+        return computeServices
+            .balancers()
+            .groups()
+            .create({
+                dataCenter: dataCenter,
+                name: name,
+                description: name + " description"
+            });
+    },
+
+    createLoadBalancerPool: function(computeServices, balancer, port, method, persistence) {
+        return computeServices
+            .balancers()
+            .pools()
+            .create({
+                balancer: balancer,
+                port: port,
+                method: method,
+                persistence: persistence
+            });
+    },
+
+    setLoadBalancerNodes: function(computeServices, pool, nodes) {
+        return computeServices
+            .balancers()
+            .nodes()
+            .create({
+                pool: pool,
+                nodes: nodes
+            });
+    },
+
+    deleteLoadBalancers: function(computeServices, criteria) {
+        return computeServices
+            .balancers()
+            .groups()
+            .delete(criteria);
     }
 
 };
