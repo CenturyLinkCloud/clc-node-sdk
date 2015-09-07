@@ -95,6 +95,25 @@ function __getLatestMonitoringStatisticsByDataCenter() {
         .then(_.partial(__print, 'Latest monitoring statistics by datacenter:'));
 }
 
+function __getInvoiceForMonthAndYear() {
+    return compute
+        .invoices()
+        .getInvoice({
+            year: 2015,
+            month: 7
+        })
+        .then(_.partial(__print, 'July 2015 invoice:'));
+}
+
+function __getInvoiceForPreviousMonth() {
+    return compute
+        .invoices()
+        .getInvoice({
+            date: moment().subtract(1, 'months')
+        })
+        .then(_.partial(__print, 'Previous month invoice:'));
+}
+
 function __print(message, data) {
     console.log(message);
 
@@ -128,6 +147,8 @@ function run() {
         .then(__getMonitoringStatisticsGroupedByDataCenters)
         .then(__getMonitoringStatisticsGroupedByGroup)
         .then(__getLatestMonitoringStatisticsByDataCenter)
+        .then(__getInvoiceForMonthAndYear)
+        .then(__getInvoiceForPreviousMonth)
         .then(function() {
             __print("\nFinished statistics functionality");
         });
