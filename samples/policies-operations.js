@@ -2,6 +2,7 @@ var assert = require('assert');
 var _ = require('underscore');
 var Promise = require("bluebird");
 var Sdk = require('./../lib/clc-sdk.js');
+var SampleUtils = require('./sample-utils');
 
 var sdk = new Sdk();
 var compute = sdk.computeServices();
@@ -51,34 +52,19 @@ function createPolicies() {
 function createServer() {
     var name = "plc";
     console.log("Create server " + name);
-    return compute
-        .servers()
-        .create({
-            name: name,
-            description: name + " description",
-            group: {
-                dataCenter: dataCenter,
-                name: compute.Group.DEFAULT
-            },
-            template: {
-                dataCenter: dataCenter,
-                operatingSystem: {
-                    family: compute.OsFamily.CENTOS,
-                    version: "6",
-                    architecture: compute.Machine.Architecture.X86_64
-                }
-            },
-            machine: {
-                cpu: 1,
-                memoryGB: 1
-            },
+
+    return SampleUtils.createServer(compute,
+        {
+            name: 'plc',
+            dataCenter: dataCenter,
             type: compute.Server.HYPERSCALE,
             policy: {
                 antiAffinity: {
                     nameContains: 'policy'
                 }
             }
-        });
+        }
+    );
 }
 
 function checkServerPolicy(server) {
