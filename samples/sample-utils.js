@@ -5,10 +5,11 @@ var SampleUtils = {
     createServer: function(computeServices, config) {
         var dataCenter = config.dataCenter || computeServices.DataCenter.DE_FRANKFURT;
         var name = config.name || 'srv';
+        var description = config.description || (name + " description");
 
         var defaultCfg = {
             name: name,
-            description: name + " description",
+            description: description,
             group: {
                 dataCenter: dataCenter,
                 name: computeServices.Group.DEFAULT
