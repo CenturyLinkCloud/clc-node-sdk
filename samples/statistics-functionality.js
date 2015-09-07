@@ -117,9 +117,9 @@ function run() {
             }
 
             return Promise.join(
-                SampleUtils.createServer(compute, server1Name, DataCenter.CA_VANCOUVER),
-                SampleUtils.createServer(compute, server2Name, DataCenter.CA_VANCOUVER),
-                SampleUtils.createServer(compute, server3Name, DataCenter.CA_VANCOUVER)
+                SampleUtils.createServer(compute, {name: server1Name, dataCenter: DataCenter.CA_VANCOUVER}),
+                SampleUtils.createServer(compute, {name: server2Name, dataCenter: DataCenter.CA_VANCOUVER}),
+                SampleUtils.createServer(compute, {name: server3Name, dataCenter: DataCenter.CA_VANCOUVER})
             );
         })
         .then(__getTotalBillingStatistics)
