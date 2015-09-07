@@ -132,7 +132,7 @@ function modifyAntiAffinityPolicy(name) {
     return function() {
         return compute.policies().antiAffinity().findSingle({})
             .then(function(policy) {
-                console.log("Modify alert policy " + policy.name);
+                console.log("Modify anti-affinity policy " + policy.name);
 
                 return compute.policies().antiAffinity().modify(policy, {
                     name: name
