@@ -4,6 +4,7 @@ var moment = require('moment');
 var Promise = require("bluebird");
 var Sdk = require('./../lib/clc-sdk.js');
 var SampleUtils = require('./sample-utils.js');
+var util = require('util');
 
 var sdk = new Sdk();
 var compute = sdk.computeServices();
@@ -102,7 +103,7 @@ function __getInvoiceForMonthAndYear() {
             year: 2015,
             month: 7
         })
-        .then(_.partial(__print, 'July 2015 invoice:'));
+        .then(_.partial(__print, 'July 2015 invoice:', _, 0));
 }
 
 function __getInvoiceForPreviousMonth() {
@@ -111,14 +112,16 @@ function __getInvoiceForPreviousMonth() {
         .getInvoice({
             date: moment().subtract(1, 'months')
         })
-        .then(_.partial(__print, 'Previous month invoice:'));
+        .then(_.partial(__print, 'Previous month invoice:', _, 0));
 }
 
-function __print(message, data) {
+function __print(message, data, depth) {
     console.log(message);
 
+    depth = depth !== undefined ? depth : 2;
+
     if (data !== undefined) {
-        console.log(JSON.stringify(data, null, 2));
+        console.log(util.inspect(data, false, depth, true));
     }
 }
 
