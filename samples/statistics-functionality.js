@@ -121,7 +121,7 @@ function __print(message, data, depth) {
     depth = depth !== undefined ? depth : 2;
 
     if (data !== undefined) {
-        console.log(util.inspect(data, false, depth, true));
+        console.log(util.inspect(data, false, depth, false));
     }
 }
 
