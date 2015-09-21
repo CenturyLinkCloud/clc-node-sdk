@@ -29,6 +29,45 @@ Example
 This example shows some of the functionality supported by the CLC Node.js SDK.
 
 ```js
+var Sdk = require('clc-sdk');
+var sdk = new Sdk('user', 'password');
+
+function example() {
+    sdk.computeServices().servers().create(
+        {
+            name: 'testsrv',
+            description: 'my first server',
+            group: {
+                dataCenter: sdk.computeServices().DataCenter.DE_FRANKFURT,
+                name: sdk.computeServices().Group.DEFAULT
+            },
+            template: {
+                dataCenter: sdk.computeServices().DataCenter.DE_FRANKFURT,
+                operatingSystem: {
+                    family: sdk.computeServices().OsFamily.CENTOS,
+                    version: "6",
+                    architecture: sdk.computeServices().Machine.Architecture.X86_64
+                }
+            },
+            network: {
+                primaryDns: "172.17.1.26",
+                secondaryDns: "172.17.1.27"
+            },
+            machine: {
+                cpu: 1,
+                memoryGB: 1
+            }
+        }
+    )
+    .then(function(serverRef) {
+        return sdk.computeServices().sercers().findSingle(serverRef);
+    })
+    .then(function(serverMetadata) {
+        console.log(serverMetadata.details);
+    });
+}
+
+example();
 ```
 
 Testing

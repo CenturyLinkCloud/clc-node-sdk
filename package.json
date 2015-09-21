@@ -23,6 +23,7 @@
     "moment": "2.10.3",
     "simple-ssh": "^0.8.6"
   },
+  "main": "./lib/clc-sdk.js",
   "devDependencies": {
     "istanbul": "^0.3.17",
     "jsdoc": "^3.3.1",
