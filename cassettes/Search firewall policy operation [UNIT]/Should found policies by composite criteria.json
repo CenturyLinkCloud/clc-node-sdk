@@ -1,0 +1,22 @@
+[
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2-experimental/firewallPolicies/ALTD/DE1",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3bac3a83c3bc38fc38fc3b3c3bcc39ec3be2ec3bdc2b7c3bf30c29f7c7a6fc2b27b7fc2b6c3b3697630c3b9746f32c3bd68c3b451c39366c3adc2bac2a1c2b6c399c2b42d2e73c3ba245f66c29332c2a7c397c39b7ac29d53c2836a5d4fc3b3c28f1e7dc3afc2a3c39dc29dc3b12ec3bdc3bfc39ec283c3b1c38ec39dc2bdc3bdc28fc2be3fc3ba68c296376dc2b1c38cc39ac2a25ac39ec398c3a0783ac2adc396c38b163dc295c3adc28cc3ba5955754b1d7fc3afc2a376c2bac2bac2bbc2b74bc29fc3a0c297c2870f77c3b062592cc39fc3a2c38b5fc3bc51c29dc297c3b44ec293c297c3a7c394625ec3a7c3a7c3b4c397c2bc6d57c28fc3aec39ec38d56c38578c39ac296c3a3c2a2c2ba7bc2b9c2b7c29dc2bf5bc3a575c2b1c388c2976d56c39e3d2fc3aac3bc2a2bc38bc29755594cc28bc2bcc2b9c28b4ec3afc38ec3b2c39dc2bbc2b7c2a0c389655e4fc390c3b947c29fc29fc2bec2a13f5f7ec2857fc29fc29e3e3f7d73c3bac391c3b77fc389c3b77fc389c388c29037c3bf34c2bf7fc3bfc39e6cc2b633c39dc39fc2bfc29fc38d2607c3b70fc3ae1d3cc388c3b7c3afc38dc3b2c3b3c3bb0fc3aec3935b1bc3887bc29ec295c38d26c3bac28ec38c07c2bb0fc3b7c3a413c2a2c28b47c390c3882b61c28361c28a17c393c3850ac28d7f16c2a97c33696e4dc3a5c3b307c293c39dc2834f77c2b3c389c381c2a7c3bbc2937c37c39bc29bc3aec29c67c3996ec2964dc3af1dc39c7bc28809c39b40c3a51bc2983820c3b2c3aec39ec381c39dc2bdc3bb20c28c47c3854d2fc3890707c29d376ec2a0c2bbc3b0c3b9c3aec39ec2bdc3ad5dc3a9c3ac6771166e26c39d4dc2b3c3b0c3bdc3bf07c39ac392c28ec3814c040000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Tue, 29 Sep 2015 09:27:58 GMT",
+      "content-length": "513"
+    }
+  }
+]

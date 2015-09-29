@@ -87,8 +87,8 @@ vcr.describe('Search anti-affinity policy operation [UNIT]', function () {
             .then(done);
     });
 
-    function assertPolicies(policies) {
-        return function(criteria) {
+    function assertPolicies(criteria) {
+        return function(policies) {
             assert.notEqual(policies.length, 0);
 
             if (criteria.dataCenter) {
@@ -114,7 +114,7 @@ vcr.describe('Search anti-affinity policy operation [UNIT]', function () {
     }
 
     function assertNameContains(policy, pattern) {
-        assert(policy.name.toUpperCase().indexOf(pattern) > -1);
+        assert(policy.name.toUpperCase().indexOf(pattern.toUpperCase()) > -1);
     }
 
 });
