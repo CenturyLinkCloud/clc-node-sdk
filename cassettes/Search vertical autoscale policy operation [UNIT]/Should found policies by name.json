@@ -1,0 +1,42 @@
+[
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "POST",
+    "path": "/v2/authentication/login",
+    "body": "*",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f227ec3b147c3ab26c2af5f64c28bc3bcc2a3471f15c2b33ac29bc3a4c38b221b67653bc3bb68c3b45136c29d56c3ab657b5c165943c39f1f3f7fc3b3c2943e2dc2ab69c39616c395c3927cc3bcc293c387c2bbc3b4695dc29539c3bdc3b5c2bdc28fc28ec3b5c2a5c399c2a258c392c3a7c3bac3a74f16c3b9555ec393c39f4fc28ac2b22cc29617c3a6c3abc2a72f5e7fc2912dc2b30bc3bec3ae45c39e5e55c3b55bc3b3c39dc3ab7cc2bac2aec28bc3b6c39ac3bd5d5fc3a675c3b8c397c297c2abc2bcc38ec39a0a6fc38b07c2afc2a7c3b37cc2b62e09c39ec3b7471f4dc3b2c2acc38ec3ab37c395c39b7c49c288c3a6c397c39fc399c3897fc3afc3a3c3a2c38bc3a23bc2bfc3974fc3aec3be44c3b1c3bcc3a43bc3b3c389c3a753c3bc7dc3b6c3950fc38e765f14c39f7938c2a646c2abc3a9c2bd2f0ac3ba7077c2bac398c3bfc3b4c3b7c3b9c2bdc29fc2acc29ec3bfc39ec2af563fc3b57bc29fc3bdc3a0c2acc2b82a7ec29fc39fc3bb27c39fc29ec3bd7455c38c7ec3afc3afc2acc2bf5cc38ac3a7c38f7fc3afc29fc3bcc3814fc3bdc39ec39fc3a1c3af27c28bc3af2cc3a8c3bb772fc29ec3bec384c3b5c2976fc38e765ec2bcc3b97dc3ae534765c3be6dc3aac3b8c2a74f77c3a8c3b3775fc3bcc3a027c39ec2bdc3b8c3a9c2b7c38dc399c3b23bc297c293c38fc2bf2ac2be2cc29bc3a227c2bec3bbc3a2c2a727c3b77e723d3b7dc3b676c3b2c39d720d58c3b6c2b3673f45c3bdc38cc38a6971c396c29cc2bdc3bdc38e6ac3b2c3b9c2bbc39564317bc3b253c29fc3afc2ae26c3bcc399c2ab2fc2bfc39ac399c29d4f16c38fc296c2840f06c3b6c3a54fc3bdc39ec2afc3ae4dc3ae7dc2a7c3bec289c3afc2be6ac2b3c3afc3aec3a3c2b3373fc3b5c39d1734c2a67227c3bfc38ac3b5c3b1c395c39e4f5ec38f163f791dc2b4c3bbc2bdc2bfc2b347c3bf7f39c3bdc3bc27c2af7fc29fc39fc3bbc39525c3b75bc2be28c2a7c38bc29f2ac2a7c3a5c28bc29fc38e3ec3bfc389c2b7c2b3c3afc2be237cc2be33c2a3c3b6c2bbc29345c3b96ec3b6c39dc29f3cc2a7c3bec39bc29f7a7dc3b6c3a9c399c2a27c3b5d3c2b7ec3aac2bbc3b757c2bfc38fc3abc3bbc3b3c389c2b75fc2bd455f3ec38dc2be5c3cc3bbc3a9c39f67c3afc3a1c3ae64c3b913c3adc3afc3b3c39d77c2abc39fc3a7c3b766c29a3f79c3b3c3acc39569c2bfc3adc2bbc38bc39f67c3afc3994ec3b6c39dc287c3abc3a7c39f7dc39664c39f7dc3b603c2a271c3b1c2936f4fc39fc29d2d77c386575fc3be3e07c29f3fc3983d3ec2b8c3bcc2bdc3afc3adc2bdc3bec3a2c2aac2bec3b7c3a0c39ec2bbc38b07c3b77ec3bfc2b3c2a7c39f3ec2bf7ac2b5c3b3c3ad2fc29f5f15c3b9c3aec39ec29bc3a7c2bfc38f47c2bfc3a4c3bf011415327ec3b3020000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Tue, 22 Sep 2015 12:22:49 GMT",
+      "content-length": "739"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2/autoscalePolicies/ALTD/",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3bac3a8c3be2cc38b27c3b70fc2a6c2b3c287c3b727c3bb0f66c3a70fc2a7c2b3c3bdc283c389c3aec39e646fc292677bc3a7c3b73e1a7dc2b4c38c1639c2b53c5ec2b75533c38dc38a3c7d59c295c385c3b4c29ac2bec2a9c3b3c2a65ac397c393c3bcc38dc3b50a2dc2a6c2ab357dc398c38ec3a9c3a37955c38e5ec3a67551c38dc2be28c296c3ab366f3e7ac2b47b7fc3b411c2bfc3bfc395c3aa6c39c2adc3b345c2be6cc3a953c282c2922d2fc3a8c3b55fc3bcc391227bc3b7c391c2a34f471f2dc28ac3a547c28fc3b67ec2896dc3bec38640c3bcc3a8c391c28101c3b2c2b4c2ba5a7ac29f5bc3a0c3b8c3bcc2bbc38572565d0162c393663575c3b2c391c38ec39ec2a3c29d1dc3822d5f52c39bc28f76c3b6c3b117c3812fc28bc3a55bc382c28c6851c3a7257dc391c3a4c3a539c2b522c2b0c3a7c3b4c397c39dc38bc2bdc2bbc2991934c28fc2b9c388c29bc2bb59c399c38ec3aec39e48c2b55fc3b2c3bd5f323214c2bec297c29fc3afc3adc3afc3a4c29fc3a6c2b3c287c3bbc3934f1f66c3bbc2bb0fc3af3fc3b834c2bfc3b729c2bdc3b16036c2a30ec295c3825f5cc2a720c3b26bc3b4c3b735c2896cc388c2b0c299c386c3bbc29b69c2bcc2a3c29fc282c296c39ec3a77bc3bec3a737c392c3b83ec3be22c3b85fc29fc38637c391c28d68c3bcc3bdc3bf07c29d5a2966c387020000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Tue, 22 Sep 2015 12:22:54 GMT",
+      "content-length": "433"
+    }
+  }
+]
