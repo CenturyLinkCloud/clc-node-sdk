@@ -1,0 +1,263 @@
+[
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2-experimental/networks/ALTD/gb3",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba6836c38bc3af1fc3ac3dc3983dc29f4dc3b3c3bdc3bdc283c389c381c3837bc3b70fc3b6c3afc3af7f7a7fc3b77cc3b7c393c3a9c3ae47c2a3c28fc2a6c385c2acc2a6c296c2bb3bc3a3c39dc29d4fc387c3bbc3b7c3873b77c3b7c3b6c3a9c3b359c39e4cc3ab62c39516c395c292c2bec2be2cc2b3c3a5c3afc2bf776fc3bfc3bec3af6f1b52c29bc28bc2acc38dc2afc2b26bc3bac39e7e3a06c38c65c2b6c388c3a9c383c3b84bc38bc2bc5d64c38d5bc3ba7ec3afc3bec3bdc2b1c3b9c3bf0e7dc3935ec2afc3b0c39ac2aa2e2e09307d00001f3d02c284c3914765c2b17cc39b7cc3b4c2884656c3a725c2b56ac3b2c3b2c29cc29ac38cc3abc3bcc29cc3bec29ac2b7c3adc3aac391c39dc2bbc399c2aa184fc39b725c54772fc3b7c2b6c3b377c2abc2bc2e16c3b9c2b2c38dc38ac2bbc394c3ad5555c2bf6dc3ae66653bc2bb7b31c2b977c3b716c384c2b9c38cc3ab093ac3bdc3a8c3b3c39337c3b4c3a7c38bc2afc39e7cc3b4c3bd5f32322814c2abc3a3c399c2acc38ec29b266fc3a8c38bc29f454cc3aec2863d055879c3b8c390c2bf79c396c280703fc29bc2b8c2b85e2c1e2fc2bf7c0d44c2bec3bf4bc2bec3bfc3bf00c3b70f444e79020000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Wed, 09 Sep 2015 14:35:06 GMT",
+      "content-length": "400"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2-experimental/networks/ALTD/de1",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3bac3a87c32c39d3dc3bf74c3ba6036c39bc399c39bc39fc29dc29d677b7bc293c3ac3cc39bc2b9c2bfc2b7c2bf3fc38b76763e1a7d342d6635c2b5c39cc39d19c3afc392c3bfc3afc28f77c3aec3aec3adc393c387c2b3c2bcc299c396c385c2aa2dc2aa257d7b5966c38bc39f7f6fc3a7c3bec3af4f4dc2b819c2b5c2b8c388c39ac3bc2ac2bbc2a66fc3a903c3be70c2bc4b1f2fc2b3454ec29fc385c39e58c3a6c3ad226bc39ec392c2b77bc3b7c3afc28fc38dc3bfc281447bc2bdc3824bc2abc2bac2b824c2a8c3b4015ec3bfc3a811c2bd3fc3bac2a82cc2966fc29bc28f1ec391c290c3aac2bcc2a4464d5ec29e53c28b79c29dc29fc3935fc3b3c2b65d3dc2ba7b375b15c3a3695bc28ec28bc3aac3aec3a5c39e76c3be6ec295c397c385225fc2b65979c2977ac2bdc2aac3aac2b7c38dc39dc2ac6c677767c3b9c3aec39d5b50c3a532c2af27c3a8c3b4c2a3c38f4fc39fc390c29f2fc2bf7ac3b3c391c3b77fc389c388c2a050c2acc28e67c2b33a6fc29ac2bcc2a12f7f1631c2b91bc3b61460c3a5c3a143c3bfc3a65903c2bac3bd6cc3a2c3a27ac2b178c2bcc3bcc3b235106154c298c3a10e761ec3ae3d7cc3b070c3afc3a07c77c2b6c2bfc2b7c2b73f793879c3b870c3afc381c3b9c283c3bdc3bbc293c3a9c38ec3811ec2bd1c32c39cc2bd07c29b38c3aec39e03c3833fc3b71e50c2931ec38bc391c39b3dc29ec3abc2bc43037d4fc2a6c2bbc3b7c3a067c283c3a96e41194b564cc3afc38f1ec393c39dc284c3890fc293c3a96ec384c385c3b562c3b1c3a831c39dc3bdc3b307c3947a76706fc3afc3a1c39ec3bec283073b070fc2b3c399c3bec2836cc3b270c3a77cc3b7c39ec3bdc3b37bc3b472c38874c2bb3b0f3770c39dc2bdc29dc287c286c283c2a821c2b5c3a9c2b11d7dc39cc3a3c2bbc39e5b34c398c3b7633cc282c3b0c2b3c38178c2b7c2a0c28e252dc2a6c3b867c28fc3b16ec382c3a4c287c3897837c3a2c3a27ac2b178c3b4186fc2b2333bc39f3dc398c39bc29f4d67c3b7c3b767c3b71e1ec3a413c392c294c2937b7b7b0fc3afc3adc29dc3af67c3b472c287c3b11ec3ae6d62c2bcc2877bc296c2851e4221c3b419c28fc39ec3af315ec3b72d1ac3ac7b32c39ec383c2bdc29f0dc386c2bb05752c6931c3853f7bc28c7713263f4cc386c2bb1117c397c28bc385c2a3c38778c3b7c3b6c3af7fc3ba607ac3afc3937c6f72c2bec3bf60c3b669763ec299647b3b0fc2b27bc399c39e41767f4a2fc287c28cc2b7c2b77bc2b0c281c3b1c3b6770f0c0b51436ac393633cc3bac2b8c38778c2bdc2b768c2b0c3afc3877804c3a167c283c3b16e411d4b5a4cc3b1c38f1ec3a3c39dc284c3890fc293c3b16ec384c385c3b562c3b1c3a831c39ec3b97936c399c29dc39dc3bb74c3bfc39ec2a7c2b3c3bdc287c3b7c38fc2b34f773ec29dc29d4f33c3b210c3b71f3e3800693bc28cc2b77f6f13c3a3c3ad",
+      "c39fc2b32cc2b40f4bc394673c7ac2bfc38778c39dc2b768c2b0c3afc38978c3bbc3b77e3618c3af16c394c2b1c2a4c38514c3bfc3ac31c39e4dc298c3bc3019c3af465c5c2f160fc38b78c39fc3bf7f0054c2a114c38cc38b0e0000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Wed, 09 Sep 2015 14:35:06 GMT",
+      "content-length": "859"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2-experimental/networks/ALTD/gb1",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba68c2ba7bc3bf6067673f7bc2b077c2bec2bbc29fc3a50f1fc38ec3ae3dc2b8c29fc39dc39b7dc3b8c3b0c381c3bec283c389c381c39e47c2a3c28fc2a6c385c2acc2a6c296c2bb3bc3a34f77c386c2bbc3b776c3863b77c3b7c3b6c3a9c3b359c39e4cc3ab62c39516c395c292c2bec2be2cc2b3c3a5c3af7f706fc3a7c3b7c2b7c3adc2a8c38945c396c3a657c399357d6d3f1dc3afc392c3a7c38b6cc291c393c287c39177c29679c2bbc388c29ac2b7c3b4c3b5c39ec3bdc3bb63c3b37f7cc3935ec2afc3b0c396c2aa2e2e092e7dc280c3b73f7a4400461fc295c385c3b26dc3b3c391231a56c29dc297c394c2a8c389c38b736a31c2afc3b373c3ba6bc39ec2b6c2ab4777c3af66c2ab623c6dc38b7151c39dc2bdc39cc39bc38ec39fc2adc3b2c2ba58c3a4c38b362bc3af52c2af5755c3bdc2b6c2b9c29bc295c3adc3acc3aec38564c3b7c3ae2d2873c299c3971374c3bac391c3a7c2a76fc3a8c38fc2975fc2bdc3b9c3a8c3bbc2bf6464502856c387c2b359c29d374dc39ec390c2973fc28bc298c39c0d7b0ac2b0c3b2c3b0c2a17fc3b3c2ac01c39d7e367171c2bd583c5e7ec3b91ac288302ac38c74c3b9c283c283c287c3b9c3acc393c3bdc287c3b7c3b3c389c3bec2bd7bc399c3837c323dc3983bc39fc29fc29cc3af3cc2bc3fc38b337ac39963c2bac39dc3b1c39ec3bec2a71bc2986ec297c2be660ec3a2c286c39426c3a43ac3bec2b4c38775c2bdc29768c2a8c3afc38776c280c3b0c2b3c38177c2b720c28ec2a52c66c3b867c28fc3af6ec382c3a4c287c3897737c3a2c3a27ac2b17858c2bec3bbc3bec3bf033a62c3ab69c3ae040000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Wed, 09 Sep 2015 14:35:06 GMT",
+      "content-length": "493"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2-experimental/networks/ALTD/ca2",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3bac3a8c3bcc3bcc3a1c2a7c3b777c3ae4fc3aec3afc38fc2a6c3bb0f0fc3ae1fc3acc29dc39fc2bbc2b7c2b3c3bbc3a0c3a060722fc39f7f70c3bfc2a3c39147c393625653c38bc39dc29dc3b1c3bd4fc387c2bbc2bb0fc3873b77c3b7c3b6c3a9c3b359c39e4cc3ab62c39516c395c292c2bec2be2cc2b3c3a5c3afc3bf60c3b7c3a1c3af6fc39b51c293c28bc2acc38dc2afc2b26bc3bac39a7e3ac39ec2a5c38fc297c39922c2a70fc2a3c3af2cc3b376c291356fc3a9c3abc2bdc3bbc3b7c387c3a6c3bf3bc3b44d7bc2bdc3825bc2abc2bac2b824c2b8c3b401c39ec3bfc3a81101187d5416c38bc2b7c38d47c28f6858755e52c2a3262fc38fc2a9c385c2bcc38ec38fc3a9c2af79c39bc2ae1ec39dc2bdc29bc2adc28ac3b1c2b42dc3874575c3b7726f3b7fc2b7c38ac3ab62c2912fc39bc2acc2bc4bc2bd5e55c3b5c39bc3a66e56c2b6c2b3c2bbc3936cc3afc3ae2d2873c299c3971374c3bac391c3a7c2a76fc3a8c38fc2975fc2bdc3b9c3a8c3bbc2bf6464502856c387c2b359c29d374dc39ec390c2973fc28bc298c39c0d7b0ac2b0c3b2c3b0c2a17fc3b3c2ac01c39d7e367171c2bd583c5e7ec3b91ac2887cc3bfc2977cc3bfc3bf01c3bc65c394c38576020000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Wed, 09 Sep 2015 14:35:06 GMT",
+      "content-length": "401"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2-experimental/networks/ALTD/ny1",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c3bdc3bf0729c2bb4c0d02000000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Wed, 09 Sep 2015 14:35:06 GMT",
+      "content-length": "122"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2-experimental/networks/ALTD/il1",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba687670c2b0c2bfc2b7c2b3c29bc39fc38f1ec38cc3b6c2b3c3b3c29dc389c3bdc3bbc393c3bb0f67c393c399c283c39dc2837bc2bb0f271fc28d3ec29a16c2b3c29a5ac3aec3aec28c1fc39e1bc39f7f38c39ec2b9c2bbc2b74f1fc38fc3b2665a17c2abc2b6c2a8c296c3b4c3ad65c2992d7fc3bfc2bdc287c3b71fc3bec3bec2a61d35c2b9c388c39ac3bc2ac2bbc2a6c2afc38dc287c3a35dc3ba78c2992d72c3ba2cc3bac38a326f1759c3b3c296c2bec39ec2bb7f7f6cc3bec2bf43c39fc2b4c3972bc2bcc2b5c2aac28b4b024b1fc3a0c3bdc28f1e01c380c3a8c2a3c2b258c2be6d3e7a44c2a3c2aac3b3c2925a3579794e4dc3a6757e4e7fc38dc39b76c3b5c3a8c3aec39d6c55c28cc2a76d392ec2aac2bbc2977bc39bc3b9c2bb555e17c28b7cc39966c3a55dc3aac3b6c2aac2aac39f3677c2b3c2b2c29dc39d2dc38ac39dc2bbc2b720c38c655e4fc390c3a947c29fc29fc2bec2a13f5f7ec3b5c3a6c2a3c3afc3bfc292c29141c2a1581dc38f6675c39e3479435fc3be2c627237c3ac29c380c38ac383c287c3bec38dc2b306c284c3bbc399c384c385c3b562c3b178c3b9c3a56b20c3b2c3bd5fc3b2c3bdc3bf07c28a5e544b75020000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Wed, 09 Sep 2015 14:35:06 GMT",
+      "content-length": "399"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2-experimental/networks/ALTD/ca3",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba68c3a7c3934f7726c293c3b37bc2937c727fc3bfc381c2bdc3a9c3a4617670c3afc3a1c3b420c29f660f67c3b7270f3e1a7d342d6635c2b5c39cc39d19c3afc3aec3acc28cc3b7c3b61fc28c77c3aec3aec3adc39317c2b3c2bcc299c396c385c2aa2dc2aa257d7f5966c38bc39f7f7fc3bfc381c3afc3af1a52c29bc28bc2acc38dc2afc2b26bc3bac39e7d3cc39ec2a52fc296c39922c2a74fc3a36f2dc3b376c291356fc3a9c3bbc2bdc3bbc3b7c387c3a6c3bf3bc3b44d7bc2bdc3826bc2abc2bac2b824c388c3b401007cc3b4c28820c28c3e2ac28bc3a5c39bc3a6c2a34734c2b43a2fc2a951c293c297c3a7c394625ec3a7c3a7c3b4c397c2bc6d57c28fc3aec39ec38d56c38578c39ac296c3a3c2a2c2ba7bc2b9c2b7c29dc2bf5bc3a575c2b1c388c2976d56c39ec2a55ec2afc2aac3ba6d73372bc39bc399c39d6976c3afc3ae2dc2a873c299c3971374c3bac391c3a7c2a76fc3a8c38fc2975fc2bdc3b9c3a8c3bbc2bf6464502856c387c2b359c29d374dc39ec390c2973fc28bc298c39c0d7b0ac2b0c3b2c3b0c2a17fc3b3c2ac01c39d7e367171c2bd583c5e7ec3b91ac2887cc3bfc2977cc3bfc3bf0129c3a3c2b8c38a7a020000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Wed, 09 Sep 2015 14:35:06 GMT",
+      "content-length": "400"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2-experimental/networks/ALTD/va1",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba68c3a7c3a1c3bdc39dc28349c29e7dc2bac297c38dc3b6c3b7c3a8c297c3a9c2bdc389c2bdc39dc283c399c39ec3bdc2bdc28307c393c283c3bdc28f461f4dc28b594d2d7777c386c2bb7b0fc3867b7b3bc3a3c29dc2bb7bc3b862c29637c393c2ba58c2b545c2b5c2a4c3af2fc38b6cc3b9c3bbc3af1dc3acc3adc3bcc3bec2ae2535c2bac388c39ac3bc2ac2bbc2a606c3aec3a3c3b12e7dc2b1c38c16397d3ac3b0c39a326f1759c3b3c2961ac3acc39dc2bf3f36c3bfc38737c3adc3b50ac3afc2adc3aac3a2c29240c39307c280c3b0c39123c280187d5416c38bc2b7c38d47c28f6874755e52c2ab262fc38fc2a9c389c2bcc38ec38fc3a9c2af79c39bc2ae1ec39dc2bdc29bc2adc28ac3b1c2b42dc3874575c3b7726f3b7fc2b7c38ac3ab62c2912fc39bc2acc2bc4bc39d5e55c3b5c39bc3a66e56c2b6c2b3c2bbc297c399c3aec39d5b10c3a832c2af27c3a8c3b4c2a3c38f4fc39fc390c29f2fc2bf7ac3b3c391c3b77fc389c388c2a050c2acc28e67c2b33a6fc29ac2bcc2a12f7f1631c2b91bc3b61460c3a5c3a143c3bfc3a65903c382c3bd6cc3a2c3a27ac2b178c2bcc3bcc3b235106154c298c3b7c3b6763e7dc290c38dc3b666c3b7c3b2c2836c7f2fc38b1fc3a6c2930707c3b9c3b9c39ec3b9c381c39ec381c3bdc3bbc2b3037ac399c3a3c2bd7bc3b7c387c3bbc3b736c2b0c39ec2bdc2bdc3bd7bc38c43c39cc290c39ac284c29cc387c29fc3b618c2afc3b7120dc3b5c3bdc3b80e107e36c3b8c3ae16c384c2b1c294c3850cc3bfc3acc3b1c39d4dc298c3bc30c3b9c3ae465c5c2f160fc38b77c39fc3bf7f003fc2833469c3b5040000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Wed, 09 Sep 2015 14:35:06 GMT",
+      "content-length": "493"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2-experimental/networks/ALTD/wa1",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba682fc39bc38bc2a60fc3afc29f3fc39cc2bbc2b7c2b7c2bfc297c39dc38bc3b61e4e1f66c3a77b593ec39939c38fc3b6c3b2c28f461f4dc28b594d2d7777c38607c2bbc3a35dc3bac3bfc38ec39dc2bd7dc3ba7cc29637c393c2ba58c2b545c2b5c2a4c2af2fc38b6cc3b9c3bbc3afc3ae1dc3acc3bec3bec2b621c2b5c2b9c388c39ac3bc2ac2bbc2a6c3afc3adc2a7637cc2bec38c16397d187f69c299c2b7c28bc2ac794bc39fc3afc39dc2bf3f36c3bfc39fc2a16fc39ac3ab155e5bc395c3852501c2a60f00c3a0c2a347c28030c3bac2a82cc2966fc29bc28f1ec391c388c3aac2bcc2a4564d5ec29e53c29379c29dc29fc3935fc3b3c2b65d3dc2ba7b375b15c3a3695bc28ec28bc3aac3aec3a5c39e76c3be6ec295c397c385225fc2b65979c297c2bac2bdc2aac3aac2b7c38dc39dc2ac6c6777c2afc2b2c39dc2bbc2b720c38e655e4fc390c3a947c29fc29fc2bec2a13f5f7ec3b5c3a6c2a3c3afc3bfc292c29141c2a1581dc38f6675c39e3479435fc3be2c627237c3ac29c380c38ac383c287c3bec38dc2b30678c3bf6cc3a2c3a27ac2b178c2bcc3bcc3b23510c3b9c3be2fc3b9c3bec3bf03c3afc28ac3920079020000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Wed, 09 Sep 2015 14:35:06 GMT",
+      "content-length": "396"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2-experimental/networks/ALTD/ut1",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba687fc3a7c3bec2bdc3a9c2a7c293c29dc2bdc3a9c2bdc283c3bdc2bd3cc38fc3aec39dc2bbc2bfc2bb77c3bec3b06136c39d3f3fc2b87fc3bec391c3a8c2a36931c2abc2a9c3a5c3aec38ec3b8c3a1c38ec3b8c3bec38e78c3a7c3aec39e3e7d3cc38bc29b695dc2acc39ac2a25ac392c2b7c29765c2b6c3bcc3bdc3b776c3aec3afc3bcc3bec2a61d35c2b9c388c39ac3bc2ac2bbc2a6c2afc38dc287c3a35dc3ba78c2992d72c3ba2cc3bac38a326f1759c3b3c296c2bec39ec2bb7f7f6cc3bec28f6fc39ac3ab15c39e5ac395c38525c281c2a50fc3b0c3be47c28f0060c3b451592cc39f361f3dc2a251c3957949c2adc29ac2bc04c3aac3b33a3fc2a7c2bfc3a66dc2bb7a74c3b76ec2b62ac386c393c2b61c17c395c39dc38bc2bdc3adc3bcc39d2ac2afc28b45c2be6cc2b3c3b22e757b55c3956fc29bc2bb59c399c38ec3aec2aec39bc39dc2bbc2b720c38c655e4fc390c3a947c29fc29fc2bec2a13f5f7ec3b5c3a6c2a3c3afc3bfc292c29141c2a1581dc38f6675c39e3479435fc3be2c627237c3ac29c380c38ac383c287c3bec38dc2b306c284c3bbc399c384c385c3b562c3b178c3b9c3a56b20c3b2c3bd5fc3b2c3bdc3bf07c38dc2b2c3bec29575020000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Wed, 09 Sep 2015 14:35:06 GMT",
+      "content-length": "397"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2-experimental/networks/ALTD/ca1",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba68c3afc3a0c39ec3b9c2a70f76c3b2c287c29fc29ec3afc3afc39fc29fc3ac1f7c7ac3bfc393c287c399c39e6cc3bfc381c2a7c3b73ec39d79c2987f34c3ba685ac38c6a6ac2b9c2bb33c2bec2bf33c39e3f18c3afc39cc39dc39bc2a7c28f677933c2adc28b555b544bc3bac3b6c2b2c38cc296c2bfc3bfc39ec2bdc3bdc283c39fc39fc2b4c2a3261759c29b5f65c397c3b4c2b5c3b970c2bc4b1f2fc2b3454ec29f455f59c3a6c3ad226bc39ec392c3977bc3b7c3afc28fc38dc3bf77c3a8c29bc3b67ac285c2b75675714960c3a903c2bcc3bfc3912300187d5416c38bc2b7c38d47c28f6854755e52c2ab262fc38fc2a9c389c2bcc38ec38fc3a9c2af79c39bc2ae1ec39dc2bdc29bc2adc28ac3b1c2b42dc3874575c3b7726f3b7fc2b7c38ac3ab62c2912fc39bc2acc2bc4bc39d5e55c3b5c39bc3a66e56c2b6c2b3c2bbc3936cc3b7c3ae2d0873c299c3971374c3bac391c3a7c2a76fc3a8c38fc2975fc2bdc3b9c3a8c3bbc2bf6464502856c387c2b359c29d374dc39ec390c2973fc28bc298c39c0d7b0ac2b0c3b2c3b0c2a17fc3b3c2ac01c39e3fc29bc2b8c2b85e2c1e2fc2bf7c0d44c2bec3bf4bc2bec3bfc3bf004929673375020000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Wed, 09 Sep 2015 14:35:06 GMT",
+      "content-length": "401"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2-experimental/networks/ALTD/sg1",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c3bdc3bf0729c2bb4c0d02000000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Wed, 09 Sep 2015 14:35:06 GMT",
+      "content-length": "122"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2-experimental/networks/ALTD/uc1",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3bac3a8c3a1c3bdc3b3c2bdc287c2bbc3b9c3b9c3bec3acc393c3a9c3bec3be6427c38bc3afc3adc3aec38ec3ae3fc3b8c3b4c39ec2bd07c3a7c3996cc3bfc2a3c39147c393625653c38bc39dc29dc3b1c3aec39ec2bdc3b1c3aec2a77bc3a3c29dc2bb7bc3b862c29637c393c2ba58c2b545c2b5c2a4c3af2fc38b6cc3b9c3bbc3afc39ec3bf74c3afc3b7772dc2a9c39145c396c3a657c3993535701fc28f77c3a9c28b65c2b6c388c3a9c393c281c397c29679c2bbc388c29ac2b7c39460c3afc3bec3bdc2b1c3b9c3bf0e7dc3935ec2afc3b0c39ec2aa2e2e09347d00081f3d02c288c3914765c2b17cc39b7cc3b4c2884657c3a725c2b56ac3b2c3b2c29cc29ac38cc3abc3bcc29cc3bec29ac2b7c3adc3aac391c39dc2bbc399c2aa184fc39b725c54772fc3b7c2b6c3b377c2abc2bc2e16c3b9c2b2c38dc38ac2bbc394c3ad5555c2bf6dc3ae66653bc2bbc2bbc29ec3aec39ec2bd05c2812ec3b37ac2824e3fc3bac3bcc3b40dc3bdc3b9c3b2c2ab371f7dc3bfc297c28c0c0ac385c3aa7836c2abc3b3c2a6c3891bc3bac3b26711c293c2bb614f01561e3ec3b46fc29e3520c39cc38f262ec2ae17c28bc387c38b2f5f03c291c3afc3bfc292c3afc3bf3f5ec28dc38c267d020000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Wed, 09 Sep 2015 14:35:06 GMT",
+      "content-length": "400"
+    }
+  }
+]
