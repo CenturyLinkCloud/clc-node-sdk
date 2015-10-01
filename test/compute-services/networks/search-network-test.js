@@ -144,7 +144,7 @@ vcr.describe('Search network operation [UNIT]', function () {
             .then(function(network) {
                 assert.equal(network.netmask, '255.255.255.0');
                 assert.equal(network.gateway, '10.110.37.1');
-                assert.equal(network.dataCenter.id, compute.DataCenter.DE_FRANKFURT.id)
+                assert.equal(network.dataCenter.id, compute.DataCenter.DE_FRANKFURT.id);
             })
             .then(done);
     });
