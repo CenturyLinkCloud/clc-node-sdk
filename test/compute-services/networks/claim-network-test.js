@@ -36,7 +36,10 @@ vcr.describe('Claim Network Operation [UNIT]', function () {
                 compute.DataCenter.US_EAST_STERLING, compute.DataCenter.GB_PORTSMOUTH
             )
             .then(compute.networks().find)
-            .then(assertThatNetworksInDataCenters(compute.DataCenter.US_EAST_STERLING, compute.DataCenter.GB_PORTSMOUTH))
+            .then(assertThatNetworksInDataCenters(
+                compute.DataCenter.US_EAST_STERLING,
+                compute.DataCenter.GB_PORTSMOUTH)
+            )
             .then(releaseNetwork)
 
             .then(callDone(done));

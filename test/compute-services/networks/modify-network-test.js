@@ -14,13 +14,15 @@ vcr.describe('Modify Network Operation [UNIT]', function () {
     vcr.it('Should modify network name', function (done) {
         this.timeout(timeout);
 
+        var networkName = 'test network';
+
         Promise.resolve()
             .then(_.partial(claimNetwork, compute.DataCenter.DE_FRANKFURT))
 
-            .then(_.partial(modifyNetwork, {name: 'test network'}))
+            .then(_.partial(modifyNetwork, {name: networkName}))
 
             .then(assertThatRefIsCorrect)
-            .then(assertThatNetworkNameIs('test network'))
+            .then(assertThatNetworkNameIs(networkName))
 
             .then(releaseNetwork(done));
     });
@@ -28,16 +30,19 @@ vcr.describe('Modify Network Operation [UNIT]', function () {
     vcr.it('Should modify network name, description', function (done) {
         this.timeout(timeout);
 
+        var networkName = 'network1';
+        var networkDescription = 'description 1';
+
         Promise.resolve()
             .then(_.partial(claimNetwork, compute.DataCenter.DE_FRANKFURT))
             .then(_.partial(modifyNetwork,
                 {
-                    name: 'network1',
-                    description: 'description 1'
+                    name: networkName,
+                    description: networkDescription
                 }))
 
-            .then(assertThatNetworkNameIs('network1'))
-            .then(assertThatDescriptionIs('description 1'))
+            .then(assertThatNetworkNameIs(networkName))
+            .then(assertThatDescriptionIs(networkDescription))
 
             .then(releaseNetwork(done));
     });

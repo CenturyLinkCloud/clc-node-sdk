@@ -130,20 +130,23 @@ vcr.describe('Search network operation [UNIT]', function () {
     it('Should found network by composite criteria', function (done) {
         this.timeout(timeout);
 
+        var netmask = '255.255.255.0';
+        var gateway = '10.110.37.1';
+
         compute
             .networks()
             .find(
             {
                 and: [
-                    {netmask: '255.255.255.0'},
-                    {gateway: '10.110.37.1'},
+                    {netmask: netmask},
+                    {gateway: gateway},
                     {dataCenter: compute.DataCenter.DE_FRANKFURT}
                 ]
             })
             .then(assertThatSingleResultNotEmpty)
             .then(function(network) {
-                assert.equal(network.netmask, '255.255.255.0');
-                assert.equal(network.gateway, '10.110.37.1');
+                assert.equal(network.netmask, netmask);
+                assert.equal(network.gateway, gateway);
                 assert.equal(network.dataCenter.id, compute.DataCenter.DE_FRANKFURT.id);
             })
             .then(done);
