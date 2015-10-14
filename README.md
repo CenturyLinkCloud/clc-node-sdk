@@ -60,7 +60,7 @@ function example() {
         }
     )
     .then(function(serverRef) {
-        return sdk.computeServices().sercers().findSingle(serverRef);
+        return sdk.computeServices().servers().findSingle(serverRef);
     })
     .then(function(serverMetadata) {
         console.log(serverMetadata.details);
