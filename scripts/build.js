@@ -8,28 +8,33 @@ var version = require("../package.json").version;
 var srcDir = path.join(__dirname, "../lib");
 var dstFilePath = path.join(__dirname, "../clc-sdk.js");
 
+var externalDeps = [
+    'underscore',
+    'restling',
+    'bluebird',
+    'moment',
+    'events',
+    'util',
+    'ip-subnet-calculator',
+    'simple-ssh'
+];
+
 
 function buildSdk() {
     var bundle = browserify();
 
     bundle.require(srcDir + "/clc-sdk.js", { expose: "clc-sdk" });
-    bundle.external('underscore');
-    bundle.external('restling');
-    bundle.external('bluebird');
-    bundle.external('moment');
-    bundle.external('events');
-    bundle.external('util');
-    bundle.external('ip-subnet-calculator');
-    bundle.external('simple-ssh');
 
-    return bundle.bundle(correctCode(saveToFile));
+    externalDeps.forEach(function (curDep) { bundle.external(curDep) });
+
+    return bundle.bundle(enhanceSdkCode(saveToFile));
 }
 
-function correctCode(saveFn) {
-    return function (err, src) {
+function enhanceSdkCode(saveFn) {
+    return function (err, bundledSdkCode) {
         var wrapped = [
             "/*! Version: " + version + " */",
-            src,
+            bundledSdkCode,
             "module.exports = require('clc-sdk');"
         ];
 
