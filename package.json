@@ -15,6 +15,23 @@
     "tests-coverage": "istanbul cover ./node_modules/mocha/bin/_mocha -- -u exports -R spec --fgrep UNIT",
     "loc": "sloc --format cli-table --keys total,source,comment --exclude \"(node_modules\\.*|cassettes\\.*|docs\\.*|coverage\\.*|\\.*idea\\.*)\" ."
   },
+  "main": "./lib/clc-sdk.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CenturyLinkCloud/clc-node-sdk"
+  },
+  "bugs": {
+    "url": "https://github.com/CenturyLinkCloud/clc-node-sdk/issues"
+  },
+  "keywords": [
+    "ctl",
+    "ctl.io",
+    "clc",
+    "centurylink",
+    "cloud",
+    "sdk",
+    "api"
+  ],
   "dependencies": {
     "bluebird": "^2.9.26",
     "restling": "^0.9.1",
@@ -23,7 +40,6 @@
     "moment": "2.10.3",
     "simple-ssh": "^0.8.6"
   },
-  "main": "./lib/clc-sdk.js",
   "devDependencies": {
     "istanbul": "^0.3.17",
     "jsdoc": "^3.3.1",
@@ -33,5 +49,6 @@
     "nock-vcr-recorder-mocha": "^0.3.2",
     "sloc": "^0.1.9",
     "watch": "^0.16.0"
-  }
+  },
+  "license": "Apache-2.0"
 }
