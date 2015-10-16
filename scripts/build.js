@@ -5,40 +5,56 @@ var browserify = require("browserify");
 var path = require("path");
 var version = require("../package.json").version;
 
-var srcDir = path.join(__dirname, "../lib");
+var entrySrcFilePath = path.join(__dirname, "../lib/clc-sdk.js");
 var dstFilePath = path.join(__dirname, "../clc-sdk.js");
 
-var externalDeps = [
-    'underscore',
-    'restling',
-    'bluebird',
-    'moment',
-    'events',
-    'util',
-    'ip-subnet-calculator',
-    'simple-ssh'
-];
 
-
-function buildSdk() {
+function buildSdk () {
     var bundle = browserify();
 
-    bundle.require(srcDir + "/clc-sdk.js", { expose: "clc-sdk" });
+    defineEntryPoint(bundle, entrySrcFilePath);
 
-    externalDeps.forEach(function (curDep) { bundle.external(curDep) });
+    excludeExternalDeps(bundle);
 
-    return bundle.bundle(enhanceSdkCode(saveToFile));
+    bundle.bundle(
+        enhanceSdkCode(saveToFile)
+    );
 }
 
-function enhanceSdkCode(saveFn) {
-    return function (err, bundledSdkCode) {
-        var wrapped = [
-            "/*! Version: " + version + " */",
-            bundledSdkCode,
-            "module.exports = require('clc-sdk');"
-        ];
+function defineEntryPoint (bundle, entrySrcFilePath) {
+    bundle.require(entrySrcFilePath, { expose: "clc-sdk" });
+}
 
-        saveFn(err, wrapped.join('\n'));
+function excludeExternalDeps (bundle) {
+    var externalDeps = [
+        'underscore',
+        'restling',
+        'bluebird',
+        'moment',
+        'events',
+        'util',
+        'ip-subnet-calculator',
+        'simple-ssh'
+    ];
+
+    externalDeps.forEach(function (curDep) {
+        bundle.external(curDep);
+    });
+}
+
+function wrapSdkCode (bundledSdkCode) {
+    var wrap = [
+        "/*! Version: " + version + " */",
+        bundledSdkCode,
+        "module.exports = require('clc-sdk');"
+    ];
+
+    return wrap.join('\n');
+}
+
+function enhanceSdkCode (saveFn) {
+    return function (err, bundledSdkCode) {
+        saveFn(err, wrapSdkCode(bundledSdkCode));
     };
 }
 
