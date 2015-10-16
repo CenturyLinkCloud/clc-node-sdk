@@ -2,7 +2,7 @@
 Documentation
 -------------
 See the [wiki](https://github.com/CenturyLinkCloud/clc-node-sdk/wiki) for CLC Node.js SDK getting-started and user guides.
-Also you can run `npm run gen-docs` and see generated documentation in `/docs.index.html`.
+Also you can run `npm run gen-docs` and see generated documentation at `/docs/index.html`.
 
 Requirements
 -------------
@@ -29,7 +29,7 @@ Example
 This example shows some of the functionality supported by the CLC Node.js SDK.
 
 ```js
-var Sdk = require('clc-sdk');
+var Sdk = require('clc-node-sdk');
 var sdk = new Sdk('user', 'password');
 
 function example() {

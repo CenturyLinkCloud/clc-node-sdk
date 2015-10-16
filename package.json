@@ -3,22 +3,17 @@
   "version": "1.0.0",
   "description": "CenturyLink Cloud SDK for Node.js",
   "author": "Ilya Drabenia <ilya.drabenia@altoros.com>",
-  "scripts": {
-    "tests": "mocha --fgrep [UNIT]",
-    "tests-watch": "watch \"npm run tests\" lib test",
-    "integration-tests": "mocha --recursive test/*/*/*.js --fgrep [INTEGRATION]",
-    "long-running-tests": "mocha --recursive test/*/*/*.js --fgrep \"[INTEGRATION, LONG_RUNNING]\"",
-    "jshint": "jshint --verbose ./lib ./test",
-    "jshint-watch": "watch \"npm run jshint\" lib test",
-    "watch-all": "npm run tests-watch & npm run jshint-watch",
-    "gen-docs": "node_modules\\.bin\\jsdoc -c conf.json",
-    "tests-coverage": "istanbul cover ./node_modules/mocha/bin/_mocha -- -u exports -R spec --fgrep UNIT",
-    "loc": "sloc --format cli-table --keys total,source,comment --exclude \"(node_modules\\.*|cassettes\\.*|docs\\.*|coverage\\.*|\\.*idea\\.*)\" ."
-  },
-  "main": "./lib/clc-sdk.js",
+  "contributors": [
+    "Aliaksandr Krasitski <aliaksandr.krasitski@altoros.com>",
+    "Sergey Fedosenko <siarhei.fiadosenka@altoros.com>"
+  ],
+  "main": "./clc-sdk.js",
+  "files": [
+    "clc-sdk.js"
+  ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/CenturyLinkCloud/clc-node-sdk"
+    "url": "https://github.com/CenturyLinkCloud/clc-node-sdk.git"
   },
   "bugs": {
     "url": "https://github.com/CenturyLinkCloud/clc-node-sdk/issues"
@@ -32,13 +27,25 @@
     "sdk",
     "api"
   ],
+  "scripts": {
+    "tests": "mocha --fgrep [UNIT]",
+    "tests-watch": "watch \"npm run tests\" lib test",
+    "integration-tests": "mocha --recursive test/*/*/*.js --fgrep [INTEGRATION]",
+    "long-running-tests": "mocha --recursive test/*/*/*.js --fgrep \"[INTEGRATION, LONG_RUNNING]\"",
+    "jshint": "jshint --verbose ./lib ./test",
+    "jshint-watch": "watch \"npm run jshint\" lib test",
+    "watch-all": "npm run tests-watch & npm run jshint-watch",
+    "gen-docs": "node_modules\\.bin\\jsdoc -c conf.json",
+    "tests-coverage": "istanbul cover ./node_modules/mocha/bin/_mocha -- -u exports -R spec --fgrep UNIT",
+    "loc": "sloc --format cli-table --keys total,source,comment --exclude \"(node_modules\\.*|cassettes\\.*|docs\\.*|coverage\\.*|\\.*idea\\.*)\" ."
+  },
   "dependencies": {
-    "bluebird": "^2.9.26",
-    "restling": "^0.9.1",
-    "underscore": "^1.8.3",
-    "ip-subnet-calculator": "^1.0.2",
+    "bluebird": "2.9.26",
+    "restling": "0.9.1",
+    "underscore": "1.8.3",
+    "ip-subnet-calculator": "1.0.2",
     "moment": "2.10.3",
-    "simple-ssh": "^0.8.6"
+    "simple-ssh": "0.8.6"
   },
   "devDependencies": {
     "browserify": "^11.2.0",
@@ -46,11 +53,11 @@
     "jsdoc": "^3.3.1",
     "jshint": "^2.8.0",
     "mocha": "^2.2.5",
-    "moment": "^2.10.3",
     "nock-vcr-recorder-mocha": "^0.3.2",
     "path": "^0.12.7",
     "sloc": "^0.1.9",
-    "watch": "^0.16.0"
+    "watch": "^0.16.0",
+    "browserify": "^11.2.0"
   },
   "license": "Apache-2.0"
 }
