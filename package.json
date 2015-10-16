@@ -1,6 +1,6 @@
 {
   "name": "clc-node-sdk",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "CenturyLink Cloud SDK for Node.js",
   "author": "Ilya Drabenia <ilya.drabenia@altoros.com>",
   "scripts": {
@@ -41,12 +41,14 @@
     "simple-ssh": "^0.8.6"
   },
   "devDependencies": {
+    "browserify": "^11.2.0",
     "istanbul": "^0.3.17",
     "jsdoc": "^3.3.1",
     "jshint": "^2.8.0",
     "mocha": "^2.2.5",
     "moment": "^2.10.3",
     "nock-vcr-recorder-mocha": "^0.3.2",
+    "path": "^0.12.7",
     "sloc": "^0.1.9",
     "watch": "^0.16.0"
   },
