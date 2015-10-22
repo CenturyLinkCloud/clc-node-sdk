@@ -44,12 +44,18 @@ vcr.describe('Create server operation [UNIT]', function () {
                     architecture: compute.Machine.Architecture.X86_64
                 }
             },
-            type: Server.HYPERSCALE,
-            policy: {
+            machine: {
+                cpu: 1,
+                memoryGB: 1,
+                disks: [
+                    { size: 2 },
+                    { path: "/data", size: 4 }
+                ],
                 antiAffinity: {
                     nameContains: 'policy'
                 }
-            }
+            },
+            type: Server.HYPERSCALE
         })
         .then(compute.servers().findSingle)
         .then(assertThatServerIsHyperscale)

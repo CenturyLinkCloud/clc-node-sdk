@@ -26,7 +26,12 @@ vcr.describe('Autoscale policy server operation [UNIT]', function () {
                     disks: [
                         { size: 2 },
                         { path: "/data", size: 4 }
-                    ]
+                    ],
+                    autoScale: {
+                        vertical: {
+                            thresholdPeriod: 15
+                        }
+                    }
                 },
                 template: {
                     dataCenter: compute.DataCenter.DE_FRANKFURT,
@@ -34,13 +39,6 @@ vcr.describe('Autoscale policy server operation [UNIT]', function () {
                         family: compute.OsFamily.CENTOS,
                         version: "6",
                         architecture: compute.Machine.Architecture.X86_64
-                    }
-                },
-                policy: {
-                    autoScale: {
-                        vertical: {
-                            thresholdPeriod: 15
-                        }
                     }
                 }
             })
