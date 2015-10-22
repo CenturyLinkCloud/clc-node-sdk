@@ -58,7 +58,9 @@ function createServer() {
             name: 'plc',
             dataCenter: dataCenter,
             type: compute.Server.HYPERSCALE,
-            policy: {
+            machine: {
+                cpu: 1,
+                memoryGB: 1,
                 antiAffinity: {
                     nameContains: 'policy'
                 }
