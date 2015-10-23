@@ -57,8 +57,8 @@ vcr.describe('Autoscale policy server operation [UNIT]', function () {
         this.timeout(timeout);
 
         var serverCriteria = {
-            dataCenter: compute.DataCenter.DE_FRANKFURT,
-            nameContains: 'cln'
+            dataCenter: compute.DataCenter.GB_PORTSMOUTH,
+            nameContains: 'srv'
         };
         var policyCriteria = {nameContains: 'my'};
 
@@ -82,6 +82,57 @@ vcr.describe('Autoscale policy server operation [UNIT]', function () {
                 done();
             });
     });
+
+    it('Should modify server', function (done) {
+        this.timeout(timeout);
+
+        var newMemory = 2;
+        var newCpu = 2;
+        var policyNameContains = "my";
+
+        compute.servers()
+            .modify(
+            {dataCenter: compute.DataCenter.US_EAST_STERLING},
+            {
+                cpu: newCpu,
+                memory: newMemory,
+                autoScale: {
+                    vertical: {
+                        nameContains: policyNameContains
+                    }
+                }
+            })
+            .then(function (serverRefs) {
+                assert.equal(serverRefs != null, true);
+
+                return compute.servers().find(serverRefs);
+            })
+            .then(function(modifiedServers) {
+                var autoScalePolicyId;
+
+                assert(modifiedServers.length > 0);
+
+                _.each(modifiedServers, function(modifiedServer) {
+                    assert.equal(modifiedServer.details.cpu, newCpu);
+                    assert.equal(modifiedServer.details.memoryMB, newMemory * 1024);
+                    assert.equal(modifiedServer.locationId, compute.DataCenter.US_EAST_STERLING.id.toUpperCase());
+                    assert(modifiedServer.details.cpuAutoscalePolicy != null);
+
+                    autoScalePolicyId = modifiedServer.details.cpuAutoscalePolicy.id;
+                });
+
+                return compute.policies()
+                    .autoScale()
+                    .vertical()
+                    .findSingle({id: autoScalePolicyId});
+            })
+            .then(_.partial(assertPolicy, _, policyNameContains))
+            .then(done);
+    });
+
+    function assertPolicy(policy, nameContains) {
+        assert(policy.name.toLowerCase().indexOf(nameContains) > -1);
+    }
 
     function isAutoScalePolicyPresent(server, shouldPresent) {
         assert.equal(server.details.cpuAutoscalePolicy !== undefined, shouldPresent);
