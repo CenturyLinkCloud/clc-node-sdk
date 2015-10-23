@@ -83,8 +83,6 @@ vcr.describe('Modify server operation [UNIT]', function () {
     function assertDisks(modifiedServer) {
         var details = modifiedServer.details;
 
-//        assert.equal(details.diskCount, 4);
-//        assert.equal(_.findWhere(details.disks, {id:'0:4'}), undefined);
         assert.equal(_.findWhere(details.disks, {id:'0:1'}).sizeGB, 3);
         assert.equal(_.findWhere(details.disks, {id:'0:3'}).sizeGB, 3);
     }
