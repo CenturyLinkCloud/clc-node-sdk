@@ -48,7 +48,7 @@ vcr.describe('Search Shared Load Balancer operation [UNIT]', function () {
         groups
             .find({
                 dataCenter: DataCenter.DE_FRANKFURT,
-                ip: ['66.155.94.19']
+                ip: ['66.155.4.118']
             })
             .then(function(result) {
                 TestAsserts.assertThatResultNotEmpty(result);
@@ -58,7 +58,7 @@ vcr.describe('Search Shared Load Balancer operation [UNIT]', function () {
             })
             .then(_.first)
             .then(function(balancer) {
-                assert.equal(balancer.ipAddress, '66.155.94.19');
+                assert.equal(balancer.ipAddress, '66.155.4.118');
             })
             .then(done);
     });
@@ -95,14 +95,14 @@ vcr.describe('Search Shared Load Balancer operation [UNIT]', function () {
                     },
                     {
                         descriptionContains: "Test",
-                        ip: '66.155.94.19'
+                        ip: '66.155.4.118'
                     }
                 ]
             })
             .then(function(result) {
                 assert.equal(result.length, 1);
                 assert.equal(result[0].name, 'Balancer');
-                assert.equal(result[0].ipAddress, '66.155.94.19');
+                assert.equal(result[0].ipAddress, '66.155.4.118');
                 assert.equal(result[0].dataCenter.id, 'de1');
             })
             .then(done);
