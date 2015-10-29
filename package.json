@@ -1,6 +1,6 @@
 {
   "name": "clc-node-sdk",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "CenturyLink Cloud SDK for Node.js",
   "author": "Ilya Drabenia <ilya.drabenia@altoros.com>",
   "contributors": [
