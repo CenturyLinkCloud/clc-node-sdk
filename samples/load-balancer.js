@@ -20,6 +20,18 @@ var poolPersistence = "sticky";
 var loadBalancers = [];
 var loadBalancerPool;
 
+var server;
+
+var serverConfig = {
+    dataCenter: dataCenter,
+    publicIp: {
+        openPorts: [
+            compute.Server.Port.HTTP
+        ]
+    },
+    ttl: 2
+};
+
 function __checkLoadBalancers(loadBalancers) {
     assert.equal(loadBalancers.length, 2);
 
@@ -77,6 +89,10 @@ function __findLoadBalancerNodes() {
     });
 }
 
+function __findServerWithPublicIp() {
+    return compute.servers().findSingle(server);
+}
+
 function run() {
 
     SampleUtils
@@ -85,8 +101,10 @@ function run() {
             return Promise.join(
                 SampleUtils.createLoadBalancer(compute, dataCenter, loadBalancer1Name),
                 SampleUtils.createLoadBalancer(compute, dataCenter, loadBalancer2Name),
+                SampleUtils.createServer(compute, serverConfig),
 
-                function(loadBalancer1, loadBalancer2) {
+                function(loadBalancer1, loadBalancer2, serverRef) {
+                    server = serverRef;
                     loadBalancers.push(loadBalancer1);
                     loadBalancers.push(loadBalancer2);
                 }
@@ -100,21 +118,29 @@ function run() {
             loadBalancerPool = pool;
         })
         .then(__findLoadBalancerPools)
-        .then(function() {
+        .then(__findServerWithPublicIp)
+        .then(function(server) {
+            var publicIp = _.chain(server.details.ipAddresses)
+                .pluck("public")
+                .compact()
+                .value();
             return SampleUtils.setLoadBalancerNodes(
                 compute,
                 loadBalancerPool,
                 [
-                    {ipAddress: '10.135.145.12', privatePort: 8088},
-                    {ipAddress: '10.135.145.12', privatePort: 8089}
+                    {ipAddress: publicIp[0], privatePort: 8088},
+                    {ipAddress: publicIp[0], privatePort: 8089}
                 ]
-
             );
         })
         .then(__findLoadBalancerNodes)
         .then(function() {
-            SampleUtils.deleteLoadBalancers(compute, {dataCenter: dataCenter});
-        });
+            return Promise.join(
+                SampleUtils.deleteLoadBalancers(compute, {dataCenter: dataCenter}),
+                compute.servers().delete(server)
+            );
+        })
+        .then(Promise.resolve("Finished!"));
 }
 
 run();
