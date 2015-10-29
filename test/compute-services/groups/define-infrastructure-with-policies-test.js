@@ -9,7 +9,7 @@ var Promise = require('bluebird');
 vcr.describe('Create Infrastructure with Policies Operation [UNIT]', function () {
 
     it('Should create infrastructure in IL1 DataCenter', function (done) {
-        this.timeout(10000000);
+        this.timeout(10 * 1000);
 
         var antiAffinityCriteria = {
             name: "Super Policy"
