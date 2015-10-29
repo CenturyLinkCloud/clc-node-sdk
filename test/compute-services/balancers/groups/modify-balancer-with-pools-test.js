@@ -2,12 +2,12 @@
 var _ = require('underscore');
 var vcr = require('nock-vcr-recorder-mocha');
 var Sdk = require('./../../../../lib/clc-sdk.js');
-var compute = new Sdk(/*'cloud_user', 'cloud_password'*/).computeServices();
+var compute = new Sdk('cloud_user', 'cloud_password').computeServices();
 var assert = require('assert');
 
 
 vcr.describe('Modify Shared Load Balancer with Pools Operation [UNIT]', function () {
-    var timeout = 1000 * 1000;
+    var timeout = 10 * 1000;
 
     var balancerName = 'Super Balancer';
     var newBalancerName = balancerName + " updated";
