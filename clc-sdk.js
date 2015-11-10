@@ -1,4 +1,4 @@
-/*! Version: 1.0.0 */
+/*! Version: 1.1.1 */
 require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 var _ = require('underscore');
 
@@ -55,7 +55,7 @@ function BaseServices (getRestClientFn) {
 
     init ();
 }
-},{"./account/account-client.js":1,"./datacenters/datacenter-client.js":3,"./datacenters/datacenters.js":4,"./datacenters/domain/datacenter.js":7,"./queue/experimental-queue-client":13,"./queue/queue-client.js":14,"underscore":"underscore"}],3:[function(require,module,exports){
+},{"./account/account-client.js":1,"./datacenters/datacenter-client.js":3,"./datacenters/datacenters.js":4,"./datacenters/domain/datacenter.js":7,"./queue/experimental-queue-client":14,"./queue/queue-client.js":15,"underscore":"underscore"}],3:[function(require,module,exports){
 
 var _ = require('underscore');
 
@@ -133,7 +133,7 @@ function DataCenters (dataCenterClient) {
 
     init ();
 }
-},{"./../../core/search/search-support.js":94,"./domain/datacenter-criteria.js":5,"./domain/datacenter-metadata.js":6,"underscore":"underscore"}],5:[function(require,module,exports){
+},{"./../../core/search/search-support.js":96,"./domain/datacenter-criteria.js":5,"./domain/datacenter-metadata.js":6,"underscore":"underscore"}],5:[function(require,module,exports){
 
 var SingleDataCenterCriteria = require('./single-datacenter-criteria.js');
 var SearchCriteria = require('./../../../core/search/common-criteria.js');
@@ -150,7 +150,7 @@ module.exports = DataCenterCriteria;
 function DataCenterCriteria(criteria) {
     return new SearchCriteria(criteria, SingleDataCenterCriteria);
 }
-},{"./../../../core/search/common-criteria.js":90,"./single-datacenter-criteria.js":8}],6:[function(require,module,exports){
+},{"./../../../core/search/common-criteria.js":92,"./single-datacenter-criteria.js":8}],6:[function(require,module,exports){
 var _ = require('underscore');
 
 module.exports = DataCenterMetadata;
@@ -297,7 +297,7 @@ function SingleDataCenterCriteria(criteria) {
 
     init();
 }
-},{"./../../../core/predicates/predicates.js":89,"./../../../core/search/criteria.js":92}],9:[function(require,module,exports){
+},{"./../../../core/predicates/predicates.js":91,"./../../../core/search/criteria.js":94}],9:[function(require,module,exports){
 
 var _ = require('underscore');
 var Promise = require("bluebird");
@@ -372,6 +372,52 @@ var _ = require('underscore');
 var Promise = require("bluebird");
 
 
+module.exports = CreateLoadBalancerJob;
+
+function CreateLoadBalancerJob (loadBalancerService, result) {
+    var self,
+        resolve = _.noop,
+        reject = _.noop,
+        defaultTimeout = 5000;
+
+    function init () {
+        self = new Promise(saveResolveFn);
+    }
+    init ();
+
+    function saveResolveFn(resolveFn, rejectFn) {
+        resolve = resolveFn;
+        reject = rejectFn;
+    }
+
+    function awaitFn(timeout) {
+        return _.partial(self.await, timeout || defaultTimeout);
+    }
+
+    self.await = function (timeout) {
+        loadBalancerService
+            .findSingle(result)
+            .then(resolve)
+            .catch(function(err) {
+                if (err.message && err.message.indexOf("any object") > -1) {
+                    setTimeout(awaitFn(timeout), timeout || defaultTimeout);
+                } else {
+                    reject(err);
+                }
+            }
+        );
+
+        return self;
+    };
+
+    return self;
+}
+},{"bluebird":"bluebird","underscore":"underscore"}],11:[function(require,module,exports){
+
+var _ = require('underscore');
+var Promise = require("bluebird");
+
+
 module.exports = CreateServerJob;
 
 function CreateServerJob (serverClient, result) {
@@ -425,7 +471,7 @@ function CreateServerJob (serverClient, result) {
 
     return self;
 }
-},{"bluebird":"bluebird","underscore":"underscore"}],11:[function(require,module,exports){
+},{"bluebird":"bluebird","underscore":"underscore"}],12:[function(require,module,exports){
 
 var OperationPromise = require('./operation-promise.js');
 
@@ -445,7 +491,7 @@ function NoWaitOperationPromise(queueClient, onCompleteFn) {
 
     return self;
 }
-},{"./operation-promise.js":12}],12:[function(require,module,exports){
+},{"./operation-promise.js":13}],13:[function(require,module,exports){
 var _ = require('underscore');
 var Promise = require("bluebird");
 var events = require('events');
@@ -603,7 +649,7 @@ function OperationPromise(queueClient, onCompleteFn, operationName) {
 
     return self;
 }
-},{"./cloud-job.js":9,"bluebird":"bluebird","events":"events","underscore":"underscore"}],13:[function(require,module,exports){
+},{"./cloud-job.js":9,"bluebird":"bluebird","events":"events","underscore":"underscore"}],14:[function(require,module,exports){
 
 module.exports = ExperimentalQueueClient;
 
@@ -617,7 +663,7 @@ function ExperimentalQueueClient(rest) {
 }
 
 
-},{}],14:[function(require,module,exports){
+},{}],15:[function(require,module,exports){
 
 module.exports = QueueClient;
 
@@ -629,7 +675,7 @@ function QueueClient (rest) {
         return rest.get('/v2/operations/{ACCOUNT}/status/' + statusId);
     };
 }
-},{}],15:[function(require,module,exports){
+},{}],16:[function(require,module,exports){
 
 var SingleCriteria = require('./single-balancer-criteria.js');
 var SearchCriteria = require('./../../../../core/search/common-criteria.js');
@@ -645,7 +691,7 @@ module.exports = SharedLoadBalancerCriteria;
 function SharedLoadBalancerCriteria (criteria) {
     return new SearchCriteria(criteria, SingleCriteria);
 }
-},{"./../../../../core/search/common-criteria.js":90,"./single-balancer-criteria.js":16}],16:[function(require,module,exports){
+},{"./../../../../core/search/common-criteria.js":92,"./single-balancer-criteria.js":17}],17:[function(require,module,exports){
 
 var Predicate = require('./../../../../core/predicates/predicates.js');
 var DataCenterCriteria = require('./../../../../base-services/datacenters/domain/datacenter-criteria.js');
@@ -740,7 +786,7 @@ function SingleSharedLoadBalancerCriteria(criteria) {
 
     init();
 }
-},{"./../../../../base-services/datacenters/domain/datacenter-criteria.js":5,"./../../../../core/predicates/predicates.js":89,"./../../../../core/search/criteria.js":92}],17:[function(require,module,exports){
+},{"./../../../../base-services/datacenters/domain/datacenter-criteria.js":5,"./../../../../core/predicates/predicates.js":91,"./../../../../core/search/criteria.js":94}],18:[function(require,module,exports){
 var _ = require('underscore');
 var Promise = require('bluebird');
 
@@ -748,6 +794,7 @@ var SearchSupport = require('./../../../core/search/search-support.js');
 var NoWaitOperationPromise = require('./../../../base-services/queue/domain/no-wait-operation-promise.js');
 var SharedLoadBalancerCriteria = require('./domain/balancer-criteria');
 var Criteria = require('./../../../core/search/criteria.js');
+var CreateLoadBalancerJob = require('./../../../base-services/queue/domain/create-load-balancer-job');
 
 module.exports = SharedLoadBalancers;
 
@@ -816,6 +863,10 @@ function SharedLoadBalancers(dataCenterService, loadBalancerClient, queueClient)
         SearchSupport.call(self);
     }
 
+    self._poolService = function(poolService) {
+        self.pools = poolService;
+    };
+
     /**
      * Method allow to create shared load balancer
      *
@@ -823,6 +874,7 @@ function SharedLoadBalancers(dataCenterService, loadBalancerClient, queueClient)
      * @param {DataCenterCriteria} command.dataCenter - search criteria that specify one single target data center
      * @param {string} command.name - target balancer name
      * @param {string} command.description - target balancer description
+     * @param {CreatePoolConfig} command.pool - if specified, creates pools
      *
      * @instance
      * @function create
@@ -832,32 +884,47 @@ function SharedLoadBalancers(dataCenterService, loadBalancerClient, queueClient)
         var result = dataCenterService.findSingle(command.dataCenter)
             .then(function(dataCenter) {
                 command = setBalancerStatus(command);
-                return loadBalancerClient.createLoadBalancer(dataCenter.id, _.omit(command, "dataCenter"));
-            });
+                return loadBalancerClient.createLoadBalancer(dataCenter.id, _.omit(command, "dataCenter", "pool"))
+                    .then(function(result) {
+                        result.dataCenter = dataCenter;
+                        return new CreateLoadBalancerJob(self, result).await();
+                    });
+            })
+            .then(_.partial(addPools, command));
 
         return new NoWaitOperationPromise(queueClient, processedBalancerRef, "Create Shared Load Balancer")
             .from(result);
     };
 
-    function processedBalancerRef(response) {
-        return { id: response.id };
+    function addPools(command, balancer) {
+        if (command.pool) {
+            return Promise.all(_.map(_.asArray(command.pool), function(poolConfig) {
+                poolConfig.balancer = processedBalancerRef(balancer);
+                return self.pools().create(poolConfig);
+            }))
+            .then(_.partial(Promise.resolve, balancer));
+        }
+
+        return Promise.resolve(balancer);
     }
 
-    function deleteBalancer(metadata) {
-        return loadBalancerClient
-            .deleteLoadBalancer(metadata.id, metadata.dataCenter.id)
-            .then(function () {
-                return {id: metadata.id};
-            });
+    function processedBalancerRef(response) {
+        return { id: response.id, dataCenter: response.dataCenter };
     }
 
     function processedBalancerRefs(balancers) {
         return _.map(balancers, processedBalancerRef);
     }
 
+    function deleteBalancer(metadata) {
+        return loadBalancerClient
+            .deleteLoadBalancer(metadata.id, metadata.dataCenter.id)
+            .then(_.partial(processedBalancerRef, metadata));
+    }
+
     /**
      * Method allow to delete shared load balancers
-     * @param {SharedLoadBalancerCriteria} args - criteria that specify set of balancers that will be removed
+     * @param {SharedLoadBalancerCriteria} arguments - criteria that specify set of balancers that will be removed
      *
      * @returns {OperationPromise}
      *
@@ -886,10 +953,57 @@ function SharedLoadBalancers(dataCenterService, loadBalancerClient, queueClient)
             modificationConfig.description = balancer.description;
         }
 
-        return loadBalancerClient.modifyLoadBalancer(balancer.id, balancer.dataCenter.id, modificationConfig)
-            .then(function() {
-                return balancer;
-            });
+        return loadBalancerClient.modifyLoadBalancer(
+                balancer.id, balancer.dataCenter.id, _.omit(modificationConfig, "pool")
+            )
+            .then(_.partial(modifyPools, modificationConfig, balancer))
+            .then(_.partial(Promise.resolve, balancer));
+    }
+
+    function modifyPools(modificationConfig, balancer) {
+        if (modificationConfig.pool) {
+            return Promise.all(
+                _.map(_.asArray(modificationConfig.pool), _.partial(tryToUpdatePool, balancer))
+            );
+        }
+        return Promise.resolve(balancer);
+    }
+
+    function modifyPool(poolCriteria, poolConfig) {
+        return self.pools().modify(poolCriteria, poolConfig);
+    }
+
+    function createPool(poolConfig, balancer) {
+        return self.pools().create(
+            _.extend(
+                poolConfig,
+                {
+                    balancer: {
+                        id: balancer.id, dataCenter: balancer.dataCenter
+                    }
+                }
+            )
+        );
+    }
+
+    function loadPools(poolCriteria) {
+        return self.pools().find(poolCriteria);
+    }
+
+    function tryToUpdatePool(balancer, poolConfig) {
+        if (poolConfig.id) {
+            return modifyPool({id: poolConfig.id, balancer: processedBalancerRef(balancer)}, _.omit(poolConfig, 'id'));
+        } else {
+            return loadPools({balancer: processedBalancerRef(balancer)})
+                .then(function(pools) {
+                    var pool = _.findWhere(pools, {port: poolConfig.port});
+                    if (pool) {
+                        return modifyPool({id: pool.id, balancer: processedBalancerRef(balancer)}, poolConfig);
+                    } else {
+                        return createPool(poolConfig, processedBalancerRef(balancer));
+                    }
+                });
+        }
     }
 
     function setBalancerStatus(config) {
@@ -912,6 +1026,7 @@ function SharedLoadBalancers(dataCenterService, loadBalancerClient, queueClient)
      * @param {string} modificationConfig.name - new balancer name
      * @param {string} modificationConfig.description - new value of balancer description
      * @param {boolean} modificationConfig.enabled - the new status of balancer
+     * @param {CreatePoolConfig} modificationConfig.pool - if specified, updates pools
      * @return {Promise<SharedLoadBalancerCriteria[]>} - promise that resolved by list of references to
      *                                            successfully processed resources.
      * @instance
@@ -935,7 +1050,7 @@ function SharedLoadBalancers(dataCenterService, loadBalancerClient, queueClient)
     /**
      * Method allows to search shared load balancers.
      *
-     * @param {SharedLoadBalancerCriteria} args - criteria that specify set of balancers that will be searched
+     * @param {SharedLoadBalancerCriteria} arguments - criteria that specify set of balancers that will be searched
      *
      * @return {Promise<Array<SharedLoadBalancerCriteria>>} - promise that resolved by list of references to
      *                                            successfully processed resources.
@@ -996,7 +1111,7 @@ function SharedLoadBalancers(dataCenterService, loadBalancerClient, queueClient)
 
     init();
 }
-},{"./../../../base-services/queue/domain/no-wait-operation-promise.js":11,"./../../../core/search/criteria.js":92,"./../../../core/search/search-support.js":94,"./domain/balancer-criteria":15,"bluebird":"bluebird","underscore":"underscore"}],18:[function(require,module,exports){
+},{"./../../../base-services/queue/domain/create-load-balancer-job":10,"./../../../base-services/queue/domain/no-wait-operation-promise.js":12,"./../../../core/search/criteria.js":94,"./../../../core/search/search-support.js":96,"./domain/balancer-criteria":16,"bluebird":"bluebird","underscore":"underscore"}],19:[function(require,module,exports){
 
 var _ = require('underscore');
 var util = require('util');
@@ -1081,7 +1196,7 @@ function LoadBalancerClient(rest) {
     }
 }
 
-},{"underscore":"underscore","util":"util"}],19:[function(require,module,exports){
+},{"underscore":"underscore","util":"util"}],20:[function(require,module,exports){
 var _ = require('underscore');
 var GroupBalancers = require('./groups/load-balancer-groups.js');
 var PoolBalancers = require('./pools/load-balancer-pools.js');
@@ -1111,8 +1226,11 @@ function SharedLoadBalancers(dataCenterService, loadBalancerClient, queueClient)
     self.nodes = _.memoize(function() {
         return new NodeBalancers(self.pools(), loadBalancerClient, queueClient);
     });
+
+    self.groups()._poolService(self.pools);
+    self.pools()._nodeService(self.nodes);
 }
-},{"./groups/load-balancer-groups.js":17,"./nodes/load-balancer-nodes.js":22,"./pools/load-balancer-pools.js":25,"underscore":"underscore"}],20:[function(require,module,exports){
+},{"./groups/load-balancer-groups.js":18,"./nodes/load-balancer-nodes.js":23,"./pools/load-balancer-pools.js":26,"underscore":"underscore"}],21:[function(require,module,exports){
 
 var SingleCriteria = require('./single-node-criteria.js');
 var SearchCriteria = require('./../../../../core/search/common-criteria.js');
@@ -1128,7 +1246,7 @@ module.exports = LoadBalancerNodeCriteria;
 function LoadBalancerNodeCriteria (criteria) {
     return new SearchCriteria(criteria, SingleCriteria);
 }
-},{"./../../../../core/search/common-criteria.js":90,"./single-node-criteria.js":21}],21:[function(require,module,exports){
+},{"./../../../../core/search/common-criteria.js":92,"./single-node-criteria.js":22}],22:[function(require,module,exports){
 
 var Predicate = require('./../../../../core/predicates/predicates.js');
 var PoolCriteria = require('./../../pools/domain/pool-criteria.js');
@@ -1149,7 +1267,7 @@ module.exports = SingleLoadBalancerNodeCriteria;
  * @property {string} status - a node status restriction.
  * @property {number} ipAddress - a node ip address restriction.
  * @property {string} privatePort - a node private port restriction.
- * @property {SharedLoadBalancerCriteria} pool - restrict load balancer pools in which need to execute search.
+ * @property {LoadBalancerPoolCriteria} pool - restrict load balancer pools in which need to execute search.
  *
  * @property {string} poolId - a pool id restriction.
  * @property {string} poolMethod - a pool method restriction.
@@ -1198,7 +1316,7 @@ function SingleLoadBalancerNodeCriteria(criteria) {
 
     init();
 }
-},{"./../../../../core/predicates/predicates.js":89,"./../../../../core/search/criteria.js":92,"./../../pools/domain/pool-criteria.js":23}],22:[function(require,module,exports){
+},{"./../../../../core/predicates/predicates.js":91,"./../../../../core/search/criteria.js":94,"./../../pools/domain/pool-criteria.js":24}],23:[function(require,module,exports){
 var _ = require('underscore');
 var Promise = require('bluebird');
 
@@ -1246,6 +1364,12 @@ function SharedLoadBalancerNodes(loadBalancerPools, loadBalancerClient, queueCli
 
     function init () {
         SearchSupport.call(self);
+
+        self.Status = {
+            ENABLED: "enabled",
+            DISABLED: "disabled",
+            DELETED: "deleted"
+        };
     }
 
     function loadAllNodesWithPool(pool) {
@@ -1320,7 +1444,7 @@ function SharedLoadBalancerNodes(loadBalancerPools, loadBalancerClient, queueCli
 
     /**
     * Method allow to delete load balancer nodes
-    * @param {LoadBalancerNodeCriteria} args - criteria that specify set of pool nodes that will be removed
+    * @param {LoadBalancerNodeCriteria} arguments - criteria that specify set of pool nodes that will be removed
     *
     * @returns {Promise<Array<SharedLoadBalancerNodeMetadata>>} the array of deleted nodes
     *
@@ -1388,11 +1512,7 @@ function SharedLoadBalancerNodes(loadBalancerPools, loadBalancerClient, queueCli
      *
      * @param {LoadBalancerNodeCriteria} nodeCriteria - criteria that specify set of nodes that will be modified
      *
-     * @param {object} modificationConfig
-     * @param {string} modificationConfig.status - Status of the node: enabled, disabled or deleted.
-     * @param {string} modificationConfig.ipAddress - The internal (private) IP address of the node server
-     * @param {number} modificationConfig.privatePort - The internal (private) port of the node server.
-     * Must be a value between 1 and 65535.
+     * @param {CreateNodeConfig} modificationConfig - update config
      *
      * @return {Promise<Array<SharedLoadBalancerNodeMetadata>>} - promise that resolved by list of nodes.
      * @instance
@@ -1405,7 +1525,15 @@ function SharedLoadBalancerNodes(loadBalancerPools, loadBalancerClient, queueCli
         var result = findPools(criteria)
             .then(function(enhancedPools) {
                 return Promise.settle(
-                    _.map(enhancedPools, _.partial(modifyNodes, _, criteria, modificationConfig))
+                    _.map(
+                        enhancedPools,
+                        function(enhancedPool) {
+                            if (modificationConfig instanceof Array) {
+                                return modifyNodesForPool(enhancedPool.pool, modificationConfig, modificationConfig);
+                            }
+                            return modifyNodes(enhancedPool, criteria, modificationConfig);
+                        }
+                    )
                 );
             });
 
@@ -1415,7 +1543,7 @@ function SharedLoadBalancerNodes(loadBalancerPools, loadBalancerClient, queueCli
     /**
      * Method allows to search load balancer nodes.
      *
-     * @param {LoadBalancerNodeCriteria} args - criteria that specify set of balancer pools that will be searched
+     * @param {LoadBalancerNodeCriteria} arguments - criteria that specify set of balancer pools that will be searched
      *
      * @return {Promise<Array<SharedLoadBalancerNodeMetadata>>} - promise that resolved by list of nodes.
      *
@@ -1445,7 +1573,7 @@ function SharedLoadBalancerNodes(loadBalancerPools, loadBalancerClient, queueCli
 
     init();
 }
-},{"./../../../base-services/queue/domain/no-wait-operation-promise.js":11,"./../../../core/search/criteria.js":92,"./../../../core/search/search-support.js":94,"./domain/node-criteria.js":20,"bluebird":"bluebird","underscore":"underscore"}],23:[function(require,module,exports){
+},{"./../../../base-services/queue/domain/no-wait-operation-promise.js":12,"./../../../core/search/criteria.js":94,"./../../../core/search/search-support.js":96,"./domain/node-criteria.js":21,"bluebird":"bluebird","underscore":"underscore"}],24:[function(require,module,exports){
 
 var SingleCriteria = require('./single-pool-criteria.js');
 var SearchCriteria = require('./../../../../core/search/common-criteria.js');
@@ -1461,7 +1589,7 @@ module.exports = LoadBalancerPoolCriteria;
 function LoadBalancerPoolCriteria (criteria) {
     return new SearchCriteria(criteria, SingleCriteria);
 }
-},{"./../../../../core/search/common-criteria.js":90,"./single-pool-criteria.js":24}],24:[function(require,module,exports){
+},{"./../../../../core/search/common-criteria.js":92,"./single-pool-criteria.js":25}],25:[function(require,module,exports){
 
 var Predicate = require('./../../../../core/predicates/predicates.js');
 var BalancerCriteria = require('./../../groups/domain/balancer-criteria.js');
@@ -1556,7 +1684,7 @@ function SingleLoadBalancerPoolCriteria(criteria) {
 
     init();
 }
-},{"./../../../../core/predicates/predicates.js":89,"./../../../../core/search/criteria.js":92,"./../../groups/domain/balancer-criteria.js":15}],25:[function(require,module,exports){
+},{"./../../../../core/predicates/predicates.js":91,"./../../../../core/search/criteria.js":94,"./../../groups/domain/balancer-criteria.js":16}],26:[function(require,module,exports){
 var _ = require('underscore');
 var Promise = require('bluebird');
 
@@ -1619,6 +1747,35 @@ module.exports = SharedLoadBalancerPools;
  *   ]
  * }
  */
+
+/**
+ * @typedef CreatePoolConfig
+ * @type {object}
+
+ * @param {SharedLoadBalancerCriteria} balancer - the search criteria
+ * that specify one single target shared load balancer
+ * @param {number} port - Port to configure on the public-facing side of the load balancer pool.
+ * Must be either 80 (HTTP) or 443 (HTTPS).
+ * @param {string} method - The balancing method for this load balancer,
+ * either leastConnection or roundRobin. Default is roundRobin.
+ * @param {string} persistence - The persistence method for this load balancer, either standard or sticky.
+ * Default is standard.
+ * @param {CreateNodeConfig} nodes - if specified, creates a set of nodes for pool
+ */
+
+/**
+ * @typedef ModifyPoolConfig
+ * @type {object}
+ *
+ * @param {object} modificationConfig
+ * @param {string} modificationConfig.method - The balancing method for this load balancer,
+ * either leastConnection or roundRobin. Default is roundRobin.
+ * @param {string} modificationConfig.persistence - The persistence method for this load balancer,
+ * either standard or sticky. Default is standard.
+ * @param {CreateNodeConfig} modificationConfig.nodes - if specified, creates a set of nodes for pool
+ */
+
+
 /**
  * Service that allow to manage load balancer pools in CenturyLink Cloud
  *
@@ -1634,18 +1791,23 @@ function SharedLoadBalancerPools(loadBalancerGroups, loadBalancerClient, queueCl
         SearchSupport.call(self);
     }
 
+    self._nodeService = function(nodeService) {
+        self.nodes = nodeService;
+    };
+
+    self.Method = {
+        LEAST_CONNECTION: "leastConnection",
+        ROUND_ROBIN: "roundRobin"
+    };
+
+    self.Persistence = {
+        STANDARD: "standard",
+        STICKY: "sticky"
+    };
+
     /**
      * Method allow to create load balancer pool
-     *
-     * @param {object} command
-     * @param {SharedLoadBalancerCriteria} command.balancer - the search criteria
-     * that specify one single target shared load balancer
-     * @param {number} command.port - Port to configure on the public-facing side of the load balancer pool.
-     * Must be either 80 (HTTP) or 443 (HTTPS).
-     * @param {string} command.method - The balancing method for this load balancer,
-     * either leastConnection or roundRobin. Default is roundRobin.
-     * @param {string} command.persistence - The persistence method for this load balancer, either standard or sticky.
-     * Default is standard.
+     * @param {CreatePoolConfig} command
      *
      * @returns {Promise<Reference>} the array of created pool reference
      * @instance
@@ -1656,15 +1818,21 @@ function SharedLoadBalancerPools(loadBalancerGroups, loadBalancerClient, queueCl
         var result = loadBalancerGroups.findSingle(command.balancer)
             .then(function(balancer) {
                 return loadBalancerClient.createLoadBalancerPool(
-                    balancer.dataCenter.id, balancer.id, _.omit(command, "balancer")
+                    balancer.dataCenter.id, balancer.id, _.omit(command, "balancer", "nodes")
                 );
-            });
+            })
+            .then(_.partial(addNodes, command));
 
         return new NoWaitOperationPromise(queueClient, processedPoolRef, "Create Load Balancer Pool").from(result);
     };
 
-    function processedPoolRef(response) {
-        return { id: response.id };
+    function addNodes(command, pool) {
+        if (command.nodes) {
+            return self.nodes().create({pool: pool, nodes: command.nodes})
+                .then(_.partial(Promise.resolve, pool));
+        }
+
+        return Promise.resolve(pool);
     }
 
     function deletePool(metadata) {
@@ -1675,13 +1843,17 @@ function SharedLoadBalancerPools(loadBalancerGroups, loadBalancerClient, queueCl
             });
     }
 
+    function processedPoolRef(response) {
+        return { id: response.id, balancer: response.balancer };
+    }
+
     function processedPoolRefs(balancers) {
         return _.map(balancers, processedPoolRef);
     }
 
     /**
      * Method allow to delete load balancer pools
-     * @param {LoadBalancerPoolCriteria} args - criteria that specify set of balancer pools that will be removed
+     * @param {LoadBalancerPoolCriteria} arguments - criteria that specify set of balancer pools that will be removed
      *
      * @returns {Promise<Array<Reference>>} the array of deleted pools references
      *
@@ -1702,22 +1874,26 @@ function SharedLoadBalancerPools(loadBalancerGroups, loadBalancerClient, queueCl
 
     function modifySingle(modificationConfig, pool) {
         return loadBalancerClient.modifyLoadBalancerPool(
-            pool.id, pool.balancer.dataCenter.id, pool.balancer.id,  modificationConfig)
-            .then(function() {
-                return pool;
-            });
+                pool.id, pool.balancer.dataCenter.id, pool.balancer.id,  _.omit(modificationConfig, "port", "nodes"))
+            .then(_.partial(modifyNodes, modificationConfig, processedPoolRef(pool)))
+            .then(_.partial(Promise.resolve, pool));
+    }
+
+    function modifyNodes(command, pool) {
+        if (command.nodes) {
+            return self.nodes().modify({pool: pool}, command.nodes)
+                .then(_.partial(Promise.resolve, pool));
+        }
+
+        return Promise.resolve(pool);
     }
 
     /**
      * Method allow to modify load balancer pool resource settings
      *
-     * @param {LoadBalancerPoolCriteria} poolCriteria - criteria that specify set of balancers that will be modified
+     * @param {LoadBalancerPoolCriteria} poolCriteria - criteria that specify set of pools that will be modified
      *
-     * @param {object} modificationConfig
-     * @param {string} modificationConfig.method - The balancing method for this load balancer,
-     * either leastConnection or roundRobin. Default is roundRobin.
-     * @param {string} modificationConfig.persistence - The persistence method for this load balancer,
-     * either standard or sticky. Default is standard.
+     * @param {ModifyPoolConfig} modificationConfig - update config
      *
      * @return {Promise<Array<Reference>>} - promise that resolved by list of references to
      *                                            successfully processed resources.
@@ -1733,13 +1909,14 @@ function SharedLoadBalancerPools(loadBalancerGroups, loadBalancerClient, queueCl
                 return Promise.settle(_.map(balancers, _.partial(modifySingle, modificationConfig)));
             });
 
-        return new NoWaitOperationPromise(queueClient, processedPoolRefs, "Update Balancer Pool").fromInspections(result);
+        return new NoWaitOperationPromise(queueClient, processedPoolRefs, "Update Balancer Pool")
+            .fromInspections(result);
     };
 
     /**
      * Method allows to search load balancer pools.
      *
-     * @param {LoadBalancerPoolCriteria} args - criteria that specify set of balancer pools that will be searched
+     * @param {LoadBalancerPoolCriteria} arguments - criteria that specify set of balancer pools that will be searched
      *
      * @return {Promise<Array<SharedLoadBalancerPoolMetadata>>} - promise that resolved by list of pools.
      *
@@ -1788,7 +1965,7 @@ function SharedLoadBalancerPools(loadBalancerGroups, loadBalancerClient, queueCl
 
     init();
 }
-},{"./../../../base-services/queue/domain/no-wait-operation-promise.js":11,"./../../../core/search/criteria.js":92,"./../../../core/search/search-support.js":94,"./domain/pool-criteria.js":23,"bluebird":"bluebird","underscore":"underscore"}],26:[function(require,module,exports){
+},{"./../../../base-services/queue/domain/no-wait-operation-promise.js":12,"./../../../core/search/criteria.js":94,"./../../../core/search/search-support.js":96,"./domain/pool-criteria.js":24,"bluebird":"bluebird","underscore":"underscore"}],27:[function(require,module,exports){
 
 var _ = require('underscore');
 var ServerClient = require('./servers/server-client.js');
@@ -1875,7 +2052,8 @@ function ComputeServices (getRestClientFn, baseServicesFn) {
             baseServicesFn().dataCenters(),
             groupClient(),
             queueClient(),
-            baseServicesFn().accountClient()
+            baseServicesFn().accountClient(),
+            self.policies()
         );
     });
 
@@ -1934,7 +2112,7 @@ function ComputeServices (getRestClientFn, baseServicesFn) {
     init ();
 }
 
-},{"./../base-services/datacenters/domain/datacenter.js":7,"./balancers/load-balancer-client.js":18,"./balancers/load-balancers.js":19,"./groups/domain/group.js":29,"./groups/group-client.js":31,"./groups/groups.js":32,"./invoices/invoices.js":34,"./networks/domain/ip-address-details":35,"./networks/network-client":38,"./networks/networks":39,"./policies/domain/policy.js":50,"./policies/policies.js":57,"./policies/policy-client.js":58,"./servers/domain/architecture.js":59,"./servers/domain/create-server-converter.js":60,"./servers/domain/server.js":66,"./servers/server-client.js":69,"./servers/servers.js":70,"./statistics/domain/monitoring-stats-type.js":75,"./statistics/domain/resource.js":76,"./statistics/statistics.js":77,"./templates/domain/os-family.js":78,"./templates/templates.js":81,"underscore":"underscore"}],27:[function(require,module,exports){
+},{"./../base-services/datacenters/domain/datacenter.js":7,"./balancers/load-balancer-client.js":19,"./balancers/load-balancers.js":20,"./groups/domain/group.js":30,"./groups/group-client.js":32,"./groups/groups.js":33,"./invoices/invoices.js":35,"./networks/domain/ip-address-details":36,"./networks/network-client":39,"./networks/networks":40,"./policies/domain/policy.js":51,"./policies/policies.js":58,"./policies/policy-client.js":59,"./servers/domain/architecture.js":60,"./servers/domain/create-server-converter.js":61,"./servers/domain/server.js":67,"./servers/server-client.js":70,"./servers/servers.js":71,"./statistics/domain/monitoring-stats-type.js":76,"./statistics/domain/resource.js":77,"./statistics/statistics.js":78,"./templates/domain/os-family.js":79,"./templates/templates.js":82,"underscore":"underscore"}],28:[function(require,module,exports){
 
 var SingleGroupCriteria = require('./single-group-criteria.js');
 var SearchCriteria = require('./../../../core/search/common-criteria.js');
@@ -1950,7 +2128,7 @@ module.exports = GroupCriteria;
 function GroupCriteria (criteria) {
     return new SearchCriteria(criteria, SingleGroupCriteria);
 }
-},{"./../../../core/search/common-criteria.js":90,"./single-group-criteria.js":30}],28:[function(require,module,exports){
+},{"./../../../core/search/common-criteria.js":92,"./single-group-criteria.js":31}],29:[function(require,module,exports){
 var _ = require("underscore");
 
 module.exports = GroupMetadata;
@@ -1989,6 +2167,7 @@ function GroupMetadata() {
         });
 
         return _.chain(allServers)
+            .flatten()
             .uniq(filterFn)
             .value();
     };
@@ -2009,7 +2188,7 @@ function GroupMetadata() {
         return metadata.id;
     }
 }
-},{"underscore":"underscore"}],29:[function(require,module,exports){
+},{"underscore":"underscore"}],30:[function(require,module,exports){
 
 var Group = {
     DEFAULT: 'Default Group',
@@ -2019,7 +2198,7 @@ var Group = {
 
 module.exports = Group;
 
-},{}],30:[function(require,module,exports){
+},{}],31:[function(require,module,exports){
 
 var Predicate = require('./../../../core/predicates/predicates.js');
 var DataCenterCriteria = require('./../../../base-services/datacenters/domain/datacenter-criteria.js');
@@ -2119,7 +2298,7 @@ function SingleGroupCriteria(criteria) {
 
     init();
 }
-},{"./../../../base-services/datacenters/domain/datacenter-criteria.js":5,"./../../../core/predicates/predicates.js":89,"./../../../core/search/criteria.js":92}],31:[function(require,module,exports){
+},{"./../../../base-services/datacenters/domain/datacenter-criteria.js":5,"./../../../core/predicates/predicates.js":91,"./../../../core/search/criteria.js":94}],32:[function(require,module,exports){
 
 var _ = require('underscore');
 
@@ -2184,7 +2363,7 @@ function GroupClient(rest) {
     }
 }
 
-},{"underscore":"underscore"}],32:[function(require,module,exports){
+},{"underscore":"underscore"}],33:[function(require,module,exports){
 
 var NoWaitOperationPromise = require('./../../base-services/queue/domain/no-wait-operation-promise.js');
 var OperationPromise = require('./../../base-services/queue/domain/operation-promise.js');
@@ -2206,12 +2385,13 @@ module.exports = Groups;
  * Service that allow to manage groups in CenturyLink Cloud
  *
  * @param {DataCenters} dataCenterService
- * @param {NetworkClient} groupClient
+ * @param {GroupClient} groupClient
  * @param {QueueClient} queueClient
  * @param {AccountClient} accountClient
+ * @param {Policies} policyService
  * @constructor
  */
-function Groups(dataCenterService, groupClient, queueClient, accountClient) {
+function Groups(dataCenterService, groupClient, queueClient, accountClient, policyService) {
     var self = this;
 
     var billingStatsConverter = new BillingStatsConverter();
@@ -2648,10 +2828,41 @@ function Groups(dataCenterService, groupClient, queueClient, accountClient) {
      * @function defineInfrastructure
      */
     self.defineInfrastructure = function(infraStructureConfig) {
-        return self.defineGroupHierarchy(infraStructureConfig.dataCenter, infraStructureConfig)
+        return definePolicies(infraStructureConfig)
+            .then(_.partial(self.defineGroupHierarchy, infraStructureConfig.dataCenter, infraStructureConfig))
             .then(_.flatten)
             .then(_.uniq);
     };
+
+    function definePolicies(infraStructureConfig) {
+        return Promise.join(
+            defineAlertPolicies(infraStructureConfig), defineAntiAffinityPolicies(infraStructureConfig)
+        );
+    }
+
+    function defineAlertPolicies(infraStructureConfig) {
+        if (infraStructureConfig.alertPolicies) {
+            return Promise.all(
+                _.map(_.asArray(infraStructureConfig.alertPolicies), function(policyConfig) {
+                    return policyService.alert().create(policyConfig);
+                })
+            );
+        }
+        return Promise.resolve(infraStructureConfig);
+    }
+
+    function defineAntiAffinityPolicies(infraStructureConfig) {
+        if (infraStructureConfig.antiAffinityPolicies) {
+            return Promise.all(
+                _.map(_.asArray(infraStructureConfig.antiAffinityPolicies), function(policyConfig) {
+                    return policyService.antiAffinity().create(
+                        _.extend(policyConfig, {dataCenter: infraStructureConfig.dataCenter})
+                    );
+                })
+            );
+        }
+        return Promise.resolve(infraStructureConfig);
+    }
 
     function extractParentGroupId(config) {
         return {id: config.groupId};
@@ -2752,6 +2963,10 @@ function Groups(dataCenterService, groupClient, queueClient, accountClient) {
                 serverConfig.template.dataCenter = dataCenter;
             }
 
+            if (serverConfig.machine && serverConfig.machine.antiAffinity) {
+                serverConfig.machine.antiAffinity.dataCenter = dataCenter;
+            }
+
             var count = serverConfig.count || 1;
 
             return Promise.all(_.times(count, _.partial(createServer, serverConfig)));
@@ -2773,7 +2988,7 @@ function Groups(dataCenterService, groupClient, queueClient, accountClient) {
 
     init();
 }
-},{"./../../base-services/datacenters/domain/datacenter-criteria.js":5,"./../../base-services/queue/domain/no-wait-operation-promise.js":11,"./../../base-services/queue/domain/operation-promise.js":12,"./../../core/search/criteria.js":92,"./../../core/search/search-support.js":94,"./../../core/underscore.js":95,"./../statistics/domain/billing-stats-converter.js":71,"./../statistics/domain/monitoring-stats-converter.js":73,"./domain/group-criteria.js":27,"./domain/group-metadata.js":28,"bluebird":"bluebird"}],33:[function(require,module,exports){
+},{"./../../base-services/datacenters/domain/datacenter-criteria.js":5,"./../../base-services/queue/domain/no-wait-operation-promise.js":12,"./../../base-services/queue/domain/operation-promise.js":13,"./../../core/search/criteria.js":94,"./../../core/search/search-support.js":96,"./../../core/underscore.js":97,"./../statistics/domain/billing-stats-converter.js":72,"./../statistics/domain/monitoring-stats-converter.js":74,"./domain/group-criteria.js":28,"./domain/group-metadata.js":29,"bluebird":"bluebird"}],34:[function(require,module,exports){
 
 var moment = require('moment');
 
@@ -2801,7 +3016,7 @@ function InvoiceConverter() {
         return result;
     };
 }
-},{"moment":"moment"}],34:[function(require,module,exports){
+},{"moment":"moment"}],35:[function(require,module,exports){
 
 var InvoiceConverter = require('./domain/invoice-converter.js');
 
@@ -2851,7 +3066,7 @@ function Invoices (serverClient) {
     init();
 }
 
-},{"./domain/invoice-converter.js":33}],35:[function(require,module,exports){
+},{"./domain/invoice-converter.js":34}],36:[function(require,module,exports){
 
 var IpAddressDetails = {
     NONE: 'none',
@@ -2862,7 +3077,7 @@ var IpAddressDetails = {
 
 module.exports = IpAddressDetails;
 
-},{}],36:[function(require,module,exports){
+},{}],37:[function(require,module,exports){
 
 var SingleCriteria = require('./single-network-criteria.js');
 var SearchCriteria = require('./../../../core/search/common-criteria.js');
@@ -2878,7 +3093,7 @@ module.exports = NetworkCriteria;
 function NetworkCriteria (criteria) {
     return new SearchCriteria(criteria, SingleCriteria);
 }
-},{"./../../../core/search/common-criteria.js":90,"./single-network-criteria.js":37}],37:[function(require,module,exports){
+},{"./../../../core/search/common-criteria.js":92,"./single-network-criteria.js":38}],38:[function(require,module,exports){
 
 var Predicate = require('./../../../core/predicates/predicates.js');
 var DataCenterCriteria = require('./../../../base-services/datacenters/domain/datacenter-criteria.js');
@@ -2966,7 +3181,7 @@ function SingleGroupCriteria(criteria) {
 
     init();
 }
-},{"./../../../base-services/datacenters/domain/datacenter-criteria.js":5,"./../../../core/predicates/predicates.js":89,"./../../../core/search/criteria.js":92}],38:[function(require,module,exports){
+},{"./../../../base-services/datacenters/domain/datacenter-criteria.js":5,"./../../../core/predicates/predicates.js":91,"./../../../core/search/criteria.js":94}],39:[function(require,module,exports){
 
 module.exports = NetworkClient;
 
@@ -2998,7 +3213,7 @@ function NetworkClient(rest) {
     };
 }
 
-},{}],39:[function(require,module,exports){
+},{}],40:[function(require,module,exports){
 
 var _ = require('underscore');
 var NetworkCriteria = require("./domain/network-criteria.js");
@@ -3224,7 +3439,7 @@ function Networks(dataCenterService, networkClient) {
 
     init();
 }
-},{"./../../base-services/datacenters/domain/datacenter-criteria.js":5,"./../../base-services/queue/domain/no-wait-operation-promise.js":11,"./../../core/search/criteria.js":92,"./../../core/search/search-support.js":94,"./domain/network-criteria.js":36,"bluebird":"bluebird","underscore":"underscore"}],40:[function(require,module,exports){
+},{"./../../base-services/datacenters/domain/datacenter-criteria.js":5,"./../../base-services/queue/domain/no-wait-operation-promise.js":12,"./../../core/search/criteria.js":94,"./../../core/search/search-support.js":96,"./domain/network-criteria.js":37,"bluebird":"bluebird","underscore":"underscore"}],41:[function(require,module,exports){
 var NoWaitOperationPromise = require('./../../../base-services/queue/domain/no-wait-operation-promise.js');
 var _ = require('./../../../core/underscore.js');
 var PolicyCriteria = require("./domain/policy-criteria.js");
@@ -3475,7 +3690,7 @@ function Alert(policyClient, queueClient) {
 
     init();
 }
-},{"./../../../base-services/queue/domain/no-wait-operation-promise.js":11,"./../../../core/search/search-support.js":94,"./../../../core/underscore.js":95,"./domain/policy-criteria.js":41,"bluebird":"bluebird"}],41:[function(require,module,exports){
+},{"./../../../base-services/queue/domain/no-wait-operation-promise.js":12,"./../../../core/search/search-support.js":96,"./../../../core/underscore.js":97,"./domain/policy-criteria.js":42,"bluebird":"bluebird"}],42:[function(require,module,exports){
 
 var SinglePolicyCriteria = require('./single-policy-criteria.js');
 var SearchCriteria = require('./../../../../core/search/common-criteria.js');
@@ -3491,7 +3706,7 @@ module.exports = AlertPolicyCriteria;
 function AlertPolicyCriteria (criteria) {
     return new SearchCriteria(criteria, SinglePolicyCriteria);
 }
-},{"./../../../../core/search/common-criteria.js":90,"./single-policy-criteria.js":42}],42:[function(require,module,exports){
+},{"./../../../../core/search/common-criteria.js":92,"./single-policy-criteria.js":43}],43:[function(require,module,exports){
 
 var _ = require('underscore');
 var Predicate = require('./../../../../core/predicates/predicates.js');
@@ -3582,7 +3797,7 @@ function SingleAlertPolicyCriteria(criteria) {
 
     init();
 }
-},{"./../../../../base-services/datacenters/domain/datacenter-criteria.js":5,"./../../../../core/predicates/predicates.js":89,"./../../../../core/search/criteria.js":92,"underscore":"underscore"}],43:[function(require,module,exports){
+},{"./../../../../base-services/datacenters/domain/datacenter-criteria.js":5,"./../../../../core/predicates/predicates.js":91,"./../../../../core/search/criteria.js":94,"underscore":"underscore"}],44:[function(require,module,exports){
 var NoWaitOperationPromise = require('./../../../base-services/queue/domain/no-wait-operation-promise.js');
 var _ = require('underscore');
 var PolicyCriteria = require("./domain/policy-criteria.js");
@@ -3789,7 +4004,7 @@ function AntiAffinity(dataCenterService, policyClient, queueClient) {
 
     init();
 }
-},{"./../../../base-services/queue/domain/no-wait-operation-promise.js":11,"./../../../core/search/search-support.js":94,"./domain/policy-criteria.js":44,"bluebird":"bluebird","underscore":"underscore"}],44:[function(require,module,exports){
+},{"./../../../base-services/queue/domain/no-wait-operation-promise.js":12,"./../../../core/search/search-support.js":96,"./domain/policy-criteria.js":45,"bluebird":"bluebird","underscore":"underscore"}],45:[function(require,module,exports){
 
 var SinglePolicyCriteria = require('./single-policy-criteria.js');
 var SearchCriteria = require('./../../../../core/search/common-criteria.js');
@@ -3805,7 +4020,7 @@ module.exports = AntiAffinityPolicyCriteria;
 function AntiAffinityPolicyCriteria (criteria) {
     return new SearchCriteria(criteria, SinglePolicyCriteria);
 }
-},{"./../../../../core/search/common-criteria.js":90,"./single-policy-criteria.js":45}],45:[function(require,module,exports){
+},{"./../../../../core/search/common-criteria.js":92,"./single-policy-criteria.js":46}],46:[function(require,module,exports){
 
 var Predicate = require('./../../../../core/predicates/predicates.js');
 var DataCenterCriteria = require('./../../../../base-services/datacenters/domain/datacenter-criteria.js');
@@ -3894,7 +4109,7 @@ function SingleAntiAffinityPolicyCriteria(criteria) {
 
     init();
 }
-},{"./../../../../base-services/datacenters/domain/datacenter-criteria.js":5,"./../../../../core/predicates/predicates.js":89,"./../../../../core/search/criteria.js":92}],46:[function(require,module,exports){
+},{"./../../../../base-services/datacenters/domain/datacenter-criteria.js":5,"./../../../../core/predicates/predicates.js":91,"./../../../../core/search/criteria.js":94}],47:[function(require,module,exports){
 var _ = require('underscore');
 var Vertical = require('./vertical/vertical');
 
@@ -3917,7 +4132,7 @@ function AutoScale(policyClient) {
     });
 
 }
-},{"./vertical/vertical":49,"underscore":"underscore"}],47:[function(require,module,exports){
+},{"./vertical/vertical":50,"underscore":"underscore"}],48:[function(require,module,exports){
 
 var SinglePolicyCriteria = require('./single-policy-criteria.js');
 var SearchCriteria = require('./../../../../../core/search/common-criteria.js');
@@ -3933,7 +4148,7 @@ module.exports = VerticalAutoScalePolicyCriteria;
 function VerticalAutoScalePolicyCriteria (criteria) {
     return new SearchCriteria(criteria, SinglePolicyCriteria);
 }
-},{"./../../../../../core/search/common-criteria.js":90,"./single-policy-criteria.js":48}],48:[function(require,module,exports){
+},{"./../../../../../core/search/common-criteria.js":92,"./single-policy-criteria.js":49}],49:[function(require,module,exports){
 
 var Predicate = require('./../../../../../core/predicates/predicates.js');
 var Criteria = require('./../../../../../core/search/criteria.js');
@@ -4005,7 +4220,7 @@ function SingleVerticalAutoScalePolicyCriteria(criteria) {
 
     init();
 }
-},{"./../../../../../core/predicates/predicates.js":89,"./../../../../../core/search/criteria.js":92}],49:[function(require,module,exports){
+},{"./../../../../../core/predicates/predicates.js":91,"./../../../../../core/search/criteria.js":94}],50:[function(require,module,exports){
 var _ = require('underscore');
 var PolicyCriteria = require("./domain/policy-criteria.js");
 var SearchSupport = require('./../../../../core/search/search-support.js');
@@ -4113,7 +4328,7 @@ function Vertical(policyClient) {
 
     init();
 }
-},{"./../../../../core/search/search-support.js":94,"./domain/policy-criteria.js":47,"underscore":"underscore"}],50:[function(require,module,exports){
+},{"./../../../../core/search/search-support.js":96,"./domain/policy-criteria.js":48,"underscore":"underscore"}],51:[function(require,module,exports){
 var Policy = {
 
     Alert: {
@@ -4126,7 +4341,7 @@ var Policy = {
 };
 
 module.exports = Policy;
-},{}],51:[function(require,module,exports){
+},{}],52:[function(require,module,exports){
 
 var _ = require('underscore');
 var Promise = require("bluebird");
@@ -4185,7 +4400,7 @@ function CreatePolicyJob(policyClient, result) {
 
     return self;
 }
-},{"bluebird":"bluebird","underscore":"underscore"}],52:[function(require,module,exports){
+},{"bluebird":"bluebird","underscore":"underscore"}],53:[function(require,module,exports){
 var IpSubnetCalculator = require('ip-subnet-calculator');
 var _ = require('underscore');
 
@@ -4207,7 +4422,7 @@ function convert(ip, mask) {
     var subnet = IpSubnetCalculator.calculateCIDRPrefix(ip, mask);
     return subnet.ipLowStr + '/' + subnet.prefixSize;
 }
-},{"ip-subnet-calculator":"ip-subnet-calculator","underscore":"underscore"}],53:[function(require,module,exports){
+},{"ip-subnet-calculator":"ip-subnet-calculator","underscore":"underscore"}],54:[function(require,module,exports){
 
 var SinglePolicyCriteria = require('./single-policy-criteria.js');
 var SearchCriteria = require('./../../../../core/search/common-criteria.js');
@@ -4223,7 +4438,7 @@ module.exports = FirewallPolicyCriteria;
 function FirewallPolicyCriteria (criteria) {
     return new SearchCriteria(criteria, SinglePolicyCriteria);
 }
-},{"./../../../../core/search/common-criteria.js":90,"./single-policy-criteria.js":55}],54:[function(require,module,exports){
+},{"./../../../../core/search/common-criteria.js":92,"./single-policy-criteria.js":56}],55:[function(require,module,exports){
 
 var Port = {
     ANY: 'any',
@@ -4260,7 +4475,7 @@ Port.UDP = UDP;
 Port.convert = convert;
 
 module.exports = Port;
-},{}],55:[function(require,module,exports){
+},{}],56:[function(require,module,exports){
 
 var Predicate = require('./../../../../core/predicates/predicates.js');
 var DataCenterCriteria = require('./../../../../base-services/datacenters/domain/datacenter-criteria.js');
@@ -4414,7 +4629,7 @@ function SingleFirewallPolicyCriteria(criteria) {
 
     init();
 }
-},{"./../../../../base-services/datacenters/domain/datacenter-criteria.js":5,"./../../../../core/predicates/predicates.js":89,"./../../../../core/search/criteria.js":92,"./ip-converter":52,"./port":54,"underscore":"underscore"}],56:[function(require,module,exports){
+},{"./../../../../base-services/datacenters/domain/datacenter-criteria.js":5,"./../../../../core/predicates/predicates.js":91,"./../../../../core/search/criteria.js":94,"./ip-converter":53,"./port":55,"underscore":"underscore"}],57:[function(require,module,exports){
 var NoWaitOperationPromise = require('./../../../base-services/queue/domain/no-wait-operation-promise.js');
 var _ = require('underscore');
 var PolicyCriteria = require("./domain/policy-criteria.js");
@@ -4694,7 +4909,7 @@ function Firewall(dataCenterService, policyClient) {
 
     init();
 }
-},{"./../../../base-services/queue/domain/no-wait-operation-promise.js":11,"./../../../core/search/criteria.js":92,"./../../../core/search/search-support.js":94,"./domain/create-policy-job":51,"./domain/ip-converter":52,"./domain/policy-criteria.js":53,"./domain/port":54,"bluebird":"bluebird","underscore":"underscore"}],57:[function(require,module,exports){
+},{"./../../../base-services/queue/domain/no-wait-operation-promise.js":12,"./../../../core/search/criteria.js":94,"./../../../core/search/search-support.js":96,"./domain/create-policy-job":52,"./domain/ip-converter":53,"./domain/policy-criteria.js":54,"./domain/port":55,"bluebird":"bluebird","underscore":"underscore"}],58:[function(require,module,exports){
 var _ = require('underscore');
 var AntiAffinity = require('./anti-affinity/anti-affinity.js');
 var Alert = require('./alert/alert.js');
@@ -4743,7 +4958,7 @@ function Policies(dataCenterService, policyClient, queueClient) {
     });
 
 }
-},{"./alert/alert.js":40,"./anti-affinity/anti-affinity.js":43,"./autoscale/autoscale":46,"./firewall/firewall":56,"underscore":"underscore"}],58:[function(require,module,exports){
+},{"./alert/alert.js":41,"./anti-affinity/anti-affinity.js":44,"./autoscale/autoscale":47,"./firewall/firewall":57,"underscore":"underscore"}],59:[function(require,module,exports){
 
 module.exports = PolicyClient;
 
@@ -4827,7 +5042,7 @@ function PolicyClient(rest) {
 
 }
 
-},{}],59:[function(require,module,exports){
+},{}],60:[function(require,module,exports){
 
 var Architecture = {
     I386: "32Bit",
@@ -4835,7 +5050,7 @@ var Architecture = {
 };
 
 module.exports = Architecture;
-},{}],60:[function(require,module,exports){
+},{}],61:[function(require,module,exports){
 
 var _ = require('underscore');
 var Templates = require('./../../templates/templates.js');
@@ -4991,7 +5206,7 @@ function CreateServerConverter(groups, templates, accountClient, policies) {
     };
 
     self.setPolicies = function(command) {
-        if (command.policy) {
+        if (command.machine) {
             return setAntiAffinityPolicy(command)
                 .then(setAutoScalePolicy);
         }
@@ -4999,11 +5214,15 @@ function CreateServerConverter(groups, templates, accountClient, policies) {
     };
 
     function setAntiAffinityPolicy(command) {
-        if (command.policy.antiAffinity) {
-            command.policy.antiAffinity.dataCenter = command.group.dataCenter || command.template.dataCenter;
+        var antiAffinity = command.machine.antiAffinity;
+        if (antiAffinity) {
+            var dataCenter = (command.group && command.group.dataCenter) ||
+                (command.template && command.template.dataCenter);
+
+            antiAffinity.dataCenter = antiAffinity.dataCenter || dataCenter;
 
             return policies.antiAffinity()
-                .findSingle(command.policy.antiAffinity)
+                .findSingle(antiAffinity)
                 .then(function(policy) {
                     return _.extend(command, {antiAffinityPolicyId: policy.id});
                 });
@@ -5013,7 +5232,7 @@ function CreateServerConverter(groups, templates, accountClient, policies) {
     }
 
     function setAutoScalePolicy(command) {
-        if (command.policy.autoScale) {
+        if (command.machine.autoScale) {
             return setVerticalAutoScalePolicy(command)
                 .then(setHorizontalAutoScalePolicy);
         }
@@ -5022,9 +5241,10 @@ function CreateServerConverter(groups, templates, accountClient, policies) {
     }
 
     function setVerticalAutoScalePolicy(command) {
-        if (command.policy.autoScale.vertical) {
+        var vertical = command.machine.autoScale.vertical;
+        if (vertical) {
             return policies.autoScale().vertical()
-                .findSingle(command.policy.autoScale.vertical)
+                .findSingle(vertical)
                 .then(function(policy) {
                     return _.extend(command, {cpuAutoscalePolicyId: policy.id});
                 });
@@ -5108,7 +5328,7 @@ function CreateServerConverter(groups, templates, accountClient, policies) {
         return command;
     }
 }
-},{"./../../templates/templates.js":81,"./disk-type.js":61,"./server.js":66,"bluebird":"bluebird","underscore":"underscore"}],61:[function(require,module,exports){
+},{"./../../templates/templates.js":82,"./disk-type.js":62,"./server.js":67,"bluebird":"bluebird","underscore":"underscore"}],62:[function(require,module,exports){
 
 var DiskType = {
     RAW: "raw",
@@ -5116,7 +5336,7 @@ var DiskType = {
 };
 
 module.exports = DiskType;
-},{}],62:[function(require,module,exports){
+},{}],63:[function(require,module,exports){
 
 var Port = {
     HTTP: 80,
@@ -5128,7 +5348,7 @@ var Port = {
 };
 
 module.exports = Port;
-},{}],63:[function(require,module,exports){
+},{}],64:[function(require,module,exports){
 
 var Protocol = {
     TCP: 'TCP',
@@ -5138,7 +5358,7 @@ var Protocol = {
 };
 
 module.exports = Protocol;
-},{}],64:[function(require,module,exports){
+},{}],65:[function(require,module,exports){
 
 var _ = require('underscore');
 var IpSubnetCalculator = require('ip-subnet-calculator');
@@ -5190,7 +5410,7 @@ function PublicIpConverter() {
         return { cidr: cidr };
     }
 }
-},{"./protocol.js":63,"ip-subnet-calculator":"ip-subnet-calculator","underscore":"underscore"}],65:[function(require,module,exports){
+},{"./protocol.js":64,"ip-subnet-calculator":"ip-subnet-calculator","underscore":"underscore"}],66:[function(require,module,exports){
 
 var SingleServerCriteria = require('./single-server-criteria.js');
 var SearchCriteria = require('./../../../core/search/common-criteria.js');
@@ -5207,7 +5427,7 @@ function ServerCriteria (criteria) {
     return new SearchCriteria(criteria, SingleServerCriteria);
 
 }
-},{"./../../../core/search/common-criteria.js":90,"./single-server-criteria.js":67}],66:[function(require,module,exports){
+},{"./../../../core/search/common-criteria.js":92,"./single-server-criteria.js":68}],67:[function(require,module,exports){
 var Port = require('./port.js');
 var Protocol = require('./protocol.js');
 
@@ -5229,7 +5449,7 @@ var Server = {
 };
 
 module.exports = Server;
-},{"./port.js":62,"./protocol.js":63}],67:[function(require,module,exports){
+},{"./port.js":63,"./protocol.js":64}],68:[function(require,module,exports){
 
 var _ = require('underscore');
 var Predicate = require('./../../../core/predicates/predicates.js');
@@ -5333,7 +5553,7 @@ function SingleServerCriteria(criteria) {
 
     init();
 }
-},{"./../../../core/predicates/predicates.js":89,"./../../../core/search/criteria.js":92,"./../../groups/domain/group-criteria.js":27,"underscore":"underscore"}],68:[function(require,module,exports){
+},{"./../../../core/predicates/predicates.js":91,"./../../../core/search/criteria.js":94,"./../../groups/domain/group-criteria.js":28,"underscore":"underscore"}],69:[function(require,module,exports){
 var _ = require('underscore');
 var Promise = require("bluebird");
 var SSH = require("simple-ssh");
@@ -5548,7 +5768,7 @@ function SshClient(initPromise) {
 
     return self;
 }
-},{"bluebird":"bluebird","events":"events","simple-ssh":"simple-ssh","underscore":"underscore"}],69:[function(require,module,exports){
+},{"bluebird":"bluebird","events":"events","simple-ssh":"simple-ssh","underscore":"underscore"}],70:[function(require,module,exports){
 
 
 module.exports = ServerClient;
@@ -5683,7 +5903,7 @@ function ServerClient (client) {
     init();
 }
 
-},{}],70:[function(require,module,exports){
+},{}],71:[function(require,module,exports){
 
 var _ = require('underscore');
 var Promise = require("bluebird");
@@ -5933,6 +6153,7 @@ function Servers(serverClient, serverConverter, queueClient, groupService, netwo
                 return group.getAllServers();
             }))
             .flatten()
+            .uniq(getServerId)
             .value();
     }
 
@@ -6165,7 +6386,7 @@ function Servers(serverClient, serverConverter, queueClient, groupService, netwo
     function composeModifyServersRequest(command) {
         return Promise.all(_.map(command.serversData, function(data) {
             var cmd = _.extend(
-                command,
+                _.clone(command),
                 {
                     serverId: data.id,
                     currentPassword: data.credentials.password
@@ -6202,7 +6423,7 @@ function Servers(serverClient, serverConverter, queueClient, groupService, netwo
                 return command;
             })
             .then(composeModifyServersRequest)
-            .then(_.partial(_.map, _, modify))
+            .then(_.partial(modify, command))
             .then(Promise.settle);
 
         return new OperationPromise(
@@ -6214,7 +6435,26 @@ function Servers(serverClient, serverConverter, queueClient, groupService, netwo
         ).fromInspections(result);
     };
 
-    function modify(request) {
+    function modify(command, requests) {
+        var promises =
+            _.chain(requests)
+            .map(function(req) {
+                return [modifyServer(req), setAutoScale(req, command.autoScale && command.autoScale.vertical)];
+            })
+            .flatten()
+            .value();
+
+        return Promise.all(promises).then(_.compact);
+    }
+
+    function setAutoScale(request, autoScalePolicyCriteria) {
+        if (autoScalePolicyCriteria) {
+            return self.setAutoScalePolicy({id: request.serverId}, autoScalePolicyCriteria)
+                .then(_.noop);
+        }
+    }
+
+    function modifyServer(request) {
         return serverClient.modifyServer(request.serverId, request.config);
     }
 
@@ -6942,9 +7182,9 @@ function Servers(serverClient, serverConverter, queueClient, groupService, netwo
             .then(function(servers) {
                 return policyService.autoScale().vertical().findSingle(policyCriteria)
                     .then(function(policy) {
-                        return Promise.all(_.each(servers, _.partial(setAutoScalePolicy, _, policy)));
+                        return Promise.all(_.map(servers, _.partial(setAutoScalePolicy, _, policy)));
                     })
-                    .then(_.partial(Promise.resolve, _.each(servers, metadataToRef)));
+                    .then(_.partial(Promise.resolve, _.map(servers, metadataToRef)));
         });
     };
 
@@ -6973,7 +7213,7 @@ function Servers(serverClient, serverConverter, queueClient, groupService, netwo
 
     init();
 }
-},{"./../../base-services/queue/domain/create-server-job.js":10,"./../../base-services/queue/domain/operation-promise.js":12,"./../../core/search/criteria.js":92,"./../../core/search/search-support.js":94,"./../networks/domain/ip-address-details":35,"./domain/public-ip-converter.js":64,"./domain/server-criteria":65,"./domain/server.js":66,"./domain/ssh-client.js":68,"bluebird":"bluebird","underscore":"underscore"}],71:[function(require,module,exports){
+},{"./../../base-services/queue/domain/create-server-job.js":11,"./../../base-services/queue/domain/operation-promise.js":13,"./../../core/search/criteria.js":94,"./../../core/search/search-support.js":96,"./../networks/domain/ip-address-details":36,"./domain/public-ip-converter.js":65,"./domain/server-criteria":66,"./domain/server.js":67,"./domain/ssh-client.js":69,"bluebird":"bluebird","underscore":"underscore"}],72:[function(require,module,exports){
 
 module.exports = BillingStatsConverter;
 
@@ -7033,7 +7273,7 @@ function BillingStatsConverter() {
         };
     }
 }
-},{}],72:[function(require,module,exports){
+},{}],73:[function(require,module,exports){
 var _ = require('./../../../core/underscore.js');
 var Promise = require("bluebird");
 var Resource = require('./resource.js');
@@ -7336,7 +7576,7 @@ function BillingStatsEngine(statsParams, serverService, groupService, dataCenter
 
     init();
 }
-},{"./../../../core/underscore.js":95,"./resource.js":76,"bluebird":"bluebird"}],73:[function(require,module,exports){
+},{"./../../../core/underscore.js":97,"./resource.js":77,"bluebird":"bluebird"}],74:[function(require,module,exports){
 
 var moment = require('moment');
 var util = require('util');
@@ -7543,7 +7783,7 @@ function MonitoringStatsConverter() {
         }
     }
 }
-},{"./../../../core/underscore.js":95,"./monitoring-stats-type.js":75,"moment":"moment","util":"util"}],74:[function(require,module,exports){
+},{"./../../../core/underscore.js":97,"./monitoring-stats-type.js":76,"moment":"moment","util":"util"}],75:[function(require,module,exports){
 var _ = require('./../../../core/underscore.js');
 var Promise = require("bluebird");
 var Resource = require('./resource.js');
@@ -7951,7 +8191,7 @@ function MonitoringStatsEngine(statsParams, serverService, groupService, dataCen
 
     init();
 }
-},{"./../../../core/underscore.js":95,"./resource.js":76,"bluebird":"bluebird"}],75:[function(require,module,exports){
+},{"./../../../core/underscore.js":97,"./resource.js":77,"bluebird":"bluebird"}],76:[function(require,module,exports){
 
 var MonitoringStatsType = {
     HOURLY: 'hourly',
@@ -7961,7 +8201,7 @@ var MonitoringStatsType = {
 };
 
 module.exports = MonitoringStatsType;
-},{}],76:[function(require,module,exports){
+},{}],77:[function(require,module,exports){
 
 var Resource = {
     DATACENTER: 'dataCenter',
@@ -7971,7 +8211,7 @@ var Resource = {
 };
 
 module.exports = Resource;
-},{}],77:[function(require,module,exports){
+},{}],78:[function(require,module,exports){
 
 var Promise = require('bluebird');
 var _ = require('./../../core/underscore.js');
@@ -8055,7 +8295,7 @@ function Statistics (serverService, groupService, dataCenterService) {
     init();
 }
 
-},{"../servers/domain/server-criteria.js":65,"./../../core/search/criteria.js":92,"./../../core/search/search-support.js":94,"./../../core/underscore.js":95,"./domain/billing-stats-engine.js":72,"./domain/monitoring-stats-engine.js":74,"bluebird":"bluebird"}],78:[function(require,module,exports){
+},{"../servers/domain/server-criteria.js":66,"./../../core/search/criteria.js":94,"./../../core/search/search-support.js":96,"./../../core/underscore.js":97,"./domain/billing-stats-engine.js":73,"./domain/monitoring-stats-engine.js":75,"bluebird":"bluebird"}],79:[function(require,module,exports){
 
 var Os = {
     CENTOS: "centOS",
@@ -8066,7 +8306,7 @@ var Os = {
 };
 
 module.exports = Os;
-},{}],79:[function(require,module,exports){
+},{}],80:[function(require,module,exports){
 
 var Predicate = require('./../../../core/predicates/predicates.js');
 var _ = require('underscore');
@@ -8187,7 +8427,7 @@ function SingleTemplateCriteria (criteria) {
 
     init();
 }
-},{"./../../../base-services/datacenters/domain/datacenter-criteria.js":5,"./../../../core/predicates/predicates.js":89,"./../../../core/search/criteria.js":92,"underscore":"underscore"}],80:[function(require,module,exports){
+},{"./../../../base-services/datacenters/domain/datacenter-criteria.js":5,"./../../../core/predicates/predicates.js":91,"./../../../core/search/criteria.js":94,"underscore":"underscore"}],81:[function(require,module,exports){
 
 var SingleCriteria = require('./single-template-criteria.js');
 var SearchCriteria = require('./../../../core/search/common-criteria.js');
@@ -8203,7 +8443,7 @@ module.exports = TemplateCriteria;
 function TemplateCriteria (criteria) {
     return new SearchCriteria(criteria, SingleCriteria);
 }
-},{"./../../../core/search/common-criteria.js":90,"./single-template-criteria.js":79}],81:[function(require,module,exports){
+},{"./../../../core/search/common-criteria.js":92,"./single-template-criteria.js":80}],82:[function(require,module,exports){
 
 var Promise = require('bluebird');
 var _ = require('underscore');
@@ -8323,7 +8563,26 @@ function Templates (dataCenterService, serverClient) {
     init();
 }
 
-},{"./../../core/search/criteria.js":92,"./../../core/search/search-support.js":94,"./domain/template-criteria.js":80,"bluebird":"bluebird","underscore":"underscore"}],82:[function(require,module,exports){
+},{"./../../core/search/criteria.js":94,"./../../core/search/search-support.js":96,"./domain/template-criteria.js":81,"bluebird":"bluebird","underscore":"underscore"}],83:[function(require,module,exports){
+
+var fs = require('fs');
+var properties = fs.readFileSync('./package.json', 'utf8');
+
+module.exports = Config;
+
+function Config() {
+    var self = this;
+
+    self.fetchUserAgent = function() {
+        var properties = getProperties();
+        return properties.name + "-v" + properties.version;
+    };
+
+    function getProperties() {
+        return JSON.parse(properties);
+    }
+}
+},{"fs":98}],84:[function(require,module,exports){
 (function (process){
 
 module.exports = {
@@ -8392,18 +8651,21 @@ function EnvironmentCredentialsProvider (usernameKey, passwordKey) {
     init();
 }
 }).call(this,require('_process'))
-},{"_process":96}],83:[function(require,module,exports){
+},{"_process":99}],85:[function(require,module,exports){
 
 var rest = require('restling');
+var Config = require('./../../config.js');
 
 function LoginClient () {
     var self = this;
+    var userAgent = new Config().fetchUserAgent();
 
     self.login = function (username, password) {
         return rest
             .postJson(
                 'https://api.ctl.io/v2/authentication/login',
-                { username: username, password: password }
+                { username: username, password: password },
+                {headers: {'User-Agent': userAgent}}
             )
             .then(function (result) {
                 return result.data;
@@ -8414,13 +8676,14 @@ function LoginClient () {
 }
 
 module.exports = new LoginClient();
-},{"restling":"restling"}],84:[function(require,module,exports){
+},{"./../../config.js":83,"restling":"restling"}],86:[function(require,module,exports){
 (function (process){
 
 var rest = require('restling');
 var _ = require('underscore');
 var SdkClient = require('./sdk-client.js');
 var loginClient = require('./../auth/login-client.js');
+var Config = require('./../../config.js');
 
 module.exports = AuthenticatedClient;
 
@@ -8428,6 +8691,7 @@ function AuthenticatedClient (username, password, options) {
     var self = this;
     var sdkClient = new SdkClient(options);
     var accountPromise;
+    var userAgent = new Config().fetchUserAgent();
 
     function authHeader (account) {
         return { accessToken: account.bearerToken };
@@ -8438,7 +8702,7 @@ function AuthenticatedClient (username, password, options) {
     }
 
     function makeOptions(options, account) {
-        return _.extend({}, authHeader(account), options);
+        return _.extend({headers: {'User-Agent': userAgent}}, authHeader(account), options);
     }
 
     function whenAccountResolved(callback) {
@@ -8522,7 +8786,7 @@ function AuthenticatedClient (username, password, options) {
 
 }
 }).call(this,require('_process'))
-},{"./../auth/login-client.js":83,"./sdk-client.js":86,"_process":96,"restling":"restling","underscore":"underscore"}],85:[function(require,module,exports){
+},{"./../../config.js":83,"./../auth/login-client.js":85,"./sdk-client.js":88,"_process":99,"restling":"restling","underscore":"underscore"}],87:[function(require,module,exports){
 var Promise = require('bluebird');
 
 module.exports = PromiseRetry;
@@ -8552,11 +8816,12 @@ function PromiseRetry(fn, args, opts) {
         attempt(1);
     });
 }
-},{"bluebird":"bluebird"}],86:[function(require,module,exports){
+},{"bluebird":"bluebird"}],88:[function(require,module,exports){
 
 var rest = require('restling');
 var _ = require('underscore');
 var PromiseRetry = require('./promise-retry.js');
+var Config = require('./../../config.js');
 
 module.exports = SdkClient;
 
@@ -8565,11 +8830,13 @@ function SdkClient (options) {
     var CLC_ENDPOINT_URL = 'https://api.ctl.io';
     var self = this;
 
+    var userAgent = new Config().fetchUserAgent();
+
     var retryOpts = options ?
         {max: options.maxRetries, retryInterval: options.retryInterval} : null;
 
     function makeOptions(otherOptions) {
-        return _.extend({}, options, otherOptions);
+        return _.extend({headers: {'User-Agent': userAgent}}, options, otherOptions);
     }
 
     function extractData (response) {
@@ -8639,7 +8906,7 @@ function StatusResult () {
 
 }
 
-},{"./promise-retry.js":85,"restling":"restling","underscore":"underscore"}],87:[function(require,module,exports){
+},{"./../../config.js":83,"./promise-retry.js":87,"restling":"restling","underscore":"underscore"}],89:[function(require,module,exports){
 var Predicate = require('./predicate.js');
 var _ = require('./../underscore.js');
 
@@ -8750,7 +9017,7 @@ function ExtractPredicate(predicate, path) {
     Predicate.call(self, extract);
 }
 
-},{"./../underscore.js":95,"./predicate.js":88}],88:[function(require,module,exports){
+},{"./../underscore.js":97,"./predicate.js":90}],90:[function(require,module,exports){
 
 var _ = require('underscore');
 
@@ -8807,7 +9074,7 @@ function ConstPredicate (value) {
     init ();
 }
 
-},{"underscore":"underscore"}],89:[function(require,module,exports){
+},{"underscore":"underscore"}],91:[function(require,module,exports){
 var _ = require('underscore');
 var BasePredicate = require('./predicate.js');
 var CommonPredicates = require('./common-predicates.js');
@@ -8842,7 +9109,7 @@ BasePredicate.match = function(criteriaValue, objectProperty) {
     return new CommonPredicates.MatchPredicate(criteriaValue, objectProperty);
 };
 
-},{"./common-predicates.js":87,"./predicate.js":88,"underscore":"underscore"}],90:[function(require,module,exports){
+},{"./common-predicates.js":89,"./predicate.js":90,"underscore":"underscore"}],92:[function(require,module,exports){
 
 var _ = require('underscore');
 var Criteria = require('./criteria.js');
@@ -8876,7 +9143,7 @@ function SearchCriteria (criteria, SingleCriteriaClass) {
         return criteria;
     };
 }
-},{"./composite-criteria.js":91,"./criteria.js":92,"underscore":"underscore"}],91:[function(require,module,exports){
+},{"./composite-criteria.js":93,"./criteria.js":94,"underscore":"underscore"}],93:[function(require,module,exports){
 
 var _ = require('underscore');
 var Predicate = require('./../predicates/predicates.js');
@@ -8925,7 +9192,7 @@ function CompositeCriteria(criteria, SingleCriteriaClass) {
         return Predicate[operator === "and" ? 'alwaysTrue' : 'alwaysFalse']();
     }
 }
-},{"./../predicates/predicates.js":89,"./common-criteria.js":90,"underscore":"underscore"}],92:[function(require,module,exports){
+},{"./../predicates/predicates.js":91,"./common-criteria.js":92,"underscore":"underscore"}],94:[function(require,module,exports){
 var _ = require('underscore');
 var Predicate = require('./../predicates/predicates.js');
 var Filters = require('./filters.js');
@@ -9053,7 +9320,7 @@ function Criteria(criteria) {
         return null;
     }
 }
-},{"./../predicates/predicates.js":89,"./composite-criteria.js":91,"./filters.js":93,"underscore":"underscore"}],93:[function(require,module,exports){
+},{"./../predicates/predicates.js":91,"./composite-criteria.js":93,"./filters.js":95,"underscore":"underscore"}],95:[function(require,module,exports){
 var _ = require('underscore');
 var Predicate = require('./../predicates/predicates.js');
 
@@ -9112,7 +9379,7 @@ function Filters(criteria) {
 
 
 }
-},{"./../predicates/predicates.js":89,"underscore":"underscore"}],94:[function(require,module,exports){
+},{"./../predicates/predicates.js":91,"underscore":"underscore"}],96:[function(require,module,exports){
 
 var _ = require('underscore');
 
@@ -9168,7 +9435,7 @@ function SearchSupport () {
     };
 
 }
-},{"underscore":"underscore"}],95:[function(require,module,exports){
+},{"underscore":"underscore"}],97:[function(require,module,exports){
 
 var _ = require('underscore');
 var Promise = require('bluebird').Promise;
@@ -9195,7 +9462,9 @@ _.mixin({
         return _.extend(Object.create(new Class()), data);
     }
 });
-},{"bluebird":"bluebird","underscore":"underscore"}],96:[function(require,module,exports){
+},{"bluebird":"bluebird","underscore":"underscore"}],98:[function(require,module,exports){
+
+},{}],99:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -9380,6 +9649,6 @@ function ClcSdk () {
 
     init (arguments);
 }
-},{"./base-services/base-services.js":2,"./compute-services/compute-services.js":26,"./core/auth/credentials-provider.js":82,"./core/client/authenticated-client.js":84,"underscore":"underscore"}]},{},[]);
+},{"./base-services/base-services.js":2,"./compute-services/compute-services.js":27,"./core/auth/credentials-provider.js":84,"./core/client/authenticated-client.js":86,"underscore":"underscore"}]},{},[]);
 
 module.exports = require('clc-sdk');
