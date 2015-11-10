@@ -5,6 +5,9 @@ var browserify = require("browserify");
 var path = require("path");
 var version = require("../package.json").version;
 
+var readmePath = "../README.md";
+var readme = fs.readFileSync(readmePath, 'utf-8');
+
 var entrySrcFilePath = path.join(__dirname, "../lib/clc-sdk.js");
 var dstFilePath = path.join(__dirname, "../clc-sdk.js");
 
@@ -15,6 +18,8 @@ function buildSdk () {
     defineEntryPoint(bundle, entrySrcFilePath);
 
     excludeExternalDeps(bundle);
+
+    updateReadme();
 
     bundle.bundle(
         enhanceSdkCode(saveToFile)
@@ -60,6 +65,29 @@ function enhanceSdkCode (saveFn) {
 
 function saveToFile (err, src) {
     fs.writeFile(dstFilePath, src);
+}
+
+function updateReadme() {
+    fs.writeFileSync(readmePath, generateReadme());
+}
+
+function generateReadme() {
+    var link = '[npm-version-image]:';
+    var startIndex = readme.indexOf(link);
+
+    if (startIndex === -1) {
+        return;
+    }
+    var badgeUrl = getBadgeUrl();
+    var firstPart = readme.substring(0, startIndex);
+    var newLineIndex = readme.substring(startIndex).indexOf('\n');
+    var lastPart = newLineIndex === -1 ? "" : readme.substring(startIndex).substring(newLineIndex);
+
+    return firstPart + link + badgeUrl + lastPart;
+}
+
+function getBadgeUrl() {
+    return ' http://img.shields.io/badge/npm-v{version}-blue.svg?style=flat'.replace('{version}', version);
 }
 
 buildSdk();

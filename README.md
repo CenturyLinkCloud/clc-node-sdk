@@ -126,4 +126,4 @@ License
 This project is licensed under the [Apache License v2.0](http://www.apache.org/licenses/LICENSE-2.0.html).
 
 [npm-url]: https://npmjs.org/package/clc-node-sdk
-[npm-version-image]: http://img.shields.io/badge/npm-v1.1.0-blue.svg?style=flat
+[npm-version-image]: http://img.shields.io/badge/npm-v1.1.1-blue.svg?style=flat
