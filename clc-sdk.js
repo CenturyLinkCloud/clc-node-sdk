@@ -1,5 +1,97 @@
-/*! Version: 1.1.1 */
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+/*! Version: 1.1.2 */
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({"clc-sdk":[function(require,module,exports){
+
+var CommandLineCredentialsProvider = require('./core/auth/credentials-provider.js').CommandLineCredentialsProvider;
+var EnvironmentCredentialsProvider = require('./core/auth/credentials-provider.js').EnvironmentCredentialsProvider;
+var AuthenticatedClient = require('./core/client/authenticated-client.js');
+var ComputeServices = require('./compute-services/compute-services.js');
+var BaseServices = require('./base-services/base-services.js');
+var _ = require('underscore');
+
+
+module.exports = ClcSdk;
+
+function ClcSdk () {
+    var self = this;
+    var username;
+    var password;
+    var clientOptions;
+
+    function init (args) {
+        clientOptions = getClientOptions(args);
+
+        if (args.length >= 2 &&
+                typeof(args[0]) === 'string' &&
+                typeof(args[1]) === 'string') {
+            initWithCredentials(args[0], args[1]);
+            return;
+        }
+
+        if (args.length > 1 && args[0] instanceof Object) {
+            initWithCredentialsProvider(args[0]);
+            return;
+        }
+
+        initWithDefaultCredentialsProvider();
+    }
+
+    function initWithCredentials(usernameVal, passwordVal) {
+        username = usernameVal;
+        password = passwordVal;
+    }
+
+    function initWithCredentialsProvider(credentialsProvider) {
+        username = credentialsProvider.getUsername();
+        password = credentialsProvider.getPassword();
+    }
+
+    function initWithDefaultCredentialsProvider() {
+        var provider = new CommandLineCredentialsProvider();
+
+        username = provider.getUsername();
+        password = provider.getPassword();
+
+        if (!username && !password) {
+            var environmentCredentials = new EnvironmentCredentialsProvider();
+
+            username = environmentCredentials.getUsername();
+            password = environmentCredentials.getPassword();
+        }
+    }
+
+    function getClientOptions(args) {
+        if (args.length === 0) {
+            return {};
+        }
+        var options = _.last(args);
+
+        if (options instanceof Object) {
+            return {
+                maxRetries: options.maxRetryCount,
+                retryInterval: options.retryInterval
+            };
+        }
+    }
+
+    self.authenticatedClient = _.memoize(function () {
+        return new AuthenticatedClient(
+            username,
+            password,
+            clientOptions
+        );
+    });
+
+    self.baseServices = _.memoize(function () {
+        return new BaseServices(self.authenticatedClient);
+    });
+
+    self.computeServices = _.memoize(function () {
+        return new ComputeServices(self.authenticatedClient, self.baseServices);
+    });
+
+    init (arguments);
+}
+},{"./base-services/base-services.js":2,"./compute-services/compute-services.js":27,"./core/auth/credentials-provider.js":84,"./core/client/authenticated-client.js":86,"underscore":"underscore"}],1:[function(require,module,exports){
 var _ = require('underscore');
 
 module.exports = AccountClient;
@@ -2035,7 +2127,7 @@ function ComputeServices (getRestClientFn, baseServicesFn) {
     });
 
     self.networks = _.memoize(function () {
-        return new Networks(baseServicesFn().dataCenters(), networkClient());
+        return new Networks(baseServicesFn().dataCenters(), networkClient(), queueClient());
     });
 
     var serverConverter = _.memoize(function () {
@@ -3222,6 +3314,7 @@ var Criteria = require('./../../core/search/criteria.js');
 var DataCenterCriteria = require('./../../base-services/datacenters/domain/datacenter-criteria.js');
 var SearchSupport = require('./../../core/search/search-support.js');
 var NoWaitOperationPromise = require('./../../base-services/queue/domain/no-wait-operation-promise.js');
+var OperationPromise = require('./../../base-services/queue/domain/operation-promise.js');
 
 module.exports = Networks;
 
@@ -3274,9 +3367,10 @@ module.exports = Networks;
  *
  * @param {DataCenters} dataCenterService
  * @param {NetworkClient} networkClient
+ * @param {QueueClient} queueClient
  * @constructor
  */
-function Networks(dataCenterService, networkClient) {
+function Networks(dataCenterService, networkClient, queueClient) {
     var self = this;
 
     function init () {
@@ -3292,23 +3386,23 @@ function Networks(dataCenterService, networkClient) {
      *
      * @param {DataCenterCriteria} arguments - criteria that specify set of data centers
      * in which a network will be claimed
-     * @returns {Promise<Array<Reference>>} - promise that resolved by list of references to
-     *                                            successfully processed resources.
+     * @returns {Promise} - promise.
      */
     self.claim = function() {
         return dataCenterService.find(arguments)
             .then(function(dataCenters) {
                 return Promise.all(_.map(dataCenters, claimNetwork));
             })
-            .then(buildRefs);
+            .then(_.noop);
     };
 
     function claimNetwork(dataCenter) {
-        return networkClient.claimNetwork(dataCenter.id);
-    }
+        var promise = new OperationPromise(queueClient, "Claim Network");
 
-    function buildRefs(networks) {
-        return _.map(networks, buildRef);
+        networkClient.claimNetwork(dataCenter.id)
+            .then(promise.resolveWhenJobCompleted, promise.processErrors);
+
+        return promise;
     }
 
     function buildRef(network) {
@@ -3341,7 +3435,7 @@ function Networks(dataCenterService, networkClient) {
      * and wish to to release it back a given data center.
      * Before you can release a network, there must be no IP addresses claimed by servers.
      *
-     * @param {DataCenterCriteria} dataCenterCriteria - criteria that specify set of data centers
+     * @param {NetworkCriteria} networkSearchCriteria - criteria that specify set of data centers
      * @returns {Promise<Array<Reference>>} - promise that resolved by list of references to
      *                                            successfully processed resources.
      */
@@ -3439,7 +3533,7 @@ function Networks(dataCenterService, networkClient) {
 
     init();
 }
-},{"./../../base-services/datacenters/domain/datacenter-criteria.js":5,"./../../base-services/queue/domain/no-wait-operation-promise.js":12,"./../../core/search/criteria.js":94,"./../../core/search/search-support.js":96,"./domain/network-criteria.js":37,"bluebird":"bluebird","underscore":"underscore"}],41:[function(require,module,exports){
+},{"./../../base-services/datacenters/domain/datacenter-criteria.js":5,"./../../base-services/queue/domain/no-wait-operation-promise.js":12,"./../../base-services/queue/domain/operation-promise.js":13,"./../../core/search/criteria.js":94,"./../../core/search/search-support.js":96,"./domain/network-criteria.js":37,"bluebird":"bluebird","underscore":"underscore"}],41:[function(require,module,exports){
 var NoWaitOperationPromise = require('./../../../base-services/queue/domain/no-wait-operation-promise.js');
 var _ = require('./../../../core/underscore.js');
 var PolicyCriteria = require("./domain/policy-criteria.js");
@@ -8564,9 +8658,7 @@ function Templates (dataCenterService, serverClient) {
 }
 
 },{"./../../core/search/criteria.js":94,"./../../core/search/search-support.js":96,"./domain/template-criteria.js":81,"bluebird":"bluebird","underscore":"underscore"}],83:[function(require,module,exports){
-
-var fs = require('fs');
-var properties = fs.readFileSync('./package.json', 'utf8');
+var properties = require('../package.json');
 
 module.exports = Config;
 
@@ -8579,10 +8671,10 @@ function Config() {
     };
 
     function getProperties() {
-        return JSON.parse(properties);
+        return properties;
     }
 }
-},{"fs":98}],84:[function(require,module,exports){
+},{"../package.json":99}],84:[function(require,module,exports){
 (function (process){
 
 module.exports = {
@@ -8651,7 +8743,7 @@ function EnvironmentCredentialsProvider (usernameKey, passwordKey) {
     init();
 }
 }).call(this,require('_process'))
-},{"_process":99}],85:[function(require,module,exports){
+},{"_process":98}],85:[function(require,module,exports){
 
 var rest = require('restling');
 var Config = require('./../../config.js');
@@ -8786,7 +8878,7 @@ function AuthenticatedClient (username, password, options) {
 
 }
 }).call(this,require('_process'))
-},{"./../../config.js":83,"./../auth/login-client.js":85,"./sdk-client.js":88,"_process":99,"restling":"restling","underscore":"underscore"}],87:[function(require,module,exports){
+},{"./../../config.js":83,"./../auth/login-client.js":85,"./sdk-client.js":88,"_process":98,"restling":"restling","underscore":"underscore"}],87:[function(require,module,exports){
 var Promise = require('bluebird');
 
 module.exports = PromiseRetry;
@@ -9463,8 +9555,6 @@ _.mixin({
     }
 });
 },{"bluebird":"bluebird","underscore":"underscore"}],98:[function(require,module,exports){
-
-},{}],99:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -9557,98 +9647,70 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],"clc-sdk":[function(require,module,exports){
-
-var CommandLineCredentialsProvider = require('./core/auth/credentials-provider.js').CommandLineCredentialsProvider;
-var EnvironmentCredentialsProvider = require('./core/auth/credentials-provider.js').EnvironmentCredentialsProvider;
-var AuthenticatedClient = require('./core/client/authenticated-client.js');
-var ComputeServices = require('./compute-services/compute-services.js');
-var BaseServices = require('./base-services/base-services.js');
-var _ = require('underscore');
-
-
-module.exports = ClcSdk;
-
-function ClcSdk () {
-    var self = this;
-    var username;
-    var password;
-    var clientOptions;
-
-    function init (args) {
-        clientOptions = getClientOptions(args);
-
-        if (args.length >= 2 &&
-                typeof(args[0]) === 'string' &&
-                typeof(args[1]) === 'string') {
-            initWithCredentials(args[0], args[1]);
-            return;
-        }
-
-        if (args.length > 1 && args[0] instanceof Object) {
-            initWithCredentialsProvider(args[0]);
-            return;
-        }
-
-        initWithDefaultCredentialsProvider();
-    }
-
-    function initWithCredentials(usernameVal, passwordVal) {
-        username = usernameVal;
-        password = passwordVal;
-    }
-
-    function initWithCredentialsProvider(credentialsProvider) {
-        username = credentialsProvider.getUsername();
-        password = credentialsProvider.getPassword();
-    }
-
-    function initWithDefaultCredentialsProvider() {
-        var provider = new CommandLineCredentialsProvider();
-
-        username = provider.getUsername();
-        password = provider.getPassword();
-
-        if (!username && !password) {
-            var environmentCredentials = new EnvironmentCredentialsProvider();
-
-            username = environmentCredentials.getUsername();
-            password = environmentCredentials.getPassword();
-        }
-    }
-
-    function getClientOptions(args) {
-        if (args.length === 0) {
-            return {};
-        }
-        var options = _.last(args);
-
-        if (options instanceof Object) {
-            return {
-                maxRetries: options.maxRetryCount,
-                retryInterval: options.retryInterval
-            };
-        }
-    }
-
-    self.authenticatedClient = _.memoize(function () {
-        return new AuthenticatedClient(
-            username,
-            password,
-            clientOptions
-        );
-    });
-
-    self.baseServices = _.memoize(function () {
-        return new BaseServices(self.authenticatedClient);
-    });
-
-    self.computeServices = _.memoize(function () {
-        return new ComputeServices(self.authenticatedClient, self.baseServices);
-    });
-
-    init (arguments);
+},{}],99:[function(require,module,exports){
+module.exports={
+  "name": "clc-node-sdk",
+  "version": "1.1.2",
+  "description": "CenturyLink Cloud SDK for Node.js",
+  "author": "Ilya Drabenia <ilya.drabenia@altoros.com>",
+  "contributors": [
+    "Aliaksandr Krasitski <aliaksandr.krasitski@altoros.com>",
+    "Sergey Fedosenko <siarhei.fiadosenka@altoros.com>"
+  ],
+  "main": "./clc-sdk.js",
+  "files": [
+    "clc-sdk.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CenturyLinkCloud/clc-node-sdk.git"
+  },
+  "bugs": {
+    "url": "https://github.com/CenturyLinkCloud/clc-node-sdk/issues"
+  },
+  "keywords": [
+    "ctl",
+    "ctl.io",
+    "clc",
+    "centurylink",
+    "cloud",
+    "sdk",
+    "api"
+  ],
+  "scripts": {
+    "tests": "mocha --fgrep [UNIT]",
+    "tests-watch": "watch \"npm run tests\" lib test",
+    "integration-tests": "mocha --recursive test/*/*/*.js --fgrep [INTEGRATION]",
+    "long-running-tests": "mocha --recursive test/*/*/*.js --fgrep \"[INTEGRATION, LONG_RUNNING]\"",
+    "jshint": "jshint --verbose ./lib ./test",
+    "jshint-watch": "watch \"npm run jshint\" lib test",
+    "watch-all": "npm run tests-watch & npm run jshint-watch",
+    "gen-docs": "node_modules\\.bin\\jsdoc -c conf.json",
+    "tests-coverage": "istanbul cover ./node_modules/mocha/bin/_mocha -- -u exports -R spec --fgrep UNIT",
+    "loc": "sloc --format cli-table --keys total,source,comment --exclude \"(node_modules\\.*|cassettes\\.*|docs\\.*|coverage\\.*|\\.*idea\\.*)\" ."
+  },
+  "dependencies": {
+    "bluebird": "2.9.26",
+    "restling": "0.9.1",
+    "underscore": "1.8.3",
+    "ip-subnet-calculator": "1.0.2",
+    "moment": "2.10.3",
+    "simple-ssh": "0.8.6"
+  },
+  "devDependencies": {
+    "istanbul": "^0.3.17",
+    "jsdoc": "^3.3.1",
+    "jshint": "^2.8.0",
+    "mocha": "^2.2.5",
+    "nock-vcr-recorder-mocha": "^0.3.2",
+    "path": "^0.12.7",
+    "sloc": "^0.1.9",
+    "watch": "^0.16.0",
+    "browserify": "^11.2.0"
+  },
+  "license": "Apache-2.0"
 }
-},{"./base-services/base-services.js":2,"./compute-services/compute-services.js":27,"./core/auth/credentials-provider.js":84,"./core/client/authenticated-client.js":86,"underscore":"underscore"}]},{},[]);
+
+},{}]},{},[]);
 
 module.exports = require('clc-sdk');
