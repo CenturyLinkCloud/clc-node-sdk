@@ -12,4 +12,11 @@ Implemented features
 Release v1.1.1
 ---
 Implemented features
+
 * [Release version 1.1.1 to npm](https://github.com/CenturyLinkCloud/clc-node-sdk/issues/193)
+
+Release v1.1.2
+---
+Implemented features
+
+* Change 'claim network' response

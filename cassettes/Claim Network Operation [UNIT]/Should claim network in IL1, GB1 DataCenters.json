@@ -1,0 +1,162 @@
+[
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2-experimental/networks/ALTD/gb1",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3bac3a8c381c383c3b37b07c3b7c3b7c2b2c2873bc3934fc3b777c2a7c2936c7f2fc38f1fc29cc3afc39ec38bc3afc38dc3b6667b7b1fc28d3ec29a16c2b3c29a5ac3aec3aec28c3fc39d1dc3afc3adc39d1bc3afc39cc39dc39bc2a7c38f677933c2adc28b555b544bc3bac3bac2b2c38cc296c2bfc3bf2e7dc3bdc3bbc39bc286c394c3a6226bc3b3c2abc3acc29ac2bec2b7c29fc28e77c3a9c3b365c2b6c388c3a9c383c3b84bc38bc2bc5d64c38d5bc3ba7ec3afc3bec3bdc2b1c3b9c3bf0e7dc3935ec2afc3b0c39ac2aa2e2e09307d00001f3d02c284c3914765c2b17cc39b7cc3b4c2884656c3a725c2b56ac3b2c3b2c29cc29ac38cc3abc3bcc29cc3bec2ba7bc2b9c2b7c29dc2bf5bc3a575c2b1c388c2976d56c39ec2a55ec2aec2aac3ba6d73372bc39bc399c39dc28bc389c3aec39d5bc390c3a232c2af27c3a8c3a3c2a3c38f4fc39fc390c29f2fc2bf7ac3b3c391c3b77fc389c388c3b458c2acc28e67c2b33a6fc29ac2bcc2a12fc2bfc2b9c28ec3afc286c2800324c2bcc3aec3a9c39f3c6b40c2966fc2b06b07c39476c3bbc3b2c38bc397c3a8c2977b6626c38a1f1c3cc38c67c29fc3ae3fc2bcc29f4fc3b6c3afc39dc38b1ec3a6c293c3a9c381c39ec3b9c3bec3a47cc3a7c3a1c3bd59c29ec391c38b2113c3ad7fc2bac291c289c3b63f35c3bcc2b0c3bf29c2b5c3a93111c2bdc39e67c2a2c38e4b34c394c3b765c2a2c3bd4fc2bf0126c2ba052d2c21317fc39f1813c39dc394c3b1c38f2213c39dc398c2b5036ac2bbc2b54cc3b4c3bdc3bf07113bc281c3a7c28b040000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Wed, 06 Jan 2016 09:19:44 GMT",
+      "content-length": "475"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2-experimental/networks/ALTD/il1",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba687670c2b0c2bfc2b7c2b3c29bc39fc38f1ec38cc3b6c2b3c3b3c29dc389c3bdc3bbc393c3bb0f67c393c399c283c39dc2837bc2bb0f271fc28d3ec29a16c2b3c29a5ac3aec3aec28c1fc39e1bc39f7f38c39ec2b9c2bbc2b74f1fc38fc3b2665a17c2abc2b6c2a8c296c3b4c3ad65c2992d7fc3bfc2bdc287c3b71fc3bec3bec2a61d35c2b9c388c39ac3bc2ac2bbc2a6c2afc38dc287c3a35dc3ba78c2992d72c3ba2cc3bac38a326f1759c3b3c296c2bec39ec2bb7f7f6cc3bec2bf43c39fc2b4c3972bc2bcc2b5c2aac28b4b024b1fc3a0c3bdc28f1e01c380c3a8c2a3c2b258c2be6d3e7a44c2a3c2aac3b3c2925a3579794e4dc3a6757e4e7fc39dc2bdc39cc39bc38ec39fc2adc3b2c2ba58c3a4c38b362bc3af522f5755c3bdc2b6c2b9c29bc295c3adc3ac6e51c3aec39ec2bd051d2ec3b37ac2823e3ec3bac3bcc3b40dc3bdc3b9c3b2c2ab371f7dc3bfc297c28c4cc28fc385c3aa7836c2abc3b3c2a6c3891bc3bac3b2c29bc3abc3b86e083840c382c3abc29ec3bec38dc2b30664c3b906c2bb76406dc2b72fc2bf7cc28d7ec2bfc3bf4bc2bec3bfc3bf00471fc2833242020000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Wed, 06 Jan 2016 09:19:44 GMT",
+      "content-length": "384"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "POST",
+    "path": "/v2-experimental/networks/ALTD/gb1/claim",
+    "body": {},
+    "status": 202,
+    "response": {
+      "rel": "status",
+      "href": "/v2/operations/altd/status/gb1-67892",
+      "id": "gb1-67892"
+    },
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "expires": "-1",
+      "date": "Wed, 06 Jan 2016 09:19:46 GMT",
+      "content-length": "79"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "POST",
+    "path": "/v2-experimental/networks/ALTD/il1/claim",
+    "body": {},
+    "status": 202,
+    "response": {
+      "rel": "status",
+      "href": "/v2/operations/altd/status/il1-175596",
+      "id": "il1-175596"
+    },
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "expires": "-1",
+      "date": "Wed, 06 Jan 2016 09:19:48 GMT",
+      "content-length": "81"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2/operations/ALTD/status/gb1-67892",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f227ec3b1474dc29bc2b5c3abc3a6c2a3471f35c3abc3a934c38f67c3b9c3acc2a35fc3b2c3bf00c3b707c3a76216000000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Wed, 06 Jan 2016 09:20:57 GMT",
+      "content-length": "141"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2/operations/ALTD/status/il1-175596",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f227ec3b1474dc29bc2b5c3abc3a6c2a3471f35c3abc3a934c38f67c3b9c3acc2a35fc3b2c3bf00c3b707c3a76216000000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Wed, 06 Jan 2016 09:21:23 GMT",
+      "content-length": "141"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2-experimental/networks/ALTD/gb1",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3bac3a8c381c383c3b37b07c3b7c3b7c2b2c2873bc3934fc3b777c2a7c2936c7f2fc38f1fc29cc3afc39ec38bc3afc38dc3b6667b7b1fc28d3ec29a16c2b3c29a5ac3aec3aec28c3fc39d1dc3afc3adc39d1bc3afc39cc39dc39bc2a7c38f677933c2adc28b555b544bc3bac3bac2b2c38cc296c2bfc3bf2e7dc3bdc3bbc39bc286c394c3a6226bc3b3c2abc3acc29ac2bec2b7c29fc28e77c3a9c3b365c2b6c388c3a9c383c3b84bc38bc2bc5d64c38d5bc3ba7ec3afc3bec3bdc2b1c3b9c3bf0e7dc3935ec2afc3b0c39ac2aa2e2e09307d00001f3d02c284c3914765c2b17cc39b7cc3b4c2884656c3a725c2b56ac3b2c3b2c29cc29ac38cc3abc3bcc29cc3bec2ba7bc2b9c2b7c29dc2bf5bc3a575c2b1c388c2976d56c39ec2a55ec2aec2aac3ba6d73372bc39bc399c39dc28bc389c3aec39d5bc390c3a232c2af27c3a8c3a3c2a3c38f4fc39fc390c29f2fc2bf7ac3b3c391c3b77fc389c388c3b458c2acc28e67c2b33a6fc29ac2bcc2a12fc2bfc2b9c28ec3afc286c2800324c2bcc3aec3a9c39f3c6b40c2966fc2b06b07c39476c3bbc3b2c38bc397c3a8c2977b66263ac398c3bbc3b4c39ec283c389c3bec3b4c3816cc3af60c3bfc3bec39e6cc2b273c3be20c2bb7770c3b0c3a0c3be747732c39dc38fc3a8c3a5c290c289c3b6c3b73632c391c3bec29ec3a1c2877d10c2bdc38744c3b47ac29fc2893a2fc39150c39fc297c289c3b6c3b7c2be0126c2ba052d2c21317fc39f1813c39dc394c3b1c38f2213c39dc398c2b5036ac2bbc3ad3151c3bec3a0c3a0613ec3bb74c3bfc3a1c3bd7cc2b27fc3af5ec3b630c29f4c0fc3b6c38ec3b727c3a73b0fc3afc38f7210c2aec38344c29f6e66c2a24f2d3f7c4a6dc3ba4cc3b469c28cc289c382c29768c2a8c3afc38d44c29f7e034c740b5a584262c3bec2be3126c2bac2a9c3a3c29f4526c2bac2b16b07c394766bc299c3a8c3bbc3bf0fc3bcc3b05521c390060000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Wed, 06 Jan 2016 09:21:23 GMT",
+      "content-length": "560"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2-experimental/networks/ALTD/il1",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba687670c2b0c2bfc2b7c2b3c29bc39fc38f1ec38cc3b6c2b3c3b3c29dc389c3bdc3bbc393c3bb0f67c393c399c283c39dc2837bc2bb0f271fc28d3ec29a16c2b3c29a5ac3aec3aec28c1fc39e1bc39f7f38c39ec2b9c2bbc2b74f1fc38fc3b2665a17c2abc2b6c2a8c296c3b4c3ad65c2992d7fc3bfc2bdc287c3b71fc3bec3bec2a61d35c2b9c388c39ac3bc2ac2bbc2a6c2afc38dc287c3a35dc3ba78c2992d72c3ba2cc3bac38a326f1759c3b3c296c2bec39ec2bb7f7f6cc3bec2bf43c39fc2b4c3972bc2bcc2b5c2aac28b4b024b1fc3a0c3bdc28f1e01c380c3a8c2a3c2b258c2be6d3e7a44c2a3c2aac3b3c2925a3579794e4dc3a6757e4e7fc39dc2bdc39cc39bc38ec39fc2adc3b2c2ba58c3a4c38b362bc3af522f5755c3bdc2b6c2b9c29bc295c3adc3ac6e51c3aec39ec2bd051d2ec3b37ac2823e3ec3bac3bcc3b40dc3bdc3b9c3b2c2ab371f7dc3bfc297c28c4cc28fc385c3aa7836c2abc3b3c2a6c3891bc3bac3b2c29bc3abc3b86e083840c382c3abc29ec3bec38dc2b30664c3b906c2bb76406dc2b72fc2bf7cc28d7ec2b96766c2a007c3b9c39ec3a47cc3b75e3e7dc3b8c3a0607fc3ba60c296c39dc2a3c39fc2b3c389c3a4c3a1c3834f09c3b8c38e3d7ac39931c390c3aec3bec3bec3b8c381c2a71b38c3a8c39ec39ec2834fc3810ec392c290c39a042c24c29fc3b678c2a8c3b7120dc3b5c3bdc2980810c2be0126c2ba052d2c21317fc39f1813c39dc394c3b1c38f2213c39dc398c2b5036ac2bbc2b54cc3b4c3bdc3bf071217c3a92dc287040000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Wed, 06 Jan 2016 09:21:23 GMT",
+      "content-length": "478"
+    }
+  }
+]
