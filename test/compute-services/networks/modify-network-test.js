@@ -16,8 +16,7 @@ vcr.describe('Modify Network Operation [UNIT]', function () {
 
         var networkName = 'test network';
 
-        Promise.resolve()
-            .then(_.partial(claimNetwork, compute.DataCenter.DE_FRANKFURT))
+        compute.networks().findSingle({id: '302e98170e31408189ff1aab417bc8b4'})
 
             .then(_.partial(modifyNetwork, {name: networkName}))
 
@@ -33,8 +32,7 @@ vcr.describe('Modify Network Operation [UNIT]', function () {
         var networkName = 'network1';
         var networkDescription = 'description 1';
 
-        Promise.resolve()
-            .then(_.partial(claimNetwork, compute.DataCenter.DE_FRANKFURT))
+        compute.networks().findSingle({id: 'e789ed6495eb433a9ebc82f4bf095dea'})
             .then(_.partial(modifyNetwork,
                 {
                     name: networkName,
@@ -61,12 +59,6 @@ vcr.describe('Modify Network Operation [UNIT]', function () {
         return assertNetwork(function (metadata) {
             assert.equal(metadata.description, expectedDescription);
         });
-    }
-
-    function claimNetwork (dataCenter) {
-        return compute.networks()
-            .claim(dataCenter)
-            .then(assertThatRefIsCorrect);
     }
 
     function assertThatNetworkNameIs (name) {

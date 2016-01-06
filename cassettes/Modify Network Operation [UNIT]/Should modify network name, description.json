@@ -1,53 +1,12 @@
 [
   {
     "scope": "https://api.ctl.io:443",
-    "method": "POST",
-    "path": "/v2-experimental/networks/ALTD/de1/claim",
-    "body": {},
-    "status": 200,
-    "response": [
-      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f227ec3b147c385c3acc2a3471f7d7ac3be69c296c3ad7d3ac29d1e4cc3b7c3b6c3b7c3b67727c3b4c3abc283c3b3c3bdc39dc3bd3c3f3fc298c3adc38e3e1a7d342d6635c2b5c39cc39d19c3afc392c3bfc3b7c3b6c3b7c3873b77c3b7c3b6c3a9c28b59c39e4cc3ab62c39516c395c292c2bec2bf2cc2b3c3a5c3afc2bfc2bfc2bfc3bfc3bb53236d486d2ec2b236c2bfc38ac2aec3a97bc3ba483f1ec3afc39217c38b6cc291c393c2a7c3b1c2b7c29679c2bbc388c29ac2b7c3b4c3bdc39ec3bdc3bb63c3b3c3bf1dc3bac2a6c2bd5ec3a1c2b5555d5c1264c3ba00003e7a4410461fc295c385c3b26dc3b3c391c2a3c3afc3bdc3a2c28fc3aac2bcc2a4464d5ec29e53c28b79c29dc29fc3935fc3b3c2b65d3dc2ba7b375b15c3a3695bc28ec28bc3aac3aec3a5c39e76c3be6ec295c397c385225fc2b65979c2977ac2bdc2aac3aac2b7c38dc39dc2ac6c677767c3b9c3aec39d5b50c3a732c2af27c3a8c3b4c2a3c38f4fc39fc390c29f2fc2bf7ac3b3c391c3b77fc389c388c2a050c2acc28e67c2b33a6fc29ac2bcc2a12f7f1631c2b91bc3b61460c3a5c3a143c3bfc3a65903c2bac3bd6cc3a2c3a27ac2b178c2bcc3bcc3b23510c3b9c3be2fc3b97f001bc29422c3ab78020000"
-    ],
-    "headers": {
-      "cache-control": "no-cache",
-      "pragma": "no-cache",
-      "content-type": "application/json; charset=utf-8",
-      "content-encoding": "gzip",
-      "expires": "-1",
-      "vary": "Accept-Encoding",
-      "date": "Wed, 09 Sep 2015 14:19:22 GMT",
-      "content-length": "400"
-    }
-  },
-  {
-    "scope": "https://api.ctl.io:443",
-    "method": "GET",
-    "path": "/v2-experimental/networks/ALTD/de1",
-    "body": "",
-    "status": 200,
-    "response": [
-      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3bac3a87c32c39d3dc3bf74c3ba6036c39bc399c39bc39fc29dc29d677b7bc293c3ac3cc39bc2b9c2bfc2b7c2bf3fc38b76763e1a7d342d6635c2b5c39cc39d19c3afc392c3bfc3afc28f77c3aec3aec3adc393c387c2b3c2bcc299c396c385c2aa2dc2aa257d7b5966c38bc39f7f6fc3a7c3bec3af4f4dc2b819c2b5c2b8c388c39ac3bc2ac2bbc2a66fc3a903c3be70c2bc4b1f2fc2b3454ec29fc385c39e58c3a6c3ad226bc39ec392c2b77bc3b7c3afc28fc38dc3bfc281447bc2bdc3824bc2abc2bac2b824c2a8c3b4015ec3bfc3a811c2bd3fc3bac2a82cc2966fc29bc28f1ec391c290c3aac2bcc2a4464d5ec29e53c28b79c29dc29fc3935fc3b3c2b65d3dc2ba7b375b15c3a3695bc28ec28bc3aac3aec3a5c39e76c3be6ec295c397c385225fc2b65979c2977ac2bdc2aac3aac2b7c38dc39dc2ac6c677767c3b9c3aec39d5b50c3a532c2af27c3a8c3b4c2a3c38f4fc39fc390c29f2fc2bf7ac3b3c391c3b77fc389c388c2a050c2acc28e67c2b33a6fc29ac2bcc2a12f7f1631c2b91bc3b61460c3a5c3a143c3bfc3a65903c2bac3bd6cc3a2c3a27ac2b178c2bcc3bcc3b235106154c298c3a10e761ec3ae3d7cc3b070c3afc3a07c77c2b6c2bfc2b7c2b73f793879c3b870c3afc381c3b9c283c3bdc3bbc293c3a9c38ec3811ec2bd1c32c39cc2bd07c29b38c3aec39e03c3833fc3b71e50c2931ec38bc391c39b3dc29ec3abc2bc43037d4fc2a6c2bbc3b7c3a067c283c3a96e41194b564cc3afc38f1ec393c39dc284c3890fc293c3a96ec384c385c3b562c3b1c3a831c39dc3bdc3b307c3947a76706fc3afc3a1c39ec3bec283073b070fc2b3c399c3bec2836cc3b270c3a77cc3b7c39ec3bdc3b37bc3b472c38874c2bb3b0f3770c39dc2bdc29dc287c286c283c2a821c2b5c3a9c2b11d7dc39cc3a3c2bbc39e5b34c398c3b7633cc282c3b0c2b3c38178c2b7c2a0c28e252dc2a6c3b867c28fc3b16ec382c3a4c287c3897837c3a2c3a27ac2b178c3b4186fc2b2333bc39f3dc398c39bc29f4d67c3b7c3b767c3b71e1ec3a413c392c294c2937b7b7b0fc3afc3adc29dc3af67c3b472c287c3b11ec3ae6d62c2bcc2877bc296c2851e4221c3b419c28fc39ec3af315ec3b72d1ac3ac7b32c39ec383c2bdc29f0dc386c2bb05752c6931c3853f7bc28c7713263f4cc386c2bb1117c397c28bc385c2a3c38778c3b7c3b6c3af7fc3ba607ac3afc3937c6f72c2bec3bf60c3b669763ec299647b3b0fc2b27bc399c39e41767f4a2fc287c28cc2b7c2b77bc2b0c281c3b1c3b6770f0c0b51436ac393633cc3bac2b8c38778c2bdc2b768c2b0c3afc3877804c3a167c283c3b16e411d4b5a4cc3b1c38f1ec3a3c39dc284c3890fc293c3b16ec384c385c3b562c3b1c3a831c39ec3b97936c399c29dc39dc3bb74c3bfc39ec2a7c2b3c3bdc287c3b7c38fc2b34f773ec29dc29d4f33c3b210c3b71f3e3800693bc28cc2b77f6f13c3a3c3ad",
-      "c39fc2b32cc2b40f4bc394673c7ac2bfc38778c39dc2b768c2b0c3afc38978c3bbc3b77e3618c3af16c394c2b1c2a4c38514c3bfc3ac31c39e4dc298c3bc3019c3af465c5c2f16c28f1ec3a37d7ac3be69c296c3ad7d3ac29d1e4cc3b7c3b6293ec299c390c2af0fc38ec3b777c3b7c3b3c3bcc3bc60c2b63bc2a3c297c2bbc28cc2b7c2bfc291c3b1c3b61d0bc2a14dc284c3b1c3b623c28cc39779c28b06c3bbc2bec28cc2b7c3bfc2b3c38178c2b7c2a0c28e252dc2a6c3b867c28fc3b16ec382c3a4c287c3897837c3a2c3a27ac2b17858c386c3bbc3bec3bf03c2a8656f2144110000"
-    ],
-    "headers": {
-      "cache-control": "no-cache",
-      "pragma": "no-cache",
-      "content-type": "application/json; charset=utf-8",
-      "content-encoding": "gzip",
-      "expires": "-1",
-      "vary": "Accept-Encoding",
-      "date": "Wed, 09 Sep 2015 14:19:23 GMT",
-      "content-length": "942"
-    }
-  },
-  {
-    "scope": "https://api.ctl.io:443",
     "method": "GET",
     "path": "/v2-experimental/networks/ALTD/gb1",
     "body": "",
     "status": 200,
     "response": [
-      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba68c2ba7bc3bf6067673f7bc2b077c2bec2bbc29fc3a50f1fc38ec3ae3dc2b8c29fc39dc39b7dc3b8c3b0c381c3bec283c389c381c39e47c2a3c28fc2a6c385c2acc2a6c296c2bb3bc3a34f77c386c2bbc3b776c3863b77c3b7c3b6c3a9c3b359c39e4cc3ab62c39516c395c292c2bec2be2cc2b3c3a5c3af7f706fc3a7c3b7c2b7c3adc2a8c38945c396c3a657c399357d6d3f1dc3afc392c3a7c38b6cc291c393c287c39177c29679c2bbc388c29ac2b7c3b4c3b5c39ec3bdc3bb63c3b37f7cc3935ec2afc3b0c396c2aa2e2e092e7dc280c3b73f7a4400461fc295c385c3b26dc3b3c391231a56c29dc297c394c2a8c389c38b736a31c2afc3b373c3ba6bc39ec2b6c2ab4777c3af66c2ab623c6dc38b7151c39dc2bdc39cc39bc38ec39fc2adc3b2c2ba58c3a4c38b362bc3af52c2af5755c3bdc2b6c2b9c29bc295c3adc3acc3aec38564c3b7c3ae2d2873c299c3971374c3bac391c3a7c2a76fc3a8c38fc2975fc2bdc3b9c3a8c3bbc2bf6464502856c387c2b359c29d374dc39ec390c2973fc28bc298c39c0d7b0ac2b0c3b2c3b0c2a17fc3b3c2ac01c39d7e367171c2bd583c5e7ec3b91ac288302ac38c74c3b9c283c283c287c3b9c3acc393c3bdc287c3b7c3b3c389c3bec2bd7bc399c3837c323dc3983bc39fc29fc29cc3af3cc2bc3fc38b337ac39963c2bac39dc3b1c39ec3bec2a71bc2986ec297c2be660ec3a2c286c39426c3a43ac3bec2b4c38775c2bdc29768c2a8c3afc38776c280c3b0c2b3c38177c2b720c28ec2a52c66c3b867c28fc3af6ec382c3a4c287c3897737c3a2c3a27ac2b17858c2bec3bbc3bec3bf033a62c3ab69c3ae040000"
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3bac3a8c381c383c3b37b07c3b7c3b7c2b2c2873bc3934fc3b777c2a7c2936c7f2fc38f1fc29cc3afc39ec38bc3afc38dc3b6667b7b1fc28d3ec29a16c2b3c29a5ac3aec3aec28c3fc39d1dc3afc3adc39d1bc3afc39cc39dc39bc2a7c38f677933c2adc28b555b544bc3bac3bac2b2c38cc296c2bfc3bf2e7dc3bdc3bbc39bc286c394c3a6226bc3b3c2abc3acc29ac2bec2b7c29fc28e77c3a9c3b365c2b6c388c3a9c383c3b84bc38bc2bc5d64c38d5bc3ba7ec3afc3bec3bdc2b1c3b9c3bf0e7dc3935ec2afc3b0c39ac2aa2e2e09307d00001f3d02c284c3914765c2b17cc39b7cc3b4c2884656c3a725c2b56ac3b2c3b2c29cc29ac38cc3abc3bcc29cc3bec2ba7bc2b9c2b7c29dc2bf5bc3a575c2b1c388c2976d56c39ec2a55ec2aec2aac3ba6d73372bc39bc399c39dc28bc389c3aec39d5bc390c3a232c2af27c3a8c3a3c2a3c38f4fc39fc390c29f2fc2bf7ac3b3c391c3b77fc389c388c3b458c2acc28e67c2b33a6fc29ac2bcc2a12fc2bfc2b9c28ec3afc286c2800324c2bcc3aec3a9c39f3c6b40c2966fc2b06b07c39476c3bbc3b2c38bc397c3a8c2977b66263ac398c3bbc3b4c39ec283c389c3bec3b4c3816cc3af60c3bfc3bec39e6cc2b273c3be20c2bb7770c3b0c3a0c3be747732c39dc38fc3a8c3a5c290c289c3b6c3b73632c391c3bec29ec3a1c2877d10c2bdc38744c3b47ac29fc2893a2fc39150c39fc297c289c3b6c3b7c2be0126c2ba052d2c21317fc39f1813c39dc394c3b1c38f2213c39dc398c2b5036ac2bbc3ad3151c3bec3a0c3a0613ec3bb74c3bfc3a1c3bd7cc2b27fc3af5ec3b630c29f4c0fc3b6c38ec3b727c3a73b0fc3afc38f7210c2aec38344c29f6e66c2a24f2d3f7c4a6dc3ba4cc3b469c28cc289c382c29768c2a8c3afc38d44c29f7e034c740b5a584262c3bec2be3126c2bac2a9c3a3c29f4526c2bac2b16b07c394766bc299c3a8c3bbc3bf0fc3bcc3b05521c390060000"
     ],
     "headers": {
       "cache-control": "no-cache",
@@ -56,8 +15,8 @@
       "content-encoding": "gzip",
       "expires": "-1",
       "vary": "Accept-Encoding",
-      "date": "Wed, 09 Sep 2015 14:19:23 GMT",
-      "content-length": "493"
+      "date": "Wed, 06 Jan 2016 11:05:52 GMT",
+      "content-length": "560"
     }
   },
   {
@@ -67,7 +26,7 @@
     "body": "",
     "status": 200,
     "response": [
-      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba6836c38bc3af1fc3ac3dc3983dc29f4dc3b3c3bdc3bdc283c389c381c3837bc3b70fc3b6c3afc3af7f7a7fc3b77cc3b7c393c3a9c3ae47c2a3c28fc2a6c385c2acc2a6c296c2bb3bc3a3c39dc29d4fc387c3bbc3b7c3873b77c3b7c3b6c3a9c3b359c39e4cc3ab62c39516c395c292c2bec2be2cc2b3c3a5c3afc2bf776fc3bfc3bec3af6f1b52c29bc28bc2acc38dc2afc2b26bc3bac39e7e3a06c38c65c2b6c388c3a9c383c3b84bc38bc2bc5d64c38d5bc3ba7ec3afc3bec3bdc2b1c3b9c3bf0e7dc3935ec2afc3b0c39ac2aa2e2e09307d00001f3d02c284c3914765c2b17cc39b7cc3b4c2884656c3a725c2b56ac3b2c3b2c29cc29ac38cc3abc3bcc29cc3bec29ac2b7c3adc3aac391c39dc2bbc399c2aa184fc39b725c54772fc3b7c2b6c3b377c2abc2bc2e16c3b9c2b2c38dc38ac2bbc394c3ad5555c2bf6dc3ae66653bc2bb7b31c2b977c3b716c384c2b9c38cc3ab093ac3bdc3a8c3b3c39337c3b4c3a7c38bc2afc39e7cc3b4c3bd5f32322814c2abc3a3c399c2acc38ec29b266fc3a8c38bc29f454cc3aec2863d055879c3b8c390c2bf79c396c280703fc29bc2b8c2b85e2c1e2fc2bf7c0d44c2bec3bf4bc2bec3bfc3bf00c3b70f444e79020000"
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba6836c38bc3af1fc3ac3dc3983dc29f4dc3b3c3bdc3bdc283c389c381c3837bc3b70fc3b6c3afc3af7f7a7fc3b77cc3b7c393c3a9c3ae47c2a3c28fc2a6c385c2acc2a6c296c2bb3bc3a3c39dc29d4fc387c3bbc3b7c3873b77c3b7c3b6c3a9c3b359c39e4cc3ab62c39516c395c292c2bec2be2cc2b3c3a5c3afc2bf776fc3bfc3bec3af6f1b52c29bc28bc2acc38dc2afc2b26bc3bac39e7e3a06c38c65c2b6c388c3a9c383c3b84bc38bc2bc5d64c38d5bc3ba7ec3afc3bec3bdc2b1c3b9c3bf0e7dc3935ec2afc3b0c39ac2aa2e2e09307d00001f3d02c284c3914765c2b17cc39b7cc3b4c2884656c3a725c2b56ac3b2c3b2c29cc29ac38cc3abc3bcc29cc3bec2ba7bc2b9c2b7c29dc2bf5bc3a575c2b1c388c2976d56c39ec2a55ec2aec2aac3ba6d73372bc39bc399c39dc28bc389c2bdc2bbc2b7c2a0c385655e4fc390c38747c29fc29fc2bec2a13f5f7ec3b5c3a6c2a3c3afc3bfc292c291c3a9c2b1581dc38f6675c39e3479435f7e731dc39f0d01074878c39dc393c2bf79c396c2802cc39f60c3970ec2a8c3adc3b6c3a5c297c2afc391c3afc3b77fc389c3b7c3bf1f7e10c297c3b546020000"
     ],
     "headers": {
       "cache-control": "no-cache",
@@ -76,48 +35,8 @@
       "content-encoding": "gzip",
       "expires": "-1",
       "vary": "Accept-Encoding",
-      "date": "Wed, 09 Sep 2015 14:19:23 GMT",
-      "content-length": "400"
-    }
-  },
-  {
-    "scope": "https://api.ctl.io:443",
-    "method": "GET",
-    "path": "/v2-experimental/networks/ALTD/ny1",
-    "body": "",
-    "status": 200,
-    "response": [
-      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c3bdc3bf0729c2bb4c0d02000000"
-    ],
-    "headers": {
-      "cache-control": "no-cache",
-      "pragma": "no-cache",
-      "content-type": "application/json; charset=utf-8",
-      "content-encoding": "gzip",
-      "expires": "-1",
-      "vary": "Accept-Encoding",
-      "date": "Wed, 09 Sep 2015 14:19:23 GMT",
-      "content-length": "122"
-    }
-  },
-  {
-    "scope": "https://api.ctl.io:443",
-    "method": "GET",
-    "path": "/v2-experimental/networks/ALTD/il1",
-    "body": "",
-    "status": 200,
-    "response": [
-      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba687670c2b0c2bfc2b7c2b3c29bc39fc38f1ec38cc3b6c2b3c3b3c29dc389c3bdc3bbc393c3bb0f67c393c399c283c39dc2837bc2bb0f271fc28d3ec29a16c2b3c29a5ac3aec3aec28c1fc39e1bc39f7f38c39ec2b9c2bbc2b74f1fc38fc3b2665a17c2abc2b6c2a8c296c3b4c3ad65c2992d7fc3bfc2bdc287c3b71fc3bec3bec2a61d35c2b9c388c39ac3bc2ac2bbc2a6c2afc38dc287c3a35dc3ba78c2992d72c3ba2cc3bac38a326f1759c3b3c296c2bec39ec2bb7f7f6cc3bec2bf43c39fc2b4c3972bc2bcc2b5c2aac28b4b024b1fc3a0c3bdc28f1e01c380c3a8c2a3c2b258c2be6d3e7a44c2a3c2aac3b3c2925a3579794e4dc3a6757e4e7fc38dc39b76c3b5c3a8c3aec39d6c55c28cc2a76d392ec2aac2bbc2977bc39bc3b9c2bb555e17c28b7cc39966c3a55dc3aac3b6c2aac2aac39f3677c2b3c2b2c29dc39d2dc38ac39dc2bbc2b720c38c655e4fc390c3a947c29fc29fc2bec2a13f5f7ec3b5c3a6c2a3c3afc3bfc292c29141c2a1581dc38f6675c39e3479435fc3be2c627237c3ac29c380c38ac383c287c3bec38dc2b306c284c3bbc399c384c385c3b562c3b178c3b9c3a56b20c3b2c3bd5fc3b2c3bdc3bf07c28a5e544b75020000"
-    ],
-    "headers": {
-      "cache-control": "no-cache",
-      "pragma": "no-cache",
-      "content-type": "application/json; charset=utf-8",
-      "content-encoding": "gzip",
-      "expires": "-1",
-      "vary": "Accept-Encoding",
-      "date": "Wed, 09 Sep 2015 14:19:23 GMT",
-      "content-length": "399"
+      "date": "Wed, 06 Jan 2016 11:05:52 GMT",
+      "content-length": "384"
     }
   },
   {
@@ -127,7 +46,7 @@
     "body": "",
     "status": 200,
     "response": [
-      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3bac3a8c3bcc3bcc3a1c2a7c3b777c3ae4fc3aec3afc38fc2a6c3bb0f0fc3ae1fc3acc29dc39fc2bbc2b7c2b3c3bbc3a0c3a060722fc39f7f70c3bfc2a3c39147c393625653c38bc39dc29dc3b1c3bd4fc387c2bbc2bb0fc3873b77c3b7c3b6c3a9c3b359c39e4cc3ab62c39516c395c292c2bec2be2cc2b3c3a5c3afc3bf60c3b7c3a1c3af6fc39b51c293c28bc2acc38dc2afc2b26bc3bac39a7e3ac39ec2a5c38fc297c39922c2a70fc2a3c3af2cc3b376c291356fc3a9c3abc2bdc3bbc3b7c387c3a6c3bf3bc3b44d7bc2bdc3825bc2abc2bac2b824c2b8c3b401c39ec3bfc3a81101187d5416c38bc2b7c38d47c28f6858755e52c2a3262fc38fc2a9c385c2bcc38ec38fc3a9c2af79c39bc2ae1ec39dc2bdc29bc2adc28ac3b1c2b42dc3874575c3b7726f3b7fc2b7c38ac3ab62c2912fc39bc2acc2bc4bc2bd5e55c3b5c39bc3a66e56c2b6c2b3c2bbc3936cc3afc3ae2d2873c299c3971374c3bac391c3a7c2a76fc3a8c38fc2975fc2bdc3b9c3a8c3bbc2bf6464502856c387c2b359c29d374dc39ec390c2973fc28bc298c39c0d7b0ac2b0c3b2c3b0c2a17fc3b3c2ac01c39d7e367171c2bd583c5e7ec3b91ac2887cc3bfc2977cc3bfc3bf01c3bc65c394c38576020000"
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3bac3a8c3bcc3bcc3a1c2a7c3b777c3ae4fc3aec3afc38fc2a6c3bb0f0fc3ae1fc3acc29dc39fc2bbc2b7c2b3c3bbc3a0c3a060722fc39f7f70c3bfc2a3c39147c393625653c38bc39dc29dc3b1c3bd4fc387c2bbc2bb0fc3873b77c3b7c3b6c3a9c3b359c39e4cc3ab62c39516c395c292c2bec2be2cc2b3c3a5c3afc3bf60c3b7c3a1c3af6fc39b51c293c28bc2acc38dc2afc2b26bc3bac39a7e3ac39ec2a5c38fc297c39922c2a70fc2a3c3af2cc3b376c291356fc3a9c3abc2bdc3bbc3b7c387c3a6c3bf3bc3b44d7bc2bdc3825bc2abc2bac2b824c2b8c3b401c39ec3bfc3a81101187d5416c38bc2b7c38d47c28f6858755e52c2a3262fc38fc2a9c385c2bcc38ec38fc3a9c2afc2bbc2977bc39bc3b9c2bb555e17c28b7cc39966c3a55dc3aac3a4c2aac2aac39f3677c2b3c2b2c29dc39dc29d667b776f41c288c38bc2bcc29ec2a0c28fc28f3e3f7d437fc2bec3bcc3aac38d47c39fc3bf2523c39363c2b13ac29ec38dc3aac2bc69c3b2c286c2bec3bcc3a63ac2be1b020ec290c3b0c2bac2a77fc3b3c2ac0155c2bec381c2ae1d50c39bc3adc38b2f5fc2a3c39fc3afc3bfc292c3afc3bf3f64c3900f0843020000"
     ],
     "headers": {
       "cache-control": "no-cache",
@@ -136,28 +55,8 @@
       "content-encoding": "gzip",
       "expires": "-1",
       "vary": "Accept-Encoding",
-      "date": "Wed, 09 Sep 2015 14:19:23 GMT",
-      "content-length": "401"
-    }
-  },
-  {
-    "scope": "https://api.ctl.io:443",
-    "method": "GET",
-    "path": "/v2-experimental/networks/ALTD/ca3",
-    "body": "",
-    "status": 200,
-    "response": [
-      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba68c3a7c3934f7726c293c3b37bc2937c727fc3bfc381c2bdc3a9c3a4617670c3afc3a1c3b420c29f660f67c3b7270f3e1a7d342d6635c2b5c39cc39d19c3afc3aec3acc28cc3b7c3b61fc28c77c3aec3aec3adc39317c2b3c2bcc299c396c385c2aa2dc2aa257d7f5966c38bc39f7f7fc3bfc381c3afc3af1a52c29bc28bc2acc38dc2afc2b26bc3bac39e7d3cc39ec2a52fc296c39922c2a74fc3a36f2dc3b376c291356fc3a9c3bbc2bdc3bbc3b7c387c3a6c3bf3bc3b44d7bc2bdc3826bc2abc2bac2b824c388c3b401007cc3b4c28820c28c3e2ac28bc3a5c39bc3a6c2a34734c2b43a2fc2a951c293c297c3a7c394625ec3a7c3a7c3b4c397c2bc6d57c28fc3aec39ec38d56c38578c39ac296c3a3c2a2c2ba7bc2b9c2b7c29dc2bf5bc3a575c2b1c388c2976d56c39ec2a55ec2afc2aac3ba6d73372bc39bc399c39d6976c3afc3ae2dc2a873c299c3971374c3bac391c3a7c2a76fc3a8c38fc2975fc2bdc3b9c3a8c3bbc2bf6464502856c387c2b359c29d374dc39ec390c2973fc28bc298c39c0d7b0ac2b0c3b2c3b0c2a17fc3b3c2ac01c39d7e367171c2bd583c5e7ec3b91ac2887cc3bfc2977cc3bfc3bf0129c3a3c2b8c38a7a020000"
-    ],
-    "headers": {
-      "cache-control": "no-cache",
-      "pragma": "no-cache",
-      "content-type": "application/json; charset=utf-8",
-      "content-encoding": "gzip",
-      "expires": "-1",
-      "vary": "Accept-Encoding",
-      "date": "Wed, 09 Sep 2015 14:19:23 GMT",
-      "content-length": "400"
+      "date": "Wed, 06 Jan 2016 11:05:52 GMT",
+      "content-length": "385"
     }
   },
   {
@@ -167,7 +66,7 @@
     "body": "",
     "status": 200,
     "response": [
-      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba68c3a7c3a1c3bdc39dc28349c29e7dc2bac297c38dc3b6c3b7c3a8c297c3a9c2bdc389c2bdc39dc283c399c39ec3bdc2bdc28307c393c283c3bdc28f461f4dc28b594d2d7777c386c2bb7b0fc3867b7b3bc3a3c29dc2bb7bc3b862c29637c393c2ba58c2b545c2b5c2a4c3af2fc38b6cc3b9c3bbc3af1dc3acc3adc3bcc3bec2ae2535c2bac388c39ac3bc2ac2bbc2a606c3aec3a3c3b12e7dc2b1c38c16397d3ac3b0c39a326f1759c3b3c2961ac3acc39dc2bf3f36c3bfc38737c3adc3b50ac3afc2adc3aac3a2c29240c39307c280c3b0c39123c280187d5416c38bc2b7c38d47c28f6874755e52c2ab262fc38fc2a9c389c2bcc38ec38fc3a9c2af79c39bc2ae1ec39dc2bdc29bc2adc28ac3b1c2b42dc3874575c3b7726f3b7fc2b7c38ac3ab62c2912fc39bc2acc2bc4bc39d5e55c3b5c39bc3a66e56c2b6c2b3c2bbc297c399c3aec39d5b10c3a832c2af27c3a8c3b4c2a3c38f4fc39fc390c29f2fc2bf7ac3b3c391c3b77fc389c388c2a050c2acc28e67c2b33a6fc29ac2bcc2a12f7f1631c2b91bc3b61460c3a5c3a143c3bfc3a65903c382c3bd6cc3a2c3a27ac2b178c2bcc3bcc3b235106154c298c3b7c3b6763e7dc290c38dc3b666c3b7c3b2c2836c7f2fc38b1fc3a6c2930707c3b9c3b9c39ec3b9c381c39ec381c3bdc3bbc2b3037ac399c3a3c2bd7bc3b7c387c3bbc3b736c2b0c39ec2bdc2bdc3bd7bc38c43c39cc290c39ac284c29cc387c29fc3b618c2afc3b7120dc3b5c3bdc3b80e107e36c3b8c3ae16c384c2b1c294c3850cc3bfc3acc3b1c39d4dc298c3bc30c3b9c3ae465c5c2f160fc38b77c39fc3bf7f003fc2833469c3b5040000"
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba686fc3a7c39307c3996c6f762f3fc388c3b6c3b7c2b2c3bc613e7970c290c29fc3afc29d1fc3ac1dc39cc2bf3f3bc3b868c3b4c391c2b4c298c395c394727767c2bc7bc3afc3be78c3bfc39e78c3a7c3aec39e3e7d3ec38bc29b695dc2acc39ac2a25ac392c397c29765c2b6c3bcc3bdc3afc3adc3adc39fc3bbc3bd6d436a73c291c2b5c3b955764dc39fc39b4fc387c2bbc3b4c3b9325bc3a4c3b461c3bcc2a565c39e2ec2b2c3a62d7dc2bf77c3bfc3bec398c3bc7fc287c2be69c2af57786d5517c29704c2983e00c280c28f1e01c382c3a8c2a3c2b258c2be6d3e7a4423c2abc3b3c2925a3579794e4dc3a6757e4e7fc39dc2bdc39cc39bc38ec39fc2adc3b2c2ba58c3a4c38b362bc3af522f5755c3bdc2b6c2b9c29bc295c3adc3acc3ae65c2b67bc3b716c2b4c2b8c38cc3ab09c3bac3b8c3a8c3b3c39337c3b4c3a7c38bc2afc39e7cc3b4c3bd5f32323d16c2abc3a3c399c2acc38ec29b266fc3a8c38b6fc2aec3a3c2bb21c3a00009c2af7bc3ba37c38f1ac290c3a51bc3acc39a01c2b5c39dc2bec3bcc3b235c3bac3bdc3be2fc3b9c3bec3bf03c399c2bfc3b7c28f46020000"
     ],
     "headers": {
       "cache-control": "no-cache",
@@ -176,68 +75,8 @@
       "content-encoding": "gzip",
       "expires": "-1",
       "vary": "Accept-Encoding",
-      "date": "Wed, 09 Sep 2015 14:19:23 GMT",
-      "content-length": "493"
-    }
-  },
-  {
-    "scope": "https://api.ctl.io:443",
-    "method": "GET",
-    "path": "/v2-experimental/networks/ALTD/uc1",
-    "body": "",
-    "status": 200,
-    "response": [
-      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3bac3a8c3a1c3bdc3b3c2bdc287c2bbc3b9c3b9c3bec3acc393c3a9c3bec3be6427c38bc3afc3adc3aec38ec3ae3fc3b8c3b4c39ec2bd07c3a7c3996cc3bfc2a3c39147c393625653c38bc39dc29dc3b1c3aec39ec2bdc3b1c3aec2a77bc3a3c29dc2bb7bc3b862c29637c393c2ba58c2b545c2b5c2a4c3af2fc38b6cc3b9c3bbc3afc39ec3bf74c3afc3b7772dc2a9c39145c396c3a657c3993535701fc28f77c3a9c28b65c2b6c388c3a9c393c281c397c29679c2bbc388c29ac2b7c39460c3afc3bec3bdc2b1c3b9c3bf0e7dc3935ec2afc3b0c39ec2aa2e2e09347d00081f3d02c288c3914765c2b17cc39b7cc3b4c2884657c3a725c2b56ac3b2c3b2c29cc29ac38cc3abc3bcc29cc3bec29ac2b7c3adc3aac391c39dc2bbc399c2aa184fc39b725c54772fc3b7c2b6c3b377c2abc2bc2e16c3b9c2b2c38dc38ac2bbc394c3ad5555c2bf6dc3ae66653bc2bbc2bbc29ec3aec39ec2bd05c2812ec3b37ac2824e3fc3bac3bcc3b40dc3bdc3b9c3b2c2ab371f7dc3bfc297c28c0c0ac385c3aa7836c2abc3b3c2a6c3891bc3bac3b26711c293c2bb614f01561e3ec3b46fc29e3520c39cc38f262ec2ae17c28bc387c38b2f5f03c291c3afc3bfc292c3afc3bf3f5ec28dc38c267d020000"
-    ],
-    "headers": {
-      "cache-control": "no-cache",
-      "pragma": "no-cache",
-      "content-type": "application/json; charset=utf-8",
-      "content-encoding": "gzip",
-      "expires": "-1",
-      "vary": "Accept-Encoding",
-      "date": "Wed, 09 Sep 2015 14:19:23 GMT",
-      "content-length": "400"
-    }
-  },
-  {
-    "scope": "https://api.ctl.io:443",
-    "method": "GET",
-    "path": "/v2-experimental/networks/ALTD/ca1",
-    "body": "",
-    "status": 200,
-    "response": [
-      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba68c3afc3a0c39ec3b9c2a70f76c3b2c287c29fc29ec3afc3afc39fc29fc3ac1f7c7ac3bfc393c287c399c39e6cc3bfc381c2a7c3b73ec39d79c2987f34c3ba685ac38c6a6ac2b9c2bb33c2bec2bf33c39e3f18c3afc39cc39dc39bc2a7c28f677933c2adc28b555b544bc3bac3b6c2b2c38cc296c2bfc3bfc39ec2bdc3bdc283c39fc39fc2b4c2a3261759c29b5f65c397c3b4c2b5c3b970c2bc4b1f2fc2b3454ec29f455f59c3a6c3ad226bc39ec392c3977bc3b7c3afc28fc38dc3bf77c3a8c29bc3b67ac285c2b75675714960c3a903c2bcc3bfc3912300187d5416c38bc2b7c38d47c28f6854755e52c2ab262fc38fc2a9c389c2bcc38ec38fc3a9c2af79c39bc2ae1ec39dc2bdc29bc2adc28ac3b1c2b42dc3874575c3b7726f3b7fc2b7c38ac3ab62c2912fc39bc2acc2bc4bc39d5e55c3b5c39bc3a66e56c2b6c2b3c2bbc3936cc3b7c3ae2d0873c299c3971374c3bac391c3a7c2a76fc3a8c38fc2975fc2bdc3b9c3a8c3bbc2bf6464502856c387c2b359c29d374dc39ec390c2973fc28bc298c39c0d7b0ac2b0c3b2c3b0c2a17fc3b3c2ac01c39e3fc29bc2b8c2b85e2c1e2fc2bf7c0d44c2bec3bf4bc2bec3bfc3bf004929673375020000"
-    ],
-    "headers": {
-      "cache-control": "no-cache",
-      "pragma": "no-cache",
-      "content-type": "application/json; charset=utf-8",
-      "content-encoding": "gzip",
-      "expires": "-1",
-      "vary": "Accept-Encoding",
-      "date": "Wed, 09 Sep 2015 14:19:23 GMT",
-      "content-length": "401"
-    }
-  },
-  {
-    "scope": "https://api.ctl.io:443",
-    "method": "GET",
-    "path": "/v2-experimental/networks/ALTD/ut1",
-    "body": "",
-    "status": 200,
-    "response": [
-      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba687fc3a7c3bec2bdc3a9c2a7c293c29dc2bdc3a9c2bdc283c3bdc2bd3cc38fc3aec39dc2bbc2bfc2bb77c3bec3b06136c39d3f3fc2b87fc3bec391c3a8c2a36931c2abc2a9c3a5c3aec38ec3b8c3a1c38ec3b8c3bec38e78c3a7c3aec39e3e7d3cc38bc29b695dc2acc39ac2a25ac392c2b7c29765c2b6c3bcc3bdc3b776c3aec3afc3bcc3bec2a61d35c2b9c388c39ac3bc2ac2bbc2a6c2afc38dc287c3a35dc3ba78c2992d72c3ba2cc3bac38a326f1759c3b3c296c2bec39ec2bb7f7f6cc3bec28f6fc39ac3ab15c39e5ac395c38525c281c2a50fc3b0c3be47c28f0060c3b451592cc39f361f3dc2a251c3957949c2adc29ac2bc04c3aac3b33a3fc2a7c2bfc3a66dc2bb7a74c3b76ec2b62ac386c393c2b61c17c395c39dc38bc2bdc3adc3bcc39d2ac2afc28b45c2be6cc2b3c3b22e757b55c3956fc29bc2bb59c399c38ec3aec2aec39bc39dc2bbc2b720c38c655e4fc390c3a947c29fc29fc2bec2a13f5f7ec3b5c3a6c2a3c3afc3bfc292c29141c2a1581dc38f6675c39e3479435fc3be2c627237c3ac29c380c38ac383c287c3bec38dc2b306c284c3bbc399c384c385c3b562c3b178c3b9c3a56b20c3b2c3bd5fc3b2c3bdc3bf07c38dc2b2c3bec29575020000"
-    ],
-    "headers": {
-      "cache-control": "no-cache",
-      "pragma": "no-cache",
-      "content-type": "application/json; charset=utf-8",
-      "content-encoding": "gzip",
-      "expires": "-1",
-      "vary": "Accept-Encoding",
-      "date": "Wed, 09 Sep 2015 14:19:23 GMT",
-      "content-length": "397"
+      "date": "Wed, 06 Jan 2016 11:05:52 GMT",
+      "content-length": "384"
     }
   },
   {
@@ -247,7 +86,7 @@
     "body": "",
     "status": 200,
     "response": [
-      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba682fc39bc38bc2a60fc3afc29f3fc39cc2bbc2b7c2b7c2bfc297c39dc38bc3b61e4e1f66c3a77b593ec39939c38fc3b6c3b2c28f461f4dc28b594d2d7777c38607c2bbc3a35dc3bac3bfc38ec39dc2bd7dc3ba7cc29637c393c2ba58c2b545c2b5c2a4c2af2fc38b6cc3b9c3bbc3afc3ae1dc3acc3bec3bec2b621c2b5c2b9c388c39ac3bc2ac2bbc2a6c3afc3adc2a7637cc2bec38c16397d187f69c299c2b7c28bc2ac794bc39fc3afc39dc2bf3f36c3bfc39fc2a16fc39ac3ab155e5bc395c3852501c2a60f00c3a0c2a347c28030c3bac2a82cc2966fc29bc28f1ec391c388c3aac2bcc2a4564d5ec29e53c29379c29dc29fc3935fc3b3c2b65d3dc2ba7b375b15c3a3695bc28ec28bc3aac3aec3a5c39e76c3be6ec295c397c385225fc2b65979c297c2bac2bdc2aac3aac2b7c38dc39dc2ac6c6777c2afc2b2c39dc2bbc2b720c38e655e4fc390c3a947c29fc29fc2bec2a13f5f7ec3b5c3a6c2a3c3afc3bfc292c29141c2a1581dc38f6675c39e3479435fc3be2c627237c3ac29c380c38ac383c287c3bec38dc2b30678c3bf6cc3a2c3a27ac2b178c2bcc3bcc3b23510c3b9c3be2fc3b9c3bec3bf03c3afc28ac3920079020000"
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba682fc39bc38bc2a60fc3afc29f3fc39cc2bbc2b7c2b7c2bfc297c39dc38bc3b61e4e1f66c3a77b593ec39939c38fc3b6c3b2c28f461f4dc28b594d2d7777c38607c2bbc3a35dc3bac3bfc38ec39dc2bd7dc3ba7cc29637c393c2ba58c2b545c2b5c2a4c2af2fc38b6cc3b9c3bbc3afc3ae1dc3acc3bec3bec2b621c2b5c2b9c388c39ac3bc2ac2bbc2a6c3afc3adc2a7637cc2bec38c16397d187f69c299c2b7c28bc2ac794bc39fc3afc39dc2bf3f36c3bfc39fc2a16fc39ac3ab155e5bc395c3852501c2a60f00c3a0c2a347c28030c3bac2a82cc2966fc29bc28f1ec391c388c3aac2bcc2a4564d5ec29e53c29379c29dc29fc3935f772fc3b7c2b6c3b377c2abc2bc2e16c3b9c2b2c38dc38ac2bbc394c38b5555c2bf6dc3ae66653bc2bb7bc295c3adc39ec2bd052d2ec3b37ac2823e3ec3bac3bcc3b40dc3bdc3b9c3b2c2ab371f7dc3bfc297c28c4cc28fc385c3aa7836c2abc3b3c2a6c3891bc3bac3b2c29bc3abc3b86e083840c382c3abc29ec3bec38dc2b306687ec2835d3bc2a0c2b6c39bc2975fc2be46c2bfc39fc3bf25c39fc3bf7f00230b0a0c46020000"
     ],
     "headers": {
       "cache-control": "no-cache",
@@ -256,8 +95,128 @@
       "content-encoding": "gzip",
       "expires": "-1",
       "vary": "Accept-Encoding",
-      "date": "Wed, 09 Sep 2015 14:19:23 GMT",
-      "content-length": "396"
+      "date": "Wed, 06 Jan 2016 11:05:52 GMT",
+      "content-length": "381"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2-experimental/networks/ALTD/uc1",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3bac3a8c3a1c3bdc3b3c2bdc287c2bbc3b9c3b9c3bec3acc393c3a9c3bec3be6427c38bc3afc3adc3aec38ec3ae3fc3b8c3b4c39ec2bd07c3a7c3996cc3bfc2a3c39147c393625653c38bc39dc29dc3b1c3aec39ec2bdc3b1c3aec2a77bc3a3c29dc2bb7bc3b862c29637c393c2ba58c2b545c2b5c2a4c3af2fc38b6cc3b9c3bbc3afc39ec3bf74c3afc3b7772dc2a9c39145c396c3a657c3993535701fc28f77c3a9c28b65c2b6c388c3a9c393c281c397c29679c2bbc388c29ac2b7c39460c3afc3bec3bdc2b1c3b9c3bf0e7dc3935ec2afc3b0c39ec2aa2e2e09347d00081f3d02c288c3914765c2b17cc39b7cc3b4c2884657c3a725c2b56ac3b2c3b2c29cc29ac38cc3abc3bcc29cc3bec2ba7bc2b9c2b7c29dc2bf5bc3a575c2b1c388c2976d56c39ec2a55ec2aec2aac3ba6d73372bc39bc399c39dc3b574c3b7c3ae2dc3a871c299c39713c3b4c3b1c391c3a7c2a76fc3a8c38fc2975fc2bdc3b9c3a8c3bbc2bf64647a2c56c387c2b359c29d374dc39ec390c297c39f5cc3877743c38001125ec3b7c3b46fc29e3520c38b37c398c2b5036ac2bb7dc3b9c3a56bc3b4c3bbc3bd5fc3b2c3bdc3bf07c2acc286c3b5c2b64a020000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Wed, 06 Jan 2016 11:05:52 GMT",
+      "content-length": "385"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2-experimental/networks/ALTD/il1",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba687670c2b0c2bfc2b7c2b3c29bc39fc38f1ec38cc3b6c2b3c3b3c29dc389c3bdc3bbc393c3bb0f67c393c399c283c39dc2837bc2bb0f271fc28d3ec29a16c2b3c29a5ac3aec3aec28c1fc39e1bc39f7f38c39ec2b9c2bbc2b74f1fc38fc3b2665a17c2abc2b6c2a8c296c3b4c3ad65c2992d7fc3bfc2bdc287c3b71fc3bec3bec2a61d35c2b9c388c39ac3bc2ac2bbc2a6c2afc38dc287c3a35dc3ba78c2992d72c3ba2cc3bac38a326f1759c3b3c296c2bec39ec2bb7f7f6cc3bec2bf43c39fc2b4c3972bc2bcc2b5c2aac28b4b024b1fc3a0c3bdc28f1e01c380c3a8c2a3c2b258c2be6d3e7a44c2a3c2aac3b3c2925a3579794e4dc3a6757e4e7fc39dc2bdc39cc39bc38ec39fc2adc3b2c2ba58c3a4c38b362bc3af522f5755c3bdc2b6c2b9c29bc295c3adc3ac6e51c3aec39ec2bd051d2ec3b37ac2823e3ec3bac3bcc3b40dc3bdc3b9c3b2c2ab371f7dc3bfc297c28c4cc28fc385c3aa7836c2abc3b3c2a6c3891bc3bac3b2c29bc3abc3b86e083840c382c3abc29ec3bec38dc2b30664c3b906c2bb76406dc2b72fc2bf7cc28d7ec2bfc3bf4bc2bec3bfc3bf00471fc2833242020000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Wed, 06 Jan 2016 11:05:52 GMT",
+      "content-length": "384"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2-experimental/networks/ALTD/ca3",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba68c3a7c3934f7726c293c3b37bc2937c727fc3bfc381c2bdc3a9c3a4617670c3afc3a1c3b420c29f660f67c3b7270f3e1a7d342d6635c2b5c39cc39d19c3afc3aec3acc28cc3b7c3b61fc28c77c3aec3aec3adc39317c2b3c2bcc299c396c385c2aa2dc2aa257d7f5966c38bc39f7f7fc3bfc381c3afc3af1a52c29bc28bc2acc38dc2afc2b26bc3bac39e7d3cc39ec2a52fc296c39922c2a74fc3a36f2dc3b376c291356fc3a9c3bbc2bdc3bbc3b7c387c3a6c3bf3bc3b44d7bc2bdc3826bc2abc2bac2b824c388c3b401007cc3b4c28820c28c3e2ac28bc3a5c39bc3a6c2a34734c2b43a2fc2a951c293c297c3a7c394625ec3a7c3a7c3b4c397c39dc38bc2bdc3adc3bcc39d2ac2afc28b45c2be6cc2b3c3b22e757255c3956fc29bc2bb59c399c38ec3ae4ec2b37b776f41c28cc38bc2bcc29ec2a0c28fc28f3e3f7d437fc2bec3bcc3aac38d47c39fc3bf2523c39363c2b13ac29ec38dc3aac2bc69c3b2c286c2bec3bcc3a63ac2be1b020ec290c3b0c2bac2a77fc3b3c2ac0155c2bec381c2ae1d50c39bc3adc38b2f5fc2a3c39fc3afc3bfc292c3afc3bf3fc39bc28bc2bbc2a947020000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Wed, 06 Jan 2016 11:05:52 GMT",
+      "content-length": "384"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2-experimental/networks/ALTD/de1",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3bac3a860c3a7c3a1c39ec383070fc3b70ec38e7767c3bb7b7bc3bbc293c287c293c2870fc3b71ec29c3fc398c2bf3fc299c3ae1cc3ac7d34c3ba685ac38c6a6ac2b9c2bb33c39ec2a5c3bfc39f7b30c39ec2b9c2bbc2b74fc29fc38fc3b2665a17c2abc2b6c2a8c296c3b4c3b565c2992d7fc3bfc2bd7b0f7e7f6a23c3adc2a8c38945c396c3a657c399357d4dc29fc388c2a7c3a35dc3ba7cc2992d72c3ba30c3bac38e326f1759c3b3c296c2bec39ec2bb7f7f6cc3bec2bf43c39fc2b4c3972bc2bcc2b5c2aac28b4bc2824b1fc3a0c3bdc28f1e11c280c3914765c2b17cc39b7cc3b4c288c28655c3a725356ac3b2c3b2c29c5ac38cc3abc3bcc29cc3bec2ba7bc2b9c2b7c29dc2bf5bc3a575c2b1c388c2976d56c39ec2a54ec2aec2aac3ba6d73372bc39bc399c39d59c2be7bc3b716c284c2b8c38cc3ab09c3bac3b8c3a8c3b3c39337c3b4c3a7c38bc2afc39e7cc3b4c3bd5f32323d16c2abc3a3c399c2acc38ec29b266fc3a8c38b6fc2aec3a3c2bb21c3a00009c2af7bc3ba37c38f1a50c3a51bc3acc39a01c2b5c39dc2bec3bcc3b235c3bac3bdc3be2fc3b9c3bec3bf03c382c291c2806c43020000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Wed, 06 Jan 2016 11:05:52 GMT",
+      "content-length": "387"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2-experimental/networks/ALTD/ca1",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba68c3afc3a0c39ec3b9c2a70f76c3b2c287c29fc29ec3afc3afc39fc29fc3ac1f7c7ac3bfc393c287c399c39e6cc3bfc381c2a7c3b73ec39d79c2987f34c3ba685ac38c6a6ac2b9c2bb33c2bec2bf33c39e3f18c3afc39cc39dc39bc2a7c28f677933c2adc28b555b544bc3bac3b6c2b2c38cc296c2bfc3bfc39ec2bdc3bdc283c39fc39fc2b4c2a3261759c29b5f65c397c3b4c2b5c3b970c2bc4b1f2fc2b3454ec29f455f59c3a6c3ad226bc39ec392c3977bc3b7c3afc28fc38dc3bf77c3a8c29bc3b67ac285c2b75675714960c3a903c2bcc3bfc3912300187d5416c38bc2b7c38d47c28f6854755e52c2ab262fc38fc2a9c389c2bcc38ec38fc3a9c2afc2bbc2977bc39bc3b9c2bb555e17c28b7cc39966c3a55dc3aac3a5c2aac2aac39f3677c2b3c2b2c29dc39dc29d66c2bb776f41c287c38bc2bcc29ec2a0c28fc28f3e3f7d437fc2bec3bcc3aac38d47c39fc3bf2523c39363c2b13ac29ec38dc3aac2bc69c3b2c286c2bec3bcc3a63ac2be1b020ec290c3b0c2bac2a77fc3b3c2ac01c29ac39f60c3970ec2a8c3adc3b6c3a5c297c2afc391c3afc3b77fc389c3b7c3bf1fc2b02bc2bfc3b142020000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Wed, 06 Jan 2016 11:05:52 GMT",
+      "content-length": "385"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2-experimental/networks/ALTD/ny1",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba28c39bc39dc399c399397870c3b069c3b6c3a9c3aec3be7e76c3bf6032c38b1e4cc2b3c3bdc2bdc3a9c3bec381c2830759c3bec391c3a8c2a36931c2abc2a9c3a5c3aec38ec3b8c381c3aec3b8c39ec283c3b1c38ec39dc2bd7dc3ba78c29637c393c2ba58c2b545c2b5c2a46f2fc38b6cc3b9c3bbc39fc2bb77c3afc381c3af6fc39a51c293c28bc2acc38dc2afc2b26bc3bac39a7c38c39ec2a5c28fc297c39922c2a7c38fc2a2c2af2cc3b376c291356fc3a9c3abc2bdc3bbc3b7c387c3a6c3bf3bc3b44d7bc2bdc3825bc2abc2bac2b824c2b0c3b401c39ec3bfc3a81100c28c3e2ac28bc3a5c39bc3a6c2a34734c2aa3a2fc2a955c293c297c3a7c394645ec3a7c3a7c3b4c397c39dc38bc2bdc3adc3bcc39d2ac2afc28b45c2be6cc2b3c3b22ec3b57255c3956fc29bc2bb59c399c38ec3ae2ec2af77c3afc39ec2820ec297793d411f1f7d7ec3bac286c3be7cc3b9c395c29bc28fc2bec3bf4b46c2a6c38762753cc29bc39579c393c3a40d7dc3b9c38d757c37041c20c3a1754fc3bfc3a6590334c2bfc381c2ae1d50c39bc3adc38b2f5fc2a3c39fc3afc3bfc292c3afc3bf3f1e6ac3b1c2bd42020000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Wed, 06 Jan 2016 11:05:52 GMT",
+      "content-length": "383"
     }
   },
   {
@@ -276,14 +235,54 @@
       "content-encoding": "gzip",
       "expires": "-1",
       "vary": "Accept-Encoding",
-      "date": "Wed, 09 Sep 2015 14:19:23 GMT",
+      "date": "Wed, 06 Jan 2016 11:05:52 GMT",
       "content-length": "122"
     }
   },
   {
     "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2-experimental/networks/ALTD/ut1",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba687fc3a7c3bec2bdc3a9c2a7c293c29dc2bdc3a9c2bdc283c3bdc2bd3cc38fc3aec39dc2bbc2bfc2bb77c3bec3b06136c39d3f3fc2b87fc3bec391c3a8c2a36931c2abc2a9c3a5c3aec38ec3b8c3a1c38ec3b8c3bec38e78c3a7c3aec39e3e7d3cc38bc29b695dc2acc39ac2a25ac392c2b7c29765c2b6c3bcc3bdc3b776c3aec3afc3bcc3bec2a61d35c2b9c388c39ac3bc2ac2bbc2a6c2afc38dc287c3a35dc3ba78c2992d72c3ba2cc3bac38a326f1759c3b3c296c2bec39ec2bb7f7f6cc3bec28f6fc39ac3ab15c39e5ac395c38525c281c2a50fc3b0c3be47c28f0060c3b451592cc39f361f3dc2a251c3957949c2adc29ac2bc04c3aac3b33a3fc2a7c2bfc3ae5ec3ae6dc3a7c3af56795d2cc3b265c29bc29577c2a9c297c2abc2aa7ec39bc39cc38dc38a767677c39dc3aec39ec2bd051d2ec3b37ac2823e3ec3bac3bcc3b40dc3bdc3b9c3b2c2ab371f7dc3bfc297c28c4cc28fc385c3aa7836c2abc3b3c2a6c3891bc3bac3b2c29bc3abc3b86e083840c382c3abc29ec3bec38dc2b30664c3b906c2bb76406dc2b72fc2bf7cc28d7ec2bfc3bf4bc2bec3bfc3bf005d76c3b96b42020000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Wed, 06 Jan 2016 11:05:52 GMT",
+      "content-length": "382"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2-experimental/networks/ALTD/gb1",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3bac3a8c381c383c3b37b07c3b7c3b7c2b2c2873bc3934fc3b777c2a7c2936c7f2fc38f1fc29cc3afc39ec38bc3afc38dc3b6667b7b1fc28d3ec29a16c2b3c29a5ac3aec3aec28c3fc39d1dc3afc3adc39d1bc3afc39cc39dc39bc2a7c38f677933c2adc28b555b544bc3bac3bac2b2c38cc296c2bfc3bf2e7dc3bdc3bbc39bc286c394c3a6226bc3b3c2abc3acc29ac2bec2b7c29fc28e77c3a9c3b365c2b6c388c3a9c383c3b84bc38bc2bc5d64c38d5bc3ba7ec3afc3bec3bdc2b1c3b9c3bf0e7dc3935ec2afc3b0c39ac2aa2e2e09307d00001f3d02c284c3914765c2b17cc39b7cc3b4c2884656c3a725c2b56ac3b2c3b2c29cc29ac38cc3abc3bcc29cc3bec2ba7bc2b9c2b7c29dc2bf5bc3a575c2b1c388c2976d56c39ec2a55ec2aec2aac3ba6d73372bc39bc399c39dc28bc389c3aec39d5bc390c3a232c2af27c3a8c3a3c2a3c38f4fc39fc390c29f2fc2bf7ac3b3c391c3b77fc389c388c3b458c2acc28e67c2b33a6fc29ac2bcc2a12fc2bfc2b9c28ec3afc286c2800324c2bcc3aec3a9c39f3c6b40c2966fc2b06b07c39476c3bbc3b2c38bc397c3a8c2977b66263ac398c3bbc3b4c39ec283c389c3bec3b4c3816cc3af60c3bfc3bec39e6cc2b273c3be20c2bb7770c3b0c3a0c3be747732c39dc38fc3a8c3a5c290c289c3b6c3b73632c391c3bec29ec3a1c2877d10c2bdc38744c3b47ac29fc2893a2fc39150c39fc297c289c3b6c3b7c2be0126c2ba052d2c21317fc39f1813c39dc394c3b1c38f2213c39dc398c2b5036ac2bbc3ad3151c3bec3a0c3a0613ec3bb74c3bfc3a1c3bd7cc2b27fc3af5ec3b630c29f4c0fc3b6c38ec3b727c3a73b0fc3afc38f7210c2aec38344c29f6e66c2a24f2d3f7c4a6dc3ba4cc3b469c28cc289c382c29768c2a8c3afc38d44c29f7e034c740b5a584262c3bec2be3126c2bac2a9c3a3c29f4526c2bac2b16b07c394766bc299c3a8c3bbc3bf0fc3bcc3b05521c390060000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Wed, 06 Jan 2016 11:05:54 GMT",
+      "content-length": "560"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
     "method": "put",
-    "path": "/v2-experimental/networks/ALTD/de1/6f6aa26cc8c24241b6cc7f414eef8d1d",
+    "path": "/v2-experimental/networks/ALTD/gb1/e789ed6495eb433a9ebc82f4bf095dea",
     "body": {
       "name": "network1",
       "description": "description 1"
@@ -294,48 +293,7 @@
       "cache-control": "no-cache",
       "pragma": "no-cache",
       "expires": "-1",
-      "date": "Wed, 09 Sep 2015 14:19:23 GMT"
-    }
-  },
-  {
-    "scope": "https://api.ctl.io:443",
-    "method": "GET",
-    "path": "/v2-experimental/networks/ALTD/gb3",
-    "body": "",
-    "status": 200,
-    "response": [
-      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba6836c38bc3af1fc3ac3dc3983dc29f4dc3b3c3bdc3bdc283c389c381c3837bc3b70fc3b6c3afc3af7f7a7fc3b77cc3b7c393c3a9c3ae47c2a3c28fc2a6c385c2acc2a6c296c2bb3bc3a3c39dc29d4fc387c3bbc3b7c3873b77c3b7c3b6c3a9c3b359c39e4cc3ab62c39516c395c292c2bec2be2cc2b3c3a5c3afc2bf776fc3bfc3bec3af6f1b52c29bc28bc2acc38dc2afc2b26bc3bac39e7e3a06c38c65c2b6c388c3a9c383c3b84bc38bc2bc5d64c38d5bc3ba7ec3afc3bec3bdc2b1c3b9c3bf0e7dc3935ec2afc3b0c39ac2aa2e2e09307d00001f3d02c284c3914765c2b17cc39b7cc3b4c2884656c3a725c2b56ac3b2c3b2c29cc29ac38cc3abc3bcc29cc3bec29ac2b7c3adc3aac391c39dc2bbc399c2aa184fc39b725c54772fc3b7c2b6c3b377c2abc2bc2e16c3b9c2b2c38dc38ac2bbc394c3ad5555c2bf6dc3ae66653bc2bb7b31c2b977c3b716c384c2b9c38cc3ab093ac3bdc3a8c3b3c39337c3b4c3a7c38bc2afc39e7cc3b4c3bd5f32322814c2abc3a3c399c2acc38ec29b266fc3a8c38bc29f454cc3aec2863d055879c3b8c390c2bf79c396c280703fc29bc2b8c2b85e2c1e2fc2bf7c0d44c2bec3bf4bc2bec3bfc3bf00c3b70f444e79020000"
-    ],
-    "headers": {
-      "cache-control": "no-cache",
-      "pragma": "no-cache",
-      "content-type": "application/json; charset=utf-8",
-      "content-encoding": "gzip",
-      "expires": "-1",
-      "vary": "Accept-Encoding",
-      "date": "Wed, 09 Sep 2015 14:19:25 GMT",
-      "content-length": "400"
-    }
-  },
-  {
-    "scope": "https://api.ctl.io:443",
-    "method": "GET",
-    "path": "/v2-experimental/networks/ALTD/de1",
-    "body": "",
-    "status": 200,
-    "response": [
-      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3bac3a87c32c39d3dc3bf74c3ba6036c39bc399c39bc39fc29dc29d677b7bc293c3ac3cc39bc2b9c2bfc2b7c2bf3fc38b76763e1a7d342d6635c2b5c39cc39d19c3afc392c3bfc3afc28f77c3aec3aec3adc393c387c2b3c2bcc299c396c385c2aa2dc2aa257d7b5966c38bc39f7f6fc3a7c3bec3af4f4dc2b819c2b5c2b8c388c39ac3bc2ac2bbc2a66fc3a903c3be70c2bc4b1f2fc2b3454ec29fc385c39e58c3a6c3ad226bc39ec392c2b77bc3b7c3afc28fc38dc3bfc281447bc2bdc3824bc2abc2bac2b824c2a8c3b4015ec3bfc3a811c2bd3fc3bac2a82cc2966fc29bc28f1ec391c290c3aac2bcc2a4464d5ec29e53c28b79c29dc29fc3935fc3b3c2b65d3dc2ba7b375b15c3a3695bc28ec28bc3aac3aec3a5c39e76c3be6ec295c397c385225fc2b65979c2977ac2bdc2aac3aac2b7c38dc39dc2ac6c677767c3b9c3aec39d5b50c3a532c2af27c3a8c3b4c2a3c38f4fc39fc390c29f2fc2bf7ac3b3c391c3b77fc389c388c2a050c2acc28e67c2b33a6fc29ac2bcc2a12f7f1631c2b91bc3b61460c3a5c3a143c3bfc3a65903c2bac3bd6cc3a2c3a27ac2b178c2bcc3bcc3b235106154c298c3a10e761ec3ae3d7cc3b070c3afc3a07c77c2b6c2bfc2b7c2b73f793879c3b870c3afc381c3b9c283c3bdc3bbc293c3a9c38ec3811ec2bd1c32c39cc2bd07c29b38c3aec39e03c3833fc3b71e50c2931ec38bc391c39b3dc29ec3abc2bc43037d4fc2a6c2bbc3b7c3a067c283c3a96e41194b564cc3afc38f1ec393c39dc284c3890fc293c3a96ec384c385c3b562c3b1c3a831c39dc3bdc3b307c3947a76706fc3afc3a1c39ec3bec283073b070fc2b3c399c3bec2836cc3b270c3a77cc3b7c39ec3bdc3b37bc3b472c38874c2bb3b0f3770c39dc2bdc29dc287c286c283c2a821c2b5c3a9c2b11d7dc39cc3a3c2bbc39e5b34c398c3b7633cc282c3b0c2b3c38178c2b7c2a0c28e252dc2a6c3b867c28fc3b16ec382c3a4c287c3897837c3a2c3a27ac2b178c3b4186fc2b2333bc39f3dc398c39bc29f4d67c3b7c3b767c3b71e1ec3a413c392c294c2937b7b7b0fc3afc3adc29dc3af67c3b472c287c3b11ec3ae6d62c2bcc2877bc296c2851e4221c3b419c28fc39ec3af315ec3b72d1ac3ac7b32c39ec383c2bdc29f0dc386c2bb05752c6931c3853f7bc28c7713263f4cc386c2bb1117c397c28bc385c2a3c38778c3b7c3b6c3af7fc3ba607ac3afc3937c6f72c2bec3bf60c3b669763ec299647b3b0fc2b27bc399c39e41767f4a2fc287c28cc2b7c2b77bc2b0c281c3b1c3b6770f0c0b51436ac393633cc3bac2b8c38778c2bdc2b768c2b0c3afc3877804c3a167c283c3b16e411d4b5a4cc3b1c38f1ec3a3c39dc284c3890fc293c3b16ec384c385c3b562c3b1c3a831c39ec3b97936c399c29dc39dc3bb74c3bfc39ec2a7c2b3c3bdc287c3b7c38fc2b34f773ec29dc29d4f33c3b210c3b71f3e3800693bc28cc2b77f6f13c3a3c3ad",
-      "c39fc2b32cc2b40f4bc394673c7ac2bfc38778c39dc2b768c2b0c3afc38978c3bbc3b77e3618c3af16c394c2b1c2a4c38514c3bfc3ac31c39e4dc298c3bc3019c3af465c5c2f16c28f1ec3a37d7ac3be69c296c3ad7d3ac29d1e4cc3b7c3b6293ec299c390c2af0fc38ec3b777c3b7c3b3c3bcc3bc60c2b63bc2a3c297c2bbc28cc2b71f673cc3afc2af14c29c1561c2b97dc29fc3a57440c3bcc389c3bbc3b3c399c3bec38f06c29fc39dc28218c296c292c298c391c29f3d3ec2bb09c2931f26c29fc39dc288c28bc3abc385c3a261c3b9c3acc3bbc3bf0f6bc286507b33110000"
-    ],
-    "headers": {
-      "cache-control": "no-cache",
-      "pragma": "no-cache",
-      "content-type": "application/json; charset=utf-8",
-      "content-encoding": "gzip",
-      "expires": "-1",
-      "vary": "Accept-Encoding",
-      "date": "Wed, 09 Sep 2015 14:19:25 GMT",
-      "content-length": "941"
+      "date": "Wed, 06 Jan 2016 11:05:53 GMT"
     }
   },
   {
@@ -345,7 +303,7 @@
     "body": "",
     "status": 200,
     "response": [
-      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba68c2ba7bc3bf6067673f7bc2b077c2bec2bbc29fc3a50f1fc38ec3ae3dc2b8c29fc39dc39b7dc3b8c3b0c381c3bec283c389c381c39e47c2a3c28fc2a6c385c2acc2a6c296c2bb3bc3a34f77c386c2bbc3b776c3863b77c3b7c3b6c3a9c3b359c39e4cc3ab62c39516c395c292c2bec2be2cc2b3c3a5c3af7f706fc3a7c3b7c2b7c3adc2a8c38945c396c3a657c399357d6d3f1dc3afc392c3a7c38b6cc291c393c287c39177c29679c2bbc388c29ac2b7c3b4c3b5c39ec3bdc3bb63c3b37f7cc3935ec2afc3b0c396c2aa2e2e092e7dc280c3b73f7a4400461fc295c385c3b26dc3b3c391231a56c29dc297c394c2a8c389c38b736a31c2afc3b373c3ba6bc39ec2b6c2ab4777c3af66c2ab623c6dc38b7151c39dc2bdc39cc39bc38ec39fc2adc3b2c2ba58c3a4c38b362bc3af52c2af5755c3bdc2b6c2b9c29bc295c3adc3acc3aec38564c3b7c3ae2d2873c299c3971374c3bac391c3a7c2a76fc3a8c38fc2975fc2bdc3b9c3a8c3bbc2bf6464502856c387c2b359c29d374dc39ec390c2973fc28bc298c39c0d7b0ac2b0c3b2c3b0c2a17fc3b3c2ac01c39d7e367171c2bd583c5e7ec3b91ac288302ac38c74c3b9c283c283c287c3b9c3acc393c3bdc287c3b7c3b3c389c3bec2bd7bc399c3837c323dc3983bc39fc29fc29cc3af3cc2bc3fc38b337ac39963c2bac39dc3b1c39ec3bec2a71bc2986ec297c2be660ec3a2c286c39426c3a43ac3bec2b4c38775c2bdc29768c2a8c3afc38776c280c3b0c2b3c38177c2b720c28ec2a52c66c3b867c28fc3af6ec382c3a4c287c3897737c3a2c3a27ac2b17858c2bec3bbc3bec3bf033a62c3ab69c3ae040000"
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3bac3a8c381c383c3b37b07c3b7c3b7c2b2c2873bc3934fc3b777c2a7c2936c7f2fc38f1fc29cc3afc39ec38bc3afc38dc3b6667b7b1fc28d3ec29a16c2b3c29a5ac3aec3aec28c3fc39d1dc3afc3adc39d1bc3afc39cc39dc39bc2a7c38f677933c2adc28b555b544bc3bac3bac2b2c38cc296c2bfc3bf2e7dc3bdc3bbc39bc286c394c3a6226bc3b3c2abc3acc29ac2bec2b7c29fc28e77c3a9c3b365c2b6c388c3a9c383c3b84bc38bc2bc5d64c38d5bc3ba7ec3afc3bec3bdc2b1c3b9c3bf0e7dc3935ec2afc3b0c39ac2aa2e2e09307d00001f3d02c284c3914765c2b17cc39b7cc3b4c2884656c3a725c2b56ac3b2c3b2c29cc29ac38cc3abc3bcc29cc3bec2ba7bc2b9c2b7c29dc2bf5bc3a575c2b1c388c2976d56c39ec2a55ec2aec2aac3ba6d73372bc39bc399c39dc28bc389c3aec39d5bc390c3a232c2af27c3a8c3a3c2a3c38f4fc39fc390c29f2fc2bf7ac3b3c391c3b77fc389c388c3b458c2acc28e67c2b33a6fc29ac2bcc2a12fc2bfc2b9c28ec3afc286c2800324c2bcc3aec3a9c39f3c6b40c2966fc2b06b07c39476c3bbc3b2c38bc397c3a8c2977b66263ac398c3bbc3b4c39ec283c389c3bec3b4c3816cc3af60c3bfc3bec39e6cc2b273c3be20c2bb7770c3b0c3a0c3be747732c39dc38fc3a8c3a5c290c289c3b6c3b73632c391c3bec29ec3a1c2877d10c2bdc38744c3b47ac29fc2893a2fc39150c39fc297c289c3b6c3b7c2be0126c2ba052d2c21317fc39f1813c39dc394c3b1c38f2213c39dc398c2b5036ac2bbc3ad3151c3bec3a0c3a0613ec3bb74c3bfc3a1c3bd7cc2b27fc3af5ec3b630c29f4c0fc3b6c38ec3b727c3a73b0fc3afc38f7210c2aec38344c29fc386c299c388c3bb2b05c29bc3b4c399c3a753c29f7d7438c3bcc389c397c3a0c2994fc2bf01c29ec2b9c385c3902dc39d305dc39f18c38fc39cc394c3b1c38f22c38fc39cc398c2b5036ac2bbc2b53cc3b3c3bdc3bf07225b5275c2bf060000"
     ],
     "headers": {
       "cache-control": "no-cache",
@@ -354,8 +312,48 @@
       "content-encoding": "gzip",
       "expires": "-1",
       "vary": "Accept-Encoding",
-      "date": "Wed, 09 Sep 2015 14:19:25 GMT",
-      "content-length": "493"
+      "date": "Wed, 06 Jan 2016 11:05:53 GMT",
+      "content-length": "558"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2-experimental/networks/ALTD/gb3",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba6836c38bc3af1fc3ac3dc3983dc29f4dc3b3c3bdc3bdc283c389c381c3837bc3b70fc3b6c3afc3af7f7a7fc3b77cc3b7c393c3a9c3ae47c2a3c28fc2a6c385c2acc2a6c296c2bb3bc3a3c39dc29d4fc387c3bbc3b7c3873b77c3b7c3b6c3a9c3b359c39e4cc3ab62c39516c395c292c2bec2be2cc2b3c3a5c3afc2bf776fc3bfc3bec3af6f1b52c29bc28bc2acc38dc2afc2b26bc3bac39e7e3a06c38c65c2b6c388c3a9c383c3b84bc38bc2bc5d64c38d5bc3ba7ec3afc3bec3bdc2b1c3b9c3bf0e7dc3935ec2afc3b0c39ac2aa2e2e09307d00001f3d02c284c3914765c2b17cc39b7cc3b4c2884656c3a725c2b56ac3b2c3b2c29cc29ac38cc3abc3bcc29cc3bec2ba7bc2b9c2b7c29dc2bf5bc3a575c2b1c388c2976d56c39ec2a55ec2aec2aac3ba6d73372bc39bc399c39dc28bc389c2bdc2bbc2b7c2a0c385655e4fc390c38747c29fc29fc2bec2a13f5f7ec3b5c3a6c2a3c3afc3bfc292c291c3a9c2b1581dc38f6675c39e3479435f7e731dc39f0d01074878c39dc393c2bf79c396c2802cc39f60c3970ec2a8c3adc3b6c3a5c297c2afc391c3afc3b77fc389c3b7c3bf1f7e10c297c3b546020000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Wed, 06 Jan 2016 11:05:53 GMT",
+      "content-length": "384"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2-experimental/networks/ALTD/de1",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3bac3a860c3a7c3a1c39ec383070fc3b70ec38e7767c3bb7b7bc3bbc293c287c293c2870fc3b71ec29c3fc398c2bf3fc299c3ae1cc3ac7d34c3ba685ac38c6a6ac2b9c2bb33c39ec2a5c3bfc39f7b30c39ec2b9c2bbc2b74fc29fc38fc3b2665a17c2abc2b6c2a8c296c3b4c3b565c2992d7fc3bfc2bd7b0f7e7f6a23c3adc2a8c38945c396c3a657c399357d4dc29fc388c2a7c3a35dc3ba7cc2992d72c3ba30c3bac38e326f1759c3b3c296c2bec39ec2bb7f7f6cc3bec2bf43c39fc2b4c3972bc2bcc2b5c2aac28b4bc2824b1fc3a0c3bdc28f1e11c280c3914765c2b17cc39b7cc3b4c288c28655c3a725356ac3b2c3b2c29c5ac38cc3abc3bcc29cc3bec2ba7bc2b9c2b7c29dc2bf5bc3a575c2b1c388c2976d56c39ec2a54ec2aec2aac3ba6d73372bc39bc399c39d59c2be7bc3b716c284c2b8c38cc3ab09c3bac3b8c3a8c3b3c39337c3b4c3a7c38bc2afc39e7cc3b4c3bd5f32323d16c2abc3a3c399c2acc38ec29b266fc3a8c38b6fc2aec3a3c2bb21c3a00009c2af7bc3ba37c38f1a50c3a51bc3acc39a01c2b5c39dc2bec3bcc3b235c3bac3bdc3be2fc3b9c3bec3bf03c382c291c2806c43020000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Wed, 06 Jan 2016 11:05:54 GMT",
+      "content-length": "387"
     }
   },
   {
@@ -365,7 +363,7 @@
     "body": "",
     "status": 200,
     "response": [
-      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c3bdc3bf0729c2bb4c0d02000000"
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba28c39bc39dc399c399397870c3b069c3b6c3a9c3aec3be7e76c3bf6032c38b1e4cc2b3c3bdc2bdc3a9c3bec381c2830759c3bec391c3a8c2a36931c2abc2a9c3a5c3aec38ec3b8c381c3aec3b8c39ec283c3b1c38ec39dc2bd7dc3ba78c29637c393c2ba58c2b545c2b5c2a46f2fc38b6cc3b9c3bbc39fc2bb77c3afc381c3af6fc39a51c293c28bc2acc38dc2afc2b26bc3bac39a7c38c39ec2a5c28fc297c39922c2a7c38fc2a2c2af2cc3b376c291356fc3a9c3abc2bdc3bbc3b7c387c3a6c3bf3bc3b44d7bc2bdc3825bc2abc2bac2b824c2b0c3b401c39ec3bfc3a81100c28c3e2ac28bc3a5c39bc3a6c2a34734c2aa3a2fc2a955c293c297c3a7c394645ec3a7c3a7c3b4c397c39dc38bc2bdc3adc3bcc39d2ac2afc28b45c2be6cc2b3c3b22ec3b57255c3956fc29bc2bb59c399c38ec3ae2ec2af77c3afc39ec2820ec297793d411f1f7d7ec3bac286c3be7cc3b9c395c29bc28fc2bec3bf4b46c2a6c38762753cc29bc39579c393c3a40d7dc3b9c38d757c37041c20c3a1754fc3bfc3a6590334c2bfc381c2ae1d50c39bc3adc38b2f5fc2a3c39fc3afc3bfc292c3afc3bf3f1e6ac3b1c2bd42020000"
     ],
     "headers": {
       "cache-control": "no-cache",
@@ -374,68 +372,8 @@
       "content-encoding": "gzip",
       "expires": "-1",
       "vary": "Accept-Encoding",
-      "date": "Wed, 09 Sep 2015 14:19:25 GMT",
-      "content-length": "122"
-    }
-  },
-  {
-    "scope": "https://api.ctl.io:443",
-    "method": "GET",
-    "path": "/v2-experimental/networks/ALTD/va1",
-    "body": "",
-    "status": 200,
-    "response": [
-      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba68c3a7c3a1c3bdc39dc28349c29e7dc2bac297c38dc3b6c3b7c3a8c297c3a9c2bdc389c2bdc39dc283c399c39ec3bdc2bdc28307c393c283c3bdc28f461f4dc28b594d2d7777c386c2bb7b0fc3867b7b3bc3a3c29dc2bb7bc3b862c29637c393c2ba58c2b545c2b5c2a4c3af2fc38b6cc3b9c3bbc3af1dc3acc3adc3bcc3bec2ae2535c2bac388c39ac3bc2ac2bbc2a606c3aec3a3c3b12e7dc2b1c38c16397d3ac3b0c39a326f1759c3b3c2961ac3acc39dc2bf3f36c3bfc38737c3adc3b50ac3afc2adc3aac3a2c29240c39307c280c3b0c39123c280187d5416c38bc2b7c38d47c28f6874755e52c2ab262fc38fc2a9c389c2bcc38ec38fc3a9c2af79c39bc2ae1ec39dc2bdc29bc2adc28ac3b1c2b42dc3874575c3b7726f3b7fc2b7c38ac3ab62c2912fc39bc2acc2bc4bc39d5e55c3b5c39bc3a66e56c2b6c2b3c2bbc297c399c3aec39d5b10c3a832c2af27c3a8c3b4c2a3c38f4fc39fc390c29f2fc2bf7ac3b3c391c3b77fc389c388c2a050c2acc28e67c2b33a6fc29ac2bcc2a12f7f1631c2b91bc3b61460c3a5c3a143c3bfc3a65903c382c3bd6cc3a2c3a27ac2b178c2bcc3bcc3b235106154c298c3b7c3b6763e7dc290c38dc3b666c3b7c3b2c2836c7f2fc38b1fc3a6c2930707c3b9c3b9c39ec3b9c381c39ec381c3bdc3bbc2b3037ac399c3a3c2bd7bc3b7c387c3bbc3b736c2b0c39ec2bdc2bdc3bd7bc38c43c39cc290c39ac284c29cc387c29fc3b618c2afc3b7120dc3b5c3bdc3b80e107e36c3b8c3ae16c384c2b1c294c3850cc3bfc3acc3b1c39d4dc298c3bc30c3b9c3ae465c5c2f160fc38b77c39fc3bf7f003fc2833469c3b5040000"
-    ],
-    "headers": {
-      "cache-control": "no-cache",
-      "pragma": "no-cache",
-      "content-type": "application/json; charset=utf-8",
-      "content-encoding": "gzip",
-      "expires": "-1",
-      "vary": "Accept-Encoding",
-      "date": "Wed, 09 Sep 2015 14:19:25 GMT",
-      "content-length": "493"
-    }
-  },
-  {
-    "scope": "https://api.ctl.io:443",
-    "method": "GET",
-    "path": "/v2-experimental/networks/ALTD/ca2",
-    "body": "",
-    "status": 200,
-    "response": [
-      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3bac3a8c3bcc3bcc3a1c2a7c3b777c3ae4fc3aec3afc38fc2a6c3bb0f0fc3ae1fc3acc29dc39fc2bbc2b7c2b3c3bbc3a0c3a060722fc39f7f70c3bfc2a3c39147c393625653c38bc39dc29dc3b1c3bd4fc387c2bbc2bb0fc3873b77c3b7c3b6c3a9c3b359c39e4cc3ab62c39516c395c292c2bec2be2cc2b3c3a5c3afc3bf60c3b7c3a1c3af6fc39b51c293c28bc2acc38dc2afc2b26bc3bac39a7e3ac39ec2a5c38fc297c39922c2a70fc2a3c3af2cc3b376c291356fc3a9c3abc2bdc3bbc3b7c387c3a6c3bf3bc3b44d7bc2bdc3825bc2abc2bac2b824c2b8c3b401c39ec3bfc3a81101187d5416c38bc2b7c38d47c28f6858755e52c2a3262fc38fc2a9c385c2bcc38ec38fc3a9c2af79c39bc2ae1ec39dc2bdc29bc2adc28ac3b1c2b42dc3874575c3b7726f3b7fc2b7c38ac3ab62c2912fc39bc2acc2bc4bc2bd5e55c3b5c39bc3a66e56c2b6c2b3c2bbc3936cc3afc3ae2d2873c299c3971374c3bac391c3a7c2a76fc3a8c38fc2975fc2bdc3b9c3a8c3bbc2bf6464502856c387c2b359c29d374dc39ec390c2973fc28bc298c39c0d7b0ac2b0c3b2c3b0c2a17fc3b3c2ac01c39d7e367171c2bd583c5e7ec3b91ac2887cc3bfc2977cc3bfc3bf01c3bc65c394c38576020000"
-    ],
-    "headers": {
-      "cache-control": "no-cache",
-      "pragma": "no-cache",
-      "content-type": "application/json; charset=utf-8",
-      "content-encoding": "gzip",
-      "expires": "-1",
-      "vary": "Accept-Encoding",
-      "date": "Wed, 09 Sep 2015 14:19:25 GMT",
-      "content-length": "401"
-    }
-  },
-  {
-    "scope": "https://api.ctl.io:443",
-    "method": "GET",
-    "path": "/v2-experimental/networks/ALTD/il1",
-    "body": "",
-    "status": 200,
-    "response": [
-      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba687670c2b0c2bfc2b7c2b3c29bc39fc38f1ec38cc3b6c2b3c3b3c29dc389c3bdc3bbc393c3bb0f67c393c399c283c39dc2837bc2bb0f271fc28d3ec29a16c2b3c29a5ac3aec3aec28c1fc39e1bc39f7f38c39ec2b9c2bbc2b74f1fc38fc3b2665a17c2abc2b6c2a8c296c3b4c3ad65c2992d7fc3bfc2bdc287c3b71fc3bec3bec2a61d35c2b9c388c39ac3bc2ac2bbc2a6c2afc38dc287c3a35dc3ba78c2992d72c3ba2cc3bac38a326f1759c3b3c296c2bec39ec2bb7f7f6cc3bec2bf43c39fc2b4c3972bc2bcc2b5c2aac28b4b024b1fc3a0c3bdc28f1e01c380c3a8c2a3c2b258c2be6d3e7a44c2a3c2aac3b3c2925a3579794e4dc3a6757e4e7fc38dc39b76c3b5c3a8c3aec39d6c55c28cc2a76d392ec2aac2bbc2977bc39bc3b9c2bb555e17c28b7cc39966c3a55dc3aac3b6c2aac2aac39f3677c2b3c2b2c29dc39d2dc38ac39dc2bbc2b720c38c655e4fc390c3a947c29fc29fc2bec2a13f5f7ec3b5c3a6c2a3c3afc3bfc292c29141c2a1581dc38f6675c39e3479435fc3be2c627237c3ac29c380c38ac383c287c3bec38dc2b306c284c3bbc399c384c385c3b562c3b178c3b9c3a56b20c3b2c3bd5fc3b2c3bdc3bf07c28a5e544b75020000"
-    ],
-    "headers": {
-      "cache-control": "no-cache",
-      "pragma": "no-cache",
-      "content-type": "application/json; charset=utf-8",
-      "content-encoding": "gzip",
-      "expires": "-1",
-      "vary": "Accept-Encoding",
-      "date": "Wed, 09 Sep 2015 14:19:25 GMT",
-      "content-length": "399"
+      "date": "Wed, 06 Jan 2016 11:05:54 GMT",
+      "content-length": "383"
     }
   },
   {
@@ -445,7 +383,7 @@
     "body": "",
     "status": 200,
     "response": [
-      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba68c3a7c3934f7726c293c3b37bc2937c727fc3bfc381c2bdc3a9c3a4617670c3afc3a1c3b420c29f660f67c3b7270f3e1a7d342d6635c2b5c39cc39d19c3afc3aec3acc28cc3b7c3b61fc28c77c3aec3aec3adc39317c2b3c2bcc299c396c385c2aa2dc2aa257d7f5966c38bc39f7f7fc3bfc381c3afc3af1a52c29bc28bc2acc38dc2afc2b26bc3bac39e7d3cc39ec2a52fc296c39922c2a74fc3a36f2dc3b376c291356fc3a9c3bbc2bdc3bbc3b7c387c3a6c3bf3bc3b44d7bc2bdc3826bc2abc2bac2b824c388c3b401007cc3b4c28820c28c3e2ac28bc3a5c39bc3a6c2a34734c2b43a2fc2a951c293c297c3a7c394625ec3a7c3a7c3b4c397c2bc6d57c28fc3aec39ec38d56c38578c39ac296c3a3c2a2c2ba7bc2b9c2b7c29dc2bf5bc3a575c2b1c388c2976d56c39ec2a55ec2afc2aac3ba6d73372bc39bc399c39d6976c3afc3ae2dc2a873c299c3971374c3bac391c3a7c2a76fc3a8c38fc2975fc2bdc3b9c3a8c3bbc2bf6464502856c387c2b359c29d374dc39ec390c2973fc28bc298c39c0d7b0ac2b0c3b2c3b0c2a17fc3b3c2ac01c39d7e367171c2bd583c5e7ec3b91ac2887cc3bfc2977cc3bfc3bf0129c3a3c2b8c38a7a020000"
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba68c3a7c3934f7726c293c3b37bc2937c727fc3bfc381c2bdc3a9c3a4617670c3afc3a1c3b420c29f660f67c3b7270f3e1a7d342d6635c2b5c39cc39d19c3afc3aec3acc28cc3b7c3b61fc28c77c3aec3aec3adc39317c2b3c2bcc299c396c385c2aa2dc2aa257d7f5966c38bc39f7f7fc3bfc381c3afc3af1a52c29bc28bc2acc38dc2afc2b26bc3bac39e7d3cc39ec2a52fc296c39922c2a74fc3a36f2dc3b376c291356fc3a9c3bbc2bdc3bbc3b7c387c3a6c3bf3bc3b44d7bc2bdc3826bc2abc2bac2b824c388c3b401007cc3b4c28820c28c3e2ac28bc3a5c39bc3a6c2a34734c2b43a2fc2a951c293c297c3a7c394625ec3a7c3a7c3b4c397c39dc38bc2bdc3adc3bcc39d2ac2afc28b45c2be6cc2b3c3b22e757255c3956fc29bc2bb59c399c38ec3ae4ec2b37b776f41c28cc38bc2bcc29ec2a0c28fc28f3e3f7d437fc2bec3bcc3aac38d47c39fc3bf2523c39363c2b13ac29ec38dc3aac2bc69c3b2c286c2bec3bcc3a63ac2be1b020ec290c3b0c2bac2a77fc3b3c2ac0155c2bec381c2ae1d50c39bc3adc38b2f5fc2a3c39fc3afc3bfc292c3afc3bf3fc39bc28bc2bbc2a947020000"
     ],
     "headers": {
       "cache-control": "no-cache",
@@ -454,8 +392,8 @@
       "content-encoding": "gzip",
       "expires": "-1",
       "vary": "Accept-Encoding",
-      "date": "Wed, 09 Sep 2015 14:19:25 GMT",
-      "content-length": "400"
+      "date": "Wed, 06 Jan 2016 11:05:54 GMT",
+      "content-length": "384"
     }
   },
   {
@@ -465,7 +403,7 @@
     "body": "",
     "status": 200,
     "response": [
-      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba68c3afc3a0c39ec3b9c2a70f76c3b2c287c29fc29ec3afc3afc39fc29fc3ac1f7c7ac3bfc393c287c399c39e6cc3bfc381c2a7c3b73ec39d79c2987f34c3ba685ac38c6a6ac2b9c2bb33c2bec2bf33c39e3f18c3afc39cc39dc39bc2a7c28f677933c2adc28b555b544bc3bac3b6c2b2c38cc296c2bfc3bfc39ec2bdc3bdc283c39fc39fc2b4c2a3261759c29b5f65c397c3b4c2b5c3b970c2bc4b1f2fc2b3454ec29f455f59c3a6c3ad226bc39ec392c3977bc3b7c3afc28fc38dc3bf77c3a8c29bc3b67ac285c2b75675714960c3a903c2bcc3bfc3912300187d5416c38bc2b7c38d47c28f6854755e52c2ab262fc38fc2a9c389c2bcc38ec38fc3a9c2af79c39bc2ae1ec39dc2bdc29bc2adc28ac3b1c2b42dc3874575c3b7726f3b7fc2b7c38ac3ab62c2912fc39bc2acc2bc4bc39d5e55c3b5c39bc3a66e56c2b6c2b3c2bbc3936cc3b7c3ae2d0873c299c3971374c3bac391c3a7c2a76fc3a8c38fc2975fc2bdc3b9c3a8c3bbc2bf6464502856c387c2b359c29d374dc39ec390c2973fc28bc298c39c0d7b0ac2b0c3b2c3b0c2a17fc3b3c2ac01c39e3fc29bc2b8c2b85e2c1e2fc2bf7c0d44c2bec3bf4bc2bec3bfc3bf004929673375020000"
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba68c3afc3a0c39ec3b9c2a70f76c3b2c287c29fc29ec3afc3afc39fc29fc3ac1f7c7ac3bfc393c287c399c39e6cc3bfc381c2a7c3b73ec39d79c2987f34c3ba685ac38c6a6ac2b9c2bb33c2bec2bf33c39e3f18c3afc39cc39dc39bc2a7c28f677933c2adc28b555b544bc3bac3b6c2b2c38cc296c2bfc3bfc39ec2bdc3bdc283c39fc39fc2b4c2a3261759c29b5f65c397c3b4c2b5c3b970c2bc4b1f2fc2b3454ec29f455f59c3a6c3ad226bc39ec392c3977bc3b7c3afc28fc38dc3bf77c3a8c29bc3b67ac285c2b75675714960c3a903c2bcc3bfc3912300187d5416c38bc2b7c38d47c28f6854755e52c2ab262fc38fc2a9c389c2bcc38ec38fc3a9c2afc2bbc2977bc39bc3b9c2bb555e17c28b7cc39966c3a55dc3aac3a5c2aac2aac39f3677c2b3c2b2c29dc39dc29d66c2bb776f41c287c38bc2bcc29ec2a0c28fc28f3e3f7d437fc2bec3bcc3aac38d47c39fc3bf2523c39363c2b13ac29ec38dc3aac2bc69c3b2c286c2bec3bcc3a63ac2be1b020ec290c3b0c2bac2a77fc3b3c2ac01c29ac39f60c3970ec2a8c3adc3b6c3a5c297c2afc391c3afc3b77fc389c3b7c3bf1fc2b02bc2bfc3b142020000"
     ],
     "headers": {
       "cache-control": "no-cache",
@@ -474,18 +412,18 @@
       "content-encoding": "gzip",
       "expires": "-1",
       "vary": "Accept-Encoding",
-      "date": "Wed, 09 Sep 2015 14:19:25 GMT",
-      "content-length": "401"
+      "date": "Wed, 06 Jan 2016 11:05:54 GMT",
+      "content-length": "385"
     }
   },
   {
     "scope": "https://api.ctl.io:443",
     "method": "GET",
-    "path": "/v2-experimental/networks/ALTD/uc1",
+    "path": "/v2-experimental/networks/ALTD/il1",
     "body": "",
     "status": 200,
     "response": [
-      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3bac3a8c3a1c3bdc3b3c2bdc287c2bbc3b9c3b9c3bec3acc393c3a9c3bec3be6427c38bc3afc3adc3aec38ec3ae3fc3b8c3b4c39ec2bd07c3a7c3996cc3bfc2a3c39147c393625653c38bc39dc29dc3b1c3aec39ec2bdc3b1c3aec2a77bc3a3c29dc2bb7bc3b862c29637c393c2ba58c2b545c2b5c2a4c3af2fc38b6cc3b9c3bbc3afc39ec3bf74c3afc3b7772dc2a9c39145c396c3a657c3993535701fc28f77c3a9c28b65c2b6c388c3a9c393c281c397c29679c2bbc388c29ac2b7c39460c3afc3bec3bdc2b1c3b9c3bf0e7dc3935ec2afc3b0c39ec2aa2e2e09347d00081f3d02c288c3914765c2b17cc39b7cc3b4c2884657c3a725c2b56ac3b2c3b2c29cc29ac38cc3abc3bcc29cc3bec29ac2b7c3adc3aac391c39dc2bbc399c2aa184fc39b725c54772fc3b7c2b6c3b377c2abc2bc2e16c3b9c2b2c38dc38ac2bbc394c3ad5555c2bf6dc3ae66653bc2bbc2bbc29ec3aec39ec2bd05c2812ec3b37ac2824e3fc3bac3bcc3b40dc3bdc3b9c3b2c2ab371f7dc3bfc297c28c0c0ac385c3aa7836c2abc3b3c2a6c3891bc3bac3b26711c293c2bb614f01561e3ec3b46fc29e3520c39cc38f262ec2ae17c28bc387c38b2f5f03c291c3afc3bfc292c3afc3bf3f5ec28dc38c267d020000"
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba687670c2b0c2bfc2b7c2b3c29bc39fc38f1ec38cc3b6c2b3c3b3c29dc389c3bdc3bbc393c3bb0f67c393c399c283c39dc2837bc2bb0f271fc28d3ec29a16c2b3c29a5ac3aec3aec28c1fc39e1bc39f7f38c39ec2b9c2bbc2b74f1fc38fc3b2665a17c2abc2b6c2a8c296c3b4c3ad65c2992d7fc3bfc2bdc287c3b71fc3bec3bec2a61d35c2b9c388c39ac3bc2ac2bbc2a6c2afc38dc287c3a35dc3ba78c2992d72c3ba2cc3bac38a326f1759c3b3c296c2bec39ec2bb7f7f6cc3bec2bf43c39fc2b4c3972bc2bcc2b5c2aac28b4b024b1fc3a0c3bdc28f1e01c380c3a8c2a3c2b258c2be6d3e7a44c2a3c2aac3b3c2925a3579794e4dc3a6757e4e7fc39dc2bdc39cc39bc38ec39fc2adc3b2c2ba58c3a4c38b362bc3af522f5755c3bdc2b6c2b9c29bc295c3adc3ac6e51c3aec39ec2bd051d2ec3b37ac2823e3ec3bac3bcc3b40dc3bdc3b9c3b2c2ab371f7dc3bfc297c28c4cc28fc385c3aa7836c2abc3b3c2a6c3891bc3bac3b2c29bc3abc3b86e083840c382c3abc29ec3bec38dc2b30664c3b906c2bb76406dc2b72fc2bf7cc28d7ec2bfc3bf4bc2bec3bfc3bf00471fc2833242020000"
     ],
     "headers": {
       "cache-control": "no-cache",
@@ -494,8 +432,8 @@
       "content-encoding": "gzip",
       "expires": "-1",
       "vary": "Accept-Encoding",
-      "date": "Wed, 09 Sep 2015 14:19:25 GMT",
-      "content-length": "400"
+      "date": "Wed, 06 Jan 2016 11:05:55 GMT",
+      "content-length": "384"
     }
   },
   {
@@ -505,7 +443,7 @@
     "body": "",
     "status": 200,
     "response": [
-      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba682fc39bc38bc2a60fc3afc29f3fc39cc2bbc2b7c2b7c2bfc297c39dc38bc3b61e4e1f66c3a77b593ec39939c38fc3b6c3b2c28f461f4dc28b594d2d7777c38607c2bbc3a35dc3bac3bfc38ec39dc2bd7dc3ba7cc29637c393c2ba58c2b545c2b5c2a4c2af2fc38b6cc3b9c3bbc3afc3ae1dc3acc3bec3bec2b621c2b5c2b9c388c39ac3bc2ac2bbc2a6c3afc3adc2a7637cc2bec38c16397d187f69c299c2b7c28bc2ac794bc39fc3afc39dc2bf3f36c3bfc39fc2a16fc39ac3ab155e5bc395c3852501c2a60f00c3a0c2a347c28030c3bac2a82cc2966fc29bc28f1ec391c388c3aac2bcc2a4564d5ec29e53c29379c29dc29fc3935fc3b3c2b65d3dc2ba7b375b15c3a3695bc28ec28bc3aac3aec3a5c39e76c3be6ec295c397c385225fc2b65979c297c2bac2bdc2aac3aac2b7c38dc39dc2ac6c6777c2afc2b2c39dc2bbc2b720c38e655e4fc390c3a947c29fc29fc2bec2a13f5f7ec3b5c3a6c2a3c3afc3bfc292c29141c2a1581dc38f6675c39e3479435fc3be2c627237c3ac29c380c38ac383c287c3bec38dc2b30678c3bf6cc3a2c3a27ac2b178c2bcc3bcc3b23510c3b9c3be2fc3b9c3bec3bf03c3afc28ac3920079020000"
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba682fc39bc38bc2a60fc3afc29f3fc39cc2bbc2b7c2b7c2bfc297c39dc38bc3b61e4e1f66c3a77b593ec39939c38fc3b6c3b2c28f461f4dc28b594d2d7777c38607c2bbc3a35dc3bac3bfc38ec39dc2bd7dc3ba7cc29637c393c2ba58c2b545c2b5c2a4c2af2fc38b6cc3b9c3bbc3afc3ae1dc3acc3bec3bec2b621c2b5c2b9c388c39ac3bc2ac2bbc2a6c3afc3adc2a7637cc2bec38c16397d187f69c299c2b7c28bc2ac794bc39fc3afc39dc2bf3f36c3bfc39fc2a16fc39ac3ab155e5bc395c3852501c2a60f00c3a0c2a347c28030c3bac2a82cc2966fc29bc28f1ec391c388c3aac2bcc2a4564d5ec29e53c29379c29dc29fc3935f772fc3b7c2b6c3b377c2abc2bc2e16c3b9c2b2c38dc38ac2bbc394c38b5555c2bf6dc3ae66653bc2bb7bc295c3adc39ec2bd052d2ec3b37ac2823e3ec3bac3bcc3b40dc3bdc3b9c3b2c2ab371f7dc3bfc297c28c4cc28fc385c3aa7836c2abc3b3c2a6c3891bc3bac3b2c29bc3abc3b86e083840c382c3abc29ec3bec38dc2b306687ec2835d3bc2a0c2b6c39bc2975fc2be46c2bfc39fc3bf25c39fc3bf7f00230b0a0c46020000"
     ],
     "headers": {
       "cache-control": "no-cache",
@@ -514,8 +452,8 @@
       "content-encoding": "gzip",
       "expires": "-1",
       "vary": "Accept-Encoding",
-      "date": "Wed, 09 Sep 2015 14:19:25 GMT",
-      "content-length": "396"
+      "date": "Wed, 06 Jan 2016 11:05:54 GMT",
+      "content-length": "381"
     }
   },
   {
@@ -525,7 +463,7 @@
     "body": "",
     "status": 200,
     "response": [
-      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba687fc3a7c3bec2bdc3a9c2a7c293c29dc2bdc3a9c2bdc283c3bdc2bd3cc38fc3aec39dc2bbc2bfc2bb77c3bec3b06136c39d3f3fc2b87fc3bec391c3a8c2a36931c2abc2a9c3a5c3aec38ec3b8c3a1c38ec3b8c3bec38e78c3a7c3aec39e3e7d3cc38bc29b695dc2acc39ac2a25ac392c2b7c29765c2b6c3bcc3bdc3b776c3aec3afc3bcc3bec2a61d35c2b9c388c39ac3bc2ac2bbc2a6c2afc38dc287c3a35dc3ba78c2992d72c3ba2cc3bac38a326f1759c3b3c296c2bec39ec2bb7f7f6cc3bec28f6fc39ac3ab15c39e5ac395c38525c281c2a50fc3b0c3be47c28f0060c3b451592cc39f361f3dc2a251c3957949c2adc29ac2bc04c3aac3b33a3fc2a7c2bfc3a66dc2bb7a74c3b76ec2b62ac386c393c2b61c17c395c39dc38bc2bdc3adc3bcc39d2ac2afc28b45c2be6cc2b3c3b22e757b55c3956fc29bc2bb59c399c38ec3aec2aec39bc39dc2bbc2b720c38c655e4fc390c3a947c29fc29fc2bec2a13f5f7ec3b5c3a6c2a3c3afc3bfc292c29141c2a1581dc38f6675c39e3479435fc3be2c627237c3ac29c380c38ac383c287c3bec38dc2b306c284c3bbc399c384c385c3b562c3b178c3b9c3a56b20c3b2c3bd5fc3b2c3bdc3bf07c38dc2b2c3bec29575020000"
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba687fc3a7c3bec2bdc3a9c2a7c293c29dc2bdc3a9c2bdc283c3bdc2bd3cc38fc3aec39dc2bbc2bfc2bb77c3bec3b06136c39d3f3fc2b87fc3bec391c3a8c2a36931c2abc2a9c3a5c3aec38ec3b8c3a1c38ec3b8c3bec38e78c3a7c3aec39e3e7d3cc38bc29b695dc2acc39ac2a25ac392c2b7c29765c2b6c3bcc3bdc3b776c3aec3afc3bcc3bec2a61d35c2b9c388c39ac3bc2ac2bbc2a6c2afc38dc287c3a35dc3ba78c2992d72c3ba2cc3bac38a326f1759c3b3c296c2bec39ec2bb7f7f6cc3bec28f6fc39ac3ab15c39e5ac395c38525c281c2a50fc3b0c3be47c28f0060c3b451592cc39f361f3dc2a251c3957949c2adc29ac2bc04c3aac3b33a3fc2a7c2bfc3ae5ec3ae6dc3a7c3af56795d2cc3b265c29bc29577c2a9c297c2abc2aa7ec39bc39cc38dc38a767677c39dc3aec39ec2bd051d2ec3b37ac2823e3ec3bac3bcc3b40dc3bdc3b9c3b2c2ab371f7dc3bfc297c28c4cc28fc385c3aa7836c2abc3b3c2a6c3891bc3bac3b2c29bc3abc3b86e083840c382c3abc29ec3bec38dc2b30664c3b906c2bb76406dc2b72fc2bf7cc28d7ec2bfc3bf4bc2bec3bfc3bf005d76c3b96b42020000"
     ],
     "headers": {
       "cache-control": "no-cache",
@@ -534,8 +472,8 @@
       "content-encoding": "gzip",
       "expires": "-1",
       "vary": "Accept-Encoding",
-      "date": "Wed, 09 Sep 2015 14:19:25 GMT",
-      "content-length": "397"
+      "date": "Wed, 06 Jan 2016 11:05:55 GMT",
+      "content-length": "382"
     }
   },
   {
@@ -554,189 +492,8 @@
       "content-encoding": "gzip",
       "expires": "-1",
       "vary": "Accept-Encoding",
-      "date": "Wed, 09 Sep 2015 14:19:25 GMT",
+      "date": "Wed, 06 Jan 2016 11:05:54 GMT",
       "content-length": "122"
-    }
-  },
-  {
-    "scope": "https://api.ctl.io:443",
-    "method": "GET",
-    "path": "/v2-experimental/networks/ALTD/gb1",
-    "body": "",
-    "status": 200,
-    "response": [
-      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba68c2ba7bc3bf6067673f7bc2b077c2bec2bbc29fc3a50f1fc38ec3ae3dc2b8c29fc39dc39b7dc3b8c3b0c381c3bec283c389c381c39e47c2a3c28fc2a6c385c2acc2a6c296c2bb3bc3a34f77c386c2bbc3b776c3863b77c3b7c3b6c3a9c3b359c39e4cc3ab62c39516c395c292c2bec2be2cc2b3c3a5c3af7f706fc3a7c3b7c2b7c3adc2a8c38945c396c3a657c399357d6d3f1dc3afc392c3a7c38b6cc291c393c287c39177c29679c2bbc388c29ac2b7c3b4c3b5c39ec3bdc3bb63c3b37f7cc3935ec2afc3b0c396c2aa2e2e092e7dc280c3b73f7a4400461fc295c385c3b26dc3b3c391231a56c29dc297c394c2a8c389c38b736a31c2afc3b373c3ba6bc39ec2b6c2ab4777c3af66c2ab623c6dc38b7151c39dc2bdc39cc39bc38ec39fc2adc3b2c2ba58c3a4c38b362bc3af52c2af5755c3bdc2b6c2b9c29bc295c3adc3acc3aec38564c3b7c3ae2d2873c299c3971374c3bac391c3a7c2a76fc3a8c38fc2975fc2bdc3b9c3a8c3bbc2bf6464502856c387c2b359c29d374dc39ec390c2973fc28bc298c39c0d7b0ac2b0c3b2c3b0c2a17fc3b3c2ac01c39d7e367171c2bd583c5e7ec3b91ac288302ac38c74c3b9c283c283c287c3b9c3acc393c3bdc287c3b7c3b3c389c3bec2bd7bc399c3837c323dc3983bc39fc29fc29cc3af3cc2bc3fc38b337ac39963c2bac39dc3b1c39ec3bec2a71bc2986ec297c2be660ec3a2c286c39426c3a43ac3bec2b4c38775c2bdc29768c2a8c3afc38776c280c3b0c2b3c38177c2b720c28ec2a52c66c3b867c28fc3af6ec382c3a4c287c3897737c3a2c3a27ac2b17858c2bec3bbc3bec3bf033a62c3ab69c3ae040000"
-    ],
-    "headers": {
-      "cache-control": "no-cache",
-      "pragma": "no-cache",
-      "content-type": "application/json; charset=utf-8",
-      "content-encoding": "gzip",
-      "expires": "-1",
-      "vary": "Accept-Encoding",
-      "date": "Wed, 09 Sep 2015 14:19:26 GMT",
-      "content-length": "493"
-    }
-  },
-  {
-    "scope": "https://api.ctl.io:443",
-    "method": "GET",
-    "path": "/v2-experimental/networks/ALTD/de1",
-    "body": "",
-    "status": 200,
-    "response": [
-      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3bac3a87c32c39d3dc3bf74c3ba6036c39bc399c39bc39fc29dc29d677b7bc293c3ac3cc39bc2b9c2bfc2b7c2bf3fc38b76763e1a7d342d6635c2b5c39cc39d19c3afc392c3bfc3afc28f77c3aec3aec3adc393c387c2b3c2bcc299c396c385c2aa2dc2aa257d7b5966c38bc39f7f6fc3a7c3bec3af4f4dc2b819c2b5c2b8c388c39ac3bc2ac2bbc2a66fc3a903c3be70c2bc4b1f2fc2b3454ec29fc385c39e58c3a6c3ad226bc39ec392c2b77bc3b7c3afc28fc38dc3bfc281447bc2bdc3824bc2abc2bac2b824c2a8c3b4015ec3bfc3a811c2bd3fc3bac2a82cc2966fc29bc28f1ec391c290c3aac2bcc2a4464d5ec29e53c28b79c29dc29fc3935fc3b3c2b65d3dc2ba7b375b15c3a3695bc28ec28bc3aac3aec3a5c39e76c3be6ec295c397c385225fc2b65979c2977ac2bdc2aac3aac2b7c38dc39dc2ac6c677767c3b9c3aec39d5b50c3a532c2af27c3a8c3b4c2a3c38f4fc39fc390c29f2fc2bf7ac3b3c391c3b77fc389c388c2a050c2acc28e67c2b33a6fc29ac2bcc2a12f7f1631c2b91bc3b61460c3a5c3a143c3bfc3a65903c2bac3bd6cc3a2c3a27ac2b178c2bcc3bcc3b235106154c298c3a10e761ec3ae3d7cc3b070c3afc3a07c77c2b6c2bfc2b7c2b73f793879c3b870c3afc381c3b9c283c3bdc3bbc293c3a9c38ec3811ec2bd1c32c39cc2bd07c29b38c3aec39e03c3833fc3b71e50c2931ec38bc391c39b3dc29ec3abc2bc43037d4fc2a6c2bbc3b7c3a067c283c3a96e41194b564cc3afc38f1ec393c39dc284c3890fc293c3a96ec384c385c3b562c3b1c3a831c39dc3bdc3b307c3947a76706fc3afc3a1c39ec3bec283073b070fc2b3c399c3bec2836cc3b270c3a77cc3b7c39ec3bdc3b37bc3b472c38874c2bb3b0f3770c39dc2bdc29dc287c286c283c2a821c2b5c3a9c2b11d7dc39cc3a3c2bbc39e5b34c398c3b7633cc282c3b0c2b3c38178c2b7c2a0c28e252dc2a6c3b867c28fc3b16ec382c3a4c287c3897837c3a2c3a27ac2b178c3b4186fc2b2333bc39f3dc398c39bc29f4d67c3b7c3b767c3b71e1ec3a413c392c294c2937b7b7b0fc3afc3adc29dc3af67c3b472c287c3b11ec3ae6d62c2bcc2877bc296c2851e4221c3b419c28fc39ec3af315ec3b72d1ac3ac7b32c39ec383c2bdc29f0dc386c2bb05752c6931c3853f7bc28c7713263f4cc386c2bb1117c397c28bc385c2a3c38778c3b7c3b6c3af7fc3ba607ac3afc3937c6f72c2bec3bf60c3b669763ec299647b3b0fc2b27bc399c39e41767f4a2fc287c28cc2b7c2b77bc2b0c281c3b1c3b6770f0c0b51436ac393633cc3bac2b8c38778c2bdc2b768c2b0c3afc3877804c3a167c283c3b16e411d4b5a4cc3b1c38f1ec3a3c39dc284c3890fc293c3b16ec384c385c3b562c3b1c3a831c39ec3b97936c399c29dc39dc3bb74c3bfc39ec2a7c2b3c3bdc287c3b7c38fc2b34f773ec29dc29d4f33c3b210c3b71f3e3800693bc28cc2b77f6f13c3a3c3ad",
-      "c39fc2b32cc2b40f4bc394673c7ac2bfc38778c39dc2b768c2b0c3afc38978c3bbc3b77e3618c3af16c394c2b1c2a4c38514c3bfc3ac31c39e4dc298c3bc3019c3af465c5c2f16c28f1ec3a37d7ac3be69c296c3ad7d3ac29d1e4cc3b7c3b6293ec299c390c2af0fc38ec3b777c3b7c3b3c3bcc3bc60c2b63bc2a3c297c2bbc28cc2b71f673cc3afc2af14c29c1561c2b97dc29fc3a57440c3bcc389c3bbc3b3c399c3bec38f06c29fc39dc28218c296c292c298c391c29f3d3ec2bb09c2931f26c29fc39dc288c28bc3abc385c3a261c3b9c3acc3bbc3bf0f6bc286507b33110000"
-    ],
-    "headers": {
-      "cache-control": "no-cache",
-      "pragma": "no-cache",
-      "content-type": "application/json; charset=utf-8",
-      "content-encoding": "gzip",
-      "expires": "-1",
-      "vary": "Accept-Encoding",
-      "date": "Wed, 09 Sep 2015 14:19:26 GMT",
-      "content-length": "941"
-    }
-  },
-  {
-    "scope": "https://api.ctl.io:443",
-    "method": "GET",
-    "path": "/v2-experimental/networks/ALTD/gb3",
-    "body": "",
-    "status": 200,
-    "response": [
-      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba6836c38bc3af1fc3ac3dc3983dc29f4dc3b3c3bdc3bdc283c389c381c3837bc3b70fc3b6c3afc3af7f7a7fc3b77cc3b7c393c3a9c3ae47c2a3c28fc2a6c385c2acc2a6c296c2bb3bc3a3c39dc29d4fc387c3bbc3b7c3873b77c3b7c3b6c3a9c3b359c39e4cc3ab62c39516c395c292c2bec2be2cc2b3c3a5c3afc2bf776fc3bfc3bec3af6f1b52c29bc28bc2acc38dc2afc2b26bc3bac39e7e3a06c38c65c2b6c388c3a9c383c3b84bc38bc2bc5d64c38d5bc3ba7ec3afc3bec3bdc2b1c3b9c3bf0e7dc3935ec2afc3b0c39ac2aa2e2e09307d00001f3d02c284c3914765c2b17cc39b7cc3b4c2884656c3a725c2b56ac3b2c3b2c29cc29ac38cc3abc3bcc29cc3bec29ac2b7c3adc3aac391c39dc2bbc399c2aa184fc39b725c54772fc3b7c2b6c3b377c2abc2bc2e16c3b9c2b2c38dc38ac2bbc394c3ad5555c2bf6dc3ae66653bc2bb7b31c2b977c3b716c384c2b9c38cc3ab093ac3bdc3a8c3b3c39337c3b4c3a7c38bc2afc39e7cc3b4c3bd5f32322814c2abc3a3c399c2acc38ec29b266fc3a8c38bc29f454cc3aec2863d055879c3b8c390c2bf79c396c280703fc29bc2b8c2b85e2c1e2fc2bf7c0d44c2bec3bf4bc2bec3bfc3bf00c3b70f444e79020000"
-    ],
-    "headers": {
-      "cache-control": "no-cache",
-      "pragma": "no-cache",
-      "content-type": "application/json; charset=utf-8",
-      "content-encoding": "gzip",
-      "expires": "-1",
-      "vary": "Accept-Encoding",
-      "date": "Wed, 09 Sep 2015 14:19:26 GMT",
-      "content-length": "400"
-    }
-  },
-  {
-    "scope": "https://api.ctl.io:443",
-    "method": "GET",
-    "path": "/v2-experimental/networks/ALTD/ny1",
-    "body": "",
-    "status": 200,
-    "response": [
-      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c3bdc3bf0729c2bb4c0d02000000"
-    ],
-    "headers": {
-      "cache-control": "no-cache",
-      "pragma": "no-cache",
-      "content-type": "application/json; charset=utf-8",
-      "content-encoding": "gzip",
-      "expires": "-1",
-      "vary": "Accept-Encoding",
-      "date": "Wed, 09 Sep 2015 14:19:26 GMT",
-      "content-length": "122"
-    }
-  },
-  {
-    "scope": "https://api.ctl.io:443",
-    "method": "GET",
-    "path": "/v2-experimental/networks/ALTD/il1",
-    "body": "",
-    "status": 200,
-    "response": [
-      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba687670c2b0c2bfc2b7c2b3c29bc39fc38f1ec38cc3b6c2b3c3b3c29dc389c3bdc3bbc393c3bb0f67c393c399c283c39dc2837bc2bb0f271fc28d3ec29a16c2b3c29a5ac3aec3aec28c1fc39e1bc39f7f38c39ec2b9c2bbc2b74f1fc38fc3b2665a17c2abc2b6c2a8c296c3b4c3ad65c2992d7fc3bfc2bdc287c3b71fc3bec3bec2a61d35c2b9c388c39ac3bc2ac2bbc2a6c2afc38dc287c3a35dc3ba78c2992d72c3ba2cc3bac38a326f1759c3b3c296c2bec39ec2bb7f7f6cc3bec2bf43c39fc2b4c3972bc2bcc2b5c2aac28b4b024b1fc3a0c3bdc28f1e01c380c3a8c2a3c2b258c2be6d3e7a44c2a3c2aac3b3c2925a3579794e4dc3a6757e4e7fc38dc39b76c3b5c3a8c3aec39d6c55c28cc2a76d392ec2aac2bbc2977bc39bc3b9c2bb555e17c28b7cc39966c3a55dc3aac3b6c2aac2aac39f3677c2b3c2b2c29dc39d2dc38ac39dc2bbc2b720c38c655e4fc390c3a947c29fc29fc2bec2a13f5f7ec3b5c3a6c2a3c3afc3bfc292c29141c2a1581dc38f6675c39e3479435fc3be2c627237c3ac29c380c38ac383c287c3bec38dc2b306c284c3bbc399c384c385c3b562c3b178c3b9c3a56b20c3b2c3bd5fc3b2c3bdc3bf07c28a5e544b75020000"
-    ],
-    "headers": {
-      "cache-control": "no-cache",
-      "pragma": "no-cache",
-      "content-type": "application/json; charset=utf-8",
-      "content-encoding": "gzip",
-      "expires": "-1",
-      "vary": "Accept-Encoding",
-      "date": "Wed, 09 Sep 2015 14:19:26 GMT",
-      "content-length": "399"
-    }
-  },
-  {
-    "scope": "https://api.ctl.io:443",
-    "method": "GET",
-    "path": "/v2-experimental/networks/ALTD/ca3",
-    "body": "",
-    "status": 200,
-    "response": [
-      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba68c3a7c3934f7726c293c3b37bc2937c727fc3bfc381c2bdc3a9c3a4617670c3afc3a1c3b420c29f660f67c3b7270f3e1a7d342d6635c2b5c39cc39d19c3afc3aec3acc28cc3b7c3b61fc28c77c3aec3aec3adc39317c2b3c2bcc299c396c385c2aa2dc2aa257d7f5966c38bc39f7f7fc3bfc381c3afc3af1a52c29bc28bc2acc38dc2afc2b26bc3bac39e7d3cc39ec2a52fc296c39922c2a74fc3a36f2dc3b376c291356fc3a9c3bbc2bdc3bbc3b7c387c3a6c3bf3bc3b44d7bc2bdc3826bc2abc2bac2b824c388c3b401007cc3b4c28820c28c3e2ac28bc3a5c39bc3a6c2a34734c2b43a2fc2a951c293c297c3a7c394625ec3a7c3a7c3b4c397c2bc6d57c28fc3aec39ec38d56c38578c39ac296c3a3c2a2c2ba7bc2b9c2b7c29dc2bf5bc3a575c2b1c388c2976d56c39ec2a55ec2afc2aac3ba6d73372bc39bc399c39d6976c3afc3ae2dc2a873c299c3971374c3bac391c3a7c2a76fc3a8c38fc2975fc2bdc3b9c3a8c3bbc2bf6464502856c387c2b359c29d374dc39ec390c2973fc28bc298c39c0d7b0ac2b0c3b2c3b0c2a17fc3b3c2ac01c39d7e367171c2bd583c5e7ec3b91ac2887cc3bfc2977cc3bfc3bf0129c3a3c2b8c38a7a020000"
-    ],
-    "headers": {
-      "cache-control": "no-cache",
-      "pragma": "no-cache",
-      "content-type": "application/json; charset=utf-8",
-      "content-encoding": "gzip",
-      "expires": "-1",
-      "vary": "Accept-Encoding",
-      "date": "Wed, 09 Sep 2015 14:19:26 GMT",
-      "content-length": "400"
-    }
-  },
-  {
-    "scope": "https://api.ctl.io:443",
-    "method": "GET",
-    "path": "/v2-experimental/networks/ALTD/ca2",
-    "body": "",
-    "status": 200,
-    "response": [
-      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3bac3a8c3bcc3bcc3a1c2a7c3b777c3ae4fc3aec3afc38fc2a6c3bb0f0fc3ae1fc3acc29dc39fc2bbc2b7c2b3c3bbc3a0c3a060722fc39f7f70c3bfc2a3c39147c393625653c38bc39dc29dc3b1c3bd4fc387c2bbc2bb0fc3873b77c3b7c3b6c3a9c3b359c39e4cc3ab62c39516c395c292c2bec2be2cc2b3c3a5c3afc3bf60c3b7c3a1c3af6fc39b51c293c28bc2acc38dc2afc2b26bc3bac39a7e3ac39ec2a5c38fc297c39922c2a70fc2a3c3af2cc3b376c291356fc3a9c3abc2bdc3bbc3b7c387c3a6c3bf3bc3b44d7bc2bdc3825bc2abc2bac2b824c2b8c3b401c39ec3bfc3a81101187d5416c38bc2b7c38d47c28f6858755e52c2a3262fc38fc2a9c385c2bcc38ec38fc3a9c2af79c39bc2ae1ec39dc2bdc29bc2adc28ac3b1c2b42dc3874575c3b7726f3b7fc2b7c38ac3ab62c2912fc39bc2acc2bc4bc2bd5e55c3b5c39bc3a66e56c2b6c2b3c2bbc3936cc3afc3ae2d2873c299c3971374c3bac391c3a7c2a76fc3a8c38fc2975fc2bdc3b9c3a8c3bbc2bf6464502856c387c2b359c29d374dc39ec390c2973fc28bc298c39c0d7b0ac2b0c3b2c3b0c2a17fc3b3c2ac01c39d7e367171c2bd583c5e7ec3b91ac2887cc3bfc2977cc3bfc3bf01c3bc65c394c38576020000"
-    ],
-    "headers": {
-      "cache-control": "no-cache",
-      "pragma": "no-cache",
-      "content-type": "application/json; charset=utf-8",
-      "content-encoding": "gzip",
-      "expires": "-1",
-      "vary": "Accept-Encoding",
-      "date": "Wed, 09 Sep 2015 14:19:26 GMT",
-      "content-length": "401"
-    }
-  },
-  {
-    "scope": "https://api.ctl.io:443",
-    "method": "GET",
-    "path": "/v2-experimental/networks/ALTD/uc1",
-    "body": "",
-    "status": 200,
-    "response": [
-      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3bac3a8c3a1c3bdc3b3c2bdc287c2bbc3b9c3b9c3bec3acc393c3a9c3bec3be6427c38bc3afc3adc3aec38ec3ae3fc3b8c3b4c39ec2bd07c3a7c3996cc3bfc2a3c39147c393625653c38bc39dc29dc3b1c3aec39ec2bdc3b1c3aec2a77bc3a3c29dc2bb7bc3b862c29637c393c2ba58c2b545c2b5c2a4c3af2fc38b6cc3b9c3bbc3afc39ec3bf74c3afc3b7772dc2a9c39145c396c3a657c3993535701fc28f77c3a9c28b65c2b6c388c3a9c393c281c397c29679c2bbc388c29ac2b7c39460c3afc3bec3bdc2b1c3b9c3bf0e7dc3935ec2afc3b0c39ec2aa2e2e09347d00081f3d02c288c3914765c2b17cc39b7cc3b4c2884657c3a725c2b56ac3b2c3b2c29cc29ac38cc3abc3bcc29cc3bec29ac2b7c3adc3aac391c39dc2bbc399c2aa184fc39b725c54772fc3b7c2b6c3b377c2abc2bc2e16c3b9c2b2c38dc38ac2bbc394c3ad5555c2bf6dc3ae66653bc2bbc2bbc29ec3aec39ec2bd05c2812ec3b37ac2824e3fc3bac3bcc3b40dc3bdc3b9c3b2c2ab371f7dc3bfc297c28c0c0ac385c3aa7836c2abc3b3c2a6c3891bc3bac3b26711c293c2bb614f01561e3ec3b46fc29e3520c39cc38f262ec2ae17c28bc387c38b2f5f03c291c3afc3bfc292c3afc3bf3f5ec28dc38c267d020000"
-    ],
-    "headers": {
-      "cache-control": "no-cache",
-      "pragma": "no-cache",
-      "content-type": "application/json; charset=utf-8",
-      "content-encoding": "gzip",
-      "expires": "-1",
-      "vary": "Accept-Encoding",
-      "date": "Wed, 09 Sep 2015 14:19:26 GMT",
-      "content-length": "400"
-    }
-  },
-  {
-    "scope": "https://api.ctl.io:443",
-    "method": "GET",
-    "path": "/v2-experimental/networks/ALTD/ca1",
-    "body": "",
-    "status": 200,
-    "response": [
-      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba68c3afc3a0c39ec3b9c2a70f76c3b2c287c29fc29ec3afc3afc39fc29fc3ac1f7c7ac3bfc393c287c399c39e6cc3bfc381c2a7c3b73ec39d79c2987f34c3ba685ac38c6a6ac2b9c2bb33c2bec2bf33c39e3f18c3afc39cc39dc39bc2a7c28f677933c2adc28b555b544bc3bac3b6c2b2c38cc296c2bfc3bfc39ec2bdc3bdc283c39fc39fc2b4c2a3261759c29b5f65c397c3b4c2b5c3b970c2bc4b1f2fc2b3454ec29f455f59c3a6c3ad226bc39ec392c3977bc3b7c3afc28fc38dc3bf77c3a8c29bc3b67ac285c2b75675714960c3a903c2bcc3bfc3912300187d5416c38bc2b7c38d47c28f6854755e52c2ab262fc38fc2a9c389c2bcc38ec38fc3a9c2af79c39bc2ae1ec39dc2bdc29bc2adc28ac3b1c2b42dc3874575c3b7726f3b7fc2b7c38ac3ab62c2912fc39bc2acc2bc4bc39d5e55c3b5c39bc3a66e56c2b6c2b3c2bbc3936cc3b7c3ae2d0873c299c3971374c3bac391c3a7c2a76fc3a8c38fc2975fc2bdc3b9c3a8c3bbc2bf6464502856c387c2b359c29d374dc39ec390c2973fc28bc298c39c0d7b0ac2b0c3b2c3b0c2a17fc3b3c2ac01c39e3fc29bc2b8c2b85e2c1e2fc2bf7c0d44c2bec3bf4bc2bec3bfc3bf004929673375020000"
-    ],
-    "headers": {
-      "cache-control": "no-cache",
-      "pragma": "no-cache",
-      "content-type": "application/json; charset=utf-8",
-      "content-encoding": "gzip",
-      "expires": "-1",
-      "vary": "Accept-Encoding",
-      "date": "Wed, 09 Sep 2015 14:19:26 GMT",
-      "content-length": "401"
     }
   },
   {
@@ -746,7 +503,7 @@
     "body": "",
     "status": 200,
     "response": [
-      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba68c3a7c3a1c3bdc39dc28349c29e7dc2bac297c38dc3b6c3b7c3a8c297c3a9c2bdc389c2bdc39dc283c399c39ec3bdc2bdc28307c393c283c3bdc28f461f4dc28b594d2d7777c386c2bb7b0fc3867b7b3bc3a3c29dc2bb7bc3b862c29637c393c2ba58c2b545c2b5c2a4c3af2fc38b6cc3b9c3bbc3af1dc3acc3adc3bcc3bec2ae2535c2bac388c39ac3bc2ac2bbc2a606c3aec3a3c3b12e7dc2b1c38c16397d3ac3b0c39a326f1759c3b3c2961ac3acc39dc2bf3f36c3bfc38737c3adc3b50ac3afc2adc3aac3a2c29240c39307c280c3b0c39123c280187d5416c38bc2b7c38d47c28f6874755e52c2ab262fc38fc2a9c389c2bcc38ec38fc3a9c2af79c39bc2ae1ec39dc2bdc29bc2adc28ac3b1c2b42dc3874575c3b7726f3b7fc2b7c38ac3ab62c2912fc39bc2acc2bc4bc39d5e55c3b5c39bc3a66e56c2b6c2b3c2bbc297c399c3aec39d5b10c3a832c2af27c3a8c3b4c2a3c38f4fc39fc390c29f2fc2bf7ac3b3c391c3b77fc389c388c2a050c2acc28e67c2b33a6fc29ac2bcc2a12f7f1631c2b91bc3b61460c3a5c3a143c3bfc3a65903c382c3bd6cc3a2c3a27ac2b178c2bcc3bcc3b235106154c298c3b7c3b6763e7dc290c38dc3b666c3b7c3b2c2836c7f2fc38b1fc3a6c2930707c3b9c3b9c39ec3b9c381c39ec381c3bdc3bbc2b3037ac399c3a3c2bd7bc3b7c387c3bbc3b736c2b0c39ec2bdc2bdc3bd7bc38c43c39cc290c39ac284c29cc387c29fc3b618c2afc3b7120dc3b5c3bdc3b80e107e36c3b8c3ae16c384c2b1c294c3850cc3bfc3acc3b1c39d4dc298c3bc30c3b9c3ae465c5c2f160fc38b77c39fc3bf7f003fc2833469c3b5040000"
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba686fc3a7c39307c3996c6f762f3fc388c3b6c3b7c2b2c3bc613e7970c290c29fc3afc29d1fc3ac1dc39cc2bf3f3bc3b868c3b4c391c2b4c298c395c394727767c2bc7bc3afc3be78c3bfc39e78c3a7c3aec39e3e7d3ec38bc29b695dc2acc39ac2a25ac392c397c29765c2b6c3bcc3bdc3afc3adc3adc39fc3bbc3bd6d436a73c291c2b5c3b955764dc39fc39b4fc387c2bbc3b4c3b9325bc3a4c3b461c3bcc2a565c39e2ec2b2c3a62d7dc2bf77c3bfc3bec398c3bc7fc287c2be69c2af57786d5517c29704c2983e00c280c28f1e01c382c3a8c2a3c2b258c2be6d3e7a4423c2abc3b3c2925a3579794e4dc3a6757e4e7fc39dc2bdc39cc39bc38ec39fc2adc3b2c2ba58c3a4c38b362bc3af522f5755c3bdc2b6c2b9c29bc295c3adc3acc3ae65c2b67bc3b716c2b4c2b8c38cc3ab09c3bac3b8c3a8c3b3c39337c3b4c3a7c38bc2afc39e7cc3b4c3bd5f32323d16c2abc3a3c399c2acc38ec29b266fc3a8c38b6fc2aec3a3c2bb21c3a00009c2af7bc3ba37c38f1ac290c3a51bc3acc39a01c2b5c39dc2bec3bcc3b235c3bac3bdc3be2fc3b9c3bec3bf03c399c2bfc3b7c28f46020000"
     ],
     "headers": {
       "cache-control": "no-cache",
@@ -755,8 +512,228 @@
       "content-encoding": "gzip",
       "expires": "-1",
       "vary": "Accept-Encoding",
-      "date": "Wed, 09 Sep 2015 14:19:26 GMT",
-      "content-length": "493"
+      "date": "Wed, 06 Jan 2016 11:05:55 GMT",
+      "content-length": "384"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2-experimental/networks/ALTD/uc1",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3bac3a8c3a1c3bdc3b3c2bdc287c2bbc3b9c3b9c3bec3acc393c3a9c3bec3be6427c38bc3afc3adc3aec38ec3ae3fc3b8c3b4c39ec2bd07c3a7c3996cc3bfc2a3c39147c393625653c38bc39dc29dc3b1c3aec39ec2bdc3b1c3aec2a77bc3a3c29dc2bb7bc3b862c29637c393c2ba58c2b545c2b5c2a4c3af2fc38b6cc3b9c3bbc3afc39ec3bf74c3afc3b7772dc2a9c39145c396c3a657c3993535701fc28f77c3a9c28b65c2b6c388c3a9c393c281c397c29679c2bbc388c29ac2b7c39460c3afc3bec3bdc2b1c3b9c3bf0e7dc3935ec2afc3b0c39ec2aa2e2e09347d00081f3d02c288c3914765c2b17cc39b7cc3b4c2884657c3a725c2b56ac3b2c3b2c29cc29ac38cc3abc3bcc29cc3bec2ba7bc2b9c2b7c29dc2bf5bc3a575c2b1c388c2976d56c39ec2a55ec2aec2aac3ba6d73372bc39bc399c39dc3b574c3b7c3ae2dc3a871c299c39713c3b4c3b1c391c3a7c2a76fc3a8c38fc2975fc2bdc3b9c3a8c3bbc2bf64647a2c56c387c2b359c29d374dc39ec390c297c39f5cc3877743c38001125ec3b7c3b46fc29e3520c38b37c398c2b5036ac2bb7dc3b9c3a56bc3b4c3bbc3bd5fc3b2c3bdc3bf07c2acc286c3b5c2b64a020000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Wed, 06 Jan 2016 11:05:55 GMT",
+      "content-length": "385"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2-experimental/networks/ALTD/ca2",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3bac3a8c3bcc3bcc3a1c2a7c3b777c3ae4fc3aec3afc38fc2a6c3bb0f0fc3ae1fc3acc29dc39fc2bbc2b7c2b3c3bbc3a0c3a060722fc39f7f70c3bfc2a3c39147c393625653c38bc39dc29dc3b1c3bd4fc387c2bbc2bb0fc3873b77c3b7c3b6c3a9c3b359c39e4cc3ab62c39516c395c292c2bec2be2cc2b3c3a5c3afc3bf60c3b7c3a1c3af6fc39b51c293c28bc2acc38dc2afc2b26bc3bac39a7e3ac39ec2a5c38fc297c39922c2a70fc2a3c3af2cc3b376c291356fc3a9c3abc2bdc3bbc3b7c387c3a6c3bf3bc3b44d7bc2bdc3825bc2abc2bac2b824c2b8c3b401c39ec3bfc3a81101187d5416c38bc2b7c38d47c28f6858755e52c2a3262fc38fc2a9c385c2bcc38ec38fc3a9c2afc2bbc2977bc39bc3b9c2bb555e17c28b7cc39966c3a55dc3aac3a4c2aac2aac39f3677c2b3c2b2c29dc39dc29d667b776f41c288c38bc2bcc29ec2a0c28fc28f3e3f7d437fc2bec3bcc3aac38d47c39fc3bf2523c39363c2b13ac29ec38dc3aac2bc69c3b2c286c2bec3bcc3a63ac2be1b020ec290c3b0c2bac2a77fc3b3c2ac0155c2bec381c2ae1d50c39bc3adc38b2f5fc2a3c39fc3afc3bfc292c3afc3bf3f64c3900f0843020000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Wed, 06 Jan 2016 11:05:55 GMT",
+      "content-length": "385"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2-experimental/networks/ALTD/gb3",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba6836c38bc3af1fc3ac3dc3983dc29f4dc3b3c3bdc3bdc283c389c381c3837bc3b70fc3b6c3afc3af7f7a7fc3b77cc3b7c393c3a9c3ae47c2a3c28fc2a6c385c2acc2a6c296c2bb3bc3a3c39dc29d4fc387c3bbc3b7c3873b77c3b7c3b6c3a9c3b359c39e4cc3ab62c39516c395c292c2bec2be2cc2b3c3a5c3afc2bf776fc3bfc3bec3af6f1b52c29bc28bc2acc38dc2afc2b26bc3bac39e7e3a06c38c65c2b6c388c3a9c383c3b84bc38bc2bc5d64c38d5bc3ba7ec3afc3bec3bdc2b1c3b9c3bf0e7dc3935ec2afc3b0c39ac2aa2e2e09307d00001f3d02c284c3914765c2b17cc39b7cc3b4c2884656c3a725c2b56ac3b2c3b2c29cc29ac38cc3abc3bcc29cc3bec2ba7bc2b9c2b7c29dc2bf5bc3a575c2b1c388c2976d56c39ec2a55ec2aec2aac3ba6d73372bc39bc399c39dc28bc389c2bdc2bbc2b7c2a0c385655e4fc390c38747c29fc29fc2bec2a13f5f7ec3b5c3a6c2a3c3afc3bfc292c291c3a9c2b1581dc38f6675c39e3479435f7e731dc39f0d01074878c39dc393c2bf79c396c2802cc39f60c3970ec2a8c3adc3b6c3a5c297c2afc391c3afc3b77fc389c3b7c3bf1f7e10c297c3b546020000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Wed, 06 Jan 2016 11:05:55 GMT",
+      "content-length": "384"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2-experimental/networks/ALTD/gb1",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3bac3a8c381c383c3b37b07c3b7c3b7c2b2c2873bc3934fc3b777c2a7c2936c7f2fc38f1fc29cc3afc39ec38bc3afc38dc3b6667b7b1fc28d3ec29a16c2b3c29a5ac3aec3aec28c3fc39d1dc3afc3adc39d1bc3afc39cc39dc39bc2a7c38f677933c2adc28b555b544bc3bac3bac2b2c38cc296c2bfc3bf2e7dc3bdc3bbc39bc286c394c3a6226bc3b3c2abc3acc29ac2bec2b7c29fc28e77c3a9c3b365c2b6c388c3a9c383c3b84bc38bc2bc5d64c38d5bc3ba7ec3afc3bec3bdc2b1c3b9c3bf0e7dc3935ec2afc3b0c39ac2aa2e2e09307d00001f3d02c284c3914765c2b17cc39b7cc3b4c2884656c3a725c2b56ac3b2c3b2c29cc29ac38cc3abc3bcc29cc3bec2ba7bc2b9c2b7c29dc2bf5bc3a575c2b1c388c2976d56c39ec2a55ec2aec2aac3ba6d73372bc39bc399c39dc28bc389c3aec39d5bc390c3a232c2af27c3a8c3a3c2a3c38f4fc39fc390c29f2fc2bf7ac3b3c391c3b77fc389c388c3b458c2acc28e67c2b33a6fc29ac2bcc2a12fc2bfc2b9c28ec3afc286c2800324c2bcc3aec3a9c39f3c6b40c2966fc2b06b07c39476c3bbc3b2c38bc397c3a8c2977b66263ac398c3bbc3b4c39ec283c389c3bec3b4c3816cc3af60c3bfc3bec39e6cc2b273c3be20c2bb7770c3b0c3a0c3be747732c39dc38fc3a8c3a5c290c289c3b6c3b73632c391c3bec29ec3a1c2877d10c2bdc38744c3b47ac29fc2893a2fc39150c39fc297c289c3b6c3b7c2be0126c2ba052d2c21317fc39f1813c39dc394c3b1c38f2213c39dc398c2b5036ac2bbc3ad3151c3bec3a0c3a0613ec3bb74c3bfc3a1c3bd7cc2b27fc3af5ec3b630c29f4c0fc3b6c38ec3b727c3a73b0fc3afc38f7210c2aec38344c29fc386c299c388c3bb2b05c29bc3b4c399c3a753c29f7d7438c3bcc389c397c3a0c2994fc2bf01c29ec2b9c385c3902dc39d305dc39f18c38fc39cc394c3b1c38f22c38fc39cc398c2b5036ac2bbc2b53cc3b3c3bdc3bf07225b5275c2bf060000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Wed, 06 Jan 2016 11:05:55 GMT",
+      "content-length": "558"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2-experimental/networks/ALTD/de1",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3bac3a860c3a7c3a1c39ec383070fc3b70ec38e7767c3bb7b7bc3bbc293c287c293c2870fc3b71ec29c3fc398c2bf3fc299c3ae1cc3ac7d34c3ba685ac38c6a6ac2b9c2bb33c39ec2a5c3bfc39f7b30c39ec2b9c2bbc2b74fc29fc38fc3b2665a17c2abc2b6c2a8c296c3b4c3b565c2992d7fc3bfc2bd7b0f7e7f6a23c3adc2a8c38945c396c3a657c399357d4dc29fc388c2a7c3a35dc3ba7cc2992d72c3ba30c3bac38e326f1759c3b3c296c2bec39ec2bb7f7f6cc3bec2bf43c39fc2b4c3972bc2bcc2b5c2aac28b4bc2824b1fc3a0c3bdc28f1e11c280c3914765c2b17cc39b7cc3b4c288c28655c3a725356ac3b2c3b2c29c5ac38cc3abc3bcc29cc3bec2ba7bc2b9c2b7c29dc2bf5bc3a575c2b1c388c2976d56c39ec2a54ec2aec2aac3ba6d73372bc39bc399c39d59c2be7bc3b716c284c2b8c38cc3ab09c3bac3b8c3a8c3b3c39337c3b4c3a7c38bc2afc39e7cc3b4c3bd5f32323d16c2abc3a3c399c2acc38ec29b266fc3a8c38b6fc2aec3a3c2bb21c3a00009c2af7bc3ba37c38f1a50c3a51bc3acc39a01c2b5c39dc2bec3bcc3b235c3bac3bdc3be2fc3b9c3bec3bf03c382c291c2806c43020000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Wed, 06 Jan 2016 11:05:54 GMT",
+      "content-length": "387"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2-experimental/networks/ALTD/ca2",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3bac3a8c3bcc3bcc3a1c2a7c3b777c3ae4fc3aec3afc38fc2a6c3bb0f0fc3ae1fc3acc29dc39fc2bbc2b7c2b3c3bbc3a0c3a060722fc39f7f70c3bfc2a3c39147c393625653c38bc39dc29dc3b1c3bd4fc387c2bbc2bb0fc3873b77c3b7c3b6c3a9c3b359c39e4cc3ab62c39516c395c292c2bec2be2cc2b3c3a5c3afc3bf60c3b7c3a1c3af6fc39b51c293c28bc2acc38dc2afc2b26bc3bac39a7e3ac39ec2a5c38fc297c39922c2a70fc2a3c3af2cc3b376c291356fc3a9c3abc2bdc3bbc3b7c387c3a6c3bf3bc3b44d7bc2bdc3825bc2abc2bac2b824c2b8c3b401c39ec3bfc3a81101187d5416c38bc2b7c38d47c28f6858755e52c2a3262fc38fc2a9c385c2bcc38ec38fc3a9c2afc2bbc2977bc39bc3b9c2bb555e17c28b7cc39966c3a55dc3aac3a4c2aac2aac39f3677c2b3c2b2c29dc39dc29d667b776f41c288c38bc2bcc29ec2a0c28fc28f3e3f7d437fc2bec3bcc3aac38d47c39fc3bf2523c39363c2b13ac29ec38dc3aac2bc69c3b2c286c2bec3bcc3a63ac2be1b020ec290c3b0c2bac2a77fc3b3c2ac0155c2bec381c2ae1d50c39bc3adc38b2f5fc2a3c39fc3afc3bfc292c3afc3bf3f64c3900f0843020000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Wed, 06 Jan 2016 11:05:55 GMT",
+      "content-length": "385"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2-experimental/networks/ALTD/ca3",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba68c3a7c3934f7726c293c3b37bc2937c727fc3bfc381c2bdc3a9c3a4617670c3afc3a1c3b420c29f660f67c3b7270f3e1a7d342d6635c2b5c39cc39d19c3afc3aec3acc28cc3b7c3b61fc28c77c3aec3aec3adc39317c2b3c2bcc299c396c385c2aa2dc2aa257d7f5966c38bc39f7f7fc3bfc381c3afc3af1a52c29bc28bc2acc38dc2afc2b26bc3bac39e7d3cc39ec2a52fc296c39922c2a74fc3a36f2dc3b376c291356fc3a9c3bbc2bdc3bbc3b7c387c3a6c3bf3bc3b44d7bc2bdc3826bc2abc2bac2b824c388c3b401007cc3b4c28820c28c3e2ac28bc3a5c39bc3a6c2a34734c2b43a2fc2a951c293c297c3a7c394625ec3a7c3a7c3b4c397c39dc38bc2bdc3adc3bcc39d2ac2afc28b45c2be6cc2b3c3b22e757255c3956fc29bc2bb59c399c38ec3ae4ec2b37b776f41c28cc38bc2bcc29ec2a0c28fc28f3e3f7d437fc2bec3bcc3aac38d47c39fc3bf2523c39363c2b13ac29ec38dc3aac2bc69c3b2c286c2bec3bcc3a63ac2be1b020ec290c3b0c2bac2a77fc3b3c2ac0155c2bec381c2ae1d50c39bc3adc38b2f5fc2a3c39fc3afc3bfc292c3afc3bf3fc39bc28bc2bbc2a947020000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Wed, 06 Jan 2016 11:05:54 GMT",
+      "content-length": "384"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2-experimental/networks/ALTD/va1",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba686fc3a7c39307c3996c6f762f3fc388c3b6c3b7c2b2c3bc613e7970c290c29fc3afc29d1fc3ac1dc39cc2bf3f3bc3b868c3b4c391c2b4c298c395c394727767c2bc7bc3afc3be78c3bfc39e78c3a7c3aec39e3e7d3ec38bc29b695dc2acc39ac2a25ac392c397c29765c2b6c3bcc3bdc3afc3adc3adc39fc3bbc3bd6d436a73c291c2b5c3b955764dc39fc39b4fc387c2bbc3b4c3b9325bc3a4c3b461c3bcc2a565c39e2ec2b2c3a62d7dc2bf77c3bfc3bec398c3bc7fc287c2be69c2af57786d5517c29704c2983e00c280c28f1e01c382c3a8c2a3c2b258c2be6d3e7a4423c2abc3b3c2925a3579794e4dc3a6757e4e7fc39dc2bdc39cc39bc38ec39fc2adc3b2c2ba58c3a4c38b362bc3af522f5755c3bdc2b6c2b9c29bc295c3adc3acc3ae65c2b67bc3b716c2b4c2b8c38cc3ab09c3bac3b8c3a8c3b3c39337c3b4c3a7c38bc2afc39e7cc3b4c3bd5f32323d16c2abc3a3c399c2acc38ec29b266fc3a8c38b6fc2aec3a3c2bb21c3a00009c2af7bc3ba37c38f1ac290c3a51bc3acc39a01c2b5c39dc2bec3bcc3b235c3bac3bdc3be2fc3b9c3bec3bf03c399c2bfc3b7c28f46020000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Wed, 06 Jan 2016 11:05:55 GMT",
+      "content-length": "384"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2-experimental/networks/ALTD/il1",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba687670c2b0c2bfc2b7c2b3c29bc39fc38f1ec38cc3b6c2b3c3b3c29dc389c3bdc3bbc393c3bb0f67c393c399c283c39dc2837bc2bb0f271fc28d3ec29a16c2b3c29a5ac3aec3aec28c1fc39e1bc39f7f38c39ec2b9c2bbc2b74f1fc38fc3b2665a17c2abc2b6c2a8c296c3b4c3ad65c2992d7fc3bfc2bdc287c3b71fc3bec3bec2a61d35c2b9c388c39ac3bc2ac2bbc2a6c2afc38dc287c3a35dc3ba78c2992d72c3ba2cc3bac38a326f1759c3b3c296c2bec39ec2bb7f7f6cc3bec2bf43c39fc2b4c3972bc2bcc2b5c2aac28b4b024b1fc3a0c3bdc28f1e01c380c3a8c2a3c2b258c2be6d3e7a44c2a3c2aac3b3c2925a3579794e4dc3a6757e4e7fc39dc2bdc39cc39bc38ec39fc2adc3b2c2ba58c3a4c38b362bc3af522f5755c3bdc2b6c2b9c29bc295c3adc3ac6e51c3aec39ec2bd051d2ec3b37ac2823e3ec3bac3bcc3b40dc3bdc3b9c3b2c2ab371f7dc3bfc297c28c4cc28fc385c3aa7836c2abc3b3c2a6c3891bc3bac3b2c29bc3abc3b86e083840c382c3abc29ec3bec38dc2b30664c3b906c2bb76406dc2b72fc2bf7cc28d7ec2bfc3bf4bc2bec3bfc3bf00471fc2833242020000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Wed, 06 Jan 2016 11:05:55 GMT",
+      "content-length": "384"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2-experimental/networks/ALTD/ca1",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba68c3afc3a0c39ec3b9c2a70f76c3b2c287c29fc29ec3afc3afc39fc29fc3ac1f7c7ac3bfc393c287c399c39e6cc3bfc381c2a7c3b73ec39d79c2987f34c3ba685ac38c6a6ac2b9c2bb33c2bec2bf33c39e3f18c3afc39cc39dc39bc2a7c28f677933c2adc28b555b544bc3bac3b6c2b2c38cc296c2bfc3bfc39ec2bdc3bdc283c39fc39fc2b4c2a3261759c29b5f65c397c3b4c2b5c3b970c2bc4b1f2fc2b3454ec29f455f59c3a6c3ad226bc39ec392c3977bc3b7c3afc28fc38dc3bf77c3a8c29bc3b67ac285c2b75675714960c3a903c2bcc3bfc3912300187d5416c38bc2b7c38d47c28f6854755e52c2ab262fc38fc2a9c389c2bcc38ec38fc3a9c2afc2bbc2977bc39bc3b9c2bb555e17c28b7cc39966c3a55dc3aac3a5c2aac2aac39f3677c2b3c2b2c29dc39dc29d66c2bb776f41c287c38bc2bcc29ec2a0c28fc28f3e3f7d437fc2bec3bcc3aac38d47c39fc3bf2523c39363c2b13ac29ec38dc3aac2bc69c3b2c286c2bec3bcc3a63ac2be1b020ec290c3b0c2bac2a77fc3b3c2ac01c29ac39f60c3970ec2a8c3adc3b6c3a5c297c2afc391c3afc3b77fc389c3b7c3bf1fc2b02bc2bfc3b142020000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Wed, 06 Jan 2016 11:05:54 GMT",
+      "content-length": "385"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2-experimental/networks/ALTD/ny1",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba28c39bc39dc399c399397870c3b069c3b6c3a9c3aec3be7e76c3bf6032c38b1e4cc2b3c3bdc2bdc3a9c3bec381c2830759c3bec391c3a8c2a36931c2abc2a9c3a5c3aec38ec3b8c381c3aec3b8c39ec283c3b1c38ec39dc2bd7dc3ba78c29637c393c2ba58c2b545c2b5c2a46f2fc38b6cc3b9c3bbc39fc2bb77c3afc381c3af6fc39a51c293c28bc2acc38dc2afc2b26bc3bac39a7c38c39ec2a5c28fc297c39922c2a7c38fc2a2c2af2cc3b376c291356fc3a9c3abc2bdc3bbc3b7c387c3a6c3bf3bc3b44d7bc2bdc3825bc2abc2bac2b824c2b0c3b401c39ec3bfc3a81100c28c3e2ac28bc3a5c39bc3a6c2a34734c2aa3a2fc2a955c293c297c3a7c394645ec3a7c3a7c3b4c397c39dc38bc2bdc3adc3bcc39d2ac2afc28b45c2be6cc2b3c3b22ec3b57255c3956fc29bc2bb59c399c38ec3ae2ec2af77c3afc39ec2820ec297793d411f1f7d7ec3bac286c3be7cc3b9c395c29bc28fc2bec3bf4b46c2a6c38762753cc29bc39579c393c3a40d7dc3b9c38d757c37041c20c3a1754fc3bfc3a6590334c2bfc381c2ae1d50c39bc3adc38b2f5fc2a3c39fc3afc3bfc292c3afc3bf3f1e6ac3b1c2bd42020000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Wed, 06 Jan 2016 11:05:55 GMT",
+      "content-length": "383"
     }
   },
   {
@@ -766,7 +743,7 @@
     "body": "",
     "status": 200,
     "response": [
-      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba687fc3a7c3bec2bdc3a9c2a7c293c29dc2bdc3a9c2bdc283c3bdc2bd3cc38fc3aec39dc2bbc2bfc2bb77c3bec3b06136c39d3f3fc2b87fc3bec391c3a8c2a36931c2abc2a9c3a5c3aec38ec3b8c3a1c38ec3b8c3bec38e78c3a7c3aec39e3e7d3cc38bc29b695dc2acc39ac2a25ac392c2b7c29765c2b6c3bcc3bdc3b776c3aec3afc3bcc3bec2a61d35c2b9c388c39ac3bc2ac2bbc2a6c2afc38dc287c3a35dc3ba78c2992d72c3ba2cc3bac38a326f1759c3b3c296c2bec39ec2bb7f7f6cc3bec28f6fc39ac3ab15c39e5ac395c38525c281c2a50fc3b0c3be47c28f0060c3b451592cc39f361f3dc2a251c3957949c2adc29ac2bc04c3aac3b33a3fc2a7c2bfc3a66dc2bb7a74c3b76ec2b62ac386c393c2b61c17c395c39dc38bc2bdc3adc3bcc39d2ac2afc28b45c2be6cc2b3c3b22e757b55c3956fc29bc2bb59c399c38ec3aec2aec39bc39dc2bbc2b720c38c655e4fc390c3a947c29fc29fc2bec2a13f5f7ec3b5c3a6c2a3c3afc3bfc292c29141c2a1581dc38f6675c39e3479435fc3be2c627237c3ac29c380c38ac383c287c3bec38dc2b306c284c3bbc399c384c385c3b562c3b178c3b9c3a56b20c3b2c3bd5fc3b2c3bdc3bf07c38dc2b2c3bec29575020000"
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba687fc3a7c3bec2bdc3a9c2a7c293c29dc2bdc3a9c2bdc283c3bdc2bd3cc38fc3aec39dc2bbc2bfc2bb77c3bec3b06136c39d3f3fc2b87fc3bec391c3a8c2a36931c2abc2a9c3a5c3aec38ec3b8c3a1c38ec3b8c3bec38e78c3a7c3aec39e3e7d3cc38bc29b695dc2acc39ac2a25ac392c2b7c29765c2b6c3bcc3bdc3b776c3aec3afc3bcc3bec2a61d35c2b9c388c39ac3bc2ac2bbc2a6c2afc38dc287c3a35dc3ba78c2992d72c3ba2cc3bac38a326f1759c3b3c296c2bec39ec2bb7f7f6cc3bec28f6fc39ac3ab15c39e5ac395c38525c281c2a50fc3b0c3be47c28f0060c3b451592cc39f361f3dc2a251c3957949c2adc29ac2bc04c3aac3b33a3fc2a7c2bfc3ae5ec3ae6dc3a7c3af56795d2cc3b265c29bc29577c2a9c297c2abc2aa7ec39bc39cc38dc38a767677c39dc3aec39ec2bd051d2ec3b37ac2823e3ec3bac3bcc3b40dc3bdc3b9c3b2c2ab371f7dc3bfc297c28c4cc28fc385c3aa7836c2abc3b3c2a6c3891bc3bac3b2c29bc3abc3b86e083840c382c3abc29ec3bec38dc2b30664c3b906c2bb76406dc2b72fc2bf7cc28d7ec2bfc3bf4bc2bec3bfc3bf005d76c3b96b42020000"
     ],
     "headers": {
       "cache-control": "no-cache",
@@ -775,8 +752,8 @@
       "content-encoding": "gzip",
       "expires": "-1",
       "vary": "Accept-Encoding",
-      "date": "Wed, 09 Sep 2015 14:19:26 GMT",
-      "content-length": "397"
+      "date": "Wed, 06 Jan 2016 11:05:55 GMT",
+      "content-length": "382"
     }
   },
   {
@@ -786,7 +763,7 @@
     "body": "",
     "status": 200,
     "response": [
-      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba682fc39bc38bc2a60fc3afc29f3fc39cc2bbc2b7c2b7c2bfc297c39dc38bc3b61e4e1f66c3a77b593ec39939c38fc3b6c3b2c28f461f4dc28b594d2d7777c38607c2bbc3a35dc3bac3bfc38ec39dc2bd7dc3ba7cc29637c393c2ba58c2b545c2b5c2a4c2af2fc38b6cc3b9c3bbc3afc3ae1dc3acc3bec3bec2b621c2b5c2b9c388c39ac3bc2ac2bbc2a6c3afc3adc2a7637cc2bec38c16397d187f69c299c2b7c28bc2ac794bc39fc3afc39dc2bf3f36c3bfc39fc2a16fc39ac3ab155e5bc395c3852501c2a60f00c3a0c2a347c28030c3bac2a82cc2966fc29bc28f1ec391c388c3aac2bcc2a4564d5ec29e53c29379c29dc29fc3935fc3b3c2b65d3dc2ba7b375b15c3a3695bc28ec28bc3aac3aec3a5c39e76c3be6ec295c397c385225fc2b65979c297c2bac2bdc2aac3aac2b7c38dc39dc2ac6c6777c2afc2b2c39dc2bbc2b720c38e655e4fc390c3a947c29fc29fc2bec2a13f5f7ec3b5c3a6c2a3c3afc3bfc292c29141c2a1581dc38f6675c39e3479435fc3be2c627237c3ac29c380c38ac383c287c3bec38dc2b30678c3bf6cc3a2c3a27ac2b178c2bcc3bcc3b23510c3b9c3be2fc3b9c3bec3bf03c3afc28ac3920079020000"
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba682fc39bc38bc2a60fc3afc29f3fc39cc2bbc2b7c2b7c2bfc297c39dc38bc3b61e4e1f66c3a77b593ec39939c38fc3b6c3b2c28f461f4dc28b594d2d7777c38607c2bbc3a35dc3bac3bfc38ec39dc2bd7dc3ba7cc29637c393c2ba58c2b545c2b5c2a4c2af2fc38b6cc3b9c3bbc3afc3ae1dc3acc3bec3bec2b621c2b5c2b9c388c39ac3bc2ac2bbc2a6c3afc3adc2a7637cc2bec38c16397d187f69c299c2b7c28bc2ac794bc39fc3afc39dc2bf3f36c3bfc39fc2a16fc39ac3ab155e5bc395c3852501c2a60f00c3a0c2a347c28030c3bac2a82cc2966fc29bc28f1ec391c388c3aac2bcc2a4564d5ec29e53c29379c29dc29fc3935f772fc3b7c2b6c3b377c2abc2bc2e16c3b9c2b2c38dc38ac2bbc394c38b5555c2bf6dc3ae66653bc2bb7bc295c3adc39ec2bd052d2ec3b37ac2823e3ec3bac3bcc3b40dc3bdc3b9c3b2c2ab371f7dc3bfc297c28c4cc28fc385c3aa7836c2abc3b3c2a6c3891bc3bac3b2c29bc3abc3b86e083840c382c3abc29ec3bec38dc2b306687ec2835d3bc2a0c2b6c39bc2975fc2be46c2bfc39fc3bf25c39fc3bf7f00230b0a0c46020000"
     ],
     "headers": {
       "cache-control": "no-cache",
@@ -795,8 +772,28 @@
       "content-encoding": "gzip",
       "expires": "-1",
       "vary": "Accept-Encoding",
-      "date": "Wed, 09 Sep 2015 14:19:26 GMT",
-      "content-length": "396"
+      "date": "Wed, 06 Jan 2016 11:05:54 GMT",
+      "content-length": "381"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2-experimental/networks/ALTD/uc1",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3bac3a8c3a1c3bdc3b3c2bdc287c2bbc3b9c3b9c3bec3acc393c3a9c3bec3be6427c38bc3afc3adc3aec38ec3ae3fc3b8c3b4c39ec2bd07c3a7c3996cc3bfc2a3c39147c393625653c38bc39dc29dc3b1c3aec39ec2bdc3b1c3aec2a77bc3a3c29dc2bb7bc3b862c29637c393c2ba58c2b545c2b5c2a4c3af2fc38b6cc3b9c3bbc3afc39ec3bf74c3afc3b7772dc2a9c39145c396c3a657c3993535701fc28f77c3a9c28b65c2b6c388c3a9c393c281c397c29679c2bbc388c29ac2b7c39460c3afc3bec3bdc2b1c3b9c3bf0e7dc3935ec2afc3b0c39ec2aa2e2e09347d00081f3d02c288c3914765c2b17cc39b7cc3b4c2884657c3a725c2b56ac3b2c3b2c29cc29ac38cc3abc3bcc29cc3bec2ba7bc2b9c2b7c29dc2bf5bc3a575c2b1c388c2976d56c39ec2a55ec2aec2aac3ba6d73372bc39bc399c39dc3b574c3b7c3ae2dc3a871c299c39713c3b4c3b1c391c3a7c2a76fc3a8c38fc2975fc2bdc3b9c3a8c3bbc2bf64647a2c56c387c2b359c29d374dc39ec390c297c39f5cc3877743c38001125ec3b7c3b46fc29e3520c38b37c398c2b5036ac2bb7dc3b9c3a56bc3b4c3bbc3bd5fc3b2c3bdc3bf07c2acc286c3b5c2b64a020000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Wed, 06 Jan 2016 11:05:55 GMT",
+      "content-length": "385"
     }
   },
   {
@@ -815,28 +812,8 @@
       "content-encoding": "gzip",
       "expires": "-1",
       "vary": "Accept-Encoding",
-      "date": "Wed, 09 Sep 2015 14:19:26 GMT",
+      "date": "Wed, 06 Jan 2016 11:05:55 GMT",
       "content-length": "122"
-    }
-  },
-  {
-    "scope": "https://api.ctl.io:443",
-    "method": "GET",
-    "path": "/v2-experimental/networks/ALTD/gb3",
-    "body": "",
-    "status": 200,
-    "response": [
-      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba6836c38bc3af1fc3ac3dc3983dc29f4dc3b3c3bdc3bdc283c389c381c3837bc3b70fc3b6c3afc3af7f7a7fc3b77cc3b7c393c3a9c3ae47c2a3c28fc2a6c385c2acc2a6c296c2bb3bc3a3c39dc29d4fc387c3bbc3b7c3873b77c3b7c3b6c3a9c3b359c39e4cc3ab62c39516c395c292c2bec2be2cc2b3c3a5c3afc2bf776fc3bfc3bec3af6f1b52c29bc28bc2acc38dc2afc2b26bc3bac39e7e3a06c38c65c2b6c388c3a9c383c3b84bc38bc2bc5d64c38d5bc3ba7ec3afc3bec3bdc2b1c3b9c3bf0e7dc3935ec2afc3b0c39ac2aa2e2e09307d00001f3d02c284c3914765c2b17cc39b7cc3b4c2884656c3a725c2b56ac3b2c3b2c29cc29ac38cc3abc3bcc29cc3bec29ac2b7c3adc3aac391c39dc2bbc399c2aa184fc39b725c54772fc3b7c2b6c3b377c2abc2bc2e16c3b9c2b2c38dc38ac2bbc394c3ad5555c2bf6dc3ae66653bc2bb7b31c2b977c3b716c384c2b9c38cc3ab093ac3bdc3a8c3b3c39337c3b4c3a7c38bc2afc39e7cc3b4c3bd5f32322814c2abc3a3c399c2acc38ec29b266fc3a8c38bc29f454cc3aec2863d055879c3b8c390c2bf79c396c280703fc29bc2b8c2b85e2c1e2fc2bf7c0d44c2bec3bf4bc2bec3bfc3bf00c3b70f444e79020000"
-    ],
-    "headers": {
-      "cache-control": "no-cache",
-      "pragma": "no-cache",
-      "content-type": "application/json; charset=utf-8",
-      "content-encoding": "gzip",
-      "expires": "-1",
-      "vary": "Accept-Encoding",
-      "date": "Wed, 09 Sep 2015 14:19:27 GMT",
-      "content-length": "400"
     }
   },
   {
@@ -846,7 +823,7 @@
     "body": "",
     "status": 200,
     "response": [
-      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba68c2ba7bc3bf6067673f7bc2b077c2bec2bbc29fc3a50f1fc38ec3ae3dc2b8c29fc39dc39b7dc3b8c3b0c381c3bec283c389c381c39e47c2a3c28fc2a6c385c2acc2a6c296c2bb3bc3a34f77c386c2bbc3b776c3863b77c3b7c3b6c3a9c3b359c39e4cc3ab62c39516c395c292c2bec2be2cc2b3c3a5c3af7f706fc3a7c3b7c2b7c3adc2a8c38945c396c3a657c399357d6d3f1dc3afc392c3a7c38b6cc291c393c287c39177c29679c2bbc388c29ac2b7c3b4c3b5c39ec3bdc3bb63c3b37f7cc3935ec2afc3b0c396c2aa2e2e092e7dc280c3b73f7a4400461fc295c385c3b26dc3b3c391231a56c29dc297c394c2a8c389c38b736a31c2afc3b373c3ba6bc39ec2b6c2ab4777c3af66c2ab623c6dc38b7151c39dc2bdc39cc39bc38ec39fc2adc3b2c2ba58c3a4c38b362bc3af52c2af5755c3bdc2b6c2b9c29bc295c3adc3acc3aec38564c3b7c3ae2d2873c299c3971374c3bac391c3a7c2a76fc3a8c38fc2975fc2bdc3b9c3a8c3bbc2bf6464502856c387c2b359c29d374dc39ec390c2973fc28bc298c39c0d7b0ac2b0c3b2c3b0c2a17fc3b3c2ac01c39d7e367171c2bd583c5e7ec3b91ac288302ac38c74c3b9c283c283c287c3b9c3acc393c3bdc287c3b7c3b3c389c3bec2bd7bc399c3837c323dc3983bc39fc29fc29cc3af3cc2bc3fc38b337ac39963c2bac39dc3b1c39ec3bec2a71bc2986ec297c2be660ec3a2c286c39426c3a43ac3bec2b4c38775c2bdc29768c2a8c3afc38776c280c3b0c2b3c38177c2b720c28ec2a52c66c3b867c28fc3af6ec382c3a4c287c3897737c3a2c3a27ac2b17858c2bec3bbc3bec3bf033a62c3ab69c3ae040000"
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3bac3a8c381c383c3b37b07c3b7c3b7c2b2c2873bc3934fc3b777c2a7c2936c7f2fc38f1fc29cc3afc39ec38bc3afc38dc3b6667b7b1fc28d3ec29a16c2b3c29a5ac3aec3aec28c3fc39d1dc3afc3adc39d1bc3afc39cc39dc39bc2a7c38f677933c2adc28b555b544bc3bac3bac2b2c38cc296c2bfc3bf2e7dc3bdc3bbc39bc286c394c3a6226bc3b3c2abc3acc29ac2bec2b7c29fc28e77c3a9c3b365c2b6c388c3a9c383c3b84bc38bc2bc5d64c38d5bc3ba7ec3afc3bec3bdc2b1c3b9c3bf0e7dc3935ec2afc3b0c39ac2aa2e2e09307d00001f3d02c284c3914765c2b17cc39b7cc3b4c2884656c3a725c2b56ac3b2c3b2c29cc29ac38cc3abc3bcc29cc3bec2ba7bc2b9c2b7c29dc2bf5bc3a575c2b1c388c2976d56c39ec2a55ec2aec2aac3ba6d73372bc39bc399c39dc28bc389c3aec39d5bc390c3a232c2af27c3a8c3a3c2a3c38f4fc39fc390c29f2fc2bf7ac3b3c391c3b77fc389c388c3b458c2acc28e67c2b33a6fc29ac2bcc2a12fc2bfc2b9c28ec3afc286c2800324c2bcc3aec3a9c39f3c6b40c2966fc2b06b07c39476c3bbc3b2c38bc397c3a8c2977b66263ac398c3bbc3b4c39ec283c389c3bec3b4c3816cc3af60c3bfc3bec39e6cc2b273c3be20c2bb7770c3b0c3a0c3be747732c39dc38fc3a8c3a5c290c289c3b6c3b73632c391c3bec29ec3a1c2877d10c2bdc38744c3b47ac29fc2893a2fc39150c39fc297c289c3b6c3b7c2be0126c2ba052d2c21317fc39f1813c39dc394c3b1c38f2213c39dc398c2b5036ac2bbc3ad3151c3bec3a0c3a0613ec3bb74c3bfc3a1c3bd7cc2b27fc3af5ec3b630c29f4c0fc3b6c38ec3b727c3a73b0fc3afc38f7210c2aec38344c29fc386c299c388c3bb2b05c29bc3b4c399c3a753c29f7d7438c3bcc389c397c3a0c2994fc2bf01c29ec2b9c385c3902dc39d305dc39f18c38fc39cc394c3b1c38f22c38fc39cc398c2b5036ac2bbc2b53cc3b3c3bdc3bf07225b5275c2bf060000"
     ],
     "headers": {
       "cache-control": "no-cache",
@@ -855,8 +832,8 @@
       "content-encoding": "gzip",
       "expires": "-1",
       "vary": "Accept-Encoding",
-      "date": "Wed, 09 Sep 2015 14:19:27 GMT",
-      "content-length": "493"
+      "date": "Wed, 06 Jan 2016 11:05:55 GMT",
+      "content-length": "558"
     }
   },
   {
@@ -866,8 +843,7 @@
     "body": "",
     "status": 200,
     "response": [
-      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3bac3a87c32c39d3dc3bf74c3ba6036c39bc399c39bc39fc29dc29d677b7bc293c3ac3cc39bc2b9c2bfc2b7c2bf3fc38b76763e1a7d342d6635c2b5c39cc39d19c3afc392c3bfc3afc28f77c3aec3aec3adc393c387c2b3c2bcc299c396c385c2aa2dc2aa257d7b5966c38bc39f7f6fc3a7c3bec3af4f4dc2b819c2b5c2b8c388c39ac3bc2ac2bbc2a66fc3a903c3be70c2bc4b1f2fc2b3454ec29fc385c39e58c3a6c3ad226bc39ec392c2b77bc3b7c3afc28fc38dc3bfc281447bc2bdc3824bc2abc2bac2b824c2a8c3b4015ec3bfc3a811c2bd3fc3bac2a82cc2966fc29bc28f1ec391c290c3aac2bcc2a4464d5ec29e53c28b79c29dc29fc3935fc3b3c2b65d3dc2ba7b375b15c3a3695bc28ec28bc3aac3aec3a5c39e76c3be6ec295c397c385225fc2b65979c2977ac2bdc2aac3aac2b7c38dc39dc2ac6c677767c3b9c3aec39d5b50c3a532c2af27c3a8c3b4c2a3c38f4fc39fc390c29f2fc2bf7ac3b3c391c3b77fc389c388c2a050c2acc28e67c2b33a6fc29ac2bcc2a12f7f1631c2b91bc3b61460c3a5c3a143c3bfc3a65903c2bac3bd6cc3a2c3a27ac2b178c2bcc3bcc3b235106154c298c3a10e761ec3ae3d7cc3b070c3afc3a07c77c2b6c2bfc2b7c2b73f793879c3b870c3afc381c3b9c283c3bdc3bbc293c3a9c38ec3811ec2bd1c32c39cc2bd07c29b38c3aec39e03c3833fc3b71e50c2931ec38bc391c39b3dc29ec3abc2bc43037d4fc2a6c2bbc3b7c3a067c283c3a96e41194b564cc3afc38f1ec393c39dc284c3890fc293c3a96ec384c385c3b562c3b1c3a831c39dc3bdc3b307c3947a76706fc3afc3a1c39ec3bec283073b070fc2b3c399c3bec2836cc3b270c3a77cc3b7c39ec3bdc3b37bc3b472c38874c2bb3b0f3770c39dc2bdc29dc287c286c283c2a821c2b5c3a9c2b11d7dc39cc3a3c2bbc39e5b34c398c3b7633cc282c3b0c2b3c38178c2b7c2a0c28e252dc2a6c3b867c28fc3b16ec382c3a4c287c3897837c3a2c3a27ac2b178c3b4186fc2b2333bc39f3dc398c39bc29f4d67c3b7c3b767c3b71e1ec3a413c392c294c2937b7b7b0fc3afc3adc29dc3af67c3b472c287c3b11ec3ae6d62c2bcc2877bc296c2851e4221c3b419c28fc39ec3af315ec3b72d1ac3ac7b32c39ec383c2bdc29f0dc386c2bb05752c6931c3853f7bc28c7713263f4cc386c2bb1117c397c28bc385c2a3c38778c3b7c3b6c3af7fc3ba607ac3afc3937c6f72c2bec3bf60c3b669763ec299647b3b0fc2b27bc399c39e41767f4a2fc287c28cc2b7c2b77bc2b0c281c3b1c3b6770f0c0b51436ac393633cc3bac2b8c38778c2bdc2b768c2b0c3afc3877804c3a167c283c3b16e411d4b5a4cc3b1c38f1ec3a3c39dc284c3890fc293c3b16ec384c385c3b562c3b1c3a831c39ec3b97936c399c29dc39dc3bb74c3bfc39ec2a7c2b3c3bdc287c3b7c38fc2b34f773ec29dc29d4f33c3b210c3b71f3e3800693bc28cc2b77f6f13c3a3c3ad",
-      "c39fc2b32cc2b40f4bc394673c7ac2bfc38778c39dc2b768c2b0c3afc38978c3bbc3b77e3618c3af16c394c2b1c2a4c38514c3bfc3ac31c39e4dc298c3bc3019c3af465c5c2f16c28f1ec3a37d7ac3be69c296c3ad7d3ac29d1e4cc3b7c3b6293ec299c390c2af0fc38ec3b777c3b7c3b3c3bcc3bc60c2b63bc2a3c297c2bbc28cc2b71f673cc3afc2af14c29c1561c2b97dc29fc3a57440c3bcc389c3bbc3b3c399c3bec38f06c29fc39dc28218c296c292c298c391c29f3d3ec2bb09c2931f26c29fc39dc288c28bc3abc385c3a261c3b9c3acc3bbc3bf0f6bc286507b33110000"
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3bac3a860c3a7c3a1c39ec383070fc3b70ec38e7767c3bb7b7bc3bbc293c287c293c2870fc3b71ec29c3fc398c2bf3fc299c3ae1cc3ac7d34c3ba685ac38c6a6ac2b9c2bb33c39ec2a5c3bfc39f7b30c39ec2b9c2bbc2b74fc29fc38fc3b2665a17c2abc2b6c2a8c296c3b4c3b565c2992d7fc3bfc2bd7b0f7e7f6a23c3adc2a8c38945c396c3a657c399357d4dc29fc388c2a7c3a35dc3ba7cc2992d72c3ba30c3bac38e326f1759c3b3c296c2bec39ec2bb7f7f6cc3bec2bf43c39fc2b4c3972bc2bcc2b5c2aac28b4bc2824b1fc3a0c3bdc28f1e11c280c3914765c2b17cc39b7cc3b4c288c28655c3a725356ac3b2c3b2c29c5ac38cc3abc3bcc29cc3bec2ba7bc2b9c2b7c29dc2bf5bc3a575c2b1c388c2976d56c39ec2a54ec2aec2aac3ba6d73372bc39bc399c39d59c2be7bc3b716c284c2b8c38cc3ab09c3bac3b8c3a8c3b3c39337c3b4c3a7c38bc2afc39e7cc3b4c3bd5f32323d16c2abc3a3c399c2acc38ec29b266fc3a8c38b6fc2aec3a3c2bb21c3a00009c2af7bc3ba37c38f1a50c3a51bc3acc39a01c2b5c39dc2bec3bcc3b235c3bac3bdc3be2fc3b9c3bec3bf03c382c291c2806c43020000"
     ],
     "headers": {
       "cache-control": "no-cache",
@@ -876,8 +852,28 @@
       "content-encoding": "gzip",
       "expires": "-1",
       "vary": "Accept-Encoding",
-      "date": "Wed, 09 Sep 2015 14:19:27 GMT",
-      "content-length": "941"
+      "date": "Wed, 06 Jan 2016 11:05:56 GMT",
+      "content-length": "387"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2-experimental/networks/ALTD/gb3",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba6836c38bc3af1fc3ac3dc3983dc29f4dc3b3c3bdc3bdc283c389c381c3837bc3b70fc3b6c3afc3af7f7a7fc3b77cc3b7c393c3a9c3ae47c2a3c28fc2a6c385c2acc2a6c296c2bb3bc3a3c39dc29d4fc387c3bbc3b7c3873b77c3b7c3b6c3a9c3b359c39e4cc3ab62c39516c395c292c2bec2be2cc2b3c3a5c3afc2bf776fc3bfc3bec3af6f1b52c29bc28bc2acc38dc2afc2b26bc3bac39e7e3a06c38c65c2b6c388c3a9c383c3b84bc38bc2bc5d64c38d5bc3ba7ec3afc3bec3bdc2b1c3b9c3bf0e7dc3935ec2afc3b0c39ac2aa2e2e09307d00001f3d02c284c3914765c2b17cc39b7cc3b4c2884656c3a725c2b56ac3b2c3b2c29cc29ac38cc3abc3bcc29cc3bec2ba7bc2b9c2b7c29dc2bf5bc3a575c2b1c388c2976d56c39ec2a55ec2aec2aac3ba6d73372bc39bc399c39dc28bc389c2bdc2bbc2b7c2a0c385655e4fc390c38747c29fc29fc2bec2a13f5f7ec3b5c3a6c2a3c3afc3bfc292c291c3a9c2b1581dc38f6675c39e3479435f7e731dc39f0d01074878c39dc393c2bf79c396c2802cc39f60c3970ec2a8c3adc3b6c3a5c297c2afc391c3afc3b77fc389c3b7c3bf1f7e10c297c3b546020000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Wed, 06 Jan 2016 11:05:56 GMT",
+      "content-length": "384"
     }
   },
   {
@@ -887,7 +883,7 @@
     "body": "",
     "status": 200,
     "response": [
-      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c3bdc3bf0729c2bb4c0d02000000"
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba28c39bc39dc399c399397870c3b069c3b6c3a9c3aec3be7e76c3bf6032c38b1e4cc2b3c3bdc2bdc3a9c3bec381c2830759c3bec391c3a8c2a36931c2abc2a9c3a5c3aec38ec3b8c381c3aec3b8c39ec283c3b1c38ec39dc2bd7dc3ba78c29637c393c2ba58c2b545c2b5c2a46f2fc38b6cc3b9c3bbc39fc2bb77c3afc381c3af6fc39a51c293c28bc2acc38dc2afc2b26bc3bac39a7c38c39ec2a5c28fc297c39922c2a7c38fc2a2c2af2cc3b376c291356fc3a9c3abc2bdc3bbc3b7c387c3a6c3bf3bc3b44d7bc2bdc3825bc2abc2bac2b824c2b0c3b401c39ec3bfc3a81100c28c3e2ac28bc3a5c39bc3a6c2a34734c2aa3a2fc2a955c293c297c3a7c394645ec3a7c3a7c3b4c397c39dc38bc2bdc3adc3bcc39d2ac2afc28b45c2be6cc2b3c3b22ec3b57255c3956fc29bc2bb59c399c38ec3ae2ec2af77c3afc39ec2820ec297793d411f1f7d7ec3bac286c3be7cc3b9c395c29bc28fc2bec3bf4b46c2a6c38762753cc29bc39579c393c3a40d7dc3b9c38d757c37041c20c3a1754fc3bfc3a6590334c2bfc381c2ae1d50c39bc3adc38b2f5fc2a3c39fc3afc3bfc292c3afc3bf3f1e6ac3b1c2bd42020000"
     ],
     "headers": {
       "cache-control": "no-cache",
@@ -896,28 +892,8 @@
       "content-encoding": "gzip",
       "expires": "-1",
       "vary": "Accept-Encoding",
-      "date": "Wed, 09 Sep 2015 14:19:27 GMT",
-      "content-length": "122"
-    }
-  },
-  {
-    "scope": "https://api.ctl.io:443",
-    "method": "GET",
-    "path": "/v2-experimental/networks/ALTD/va1",
-    "body": "",
-    "status": 200,
-    "response": [
-      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba68c3a7c3a1c3bdc39dc28349c29e7dc2bac297c38dc3b6c3b7c3a8c297c3a9c2bdc389c2bdc39dc283c399c39ec3bdc2bdc28307c393c283c3bdc28f461f4dc28b594d2d7777c386c2bb7b0fc3867b7b3bc3a3c29dc2bb7bc3b862c29637c393c2ba58c2b545c2b5c2a4c3af2fc38b6cc3b9c3bbc3af1dc3acc3adc3bcc3bec2ae2535c2bac388c39ac3bc2ac2bbc2a606c3aec3a3c3b12e7dc2b1c38c16397d3ac3b0c39a326f1759c3b3c2961ac3acc39dc2bf3f36c3bfc38737c3adc3b50ac3afc2adc3aac3a2c29240c39307c280c3b0c39123c280187d5416c38bc2b7c38d47c28f6874755e52c2ab262fc38fc2a9c389c2bcc38ec38fc3a9c2af79c39bc2ae1ec39dc2bdc29bc2adc28ac3b1c2b42dc3874575c3b7726f3b7fc2b7c38ac3ab62c2912fc39bc2acc2bc4bc39d5e55c3b5c39bc3a66e56c2b6c2b3c2bbc297c399c3aec39d5b10c3a832c2af27c3a8c3b4c2a3c38f4fc39fc390c29f2fc2bf7ac3b3c391c3b77fc389c388c2a050c2acc28e67c2b33a6fc29ac2bcc2a12f7f1631c2b91bc3b61460c3a5c3a143c3bfc3a65903c382c3bd6cc3a2c3a27ac2b178c2bcc3bcc3b235106154c298c3b7c3b6763e7dc290c38dc3b666c3b7c3b2c2836c7f2fc38b1fc3a6c2930707c3b9c3b9c39ec3b9c381c39ec381c3bdc3bbc2b3037ac399c3a3c2bd7bc3b7c387c3bbc3b736c2b0c39ec2bdc2bdc3bd7bc38c43c39cc290c39ac284c29cc387c29fc3b618c2afc3b7120dc3b5c3bdc3b80e107e36c3b8c3ae16c384c2b1c294c3850cc3bfc3acc3b1c39d4dc298c3bc30c3b9c3ae465c5c2f160fc38b77c39fc3bf7f003fc2833469c3b5040000"
-    ],
-    "headers": {
-      "cache-control": "no-cache",
-      "pragma": "no-cache",
-      "content-type": "application/json; charset=utf-8",
-      "content-encoding": "gzip",
-      "expires": "-1",
-      "vary": "Accept-Encoding",
-      "date": "Wed, 09 Sep 2015 14:19:27 GMT",
-      "content-length": "493"
+      "date": "Wed, 06 Jan 2016 11:05:55 GMT",
+      "content-length": "383"
     }
   },
   {
@@ -927,7 +903,7 @@
     "body": "",
     "status": 200,
     "response": [
-      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba68c3a7c3934f7726c293c3b37bc2937c727fc3bfc381c2bdc3a9c3a4617670c3afc3a1c3b420c29f660f67c3b7270f3e1a7d342d6635c2b5c39cc39d19c3afc3aec3acc28cc3b7c3b61fc28c77c3aec3aec3adc39317c2b3c2bcc299c396c385c2aa2dc2aa257d7f5966c38bc39f7f7fc3bfc381c3afc3af1a52c29bc28bc2acc38dc2afc2b26bc3bac39e7d3cc39ec2a52fc296c39922c2a74fc3a36f2dc3b376c291356fc3a9c3bbc2bdc3bbc3b7c387c3a6c3bf3bc3b44d7bc2bdc3826bc2abc2bac2b824c388c3b401007cc3b4c28820c28c3e2ac28bc3a5c39bc3a6c2a34734c2b43a2fc2a951c293c297c3a7c394625ec3a7c3a7c3b4c397c2bc6d57c28fc3aec39ec38d56c38578c39ac296c3a3c2a2c2ba7bc2b9c2b7c29dc2bf5bc3a575c2b1c388c2976d56c39ec2a55ec2afc2aac3ba6d73372bc39bc399c39d6976c3afc3ae2dc2a873c299c3971374c3bac391c3a7c2a76fc3a8c38fc2975fc2bdc3b9c3a8c3bbc2bf6464502856c387c2b359c29d374dc39ec390c2973fc28bc298c39c0d7b0ac2b0c3b2c3b0c2a17fc3b3c2ac01c39d7e367171c2bd583c5e7ec3b91ac2887cc3bfc2977cc3bfc3bf0129c3a3c2b8c38a7a020000"
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba68c3a7c3934f7726c293c3b37bc2937c727fc3bfc381c2bdc3a9c3a4617670c3afc3a1c3b420c29f660f67c3b7270f3e1a7d342d6635c2b5c39cc39d19c3afc3aec3acc28cc3b7c3b61fc28c77c3aec3aec3adc39317c2b3c2bcc299c396c385c2aa2dc2aa257d7f5966c38bc39f7f7fc3bfc381c3afc3af1a52c29bc28bc2acc38dc2afc2b26bc3bac39e7d3cc39ec2a52fc296c39922c2a74fc3a36f2dc3b376c291356fc3a9c3bbc2bdc3bbc3b7c387c3a6c3bf3bc3b44d7bc2bdc3826bc2abc2bac2b824c388c3b401007cc3b4c28820c28c3e2ac28bc3a5c39bc3a6c2a34734c2b43a2fc2a951c293c297c3a7c394625ec3a7c3a7c3b4c397c39dc38bc2bdc3adc3bcc39d2ac2afc28b45c2be6cc2b3c3b22e757255c3956fc29bc2bb59c399c38ec3ae4ec2b37b776f41c28cc38bc2bcc29ec2a0c28fc28f3e3f7d437fc2bec3bcc3aac38d47c39fc3bf2523c39363c2b13ac29ec38dc3aac2bc69c3b2c286c2bec3bcc3a63ac2be1b020ec290c3b0c2bac2a77fc3b3c2ac0155c2bec381c2ae1d50c39bc3adc38b2f5fc2a3c39fc3afc3bfc292c3afc3bf3fc39bc28bc2bbc2a947020000"
     ],
     "headers": {
       "cache-control": "no-cache",
@@ -936,8 +912,8 @@
       "content-encoding": "gzip",
       "expires": "-1",
       "vary": "Accept-Encoding",
-      "date": "Wed, 09 Sep 2015 14:19:27 GMT",
-      "content-length": "400"
+      "date": "Wed, 06 Jan 2016 11:05:56 GMT",
+      "content-length": "384"
     }
   },
   {
@@ -947,7 +923,7 @@
     "body": "",
     "status": 200,
     "response": [
-      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3bac3a8c3bcc3bcc3a1c2a7c3b777c3ae4fc3aec3afc38fc2a6c3bb0f0fc3ae1fc3acc29dc39fc2bbc2b7c2b3c3bbc3a0c3a060722fc39f7f70c3bfc2a3c39147c393625653c38bc39dc29dc3b1c3bd4fc387c2bbc2bb0fc3873b77c3b7c3b6c3a9c3b359c39e4cc3ab62c39516c395c292c2bec2be2cc2b3c3a5c3afc3bf60c3b7c3a1c3af6fc39b51c293c28bc2acc38dc2afc2b26bc3bac39a7e3ac39ec2a5c38fc297c39922c2a70fc2a3c3af2cc3b376c291356fc3a9c3abc2bdc3bbc3b7c387c3a6c3bf3bc3b44d7bc2bdc3825bc2abc2bac2b824c2b8c3b401c39ec3bfc3a81101187d5416c38bc2b7c38d47c28f6858755e52c2a3262fc38fc2a9c385c2bcc38ec38fc3a9c2af79c39bc2ae1ec39dc2bdc29bc2adc28ac3b1c2b42dc3874575c3b7726f3b7fc2b7c38ac3ab62c2912fc39bc2acc2bc4bc2bd5e55c3b5c39bc3a66e56c2b6c2b3c2bbc3936cc3afc3ae2d2873c299c3971374c3bac391c3a7c2a76fc3a8c38fc2975fc2bdc3b9c3a8c3bbc2bf6464502856c387c2b359c29d374dc39ec390c2973fc28bc298c39c0d7b0ac2b0c3b2c3b0c2a17fc3b3c2ac01c39d7e367171c2bd583c5e7ec3b91ac2887cc3bfc2977cc3bfc3bf01c3bc65c394c38576020000"
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3bac3a8c3bcc3bcc3a1c2a7c3b777c3ae4fc3aec3afc38fc2a6c3bb0f0fc3ae1fc3acc29dc39fc2bbc2b7c2b3c3bbc3a0c3a060722fc39f7f70c3bfc2a3c39147c393625653c38bc39dc29dc3b1c3bd4fc387c2bbc2bb0fc3873b77c3b7c3b6c3a9c3b359c39e4cc3ab62c39516c395c292c2bec2be2cc2b3c3a5c3afc3bf60c3b7c3a1c3af6fc39b51c293c28bc2acc38dc2afc2b26bc3bac39a7e3ac39ec2a5c38fc297c39922c2a70fc2a3c3af2cc3b376c291356fc3a9c3abc2bdc3bbc3b7c387c3a6c3bf3bc3b44d7bc2bdc3825bc2abc2bac2b824c2b8c3b401c39ec3bfc3a81101187d5416c38bc2b7c38d47c28f6858755e52c2a3262fc38fc2a9c385c2bcc38ec38fc3a9c2afc2bbc2977bc39bc3b9c2bb555e17c28b7cc39966c3a55dc3aac3a4c2aac2aac39f3677c2b3c2b2c29dc39dc29d667b776f41c288c38bc2bcc29ec2a0c28fc28f3e3f7d437fc2bec3bcc3aac38d47c39fc3bf2523c39363c2b13ac29ec38dc3aac2bc69c3b2c286c2bec3bcc3a63ac2be1b020ec290c3b0c2bac2a77fc3b3c2ac0155c2bec381c2ae1d50c39bc3adc38b2f5fc2a3c39fc3afc3bfc292c3afc3bf3f64c3900f0843020000"
     ],
     "headers": {
       "cache-control": "no-cache",
@@ -956,18 +932,18 @@
       "content-encoding": "gzip",
       "expires": "-1",
       "vary": "Accept-Encoding",
-      "date": "Wed, 09 Sep 2015 14:19:27 GMT",
-      "content-length": "401"
+      "date": "Wed, 06 Jan 2016 11:05:55 GMT",
+      "content-length": "385"
     }
   },
   {
     "scope": "https://api.ctl.io:443",
     "method": "GET",
-    "path": "/v2-experimental/networks/ALTD/il1",
+    "path": "/v2-experimental/networks/ALTD/va1",
     "body": "",
     "status": 200,
     "response": [
-      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba687670c2b0c2bfc2b7c2b3c29bc39fc38f1ec38cc3b6c2b3c3b3c29dc389c3bdc3bbc393c3bb0f67c393c399c283c39dc2837bc2bb0f271fc28d3ec29a16c2b3c29a5ac3aec3aec28c1fc39e1bc39f7f38c39ec2b9c2bbc2b74f1fc38fc3b2665a17c2abc2b6c2a8c296c3b4c3ad65c2992d7fc3bfc2bdc287c3b71fc3bec3bec2a61d35c2b9c388c39ac3bc2ac2bbc2a6c2afc38dc287c3a35dc3ba78c2992d72c3ba2cc3bac38a326f1759c3b3c296c2bec39ec2bb7f7f6cc3bec2bf43c39fc2b4c3972bc2bcc2b5c2aac28b4b024b1fc3a0c3bdc28f1e01c380c3a8c2a3c2b258c2be6d3e7a44c2a3c2aac3b3c2925a3579794e4dc3a6757e4e7fc38dc39b76c3b5c3a8c3aec39d6c55c28cc2a76d392ec2aac2bbc2977bc39bc3b9c2bb555e17c28b7cc39966c3a55dc3aac3b6c2aac2aac39f3677c2b3c2b2c29dc39d2dc38ac39dc2bbc2b720c38c655e4fc390c3a947c29fc29fc2bec2a13f5f7ec3b5c3a6c2a3c3afc3bfc292c29141c2a1581dc38f6675c39e3479435fc3be2c627237c3ac29c380c38ac383c287c3bec38dc2b306c284c3bbc399c384c385c3b562c3b178c3b9c3a56b20c3b2c3bd5fc3b2c3bdc3bf07c28a5e544b75020000"
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba686fc3a7c39307c3996c6f762f3fc388c3b6c3b7c2b2c3bc613e7970c290c29fc3afc29d1fc3ac1dc39cc2bf3f3bc3b868c3b4c391c2b4c298c395c394727767c2bc7bc3afc3be78c3bfc39e78c3a7c3aec39e3e7d3ec38bc29b695dc2acc39ac2a25ac392c397c29765c2b6c3bcc3bdc3afc3adc3adc39fc3bbc3bd6d436a73c291c2b5c3b955764dc39fc39b4fc387c2bbc3b4c3b9325bc3a4c3b461c3bcc2a565c39e2ec2b2c3a62d7dc2bf77c3bfc3bec398c3bc7fc287c2be69c2af57786d5517c29704c2983e00c280c28f1e01c382c3a8c2a3c2b258c2be6d3e7a4423c2abc3b3c2925a3579794e4dc3a6757e4e7fc39dc2bdc39cc39bc38ec39fc2adc3b2c2ba58c3a4c38b362bc3af522f5755c3bdc2b6c2b9c29bc295c3adc3acc3ae65c2b67bc3b716c2b4c2b8c38cc3ab09c3bac3b8c3a8c3b3c39337c3b4c3a7c38bc2afc39e7cc3b4c3bd5f32323d16c2abc3a3c399c2acc38ec29b266fc3a8c38b6fc2aec3a3c2bb21c3a00009c2af7bc3ba37c38f1ac290c3a51bc3acc39a01c2b5c39dc2bec3bcc3b235c3bac3bdc3be2fc3b9c3bec3bf03c399c2bfc3b7c28f46020000"
     ],
     "headers": {
       "cache-control": "no-cache",
@@ -976,8 +952,8 @@
       "content-encoding": "gzip",
       "expires": "-1",
       "vary": "Accept-Encoding",
-      "date": "Wed, 09 Sep 2015 14:19:27 GMT",
-      "content-length": "399"
+      "date": "Wed, 06 Jan 2016 11:05:55 GMT",
+      "content-length": "384"
     }
   },
   {
@@ -987,7 +963,7 @@
     "body": "",
     "status": 200,
     "response": [
-      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba68c3afc3a0c39ec3b9c2a70f76c3b2c287c29fc29ec3afc3afc39fc29fc3ac1f7c7ac3bfc393c287c399c39e6cc3bfc381c2a7c3b73ec39d79c2987f34c3ba685ac38c6a6ac2b9c2bb33c2bec2bf33c39e3f18c3afc39cc39dc39bc2a7c28f677933c2adc28b555b544bc3bac3b6c2b2c38cc296c2bfc3bfc39ec2bdc3bdc283c39fc39fc2b4c2a3261759c29b5f65c397c3b4c2b5c3b970c2bc4b1f2fc2b3454ec29f455f59c3a6c3ad226bc39ec392c3977bc3b7c3afc28fc38dc3bf77c3a8c29bc3b67ac285c2b75675714960c3a903c2bcc3bfc3912300187d5416c38bc2b7c38d47c28f6854755e52c2ab262fc38fc2a9c389c2bcc38ec38fc3a9c2af79c39bc2ae1ec39dc2bdc29bc2adc28ac3b1c2b42dc3874575c3b7726f3b7fc2b7c38ac3ab62c2912fc39bc2acc2bc4bc39d5e55c3b5c39bc3a66e56c2b6c2b3c2bbc3936cc3b7c3ae2d0873c299c3971374c3bac391c3a7c2a76fc3a8c38fc2975fc2bdc3b9c3a8c3bbc2bf6464502856c387c2b359c29d374dc39ec390c2973fc28bc298c39c0d7b0ac2b0c3b2c3b0c2a17fc3b3c2ac01c39e3fc29bc2b8c2b85e2c1e2fc2bf7c0d44c2bec3bf4bc2bec3bfc3bf004929673375020000"
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba68c3afc3a0c39ec3b9c2a70f76c3b2c287c29fc29ec3afc3afc39fc29fc3ac1f7c7ac3bfc393c287c399c39e6cc3bfc381c2a7c3b73ec39d79c2987f34c3ba685ac38c6a6ac2b9c2bb33c2bec2bf33c39e3f18c3afc39cc39dc39bc2a7c28f677933c2adc28b555b544bc3bac3b6c2b2c38cc296c2bfc3bfc39ec2bdc3bdc283c39fc39fc2b4c2a3261759c29b5f65c397c3b4c2b5c3b970c2bc4b1f2fc2b3454ec29f455f59c3a6c3ad226bc39ec392c3977bc3b7c3afc28fc38dc3bf77c3a8c29bc3b67ac285c2b75675714960c3a903c2bcc3bfc3912300187d5416c38bc2b7c38d47c28f6854755e52c2ab262fc38fc2a9c389c2bcc38ec38fc3a9c2afc2bbc2977bc39bc3b9c2bb555e17c28b7cc39966c3a55dc3aac3a5c2aac2aac39f3677c2b3c2b2c29dc39dc29d66c2bb776f41c287c38bc2bcc29ec2a0c28fc28f3e3f7d437fc2bec3bcc3aac38d47c39fc3bf2523c39363c2b13ac29ec38dc3aac2bc69c3b2c286c2bec3bcc3a63ac2be1b020ec290c3b0c2bac2a77fc3b3c2ac01c29ac39f60c3970ec2a8c3adc3b6c3a5c297c2afc391c3afc3b77fc389c3b7c3bf1fc2b02bc2bfc3b142020000"
     ],
     "headers": {
       "cache-control": "no-cache",
@@ -996,8 +972,8 @@
       "content-encoding": "gzip",
       "expires": "-1",
       "vary": "Accept-Encoding",
-      "date": "Wed, 09 Sep 2015 14:19:27 GMT",
-      "content-length": "401"
+      "date": "Wed, 06 Jan 2016 11:05:56 GMT",
+      "content-length": "385"
     }
   },
   {
@@ -1007,7 +983,7 @@
     "body": "",
     "status": 200,
     "response": [
-      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba687fc3a7c3bec2bdc3a9c2a7c293c29dc2bdc3a9c2bdc283c3bdc2bd3cc38fc3aec39dc2bbc2bfc2bb77c3bec3b06136c39d3f3fc2b87fc3bec391c3a8c2a36931c2abc2a9c3a5c3aec38ec3b8c3a1c38ec3b8c3bec38e78c3a7c3aec39e3e7d3cc38bc29b695dc2acc39ac2a25ac392c2b7c29765c2b6c3bcc3bdc3b776c3aec3afc3bcc3bec2a61d35c2b9c388c39ac3bc2ac2bbc2a6c2afc38dc287c3a35dc3ba78c2992d72c3ba2cc3bac38a326f1759c3b3c296c2bec39ec2bb7f7f6cc3bec28f6fc39ac3ab15c39e5ac395c38525c281c2a50fc3b0c3be47c28f0060c3b451592cc39f361f3dc2a251c3957949c2adc29ac2bc04c3aac3b33a3fc2a7c2bfc3a66dc2bb7a74c3b76ec2b62ac386c393c2b61c17c395c39dc38bc2bdc3adc3bcc39d2ac2afc28b45c2be6cc2b3c3b22e757b55c3956fc29bc2bb59c399c38ec3aec2aec39bc39dc2bbc2b720c38c655e4fc390c3a947c29fc29fc2bec2a13f5f7ec3b5c3a6c2a3c3afc3bfc292c29141c2a1581dc38f6675c39e3479435fc3be2c627237c3ac29c380c38ac383c287c3bec38dc2b306c284c3bbc399c384c385c3b562c3b178c3b9c3a56b20c3b2c3bd5fc3b2c3bdc3bf07c38dc2b2c3bec29575020000"
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba687fc3a7c3bec2bdc3a9c2a7c293c29dc2bdc3a9c2bdc283c3bdc2bd3cc38fc3aec39dc2bbc2bfc2bb77c3bec3b06136c39d3f3fc2b87fc3bec391c3a8c2a36931c2abc2a9c3a5c3aec38ec3b8c3a1c38ec3b8c3bec38e78c3a7c3aec39e3e7d3cc38bc29b695dc2acc39ac2a25ac392c2b7c29765c2b6c3bcc3bdc3b776c3aec3afc3bcc3bec2a61d35c2b9c388c39ac3bc2ac2bbc2a6c2afc38dc287c3a35dc3ba78c2992d72c3ba2cc3bac38a326f1759c3b3c296c2bec39ec2bb7f7f6cc3bec28f6fc39ac3ab15c39e5ac395c38525c281c2a50fc3b0c3be47c28f0060c3b451592cc39f361f3dc2a251c3957949c2adc29ac2bc04c3aac3b33a3fc2a7c2bfc3ae5ec3ae6dc3a7c3af56795d2cc3b265c29bc29577c2a9c297c2abc2aa7ec39bc39cc38dc38a767677c39dc3aec39ec2bd051d2ec3b37ac2823e3ec3bac3bcc3b40dc3bdc3b9c3b2c2ab371f7dc3bfc297c28c4cc28fc385c3aa7836c2abc3b3c2a6c3891bc3bac3b2c29bc3abc3b86e083840c382c3abc29ec3bec38dc2b30664c3b906c2bb76406dc2b72fc2bf7cc28d7ec2bfc3bf4bc2bec3bfc3bf005d76c3b96b42020000"
     ],
     "headers": {
       "cache-control": "no-cache",
@@ -1016,18 +992,18 @@
       "content-encoding": "gzip",
       "expires": "-1",
       "vary": "Accept-Encoding",
-      "date": "Wed, 09 Sep 2015 14:19:27 GMT",
-      "content-length": "397"
+      "date": "Wed, 06 Jan 2016 11:05:55 GMT",
+      "content-length": "382"
     }
   },
   {
     "scope": "https://api.ctl.io:443",
     "method": "GET",
-    "path": "/v2-experimental/networks/ALTD/uc1",
+    "path": "/v2-experimental/networks/ALTD/il1",
     "body": "",
     "status": 200,
     "response": [
-      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3bac3a8c3a1c3bdc3b3c2bdc287c2bbc3b9c3b9c3bec3acc393c3a9c3bec3be6427c38bc3afc3adc3aec38ec3ae3fc3b8c3b4c39ec2bd07c3a7c3996cc3bfc2a3c39147c393625653c38bc39dc29dc3b1c3aec39ec2bdc3b1c3aec2a77bc3a3c29dc2bb7bc3b862c29637c393c2ba58c2b545c2b5c2a4c3af2fc38b6cc3b9c3bbc3afc39ec3bf74c3afc3b7772dc2a9c39145c396c3a657c3993535701fc28f77c3a9c28b65c2b6c388c3a9c393c281c397c29679c2bbc388c29ac2b7c39460c3afc3bec3bdc2b1c3b9c3bf0e7dc3935ec2afc3b0c39ec2aa2e2e09347d00081f3d02c288c3914765c2b17cc39b7cc3b4c2884657c3a725c2b56ac3b2c3b2c29cc29ac38cc3abc3bcc29cc3bec29ac2b7c3adc3aac391c39dc2bbc399c2aa184fc39b725c54772fc3b7c2b6c3b377c2abc2bc2e16c3b9c2b2c38dc38ac2bbc394c3ad5555c2bf6dc3ae66653bc2bbc2bbc29ec3aec39ec2bd05c2812ec3b37ac2824e3fc3bac3bcc3b40dc3bdc3b9c3b2c2ab371f7dc3bfc297c28c0c0ac385c3aa7836c2abc3b3c2a6c3891bc3bac3b26711c293c2bb614f01561e3ec3b46fc29e3520c39cc38f262ec2ae17c28bc387c38b2f5f03c291c3afc3bfc292c3afc3bf3f5ec28dc38c267d020000"
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba687670c2b0c2bfc2b7c2b3c29bc39fc38f1ec38cc3b6c2b3c3b3c29dc389c3bdc3bbc393c3bb0f67c393c399c283c39dc2837bc2bb0f271fc28d3ec29a16c2b3c29a5ac3aec3aec28c1fc39e1bc39f7f38c39ec2b9c2bbc2b74f1fc38fc3b2665a17c2abc2b6c2a8c296c3b4c3ad65c2992d7fc3bfc2bdc287c3b71fc3bec3bec2a61d35c2b9c388c39ac3bc2ac2bbc2a6c2afc38dc287c3a35dc3ba78c2992d72c3ba2cc3bac38a326f1759c3b3c296c2bec39ec2bb7f7f6cc3bec2bf43c39fc2b4c3972bc2bcc2b5c2aac28b4b024b1fc3a0c3bdc28f1e01c380c3a8c2a3c2b258c2be6d3e7a44c2a3c2aac3b3c2925a3579794e4dc3a6757e4e7fc39dc2bdc39cc39bc38ec39fc2adc3b2c2ba58c3a4c38b362bc3af522f5755c3bdc2b6c2b9c29bc295c3adc3ac6e51c3aec39ec2bd051d2ec3b37ac2823e3ec3bac3bcc3b40dc3bdc3b9c3b2c2ab371f7dc3bfc297c28c4cc28fc385c3aa7836c2abc3b3c2a6c3891bc3bac3b2c29bc3abc3b86e083840c382c3abc29ec3bec38dc2b30664c3b906c2bb76406dc2b72fc2bf7cc28d7ec2bfc3bf4bc2bec3bfc3bf00471fc2833242020000"
     ],
     "headers": {
       "cache-control": "no-cache",
@@ -1036,28 +1012,8 @@
       "content-encoding": "gzip",
       "expires": "-1",
       "vary": "Accept-Encoding",
-      "date": "Wed, 09 Sep 2015 14:19:27 GMT",
-      "content-length": "400"
-    }
-  },
-  {
-    "scope": "https://api.ctl.io:443",
-    "method": "GET",
-    "path": "/v2-experimental/networks/ALTD/wa1",
-    "body": "",
-    "status": 200,
-    "response": [
-      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba682fc39bc38bc2a60fc3afc29f3fc39cc2bbc2b7c2b7c2bfc297c39dc38bc3b61e4e1f66c3a77b593ec39939c38fc3b6c3b2c28f461f4dc28b594d2d7777c38607c2bbc3a35dc3bac3bfc38ec39dc2bd7dc3ba7cc29637c393c2ba58c2b545c2b5c2a4c2af2fc38b6cc3b9c3bbc3afc3ae1dc3acc3bec3bec2b621c2b5c2b9c388c39ac3bc2ac2bbc2a6c3afc3adc2a7637cc2bec38c16397d187f69c299c2b7c28bc2ac794bc39fc3afc39dc2bf3f36c3bfc39fc2a16fc39ac3ab155e5bc395c3852501c2a60f00c3a0c2a347c28030c3bac2a82cc2966fc29bc28f1ec391c388c3aac2bcc2a4564d5ec29e53c29379c29dc29fc3935fc3b3c2b65d3dc2ba7b375b15c3a3695bc28ec28bc3aac3aec3a5c39e76c3be6ec295c397c385225fc2b65979c297c2bac2bdc2aac3aac2b7c38dc39dc2ac6c6777c2afc2b2c39dc2bbc2b720c38e655e4fc390c3a947c29fc29fc2bec2a13f5f7ec3b5c3a6c2a3c3afc3bfc292c29141c2a1581dc38f6675c39e3479435fc3be2c627237c3ac29c380c38ac383c287c3bec38dc2b30678c3bf6cc3a2c3a27ac2b178c2bcc3bcc3b23510c3b9c3be2fc3b9c3bec3bf03c3afc28ac3920079020000"
-    ],
-    "headers": {
-      "cache-control": "no-cache",
-      "pragma": "no-cache",
-      "content-type": "application/json; charset=utf-8",
-      "content-encoding": "gzip",
-      "expires": "-1",
-      "vary": "Accept-Encoding",
-      "date": "Wed, 09 Sep 2015 14:19:27 GMT",
-      "content-length": "396"
+      "date": "Wed, 06 Jan 2016 11:05:56 GMT",
+      "content-length": "384"
     }
   },
   {
@@ -1076,14 +1032,54 @@
       "content-encoding": "gzip",
       "expires": "-1",
       "vary": "Accept-Encoding",
-      "date": "Wed, 09 Sep 2015 14:19:27 GMT",
+      "date": "Wed, 06 Jan 2016 11:05:56 GMT",
       "content-length": "122"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2-experimental/networks/ALTD/uc1",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3bac3a8c3a1c3bdc3b3c2bdc287c2bbc3b9c3b9c3bec3acc393c3a9c3bec3be6427c38bc3afc3adc3aec38ec3ae3fc3b8c3b4c39ec2bd07c3a7c3996cc3bfc2a3c39147c393625653c38bc39dc29dc3b1c3aec39ec2bdc3b1c3aec2a77bc3a3c29dc2bb7bc3b862c29637c393c2ba58c2b545c2b5c2a4c3af2fc38b6cc3b9c3bbc3afc39ec3bf74c3afc3b7772dc2a9c39145c396c3a657c3993535701fc28f77c3a9c28b65c2b6c388c3a9c393c281c397c29679c2bbc388c29ac2b7c39460c3afc3bec3bdc2b1c3b9c3bf0e7dc3935ec2afc3b0c39ec2aa2e2e09347d00081f3d02c288c3914765c2b17cc39b7cc3b4c2884657c3a725c2b56ac3b2c3b2c29cc29ac38cc3abc3bcc29cc3bec2ba7bc2b9c2b7c29dc2bf5bc3a575c2b1c388c2976d56c39ec2a55ec2aec2aac3ba6d73372bc39bc399c39dc3b574c3b7c3ae2dc3a871c299c39713c3b4c3b1c391c3a7c2a76fc3a8c38fc2975fc2bdc3b9c3a8c3bbc2bf64647a2c56c387c2b359c29d374dc39ec390c297c39f5cc3877743c38001125ec3b7c3b46fc29e3520c38b37c398c2b5036ac2bb7dc3b9c3a56bc3b4c3bbc3bd5fc3b2c3bdc3bf07c2acc286c3b5c2b64a020000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Wed, 06 Jan 2016 11:05:55 GMT",
+      "content-length": "385"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2-experimental/networks/ALTD/wa1",
+    "body": "",
+    "status": 200,
+    "response": [
+      "1fc28b0800000000000400c3adc2bd07601c49c29625262f6dc38a7b7f4ac3b54ac397c3a074c2a108c280601324c398c2904010c3acc381c288c38dc3a6c292c3ac1d69472329c2ab2ac281c38a6556655d661640c38cc3adc29dc2bcc3b7c39e7bc3afc2bdc3b7c39e7bc3afc2bdc3b7c2ba3bc29d4e27c3b7c39fc3bf3f5c6664016cc3b6c38e4ac39ac389c29e21c280c2aac3881f3f7e7c1f3f22c2bec3b7c28b3f2a661f3dc3ba682fc39bc38bc2a60fc3afc29f3fc39cc2bbc2b7c2b7c2bfc297c39dc38bc3b61e4e1f66c3a77b593ec39939c38fc3b6c3b2c28f461f4dc28b594d2d7777c38607c2bbc3a35dc3bac3bfc38ec39dc2bd7dc3ba7cc29637c393c2ba58c2b545c2b5c2a4c2af2fc38b6cc3b9c3bbc3afc3ae1dc3acc3bec3bec2b621c2b5c2b9c388c39ac3bc2ac2bbc2a6c3afc3adc2a7637cc2bec38c16397d187f69c299c2b7c28bc2ac794bc39fc3afc39dc2bf3f36c3bfc39fc2a16fc39ac3ab155e5bc395c3852501c2a60f00c3a0c2a347c28030c3bac2a82cc2966fc29bc28f1ec391c388c3aac2bcc2a4564d5ec29e53c29379c29dc29fc3935f772fc3b7c2b6c3b377c2abc2bc2e16c3b9c2b2c38dc38ac2bbc394c38b5555c2bf6dc3ae66653bc2bb7bc295c3adc39ec2bd052d2ec3b37ac2823e3ec3bac3bcc3b40dc3bdc3b9c3b2c2ab371f7dc3bfc297c28c4cc28fc385c3aa7836c2abc3b3c2a6c3891bc3bac3b2c29bc3abc3b86e083840c382c3abc29ec3bec38dc2b306687ec2835d3bc2a0c2b6c39bc2975fc2be46c2bfc39fc3bf25c39fc3bf7f00230b0a0c46020000"
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "content-encoding": "gzip",
+      "expires": "-1",
+      "vary": "Accept-Encoding",
+      "date": "Wed, 06 Jan 2016 11:05:56 GMT",
+      "content-length": "381"
     }
   },
   {
     "scope": "https://api.ctl.io:443",
     "method": "POST",
-    "path": "/v2-experimental/networks/ALTD/de1/6f6aa26cc8c24241b6cc7f414eef8d1d/release",
+    "path": "/v2-experimental/networks/ALTD/gb1/e789ed6495eb433a9ebc82f4bf095dea/release",
     "body": {},
     "status": 204,
     "response": "",
@@ -1091,7 +1087,7 @@
       "cache-control": "no-cache",
       "pragma": "no-cache",
       "expires": "-1",
-      "date": "Wed, 09 Sep 2015 14:20:02 GMT"
+      "date": "Wed, 06 Jan 2016 11:06:22 GMT"
     }
   }
 ]
