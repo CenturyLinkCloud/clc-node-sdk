@@ -1,0 +1,396 @@
+[
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2-experimental/networks/ALTD/ca3",
+    "body": "",
+    "status": 200,
+    "response": [
+      {
+        "id": "0660bbf3beb5473cb9a839c8eca9d5b7",
+        "cidr": "10.100.247.0/24",
+        "description": "vlan_447_10.100.247",
+        "gateway": "10.100.247.1",
+        "name": "vlan_447_10.100.247",
+        "netmask": "255.255.255.0",
+        "type": "private",
+        "vlan": 447,
+        "links": [
+          {
+            "rel": "self",
+            "href": "/v2-experimental/networks/altd/ca3/0660bbf3beb5473cb9a839c8eca9d5b7",
+            "verbs": [
+              "GET",
+              "PUT"
+            ]
+          },
+          {
+            "rel": "ipAddresses",
+            "href": "/v2-experimental/networks/altd/ca3/0660bbf3beb5473cb9a839c8eca9d5b7/ipAddresses",
+            "verbs": [
+              "GET"
+            ]
+          },
+          {
+            "rel": "release",
+            "href": "/v2-experimental/networks/altd/ca3/0660bbf3beb5473cb9a839c8eca9d5b7/release",
+            "verbs": [
+              "POST"
+            ]
+          }
+        ]
+      }
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "expires": "-1",
+      "date": "Thu, 17 Mar 2016 11:19:12 GMT",
+      "connection": "close",
+      "content-length": "583",
+      "via": "1.1 GB3T3NLOADFE01"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2-experimental/networks/ALTD/il1",
+    "body": "",
+    "status": 200,
+    "response": [
+      {
+        "id": "d884201e5a7d4af0b55c59dcd718319b",
+        "cidr": "10.93.59.0/24",
+        "description": "vlan_2959_10.93.59",
+        "gateway": "10.93.59.1",
+        "name": "vlan_2959_10.93.59",
+        "netmask": "255.255.255.0",
+        "type": "private",
+        "vlan": 2959,
+        "links": [
+          {
+            "rel": "self",
+            "href": "/v2-experimental/networks/altd/il1/d884201e5a7d4af0b55c59dcd718319b",
+            "verbs": [
+              "GET",
+              "PUT"
+            ]
+          },
+          {
+            "rel": "ipAddresses",
+            "href": "/v2-experimental/networks/altd/il1/d884201e5a7d4af0b55c59dcd718319b/ipAddresses",
+            "verbs": [
+              "GET"
+            ]
+          },
+          {
+            "rel": "release",
+            "href": "/v2-experimental/networks/altd/il1/d884201e5a7d4af0b55c59dcd718319b/release",
+            "verbs": [
+              "POST"
+            ]
+          }
+        ]
+      }
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "expires": "-1",
+      "date": "Thu, 17 Mar 2016 11:19:12 GMT",
+      "connection": "close",
+      "content-length": "578",
+      "via": "1.1 GB3T3NLOADFE01"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "POST",
+    "path": "/v2-experimental/networks/ALTD/il1/claim",
+    "body": {},
+    "status": 202,
+    "response": {
+      "operationId": "1b1dce13412645dca4813d575c7d688a",
+      "uri": "/v2-experimental/operations/ALTD/status/1b1dce13412645dca4813d575c7d688a"
+    },
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "expires": "-1",
+      "date": "Thu, 17 Mar 2016 11:19:15 GMT",
+      "connection": "close",
+      "content-length": "131",
+      "via": "1.1 GB3T3NLOADFE01"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "POST",
+    "path": "/v2-experimental/networks/ALTD/ca3/claim",
+    "body": {},
+    "status": 202,
+    "response": {
+      "operationId": "86ccade5e8474671b9cfc81f9c1e2337",
+      "uri": "/v2-experimental/operations/ALTD/status/86ccade5e8474671b9cfc81f9c1e2337"
+    },
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "expires": "-1",
+      "date": "Thu, 17 Mar 2016 11:19:15 GMT",
+      "connection": "close",
+      "content-length": "131",
+      "via": "1.1 GB3T3NLOADFE01"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2-experimental/operations/ALTD/status/86ccade5e8474671b9cfc81f9c1e2337",
+    "body": "",
+    "status": 200,
+    "response": {
+      "requestType": "blueprintOperation",
+      "status": "succeeded",
+      "summary": {
+        "blueprintId": 48636,
+        "locationId": "CA3",
+        "links": [
+          {
+            "rel": "network",
+            "href": "/v2-experimental/networks/ALTD/CA3/22a2688fc249496e838649983174aa1b",
+            "id": "22a2688fc249496e838649983174aa1b"
+          }
+        ]
+      },
+      "source": {
+        "userName": "idrabenia.altd",
+        "requestedAt": "2016-03-17T11:19:15Z"
+      }
+    },
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "expires": "-1",
+      "date": "Thu, 17 Mar 2016 11:20:28 GMT",
+      "connection": "close",
+      "content-length": "329",
+      "via": "1.1 GB3T3NLOADFE01"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2-experimental/operations/ALTD/status/1b1dce13412645dca4813d575c7d688a",
+    "body": "",
+    "status": 200,
+    "response": {
+      "requestType": "blueprintOperation",
+      "status": "succeeded",
+      "summary": {
+        "blueprintId": 191520,
+        "locationId": "IL1",
+        "links": [
+          {
+            "rel": "network",
+            "href": "/v2-experimental/networks/ALTD/IL1/a47061db5d8c42dfbe1b800a61cd913e",
+            "id": "a47061db5d8c42dfbe1b800a61cd913e"
+          }
+        ]
+      },
+      "source": {
+        "userName": "idrabenia.altd",
+        "requestedAt": "2016-03-17T11:19:15Z"
+      }
+    },
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "expires": "-1",
+      "date": "Thu, 17 Mar 2016 11:20:50 GMT",
+      "connection": "close",
+      "content-length": "330",
+      "via": "1.1 GB3T3NLOADFE01"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2-experimental/networks/ALTD/ca3",
+    "body": "",
+    "status": 200,
+    "response": [
+      {
+        "id": "0660bbf3beb5473cb9a839c8eca9d5b7",
+        "cidr": "10.100.247.0/24",
+        "description": "vlan_447_10.100.247",
+        "gateway": "10.100.247.1",
+        "name": "vlan_447_10.100.247",
+        "netmask": "255.255.255.0",
+        "type": "private",
+        "vlan": 447,
+        "links": [
+          {
+            "rel": "self",
+            "href": "/v2-experimental/networks/altd/ca3/0660bbf3beb5473cb9a839c8eca9d5b7",
+            "verbs": [
+              "GET",
+              "PUT"
+            ]
+          },
+          {
+            "rel": "ipAddresses",
+            "href": "/v2-experimental/networks/altd/ca3/0660bbf3beb5473cb9a839c8eca9d5b7/ipAddresses",
+            "verbs": [
+              "GET"
+            ]
+          },
+          {
+            "rel": "release",
+            "href": "/v2-experimental/networks/altd/ca3/0660bbf3beb5473cb9a839c8eca9d5b7/release",
+            "verbs": [
+              "POST"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "22a2688fc249496e838649983174aa1b",
+        "cidr": "10.102.17.0/24",
+        "description": "vlan_1117_10.102.17",
+        "gateway": "10.102.17.1",
+        "name": "vlan_1117_10.102.17",
+        "netmask": "255.255.255.0",
+        "type": "private",
+        "vlan": 1117,
+        "links": [
+          {
+            "rel": "self",
+            "href": "/v2-experimental/networks/altd/ca3/22a2688fc249496e838649983174aa1b",
+            "verbs": [
+              "GET",
+              "PUT"
+            ]
+          },
+          {
+            "rel": "ipAddresses",
+            "href": "/v2-experimental/networks/altd/ca3/22a2688fc249496e838649983174aa1b/ipAddresses",
+            "verbs": [
+              "GET"
+            ]
+          },
+          {
+            "rel": "release",
+            "href": "/v2-experimental/networks/altd/ca3/22a2688fc249496e838649983174aa1b/release",
+            "verbs": [
+              "POST"
+            ]
+          }
+        ]
+      }
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "expires": "-1",
+      "date": "Thu, 17 Mar 2016 11:20:50 GMT",
+      "connection": "close",
+      "content-length": "1164",
+      "via": "1.1 GB3T3NLOADFE01"
+    }
+  },
+  {
+    "scope": "https://api.ctl.io:443",
+    "method": "GET",
+    "path": "/v2-experimental/networks/ALTD/il1",
+    "body": "",
+    "status": 200,
+    "response": [
+      {
+        "id": "d884201e5a7d4af0b55c59dcd718319b",
+        "cidr": "10.93.59.0/24",
+        "description": "vlan_2959_10.93.59",
+        "gateway": "10.93.59.1",
+        "name": "vlan_2959_10.93.59",
+        "netmask": "255.255.255.0",
+        "type": "private",
+        "vlan": 2959,
+        "links": [
+          {
+            "rel": "self",
+            "href": "/v2-experimental/networks/altd/il1/d884201e5a7d4af0b55c59dcd718319b",
+            "verbs": [
+              "GET",
+              "PUT"
+            ]
+          },
+          {
+            "rel": "ipAddresses",
+            "href": "/v2-experimental/networks/altd/il1/d884201e5a7d4af0b55c59dcd718319b/ipAddresses",
+            "verbs": [
+              "GET"
+            ]
+          },
+          {
+            "rel": "release",
+            "href": "/v2-experimental/networks/altd/il1/d884201e5a7d4af0b55c59dcd718319b/release",
+            "verbs": [
+              "POST"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "a47061db5d8c42dfbe1b800a61cd913e",
+        "cidr": "10.144.128.0/24",
+        "description": "vlan_3328_10.144.128",
+        "gateway": "10.144.128.1",
+        "name": "vlan_3328_10.144.128",
+        "netmask": "255.255.255.0",
+        "type": "private",
+        "vlan": 3328,
+        "links": [
+          {
+            "rel": "self",
+            "href": "/v2-experimental/networks/altd/il1/a47061db5d8c42dfbe1b800a61cd913e",
+            "verbs": [
+              "GET",
+              "PUT"
+            ]
+          },
+          {
+            "rel": "ipAddresses",
+            "href": "/v2-experimental/networks/altd/il1/a47061db5d8c42dfbe1b800a61cd913e/ipAddresses",
+            "verbs": [
+              "GET"
+            ]
+          },
+          {
+            "rel": "release",
+            "href": "/v2-experimental/networks/altd/il1/a47061db5d8c42dfbe1b800a61cd913e/release",
+            "verbs": [
+              "POST"
+            ]
+          }
+        ]
+      }
+    ],
+    "headers": {
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "content-type": "application/json; charset=utf-8",
+      "expires": "-1",
+      "date": "Thu, 17 Mar 2016 11:20:50 GMT",
+      "connection": "close",
+      "content-length": "1163",
+      "via": "1.1 GB3T3NLOADFE01"
+    }
+  }
+]

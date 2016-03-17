@@ -1,4 +1,4 @@
-/*! Version: 1.1.2 */
+/*! Version: 1.1.3 */
 require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({"clc-sdk":[function(require,module,exports){
 
 var CommandLineCredentialsProvider = require('./core/auth/credentials-provider.js').CommandLineCredentialsProvider;
@@ -2106,6 +2106,10 @@ function ComputeServices (getRestClientFn, baseServicesFn) {
         return baseServicesFn()._queueClient();
     });
 
+    var experimentalQueueClient = _.memoize(function () {
+        return baseServicesFn()._experimentalQueueClient();
+    });
+
     var policyClient = _.memoize(function () {
        return new PolicyClient(getRestClientFn());
     });
@@ -2127,7 +2131,7 @@ function ComputeServices (getRestClientFn, baseServicesFn) {
     });
 
     self.networks = _.memoize(function () {
-        return new Networks(baseServicesFn().dataCenters(), networkClient(), queueClient());
+        return new Networks(baseServicesFn().dataCenters(), networkClient(), experimentalQueueClient());
     });
 
     var serverConverter = _.memoize(function () {
@@ -2156,7 +2160,7 @@ function ComputeServices (getRestClientFn, baseServicesFn) {
             queueClient(),
             self.groups(),
             self.networks(),
-            baseServicesFn()._experimentalQueueClient(),
+            experimentalQueueClient(),
             self.policies()
         );
     });
@@ -3367,10 +3371,10 @@ module.exports = Networks;
  *
  * @param {DataCenters} dataCenterService
  * @param {NetworkClient} networkClient
- * @param {QueueClient} queueClient
+ * @param {ExperimentalQueueClient} experimentalQueueClient
  * @constructor
  */
-function Networks(dataCenterService, networkClient, queueClient) {
+function Networks(dataCenterService, networkClient, experimentalQueueClient) {
     var self = this;
 
     function init () {
@@ -3397,7 +3401,7 @@ function Networks(dataCenterService, networkClient, queueClient) {
     };
 
     function claimNetwork(dataCenter) {
-        var promise = new OperationPromise(queueClient, "Claim Network");
+        var promise = new OperationPromise(experimentalQueueClient, "Claim Network");
 
         networkClient.claimNetwork(dataCenter.id)
             .then(promise.resolveWhenJobCompleted, promise.processErrors);
@@ -9650,7 +9654,7 @@ process.umask = function() { return 0; };
 },{}],99:[function(require,module,exports){
 module.exports={
   "name": "clc-node-sdk",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "CenturyLink Cloud SDK for Node.js",
   "author": "Ilya Drabenia <ilya.drabenia@altoros.com>",
   "contributors": [
