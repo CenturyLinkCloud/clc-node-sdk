@@ -63,4 +63,47 @@ vcr.describe('Search server operation [UNIT]', function () {
                 done();
             });
     });
+
+    it('Should not found any server by name', function (done) {
+        this.timeout(timeout);
+
+        compute
+            .servers()
+            .find({
+                name: ''
+            })
+            .then(function(servers) {
+                assert.equal(servers.length, 0);
+                done();
+            });
+    });
+
+    it('Should not found any server by id', function (done) {
+        this.timeout(timeout);
+
+        compute
+            .servers()
+            .find({
+                id: 0
+            })
+            .then(function(servers) {
+                assert.equal(servers.length, 0);
+                done();
+            });
+    });
+
+    it('Should find for null and undefined criteria values', function (done) {
+        this.timeout(timeout);
+
+        compute
+            .servers()
+            .find({
+                name: null,
+                powerStates: undefined
+            })
+            .then(function(servers) {
+                assert.equal(servers.length, 0);
+                done();
+            });
+    });
 });
