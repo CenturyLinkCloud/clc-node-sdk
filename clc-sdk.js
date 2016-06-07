@@ -1,97 +1,5 @@
-/*! Version: 1.1.3 */
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({"clc-sdk":[function(require,module,exports){
-
-var CommandLineCredentialsProvider = require('./core/auth/credentials-provider.js').CommandLineCredentialsProvider;
-var EnvironmentCredentialsProvider = require('./core/auth/credentials-provider.js').EnvironmentCredentialsProvider;
-var AuthenticatedClient = require('./core/client/authenticated-client.js');
-var ComputeServices = require('./compute-services/compute-services.js');
-var BaseServices = require('./base-services/base-services.js');
-var _ = require('underscore');
-
-
-module.exports = ClcSdk;
-
-function ClcSdk () {
-    var self = this;
-    var username;
-    var password;
-    var clientOptions;
-
-    function init (args) {
-        clientOptions = getClientOptions(args);
-
-        if (args.length >= 2 &&
-                typeof(args[0]) === 'string' &&
-                typeof(args[1]) === 'string') {
-            initWithCredentials(args[0], args[1]);
-            return;
-        }
-
-        if (args.length > 1 && args[0] instanceof Object) {
-            initWithCredentialsProvider(args[0]);
-            return;
-        }
-
-        initWithDefaultCredentialsProvider();
-    }
-
-    function initWithCredentials(usernameVal, passwordVal) {
-        username = usernameVal;
-        password = passwordVal;
-    }
-
-    function initWithCredentialsProvider(credentialsProvider) {
-        username = credentialsProvider.getUsername();
-        password = credentialsProvider.getPassword();
-    }
-
-    function initWithDefaultCredentialsProvider() {
-        var provider = new CommandLineCredentialsProvider();
-
-        username = provider.getUsername();
-        password = provider.getPassword();
-
-        if (!username && !password) {
-            var environmentCredentials = new EnvironmentCredentialsProvider();
-
-            username = environmentCredentials.getUsername();
-            password = environmentCredentials.getPassword();
-        }
-    }
-
-    function getClientOptions(args) {
-        if (args.length === 0) {
-            return {};
-        }
-        var options = _.last(args);
-
-        if (options instanceof Object) {
-            return {
-                maxRetries: options.maxRetryCount,
-                retryInterval: options.retryInterval
-            };
-        }
-    }
-
-    self.authenticatedClient = _.memoize(function () {
-        return new AuthenticatedClient(
-            username,
-            password,
-            clientOptions
-        );
-    });
-
-    self.baseServices = _.memoize(function () {
-        return new BaseServices(self.authenticatedClient);
-    });
-
-    self.computeServices = _.memoize(function () {
-        return new ComputeServices(self.authenticatedClient, self.baseServices);
-    });
-
-    init (arguments);
-}
-},{"./base-services/base-services.js":2,"./compute-services/compute-services.js":27,"./core/auth/credentials-provider.js":84,"./core/client/authenticated-client.js":86,"underscore":"underscore"}],1:[function(require,module,exports){
+/*! Version: 1.1.4 */
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 var _ = require('underscore');
 
 module.exports = AccountClient;
@@ -7769,7 +7677,7 @@ function MonitoringStatsConverter() {
         checkStatsPeriod(start, end, interval);
 
         var result = {
-            start: start.format(self.TIME_FORMAT),
+            start: composeTimeString(moment.utc(start)),
             sampleInterval: util.format(
                 '%s:%s:%s:%s',
                 prepareTime(interval.days()),
@@ -7781,7 +7689,7 @@ function MonitoringStatsConverter() {
         };
 
         if (end !== undefined) {
-            result.end = composeTimeString(end);
+            result.end = composeTimeString(moment.utc(end));
         }
 
         return result;
@@ -9426,7 +9334,7 @@ function Filters(criteria) {
     var self = this;
 
     self.byId = function() {
-        if (criteria.id) {
+        if (propertyIsPresent(criteria, 'id')) {
             var ids = _.asArray(criteria.id)
                 .map(function (value) {
                     return (value instanceof Object) ? value.id : value;
@@ -9448,10 +9356,14 @@ function Filters(criteria) {
             metadataProperty = criteriaProperty;
         }
 
-        return criteria[criteriaProperty] &&
+        return propertyIsPresent(criteria, criteriaProperty) &&
             Predicate.equalToAnyOf(_.asArray(criteria[criteriaProperty]), metadataProperty, ignoreCase) ||
             Predicate.alwaysTrue();
     };
+
+    function propertyIsPresent(obj, property) {
+        return obj[property] !== undefined && obj[property] !== null;
+    }
 
     self.byCustomPredicate = function() {
         return criteria.where &&
@@ -9654,7 +9566,7 @@ process.umask = function() { return 0; };
 },{}],99:[function(require,module,exports){
 module.exports={
   "name": "clc-node-sdk",
-  "version": "1.1.3",
+  "version": "1.1.4",
   "description": "CenturyLink Cloud SDK for Node.js",
   "author": "Ilya Drabenia <ilya.drabenia@altoros.com>",
   "contributors": [
@@ -9715,6 +9627,98 @@ module.exports={
   "license": "Apache-2.0"
 }
 
-},{}]},{},[]);
+},{}],"clc-sdk":[function(require,module,exports){
+
+var CommandLineCredentialsProvider = require('./core/auth/credentials-provider.js').CommandLineCredentialsProvider;
+var EnvironmentCredentialsProvider = require('./core/auth/credentials-provider.js').EnvironmentCredentialsProvider;
+var AuthenticatedClient = require('./core/client/authenticated-client.js');
+var ComputeServices = require('./compute-services/compute-services.js');
+var BaseServices = require('./base-services/base-services.js');
+var _ = require('underscore');
+
+
+module.exports = ClcSdk;
+
+function ClcSdk () {
+    var self = this;
+    var username;
+    var password;
+    var clientOptions;
+
+    function init (args) {
+        clientOptions = getClientOptions(args);
+
+        if (args.length >= 2 &&
+                typeof(args[0]) === 'string' &&
+                typeof(args[1]) === 'string') {
+            initWithCredentials(args[0], args[1]);
+            return;
+        }
+
+        if (args.length > 1 && args[0] instanceof Object) {
+            initWithCredentialsProvider(args[0]);
+            return;
+        }
+
+        initWithDefaultCredentialsProvider();
+    }
+
+    function initWithCredentials(usernameVal, passwordVal) {
+        username = usernameVal;
+        password = passwordVal;
+    }
+
+    function initWithCredentialsProvider(credentialsProvider) {
+        username = credentialsProvider.getUsername();
+        password = credentialsProvider.getPassword();
+    }
+
+    function initWithDefaultCredentialsProvider() {
+        var provider = new CommandLineCredentialsProvider();
+
+        username = provider.getUsername();
+        password = provider.getPassword();
+
+        if (!username && !password) {
+            var environmentCredentials = new EnvironmentCredentialsProvider();
+
+            username = environmentCredentials.getUsername();
+            password = environmentCredentials.getPassword();
+        }
+    }
+
+    function getClientOptions(args) {
+        if (args.length === 0) {
+            return {};
+        }
+        var options = _.last(args);
+
+        if (options instanceof Object) {
+            return {
+                maxRetries: options.maxRetryCount,
+                retryInterval: options.retryInterval
+            };
+        }
+    }
+
+    self.authenticatedClient = _.memoize(function () {
+        return new AuthenticatedClient(
+            username,
+            password,
+            clientOptions
+        );
+    });
+
+    self.baseServices = _.memoize(function () {
+        return new BaseServices(self.authenticatedClient);
+    });
+
+    self.computeServices = _.memoize(function () {
+        return new ComputeServices(self.authenticatedClient, self.baseServices);
+    });
+
+    init (arguments);
+}
+},{"./base-services/base-services.js":2,"./compute-services/compute-services.js":27,"./core/auth/credentials-provider.js":84,"./core/client/authenticated-client.js":86,"underscore":"underscore"}]},{},[]);
 
 module.exports = require('clc-sdk');

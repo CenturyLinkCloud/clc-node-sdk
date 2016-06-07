@@ -15,8 +15,16 @@ Implemented features
 
 * [Release version 1.1.1 to npm](https://github.com/CenturyLinkCloud/clc-node-sdk/issues/193)
 
-Release v1.1.2
+Release v1.1.3
 ---
 Implemented features
 
 * Change 'claim network' response
+
+Release v1.1.4
+---
+Fixed issues
+
+* [Time issues between UTC and EST](https://github.com/CenturyLinkCloud/clc-node-sdk/issues/198)
+* [Major Issue with Server Selection](https://github.com/CenturyLinkCloud/clc-node-sdk/issues/197)
+* [Delete and Server Selection](https://github.com/CenturyLinkCloud/clc-node-sdk/issues/196)
