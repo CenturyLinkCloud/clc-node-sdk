@@ -120,4 +120,37 @@ describe('Monitoring stats converter [UNIT]', function () {
 
     });
 
+    it("Should return the valid date", function() {
+        var timeMoment = moment().subtract(3, 'hours');
+        var resultFromString =
+        converter.validateAndConvert({
+            start: timeMoment.format('YYYY-MM-DD HH:mm:ssZ'),
+            end: moment(),
+            sampleInterval: '15:00',
+            type: compute.MonitoringStatsType.REALTIME
+
+        });
+        assert.equal(resultFromString.start, moment.utc(timeMoment).format('YYYY-MM-DDTHH:mm:ss'));
+
+        var resultFromDate =
+            converter.validateAndConvert({
+                start: timeMoment.toDate(),
+                end: moment(),
+                sampleInterval: '15:00',
+                type: compute.MonitoringStatsType.REALTIME
+
+            });
+        assert.equal(resultFromDate.start, moment.utc(timeMoment).format('YYYY-MM-DDTHH:mm:ss'));
+
+        var resultFromMoment =
+            converter.validateAndConvert({
+                start: timeMoment,
+                end: moment(),
+                sampleInterval: '15:00',
+                type: compute.MonitoringStatsType.REALTIME
+
+            });
+        assert.equal(resultFromMoment.start, moment.utc(timeMoment).format('YYYY-MM-DDTHH:mm:ss'));
+    });
+
 });

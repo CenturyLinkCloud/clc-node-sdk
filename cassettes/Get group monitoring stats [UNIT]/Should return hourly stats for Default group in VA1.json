@@ -63,7 +63,7 @@
   {
     "scope": "https://api.ctl.io:443",
     "method": "GET",
-    "path": "/v2/groups/ALTD/5757349d19c343a88ce9a473fe2522f4/statistics?start=2015-07-23T18:00:00&sampleInterval=00:02:00:00&type=hourly&end=2015-07-23T20:00:00",
+    "path": "/v2/groups/ALTD/5757349d19c343a88ce9a473fe2522f4/statistics?start=2015-07-23T15:00:00&sampleInterval=00:02:00:00&type=hourly&end=2015-07-23T17:00:00",
     "body": "",
     "status": 200,
     "response": [
